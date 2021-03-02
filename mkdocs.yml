@@ -28,9 +28,9 @@ site_name: Hitachi Cloud Accelerator Platform Documentation
 #   searchable, mobile-friendly, 40+ languages
 
 # Repository
-# repo_name: squidfunk/mkdocs-material
-# repo_url: https://github.com/squidfunk/mkdocs-material
-# edit_uri: ""
+repo_name: HCAP_doc
+repo_url: https://arnab20ghosh.github.io/HCAP_doc/
+edit_uri: ""
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2021 Martin Donath
