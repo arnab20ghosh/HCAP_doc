@@ -1,0 +1,53 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribePrincipalIdFormat",
+                "ec2:DescribeInstances",
+                "ec2:DescribeAddresses",
+                "ec2:DeleteTags",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:DescribeRegions",
+                "ec2:DescribeVolumesModifications",
+                "s3:ListBucket",
+                "ec2:DescribeVpcAttribute",
+                "s3:GetObjectAcl",
+                "iam:PassRole",
+                "ec2:DescribeVolumeStatus",
+                "ec2:StartInstances",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeInstanceStatus",
+                "iam:ListAccessKeys",
+                "iam:GetRole",
+                "ec2:TerminateInstances",
+                "iam:GetInstanceProfile",
+                "ec2:CreateTags",
+                "ec2:RunInstances",
+                "iam:ListRoles",
+                "ec2:StopInstances",
+                "iam:ListInstanceProfiles",
+                "s3:GetBucketAcl",
+                "ec2:DescribeVolumeAttribute",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeImages",
+                "s3:PutObject",
+                "s3:GetObject",
+                "sts:AssumeRole",
+                "ec2:GetPasswordData",
+                "s3:ListAllMyBuckets",
+                "ec2:DescribeSecurityGroupReferences",
+                "ec2:DescribeImageAttribute",
+                "ec2:DescribePublicIpv4Pools",
+                "iam:GetUser",
+                "ec2:DescribeSubnets"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

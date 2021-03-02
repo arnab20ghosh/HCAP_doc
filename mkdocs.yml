@@ -28,9 +28,9 @@ site_name: Hitachi Cloud Accelerator Platform Documentation
 #   searchable, mobile-friendly, 40+ languages
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
-edit_uri: ""
+# repo_name: squidfunk/mkdocs-material
+# repo_url: https://github.com/squidfunk/mkdocs-material
+# edit_uri: ""
 
 # Copyright
 copyright: Copyright &copy; 2016 - 2021 Martin Donath
@@ -41,8 +41,8 @@ theme:
   custom_dir: material
 
   # Static files
-  static_templates:
-    - 404.html
+  # static_templates:
+  #   - 404.html
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -61,46 +61,46 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   icon:
     logo: 
 
 # Plugins
 plugins:
   - search
-  - redirects:
-      redirect_maps:
-        extensions/admonition.md: reference/admonitions.md
-        extensions/codehilite.md: reference/code-blocks.md
-        extensions/footnotes.md: reference/footnotes.md
-        extensions/metadata.md: reference/meta-tags.md
-        extensions/permalinks.md: setup/setting-up-navigation.md #permalink
-        extensions/pymdown.md: reference/admonitions.md
-        plugins/revision-date.md: setup/adding-a-git-repository.md #revision-date
-        plugins/search.md: setup/setting-up-site-search.md
-        releases/4.md: upgrading.md #upgrading-from-4x-to-5x
-        releases/5.md: upgrading.md #upgrading-from-3x-to-4x
-        releases/changelog.md: changelog.md
-        setup/adding-social-links.md: setup/setting-up-the-footer.md
-        sponsorship.md: insiders.md
+  # - redirects:
+  #     redirect_maps:
+  #       extensions/admonition.md: reference/admonitions.md
+  #       extensions/codehilite.md: reference/code-blocks.md
+  #       extensions/footnotes.md: reference/footnotes.md
+  #       extensions/metadata.md: reference/meta-tags.md
+  #       extensions/permalinks.md: setup/setting-up-navigation.md #permalink
+  #       extensions/pymdown.md: reference/admonitions.md
+  #       plugins/revision-date.md: setup/adding-a-git-repository.md #revision-date
+  #       plugins/search.md: setup/setting-up-site-search.md
+  #       releases/4.md: upgrading.md #upgrading-from-4x-to-5x
+  #       releases/5.md: upgrading.md #upgrading-from-3x-to-4x
+  #       releases/changelog.md: changelog.md
+  #       setup/adding-social-links.md: setup/setting-up-the-footer.md
+  #       sponsorship.md: insiders.md
   - minify:
       minify_html: true
 
 # Customization
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/gitter
-      link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/squidfunk/
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/squidfunk
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/squidfunk
+#     - icon: fontawesome/brands/gitter
+#       link: https://gitter.im/squidfunk/mkdocs-material
+#     - icon: fontawesome/brands/docker
+#       link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/squidfunk
+#     - icon: fontawesome/brands/linkedin
+#       link: https://linkedin.com/in/squidfunk/
+#     - icon: fontawesome/brands/instagram
+#       link: https://instagram.com/squidfunk
 
 # Extensions
 markdown_extensions:
@@ -145,50 +145,66 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Getting started:
-    - Installation: getting-started.md
-    - Creating your site: creating-your-site.md
-    - Publishing your site: publishing-your-site.md
-    - Customization: customization.md
-    - Troubleshooting: troubleshooting.md
-    - Data privacy: data-privacy.md
-    - Insiders: insiders.md
-    - License: license.md
-  - Setup:
-    - Changing the colors: setup/changing-the-colors.md
-    - Changing the fonts: setup/changing-the-fonts.md
-    - Changing the language: setup/changing-the-language.md
-    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
-    - Setting up navigation: setup/setting-up-navigation.md
-    - Setting up site search: setup/setting-up-site-search.md
-    - Setting up site analytics: setup/setting-up-site-analytics.md
-    - Setting up versioning: setup/setting-up-versioning.md
-    - Setting up the header: setup/setting-up-the-header.md
-    - Setting up the footer: setup/setting-up-the-footer.md
-    - Adding a git repository: setup/adding-a-git-repository.md
-    - Adding a comment system: setup/adding-a-comment-system.md
-  - Reference:
-    - Abbreviations: reference/abbreviations.md
-    - Admonitions: reference/admonitions.md
-    - Buttons: reference/buttons.md
-    - Code blocks: reference/code-blocks.md
-    - Content tabs: reference/content-tabs.md
-    - Data tables: reference/data-tables.md
-    - Diagrams: reference/diagrams.md
-    - Footnotes: reference/footnotes.md
-    - Formatting: reference/formatting.md
-    - Icons + Emojis: reference/icons-emojis.md
-    - Images: reference/images.md
-    - Lists: reference/lists.md
-    - MathJax: reference/mathjax.md
-    - Meta tags: reference/meta-tags.md
-    - Variables: reference/variables.md
-  - Changelog:
-    - Material for MkDocs: changelog.md
-    - Material for MkDocs Insiders: changelog/insiders.md
-    - Guides:
-      - Upgrading: upgrading.md
-      - Deprecations: deprecations.md
+  - Get started:
+    - Get Started: platform-common/getStarted.md
+    - Deploy and configure: platform-common/deployAndConfigure.md
+    - Administer: platform-common/administer.md
+    - Create & access account: platform-common/createAndAccessAccount.md
+    - Install and use Platform CLI: platform-common/cliTool.md
+  - Accelerators:
+    - Deploy Accelerator: 
+      - Overview: deploy/getting-started.md
+      - Deploy and Manage:
+        - Deploy: deploy/using_copy.md
+      - Administer: deploy/administering.md
+      - How-to guides: deploy/howto-guides.md
+      - API reference: deploy/api-reference.md
+    - Workflow Accelerator:
+      - Overview: workflow/getting-started.md
+      - Understand the solution package schema: workflow/understand-solution-package-schema.md
+      - Create and register solution package: workflow/using.md
+      - Deploy solution package: workflow/deploy-package.md
+      - API reference: workflow/api-reference.md
+    - Test Accelerator:
+      - Overview: test/getting-started.md
+      - Run tests: test/using.md
+      - Administer: test/administer.md
+      - API reference: test/api-reference.md
+    - Assess Accelerator:
+      - Overview: assess/getting-started.md
+      - Run assessment policies: assess/using.md
+      - Create and manage assessment templates: assess/assess-templates.md
+      - Assessment checks reference: assess/assess-checks.md
+    - Migrate Accelerator:
+      - Overview: migrate/getting-started.md
+      - Discover and migrate resources: migrate/using.md
+      - Administer: migrate/administering.md
+  - DevSecOps:
+    - devops/gettingStarted.md
+    - Image Pipeline: 
+      - Overview: devsecops/Overview.md
+      - Configure a DevSecOps workstation: devsecops/Configuring-a-DevSecOps-Workstation.md
+      - Create project: devsecops/Creating-Projects.md
+      - Configure project: devsecops/Creating-Projects.md
+      - Build and test from Jenkins: devsecops/Building-and-Testing-from-Jenkins.md
+      - Build and test from your workstation: devsecops/Building-and-Testing-from-your-Workstation.md
+      - External configurations: devsecops/External-Configuration.md
+      - Customize projects: devsecops/Customizing-projects.md
+      - Learn the concepts: devsecops/Learn-the-concepts.md
+      - Set-up a Linux Virtual Machine: devsecops/Windows-Linux-Virtual-Machine-Setup.md
+  - Infobytes:
+    - Deploy: deploy-infobytes/info-btyes.md
+    - Infobyte 1- Product overview: deploy-infobytes/info-btyes-01.md
+    - Infobyte 2- Layered environments: deploy-infobytes/info-btyes-02.md
+    - Infobyte 3- Multiple deployment: deploy-infobytes/info-btyes-03.md
+    - Infobyte 4- Environment versions and releases: deploy-infobytes/info-btyes-04.md
+    - Infobyte 5- Blueprints: deploy-infobytes/info-btyes-05.md
+    - Infobyte 6- Packages: deploy-infobytes/info-btyes-06.md
+    - Infobyte 7- Platform CLI tool: deploy-infobytes/info-btyes-07.md
+  - What's New?:
+    - Latest Releases: platform-common/whatsNew.md
+    - Archive: platform-common/whatsNewArchive.md
+
 
 # Google Analytics
 google_analytics:
