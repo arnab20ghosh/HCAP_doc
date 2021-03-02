@@ -1,0 +1,1872 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>How-to guides for Deploy Accelerator - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-guides-for-deploy-accelerator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How-to guides for Deploy Accelerator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          How-to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        How-to guides
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-import-a-new-version-of-an-existing-environment" class="md-nav__link">
+    How do I import a new version of an existing environment?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-upgrade-an-existing-environment" class="md-nav__link">
+    How do I upgrade an existing environment?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-collaborate-with-other-users" class="md-nav__link">
+    How do I collaborate with other users?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-access-entities-of-a-user-who-has-left-the-organization" class="md-nav__link">
+    How do I access entities of a user who has left the organization?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-create-a-template-file" class="md-nav__link">
+    How do I create a template file?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-dynamically-generate-a-key-pair-for-an-ec2-instance" class="md-nav__link">
+    How do I dynamically generate a key pair for an EC2 instance?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-import-a-new-version-of-an-existing-environment" class="md-nav__link">
+    How do I import a new version of an existing environment?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-upgrade-an-existing-environment" class="md-nav__link">
+    How do I upgrade an existing environment?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-collaborate-with-other-users" class="md-nav__link">
+    How do I collaborate with other users?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-access-entities-of-a-user-who-has-left-the-organization" class="md-nav__link">
+    How do I access entities of a user who has left the organization?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-create-a-template-file" class="md-nav__link">
+    How do I create a template file?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-dynamically-generate-a-key-pair-for-an-ec2-instance" class="md-nav__link">
+    How do I dynamically generate a key pair for an EC2 instance?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="how-to-guides-for-deploy-accelerator"><a id="deploy-howto" name="deploy-howto"></a>How-to guides for Deploy Accelerator<a class="headerlink" href="#how-to-guides-for-deploy-accelerator" title="Permanent link">&para;</a></h1>
+<p>The How-to guides for Deploy Accelerator focus on achieving specific goals, performing common tasks, or resolving specific issues. These guides include high-levels steps or detailed procedures with examples to help you to quickly accomplish your goals.<br></p>
+<p>For step-by-step instructions on performing various tasks in Deploy Accelerator, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'Content'})" style="text-decoration:none">Deploy and manage environments</a>.</p>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'how-to-guides-deploy', viewSection: 'env-import-existing'})" style="text-decoration:none">How do I import a new version of an existing environment?</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'how-to-guides-deploy', viewSection: 'env-upgrade'})" style="text-decoration:none">How do I upgrade an existing environment?</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'how-to-guides-deploy', viewSection: 'collaborate'})" style="text-decoration:none">How do I collaborate with other users?</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'how-to-guides-deploy', viewSection: 'access-entities'})" style="text-decoration:none">How do I access entities of a user who has left the organization?</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'how-to-guides-deploy', viewSection: 'template-file'})" style="text-decoration:none">How do I create a template file?</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'how-to-guides-deploy', viewSection: 'generate-keypair'})" style="text-decoration:none">How do I dynamically generate a key pair for an EC2 instance?</a></li>
+</ul>
+<h2 id="how-do-i-import-a-new-version-of-an-existing-environment"><a id="env-import-existing" name="env-import-existing"></a>How do I import a new version of an existing environment?<a class="headerlink" href="#how-do-i-import-a-new-version-of-an-existing-environment" title="Permanent link">&para;</a></h2>
+<p>Deploy Accelerator allows you to import a blueprint as a new version of an existing environment. For example, say that you created a new environment in Deploy Accelerator by importing a blueprint from the Blueprint Gallery or your computer. And an updated version of this blueprint is now available. Deploy Accelerator allows you to import this updated blueprint as a new version of the existing environment.<br></p>
+<p>While you can import a blueprint with the same name as an existing environment, the version must be unique.<br></p>
+<p><em><strong>Important:</strong> Importing a blueprint as a new version of an existing environment does not affect any of the existing deployments of the environment.</em><br></p>
+<p><strong>High-level steps to import a new version of an existing environment</strong></p>
+<ol>
+<li>
+<p>Open the existing environment and note the name and existing version numbers of this environment.</p>
+</li>
+<li>
+<p>Based on your requirements, perform one of the following actions:</p>
+</li>
+<li>
+<p>To import a blueprint from your computer, click the <strong>More</strong> icon (<img alt="" src="/images/rean-deploy/icon_more_bar.PNG" />) on the canvas and then click <strong>Import</strong>.</p>
+</li>
+<li>To import a blueprint from the Blueprint Gallery, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) in the top-right corner of the Home page and then click <strong>Blueprint Gallery</strong>. On the Blueprint Gallery page, click <strong>IMPORT</strong> for the new blueprint version that you want to import.</li>
+</ol>
+<p>For detailed information about the different ways in which you can import a blueprint in Deploy Accelerator see, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'blueprint'})" style="text-decoration:none">Creating new environments from blueprints</a>.</p>
+<ol>
+<li>
+<p>In the Import Environments window, perform the following actions:</p>
+</li>
+<li>
+<p>Enter the same name as your existing environment.</p>
+</li>
+<li>
+<p>Enter a unique version up to a maximum of 40 characters.</p>
+<p>It is recommended that the version you specify is greater than all versions of your existing environment. However, you can also specify an existing version and append it with a dash (-) followed by a custom alphanumeric value (for example, <strong>02.10.18-updated</strong>). Ensure that there is no space before the dash (-) and the custom value that you specify does not contain a colon (:).</p>
+</li>
+<li>
+<p>Select the appropriate connection and provider.</p>
+</li>
+<li>
+<p>If Chef Server is set as the environment package type, select the Chef Server and chef environment. </p>
+</li>
+<li>
+<p>Click <strong>IMPORT ALL</strong>.</p>
+</li>
+</ol>
+<p>The blueprint is imported as a new version of your existing environment.</p>
+<ol>
+<li>Click the version list on the canvas.</li>
+</ol>
+<p>You can see the previous versions of the existing environment in this list.</p>
+<ol>
+<li>
+<p><em>(Optional)</em> <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'compare'})" style="text-decoration:none">Compare differences</a> between the version that you have imported and previous versions of the existing environment.</p>
+</li>
+<li>
+<p><em>(Optional)</em> <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'deploy'})" style="text-decoration:none">Start a new deployment</a> of the environment version that you have imported.</p>
+</li>
+</ol>
+<p>None of the existing deployments of the environment are impacted. To see the list of deployments across all versions of the existing environment, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'view-deploy'})" style="text-decoration:none">Viewing deployments</a>.</p>
+<p>If required, you can also redeploy an existing deployment with the new environment version. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'redeploy'})" style="text-decoration:none">Redeploying existing deployments</a>.  </p>
+<h2 id="how-do-i-upgrade-an-existing-environment"><a id="env-upgrade" name="env-upgrade"></a>How do I upgrade an existing environment?<a class="headerlink" href="#how-do-i-upgrade-an-existing-environment" title="Permanent link">&para;</a></h2>
+<p>When you create an environment and start a deployment, Deploy Accelerator creates the resources using the configured provider. After an environment is deployed in production, you can choose to continue to make updates in the same environment. However, this approach makes it difficult to keep a track of changes to an environment over time. Instead, it is recommended that you release the environment to freeze any updates to that environment. When you want to upgrade this existing environment (add or update resources), you can create a new environment version.<br></p>
+<p><strong>High-level steps to upgrade an existing environment</strong></p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'create-env'})" style="text-decoration:none">Create a new environment</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'resource'})" style="text-decoration:none">add resources</a> as required. </li>
+</ol>
+<p>To provision any compute resources in the environment, also <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'packages'})" style="text-decoration:none">add appropriate packages</a> to those resources.</p>
+<p><em><strong>Important:</strong> Deploy Accelerator cannot deploy packages on compute resources that are already deployed. Therefore, you must add the appropriate packages to a resource before you start a deployment of the environment.</em></p>
+<p><em><strong>Best practice:</strong> If you need to frequently deploy new versions of a package on a resource, you can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'create-layered-env'})" style="text-decoration:none">create a layered environment</a>. The parent environment can contain all your infrastructure resources, while the child environment can contain the <strong>Virtual VM</strong> resource to which you can add the appropriate package version. Each time you update the package version on the <strong>Virtual VM</strong> resource, you can destroy and redeploy the child environment--without having to destroy the parent environment that contains the infrastructure.</em></p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'deploy'})" style="text-decoration:none">Start a deployment</a> of the environment.</li>
+</ol>
+<p>Each environment can have multiple deployments, such as Staging and Production.  </p>
+<ol>
+<li><em>(Optional)</em> After the production deployment of the environment completes successfully, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'version-release'})" style="text-decoration:none">release the environment</a>.</li>
+</ol>
+<p>Releasing an environment ensures that no further updates can be made to the existing environment.</p>
+<p>If you <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'redeploy'})" style="text-decoration:none">redeploy existing deployments</a> of a released environment, already deployed resources are not impacted. This is because during a redeployment, only updates to deployed resources are considered.</p>
+<ol>
+<li>
+<p>To upgrade the existing environment that has been released, perform the following actions:</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'env-version'})" style="text-decoration:none">Create a new environment version</a>.</p>
+</li>
+<li>In the new environment version, add or update resources as required.</li>
+<li>Save the environment.</li>
+<li>
+<p><em>(Optional)</em> <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'compare'})" style="text-decoration:none">Compare differences</a> between the two environment versions.</p>
+</li>
+<li>
+<p>To upgrade the existing (production) deployment based on the new environment version, perform the following actions:</p>
+</li>
+<li>
+<p>From the deployments list on the canvas, select the existing deployment that you want to upgrade.</p>
+</li>
+<li>
+<p>To view the plan for the existing deployment, click the <strong>Plan</strong> icon (<img alt="" src="/images/rean-deploy/icon_envplan.PNG" />) and select <strong>Plan Selected Deployment</strong>.</p>
+</li>
+<li>
+<p>In the Review and Plan: Environment Name window, select the new environment version that you have created and <strong>PLAN</strong>.</p>
+<p>The deployment plan shows the new or updated resources that will be deployed. The already deployed resources that were not updated in the new environment version are not impacted.</p>
+</li>
+<li>
+<p>To redeploy the existing deployment, click the <strong>Re-Deploy</strong> icon (<img alt="" src="/images/rean-deploy/icon_envredeploy.PNG" />).</p>
+</li>
+<li>
+<p>On the <strong>Deployment</strong> tab, from the Environment Version list, select the new environment version that you have created.</p>
+</li>
+<li>
+<p>Select the Confirmation check box and click <strong>UPGRADE</strong>.</p>
+<p>The production deployment gets associated with the new environment version. </p>
+</li>
+</ol>
+<h2 id="how-do-i-collaborate-with-other-users"><a id="collaborate" name="collaborate"></a>How do I collaborate with other users?<a class="headerlink" href="#how-do-i-collaborate-with-other-users" title="Permanent link">&para;</a></h2>
+<p>Deploy Accelerator allows you to collaborate with other users on environments and related entities. You can share environments that you have created with multiple groups.<br></p>
+<p>When you share an environment, you can also define share permissions for groups. Based on the assigned share permissions, users in these groups can view, edit, export, and delete the environment. You can also enable these users to start and destroy their own deployments of the shared environment.<br></p>
+<p>The provider, connection, and deployments associated with the shared environment are not automatically shared. You can choose to separately share the provider, connection, and deployments and assign the appropriate permissions to the same set of groups. Otherwise, users in the groups with the deploy permission can use their own providers to start new deployments of the shared environment.</p>
+<p><strong>Examples</strong></p>
+<p>The following examples highlight the different benefits of collaborating with other users:</p>
+<ul>
+<li>The networking team can share the network environment and its Production deployment with the database and application teams and assign only the View permission. These teams can view and use the network deployment as the parent deployment for their own deployments.</li>
+<li>The application team can comprise multiple members who need to start deployments of the application environment. For example, different QA team members might need to start QA deployments of the application. The owner can share the environment with these users and assign permissions to deploy and destroy their own deployments.</li>
+</ul>
+<p><strong>High-level steps to collaborate with other users</strong></p>
+<ol>
+<li>
+<p>Request your Deploy administrator to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'add-group'})" style="text-decoration:none">create a new group</a>, assign the appropriate policies (access level) to the group, and add users to the group.</p>
+</li>
+<li>
+<p><em>(Optional)</em> If you plan to use the registered Chef Server in your environment, request the administrator to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-share'})" style="text-decoration:none">share the appropriate Chef Server packages and roles</a> with the new group.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'environments'})" style="text-decoration:none">Create a new environment</a> and select the appropriate provider and connection for the environment.</p>
+</li>
+</ol>
+<p>While creating an environment, you can choose to share the environment with appropriate groups. However, you can also create the environment and later <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'collaboration'})" style="text-decoration:none">share that environment</a> with the appropriate groups.</p>
+<p>By default, only the current environment version is shared with the selected groups. While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'env-version'})" style="text-decoration:none">creating a new version of this environment</a>, you can choose to apply the share permissions from the base environment.</p>
+<ol>
+<li>
+<p><em>(Optional)</em> Share the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'share-provider'})" style="text-decoration:none">provider</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'share-connection'})" style="text-decoration:none">connections</a> used in the environment with the same group.</p>
+</li>
+<li>
+<p><em>(Optional)</em> When you <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'deploy'})" style="text-decoration:none">start a new deployment</a> of the environment, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'deploy-share'})" style="text-decoration:none">share this deployment</a> with the appropriate group.</p>
+</li>
+</ol>
+<p>When you share the environment, its deployments are not automatically shared with the group. You have to separately share each deployment with the appropriate groups and assign share permissions.</p>
+<p><em><strong>Note:</strong> If multiple users in a group are working simultaneously on a shared environment or another shared entity, Deploy Accelerator shows an error message in case of any conflicts. For example, say <strong>User A</strong> has added a resource named <strong>vpc</strong> to a shared environment and <strong>User B</strong> also tries to add a resource named <strong>vpc</strong>, an error message is shown to <strong>User B</strong>. This error message is shown even if <strong>User A</strong> has not saved the environment after adding the <strong>vpc</strong> resource.</em></p>
+<h2 id="how-do-i-access-entities-of-a-user-who-has-left-the-organization"><a id="access-entities" name="access-entities"></a>How do I access entities of a user who has left the organization?<a class="headerlink" href="#how-do-i-access-entities-of-a-user-who-has-left-the-organization" title="Permanent link">&para;</a></h2>
+<p>If a user who leaves an organization has shared environments and other entities with a group, all members of that group can continue to access these shared entities. However, if the user has not shared any environments, deployments, providers, and connections, no other user can automatically access these entities. In this case, the Deploy administrator can disable the user and share all the user's entities with one or more groups.</p>
+<p>For detailed step-by-step instructions, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'disable-user'})" style="text-decoration:none">Disable an existing user</a>.</p>
+<p><strong>Example</strong></p>
+<p><strong>User A</strong>, <strong>User B</strong>, and <strong>User C</strong> are members of the <strong>Application Blueprints</strong> group in Deploy Accelerator. The three users share all their environments and deployments with this group, making it possible for them to access each other's entities. </p>
+<p><strong>User C</strong> leaves the organization without sharing his most recent environments and deployments with the <strong>Application Blueprints</strong> group. Now no one (including <strong>User A</strong> and <strong>User B</strong>) can access these environments and deployments.</p>
+<p><strong>User A</strong> and <strong>User B</strong> have to spend time recreating <strong>User C's</strong> environments. Also, they cannot destroy any resources that <strong>User C</strong> has deployed. To resolve these issues, the Deploy administrator can disable <strong>User C</strong> and share all the user's entities with the <strong>Application Blueprint</strong> group. Now, <strong>User A</strong> and <strong>User B</strong> can access and work with <strong>User C's</strong> environments, deployments, providers, and connections.</p>
+<h2 id="how-do-i-create-a-template-file"><a id="template-file" name="template-file"></a>How do I create a template file?<a class="headerlink" href="#how-do-i-create-a-template-file" title="Permanent link">&para;</a></h2>
+<p>Deploy Accelerator enables you to render a template file from a template string by using the <strong>Template</strong> data source. Ideally, this template string should be loaded from an external file (<strong>Local file</strong> resource). However, you can also use an inline template string in the <strong>Template</strong> data source.<br></p>
+<p><strong>To create a template file by using the Template resource, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Create or open the environment in which you want to generate a template file. </p>
+</li>
+<li>
+<p><em>(Optional)</em> To load the template string from an external file, perform the following actions:</p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the Local file resource to the canvas.</p>
+</li>
+<li>
+<p>In the Resource Name window, enter a name for the resource and click <strong>CREATE</strong>.</p>
+</li>
+<li>
+<p>In the <strong>name</strong> attribute, enter the name of the template file you want to create (for example, <strong>init.tpl</strong>).</p>
+</li>
+<li>
+<p>In the <strong>content</strong> attribute, click <strong>Set text</strong>, enter the template string in the Set String value for window, and click <strong>SET VALUE</strong>.</p>
+<p>To escape interpolation, use double dollar signs ($$).</p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>Template</strong> data source to the canvas.</p>
+</li>
+<li>
+<p>In the <strong>vars</strong> attribute, click <strong>Set Json</strong>, enter the variables in the Set Json value for window, and click <strong>SET VALUE</strong>.</p>
+</li>
+</ol>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;keystore_password&quot;</span><span class="p">:</span> <span class="s2">&quot;password&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>
+<p>In the <strong>template</strong> attribute, click <strong>Set text</strong>, and perform one of the following actions:</p>
+</li>
+<li>
+<p>If you have already added the template string in the <strong>Local file</strong> resource, specify the file path, as shown in the example below.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;</span><span class="si">${</span><span class="nv">file</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">path</span><span class="p">.module</span><span class="si">}</span><span class="s2">/init.tpl&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add an inline template string, as shown in the example in the image below. </p>
+<p>Consider the following points when using dollar signs ($) in the inline template string:</p>
+<ul>
+<li>To indicate a variable defined in the <strong>vars</strong> attribute of the <strong>Template</strong> data source, you must use double dollar signs ($$).</li>
+</ul>
+<p>In the example, double dollar signs are used to refer to the <strong>keystore_password</strong> variable. When you start a deployment, <strong>$<span class="arithmatex" keystore_password="keystore_password">\({keystore_password}** will be rendered as **\)</span></strong> in the template file.</p>
+<ul>
+<li>To escape interpolation, the template file needs to use double dollar signs. However, if you are using an inline template string to generate the template file, you must use four dollar signs ($$$$).</li>
+</ul>
+<p>In the example, <strong>$$<span class="arithmatex" my_pass="my_pass">(<span class="arithmatex">\({my_pass}** will be rendered as **\)</span>\)</span></strong> in the template file. </p>
+<p><img alt="" src="/images/rean-deploy/TemplateInlineString.PNG" /></p>
+</li>
+<li>
+<p>Save the environment. </p>
+</li>
+</ol>
+<h2 id="how-do-i-dynamically-generate-a-key-pair-for-an-ec2-instance"><a id="generate-keypair" name="generate-keypair"></a>How do I dynamically generate a key pair for an EC2 instance?<a class="headerlink" href="#how-do-i-dynamically-generate-a-key-pair-for-an-ec2-instance" title="Permanent link">&para;</a></h2>
+<p>The following procedure describes an example of how you can use the <strong>TLS Private Key Generator</strong> and <strong>Key Pair</strong> resources to dynamically generate a key pair and associate it with an AWS EC2 instance.</p>
+<ol>
+<li>
+<p>On the canvas, click the <strong>Create Environment</strong> icon (<img alt="" src="/images/rean-deploy/icon_envcreate.PNG" />).</p>
+</li>
+<li>
+<p>In the Create Environment window, enter the name as <strong>TLS_PrivateKey</strong>, add a description for this environment, specify the version as 01.00.00, select the appropriate environment package type, connection, and provider, and click <strong>CREATE</strong>.</p>
+</li>
+<li>
+<p>To add the <strong>TLS Private Key Generator</strong> resource to the environment, perform the following actions: </p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>TLS Private Key Generator</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>In the Resource Name window, enter the name as <strong>AppTLSPrivateKeyGen</strong> and click <strong>CREATE</strong>.</p>
+<p><img alt="" src="/images/rean-deploy/scenario_ssh_02.PNG" /></p>
+</li>
+<li>
+<p>To add the <strong>Key Pair</strong> resource to the environment, perform the following actions:</p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>Key Pair</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>In the Resource Name window, enter the name as <strong>AppKeypair</strong> and click <strong>CREATE</strong>.</p>
+<p><img alt="" src="/images/rean-deploy/scenario_ssh_04.PNG" /></p>
+</li>
+<li>
+<p>Select the <strong>AppKeypair</strong> resource and on the <strong>Resource</strong> tab in the right panel that opens, enter the following attribute values:</p>
+<ul>
+<li>
+<p><strong>key_name:</strong> AppKeypair</p>
+</li>
+<li>
+<p><strong>public_key:</strong> ${AppTLSPrivateKeyGen.public_key_openssh}</p>
+</li>
+</ul>
+<p>In the <strong>public_key</strong> attribute, you must use the interpolation syntax to reference the <strong>public_key_openssh</strong> attribute value of the <strong>TLS Private Key Generator</strong> resource that you created in step 3.</p>
+</li>
+<li>
+<p>To add the <strong>Instance</strong> resource to the environment, perform the following actions:</p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>Instance</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>In the Resource Name window, enter the name as <strong>AppServer</strong> and click <strong>CREATE</strong>.</p>
+<p><img alt="" src="/images/rean-deploy/scenario_ssh_06.PNG" /></p>
+</li>
+<li>
+<p>Select the <strong>AppServer</strong> resource and on the <strong>Resource</strong> tab in the right panel that opens, enter the following value for the <strong>key_name</strong> attribute:</p>
+<p>${AppKeypair.key_name}</p>
+<p>In the <strong>key_name</strong> attribute, you must use the interpolation syntax to reference the <strong>key_name</strong> attribute value of the <strong>Key Pair</strong> resource that you created in step 4.</p>
+</li>
+<li>
+<p>In the <strong>Connection</strong> attribute, select <strong>Use Custom Connection</strong> and then click <strong>Set Json</strong> for the <strong>Custom Connection</strong> attribute.</p>
+</li>
+<li>
+<p>In the Set Json value for: customConnection window, enter the content shown below and click <strong>SET VALUE</strong>.</p>
+<div class="highlight"><pre><span></span><code>{ 
+   &quot;private_key&quot;: &quot;${AppTLSPrivateKeyGen.private_key_pem}&quot;,
+   &quot;user&quot;: &quot;ubuntu&quot;,
+   &quot;type&quot;: &quot;ssh&quot;
+}
+</code></pre></div>
+<p>In the interpolation syntax for the <strong>private_key</strong> parameter, you must use the interpolation syntax to reference the <strong>private_key_pem</strong> attribute value of the <strong>TLS Private Key Generator</strong> resource that you created in step 3.</p>
+</li>
+<li>
+<p>In the <strong>ami</strong> and <strong>instance_type</strong> attributes, specify the appropriate values.</p>
+</li>
+<li>
+<p>Click the <strong>Save</strong> icon (<img alt="" src="/images/rean-deploy/icon_envsave.PNG" />).</p>
+</li>
+<li>
+<p><em>(Optional)</em> To use this dynamically generated key pair in another environment, perform the following actions: </p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>Output</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>Select the <strong>output</strong> resource and on the <strong>Resource</strong> tab in the right panel that opens, click <strong>Set Json</strong> for the <strong>output</strong> attribute.</p>
+</li>
+<li>
+<p>In the Set Json value for: output window, enter the content as shown below and click <strong>SET VALUE</strong>.</p>
+<div class="highlight"><pre><span></span><code>{ 
+    &quot;ssh_private_key&quot;: { 
+    &quot;value&quot;: &quot;${AppTLSPrivateKeyGen.private_key_pem}&quot;  
+     },
+    &quot;key_name&quot;: {
+    &quot;value&quot;: &quot;${AppKeypair.key_name}&quot;
+    }
+}
+</code></pre></div>
+</li>
+<li>
+<p>To save the environment and define the output, click the <strong>Save</strong> icon (<img alt="" src="/images/rean-deploy/icon_envsave.PNG" />).</p>
+</li>
+<li>
+<p>To start a new deployment, perform the following actions:</p>
+</li>
+<li>
+<p>Click the <strong>Deploy</strong> icon (<img alt="" src="/images/rean-deploy/icon_envdeploy.PNG" />).</p>
+</li>
+<li>On the <strong>Deployment</strong> tab, enter the deployment name and description.</li>
+<li>
+<p>Click <strong>START NEW DEPLOYMENT</strong>.</p>
+</li>
+<li>
+<p><em>(Optional)</em> Open the other environment in which you want to use the dynamically generated key pair and perform the following actions: </p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>Depends On</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>In the Resource Name window, enter the name as <strong>depends-on</strong> and click <strong>CREATE</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>depends-on</strong> resource.</p>
+</li>
+<li>
+<p>In the right panel that opens, on the <strong>Resource</strong> tab, enter <strong>TLS_PrivateKey</strong> in the <strong>Depends_On</strong> attribute.</p>
+</li>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag the <strong>Instance</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>In the Resource Name window, enter the name as <strong>instance-dynamic-key</strong> and click <strong>CREATE</strong>.</p>
+</li>
+<li>
+<p>Select the <strong>instance-dynamic-key</strong> resource and on the <strong>RESOURCE</strong> tab in the right panel that opens, enter <strong>${depends-on.key_name}</strong> in the <strong>key_name</strong> attribute.</p>
+<p>In this interpolation syntax, <strong>key_name</strong> is the variable that you have defined in the <strong>output</strong> resource of the <strong>TLS_PrivateKey</strong> environment in step 7.</p>
+</li>
+<li>
+<p>In the <strong>Connection</strong> attribute, select <strong>Use Custom Connection</strong> and then click <strong>Set Json</strong> for the <strong>Custom Connection</strong> attribute.</p>
+</li>
+<li>
+<p>In the Set Json value for: customConnection window, enter the content shown below, and click <strong>SET VALUE</strong>.</p>
+<div class="highlight"><pre><span></span><code> { 
+      &quot;private_key&quot;: &quot;${depends-on.ssh_private_key}&quot;,
+      &quot;user&quot;: &quot;ubuntu&quot;,
+      &quot;type&quot;: &quot;ssh&quot;
+ }
+</code></pre></div>
+<p>In the <strong>private_key</strong> parameter, use the interpolation syntax to reference the <strong>ssh_private_key</strong> variable that you have defined in the <strong>output</strong> resource of the <strong>TLS_PrivateKey</strong> environment in step 7.</p>
+</li>
+<li>
+<p>Click the <strong>Save</strong> icon (<img alt="" src="/images/rean-deploy/icon_envsave.PNG" />).</p>
+</li>
+<li>
+<p>Click the <strong>Deploy</strong> icon (<img alt="" src="/images/rean-deploy/icon_envdeploy.PNG" />) to open the Review and Deploy: <em>EnvironmentName</em> window.</p>
+</li>
+<li>
+<p>On the <strong>Deployment</strong> tab, enter the deployment name and description, select the parent deployment name, and then click <strong>START NEW DEPLOYMENT</strong>.</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../administering/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Administer
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../api-reference/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API reference
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

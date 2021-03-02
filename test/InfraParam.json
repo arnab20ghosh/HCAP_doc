@@ -1,0 +1,37 @@
+{
+	"name": "infra-testing-2",
+	"provider": {
+		"region": "us-east-1",
+		"iam_instance_profile": {
+			"name": "rt-test-client-1"
+		},
+		"assume_role": {
+			"role_arn": "arn:aws:iam::XXXXXXXXXXXX:role/readonly-role",
+			"session_name": "assumerole",
+			"external_id": ""
+		}
+	},
+	"input": {
+		"aws_vpc": {
+			"vpc": {
+				"cidr_block": "10.0.0.0/16"
+			}
+		},
+    "aws_instance": {
+      "Demo_EC2_Instance": {
+			  "instance_type": "t2.micro",
+			  "tags": {
+			  	"Name": "Platform-bastion-us-east-1b"
+			  }
+		  }
+	  }
+	},
+	"output": {
+		"aws_vpc": {
+		  "vpc": "vpc-0cut6871234rfgt"
+		},
+		"aws_instance": {
+			"Demo_EC2_instance": "i-05bf8kjnjdi9sdd7145"
+		}
+	}
+}

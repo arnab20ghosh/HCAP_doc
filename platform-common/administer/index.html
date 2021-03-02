@@ -1,0 +1,2431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Administer Cloud Accelerator Platform - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#administer-cloud-accelerator-platform" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administer Cloud Accelerator Platform
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getStarted/" class="md-tabs__link md-tabs__link--active">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Administer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Administer
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-admin-console" class="md-nav__link">
+    Overview of Admin Console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-users" class="md-nav__link">
+    Managing users
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-user" class="md-nav__link">
+    Add a new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-a-new-user" class="md-nav__link">
+    Verify a new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-an-existing-user" class="md-nav__link">
+    Modify an existing user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-the-password-of-an-existing-user" class="md-nav__link">
+    Reset the password of an existing user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlock-an-existing-users-account" class="md-nav__link">
+    Unlock an existing user's account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-an-existing-user" class="md-nav__link">
+    Disable an existing user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-groups" class="md-nav__link">
+    Managing groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-groups" class="md-nav__link">
+    Default groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-group" class="md-nav__link">
+    Add a new group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-an-existing-group" class="md-nav__link">
+    Modify an existing group
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-password-policy-for-user-accounts" class="md-nav__link">
+    Customizing the password policy for user accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-user-account-lockout-settings" class="md-nav__link">
+    Customizing user account lockout settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-session-timeout-for-user-accounts" class="md-nav__link">
+    Configuring the session timeout for user accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-cloud-accelerator-platform-with-active-directory" class="md-nav__link">
+    Integrating Cloud Accelerator Platform with Active Directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Cloud Accelerator Platform with Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    Before you begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-active-directory-server" class="md-nav__link">
+    Configure the Active Directory server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-active-directory-and-cloud-accelerator-platform-groups" class="md-nav__link">
+    Map Active Directory and Cloud Accelerator Platform groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-active-directory-users" class="md-nav__link">
+    View Active Directory users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-users-from-cloud-accelerator-platform-to-active-directory" class="md-nav__link">
+    Migrate users from Cloud Accelerator Platform to Active Directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrate users from Cloud Accelerator Platform to Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrate-the-default-administrator-user-to-active-directory" class="md-nav__link">
+    Migrate the default administrator user to Active Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-existing-users-to-active-directory" class="md-nav__link">
+    Migrate existing users to Active Directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-admin-console" class="md-nav__link">
+    Overview of Admin Console
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-users" class="md-nav__link">
+    Managing users
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-user" class="md-nav__link">
+    Add a new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-a-new-user" class="md-nav__link">
+    Verify a new user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-an-existing-user" class="md-nav__link">
+    Modify an existing user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-the-password-of-an-existing-user" class="md-nav__link">
+    Reset the password of an existing user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlock-an-existing-users-account" class="md-nav__link">
+    Unlock an existing user's account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-an-existing-user" class="md-nav__link">
+    Disable an existing user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-groups" class="md-nav__link">
+    Managing groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-groups" class="md-nav__link">
+    Default groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-new-group" class="md-nav__link">
+    Add a new group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-an-existing-group" class="md-nav__link">
+    Modify an existing group
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-password-policy-for-user-accounts" class="md-nav__link">
+    Customizing the password policy for user accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-user-account-lockout-settings" class="md-nav__link">
+    Customizing user account lockout settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-session-timeout-for-user-accounts" class="md-nav__link">
+    Configuring the session timeout for user accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-cloud-accelerator-platform-with-active-directory" class="md-nav__link">
+    Integrating Cloud Accelerator Platform with Active Directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Cloud Accelerator Platform with Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    Before you begin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-active-directory-server" class="md-nav__link">
+    Configure the Active Directory server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-active-directory-and-cloud-accelerator-platform-groups" class="md-nav__link">
+    Map Active Directory and Cloud Accelerator Platform groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-active-directory-users" class="md-nav__link">
+    View Active Directory users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-users-from-cloud-accelerator-platform-to-active-directory" class="md-nav__link">
+    Migrate users from Cloud Accelerator Platform to Active Directory
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrate users from Cloud Accelerator Platform to Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrate-the-default-administrator-user-to-active-directory" class="md-nav__link">
+    Migrate the default administrator user to Active Directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-existing-users-to-active-directory" class="md-nav__link">
+    Migrate existing users to Active Directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="administer-cloud-accelerator-platform">Administer Cloud Accelerator Platform<a class="headerlink" href="#administer-cloud-accelerator-platform" title="Permanent link">&para;</a></h1>
+<p>This topic describes how to manage groups and users in Hitachi Cloud Accelerator Platform and integrate Cloud Accelerator Platform with Microsoft Active Directory.</p>
+<h2 id="contents"><a name="Content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'console'})" style="text-decoration:none">Overview of Admin Console</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'users'})" style="text-decoration:none">Managing users</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'groups'})" style="text-decoration:none">Managing groups</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'password-policy'})" style="text-decoration:none">Customizing the password policy for user accounts</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'lockout-settings'})" style="text-decoration:none">Customizing user account lockout settings</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'session-timeout'})" style="text-decoration:none">Configuring the session timeout for user accounts</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'active'})" style="text-decoration:none">Integrating Cloud Accelerator Platform with Active Directory</a></li>
+</ul>
+<h2 id="overview-of-admin-console"><a id="console" name="console"></a>Overview of Admin Console<a class="headerlink" href="#overview-of-admin-console" title="Permanent link">&para;</a></h2>
+<p>The Admin Console enables Cloud Accelerator Platform administrators to manage a common set of groups and users for Hitachi Cloud Accelerator Platform - Deploy (Deploy Accelerator), Hitachi Cloud Accelerator Platform - Test (Test Accelerator), Hitachi Cloud Accelerator Platform - Assess (Assess Accelerator), and Hitachi Cloud Accelerator Platform - Migrate (Migrate Accelerator). Each user is assigned to one or more groups. The administrators assign permissions to each group by either selecting policies or configuring share permissions for specific resources. Based on their assigned groups, users can perform different actions in Deploy Accelerator, Assess Accelerator, Test Accelerator, and Migrate Accelerator.<br></p>
+<p>When Cloud Accelerator Platform is successfully deployed, a default administrator is also created with the credentials mentioned in the <strong>customer.yml</strong> file at the time of deployment. If required, this administrator can create additional administrators.<br></p>
+<p>By default, administrators can use the Admin Console to add <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'groups'})" style="text-decoration:none">groups</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'users'})" style="text-decoration:none">users</a> and assign users to appropriate groups. If required, administrators can modify users or groups, disable users, and delete groups.<br></p>
+<p>Administrators can also <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'active'})" style="text-decoration:none">integrate Cloud Accelerator Platform with an existing setup of Active Directory</a> and manage users and group membership in Active Directory.</p>
+<h2 id="managing-users"><a id="users" name="users"></a>Managing users<a class="headerlink" href="#managing-users" title="Permanent link">&para;</a></h2>
+<p>Cloud Accelerator Platform administrators can add and manage users from the Admin Console. They can perform the following actions to manage users:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'add-user'})" style="text-decoration:none">Add a new user</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'verify-user'})" style="text-decoration:none">Verify a new user</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'modify-user'})" style="text-decoration:none">Modify an existing user</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'reset-user-password'})" style="text-decoration:none">Reset the password of an existing user</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'unlock-user'})" style="text-decoration:none">Unlock an existing user's account</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'disable-user'})" style="text-decoration:none">Disable an existing user</a></li>
+</ul>
+<p>Other users can also <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'create'})" style="text-decoration:none">create their own Cloud Accelerator Platform account</a> and then request the administrator to assign them to the appropriate group.<br></p>
+<p><em><strong>Note:</strong> If you have <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'active'})" style="text-decoration:none">integrated Cloud Accelerator Platform with Active Directory</a>, you must add and manage users in Active Directory. In that case, administrators can only view user details in the Admin Console.</em></p>
+<h3 id="add-a-new-user"><a id="add-user" name="add-user"></a>Add a new user<a class="headerlink" href="#add-a-new-user" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Users</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Add User</strong>, enter the full name, user name, email address, and password of the new user.</p>
+</li>
+</ol>
+<p><img alt="" src="../platform-common/console_adduser.PNG" /></p>
+<ol>
+<li>From the <strong>Select Groups</strong> list, select the groups to which you want to add the user.</li>
+</ol>
+<p>Cloud Accelerator Platform provides a few <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'default-groups'})" style="text-decoration:none">default groups</a> that you can assign to users based on the actions that they need to perform across different accelerators. Based on the requirements, administrators can also <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'add-group'})" style="text-decoration:none">add new groups</a>.</p>
+<ol>
+<li>
+<p><em>(Optional)</em> To view details of the policies that are a part of the selected groups, select <strong>view Policies</strong>.</p>
+</li>
+<li>
+<p>Click <strong>CREATE USER</strong>.</p>
+</li>
+</ol>
+<p>A new user appears under the <strong>Users List</strong> section.</p>
+<ol>
+<li>To complete the user creation process, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'verify-user'})" style="text-decoration:none">verify that user</a>.</li>
+</ol>
+<p>New users can sign in to Cloud Accelerator Platform only after they are successfully verified.</p>
+<h3 id="verify-a-new-user"><a id="verify-user" name="verify-user"></a>Verify a new user<a class="headerlink" href="#verify-a-new-user" title="Permanent link">&para;</a></h3>
+<p>When new users create a Cloud Accelerator Platform account, they receive an email from Cloud Accelerator Platform. To verify their email address and complete the account creation process, users have to click the <strong>login</strong> link in the email. As an administrator, you can also verify new users who have created their own account.  </p>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Users</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Users List</strong>, in the <strong>Actions</strong> column for the user you want to verify, click <strong>VERIFY</strong>.</p>
+</li>
+<li>
+<p>In the confirmation box, click <strong>YES</strong>.</p>
+</li>
+</ol>
+<p>The new user is successfully verified and can sign in to Cloud Accelerator Platform.</p>
+<h3 id="modify-an-existing-user"><a id="modify-user" name="modify-user"></a>Modify an existing user<a class="headerlink" href="#modify-an-existing-user" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</li>
+<li>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</li>
+<li>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Users</strong>.</li>
+<li>Under <strong>Users List</strong>, in the <strong>Actions</strong> column for the user whose details you want to modify, click <strong>EDIT</strong>.</li>
+<li>Under <strong>Edit User</strong>, make the required changes.</li>
+<li>Click <strong>SAVE USER</strong>.</li>
+</ol>
+<h3 id="reset-the-password-of-an-existing-user"><a id="reset-user-password" name="reset-user-password"></a>Reset the password of an existing user<a class="headerlink" href="#reset-the-password-of-an-existing-user" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Users</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Users List</strong>, in the <strong>Actions</strong> column for the user whose password you want to reset, click <strong>Reset Password</strong>.</p>
+</li>
+<li>
+<p>In the Reset Password window, enter a new password, re-enter the new password, and click <strong>SUBMIT</strong>.</p>
+</li>
+</ol>
+<p>After the password is reset successfully, you can share the new password with the user. </p>
+<h3 id="unlock-an-existing-users-account"><a id="unlock-user" name="unlock-user"></a>Unlock an existing user's account<a class="headerlink" href="#unlock-an-existing-users-account" title="Permanent link">&para;</a></h3>
+<p>If users fail to sign into their Cloud Accelerator Platform account in three consecutive attempts, their account is locked for two hours. If required, administrators can unlock a user's account during this lockout duration.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</li>
+<li>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</li>
+<li>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Users</strong>.</li>
+<li>Under <strong>Users List</strong>, in the <strong>Actions</strong> column for the user whose account you want to unlock, click <strong>ENABLE</strong>.</li>
+</ol>
+<p><em><strong>Note:</strong> Administrators can also configure default values for the number of failed sign-in attempts and the lockout duration For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'lockout-settings'})" style="text-decoration:none">Customizing user account lockout settings</a>.</em></p>
+<h3 id="disable-an-existing-user"><a id="disable-user" name="disable-user"></a>Disable an existing user<a class="headerlink" href="#disable-an-existing-user" title="Permanent link">&para;</a></h3>
+<p>You can disable users to prevent them from signing in to their Cloud Accelerator Platform account. However, the entities that these users have created are not removed. While disabling a user, you can select a policy-based group with which the user's entities can be shared. Other users in the selected group can then access these shared entities.</p>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) icon in the top-right corner and then click <strong>Users</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Users List</strong>, in the <strong>Actions</strong> column for the user that you want to disable, click <strong>DISABLE</strong>.</p>
+</li>
+<li>
+<p><em>(Optional)</em> In the Share Entities window, select the policy-based group with which you want to share the following Deploy Accelerator entities that the selected user owns:</p>
+</li>
+<li>
+<p>Environments</p>
+</li>
+<li>Deployments</li>
+<li>Providers</li>
+<li>Connections</li>
+<li>Chef Server packages</li>
+</ol>
+<p><em><strong>Note:</strong> To share test jobs that the user has created in Test Accelerator, you can add the user to a group in which share permissions for the appropriate tests are configured. This action ensures that other users in that group can continue to access the test jobs created by the user you have disabled. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'groups'})" style="text-decoration:none">Managing groups</a>.</em></p>
+<ol>
+<li>Click <strong>SUBMIT</strong>.</li>
+</ol>
+<p>The user can no longer sign in to Cloud Accelerator Platform. Also, the shared entities of this user can now be accessed by other users in the selected group. The actions that they can perform on the shared entities is based on the policies assigned to the group.</p>
+<p><em><strong>Note:</strong> To enable a user that you have previously disabled, under the <strong>Users List</strong> section, in the <strong>Actions</strong> column for that user, click <strong>ENABLE</strong>. This user can once again sign in to Cloud Accelerator Platform and access all previously-owned entities. In this case, users in the group that was selected while disabling the user can no longer access the shared entities of this user.</em></p>
+<h2 id="managing-groups"><a id="groups" name="groups"></a>Managing groups<a class="headerlink" href="#managing-groups" title="Permanent link">&para;</a></h2>
+<p>Cloud Accelerator Platform provides a few <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'default-groups'})" style="text-decoration:none">default groups</a> that administrators can assign to users. If required, you can also <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'add-group'})" style="text-decoration:none">add new groups</a> or <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'modify-group'})" style="text-decoration:none">modify existing groups</a> from the Admin Console.<br></p>
+<p>You can add multiple users in a group and configure permissions for the group in one of the following ways:</p>
+<ul>
+<li><strong>Assign out-of-the-box policies</strong> (<strong>Select Policy</strong>)</li>
+</ul>
+<p>While adding a new group, you can select one or more policies based on the permissions that you want to assign to users in the group. Cloud Accelerator Platform provides many out-of-the-box policies that provide permissions to perform specific actions. For example, the <strong>ManualTestViewCreate</strong> policy provides the permission to create and view manual test jobs in Test Accelerator.</p>
+<ul>
+<li><strong>Configure share permissions for specific resources</strong> (<strong>Group-Level Sharing</strong>)</li>
+</ul>
+<p>While adding a new group, you can configure share permissions for an out-of-the-box list of resources . Based on the assigned share permissions, users within the group can view each other's resources and perform other actions based on the permissions. For example, the <strong>View</strong> permission for the <strong>ManualTest</strong> resource in Test Accelerator enables users within the group to view each other's manual test jobs.</p>
+<p>However, the users within this group must also be a part of another group that contains appropriate policies to perform the selected actions on the shared resources. For example, to view each other's manual test jobs, users must also be assigned to another policy-based group that gives them the basic permission to view manual test jobs.</p>
+<p><em><strong>Note:</strong> You can continue to add and manage Cloud Accelerator Platform groups in the Admin Console even after you have <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'active'})" style="text-decoration:none">integrated Cloud Accelerator Platform with Active Directory</a>.</em></p>
+<h3 id="default-groups"><a id ="default-groups" name ="default-groups"></a>Default groups<a class="headerlink" href="#default-groups" title="Permanent link">&para;</a></h3>
+<p>The following table lists the default groups that are available in the Admin Console. While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'add-user'})" style="text-decoration:none">adding users</a>, administrators can assign them to the appropriate groups based on the actions that they need to perform across different accelerators. Based on the requirements, you can also <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'add-group'})" style="text-decoration:none">add a new group</a> and configure the appropriate policies (access level) for that group.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Accelerator</th>
+<th>Access level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADMIN</td>
+<td>-- Assess Accelerator<br>-- Deploy Accelerator<br>-- Test Accelerator</td>
+<td>This group allows users to perform all admin-related tasks, such as manage users and groups in Admin Console, add Chef Servers in Deploy Accelerator, and configure Test Accelerator.</td>
+</tr>
+<tr>
+<td>CLOUD_ARCHITECT</td>
+<td>-- Assess Accelerator<br>-- Deploy Accelerator</td>
+<td>This group allows users to perform multiple operations, such as create environments, import environments, view environments, edit environments, deploy environments, create and manage providers, create and manage connections, destroy environments, delete environments, export environments as blueprints, run assessment policies, view assessment policy reports, download assessment policy reports, and customize assessment policy reports.</td>
+</tr>
+<tr>
+<td>DEFAULT</td>
+<td>-- Assess Accelerator<br>-- Deploy Accelerator<br>-- Test Accelerator</td>
+<td>This group allows users to update their profile information.<br><br><em><strong>Note:</strong> If users create their own Cloud Accelerator Platform account or if you do not select a group while creating users, the DEFAULT group is automatically assigned to these users.</em></td>
+</tr>
+<tr>
+<td>ENVIRONMENT_USER</td>
+<td>Deploy Accelerator</td>
+<td>This group allows users to deploy and destroy environments.</td>
+</tr>
+<tr>
+<td>ENVIRONMENT_VIEWER</td>
+<td>Deploy Accelerator</td>
+<td>This group allows users to view all connections, providers, and environments.</td>
+</tr>
+<tr>
+<td>FREE_TRIALS</td>
+<td>-- Assess Accelerator<br>-- Deploy Accelerator</td>
+<td>This group allows users to create a limited number of new connections, providers, and environments.</td>
+</tr>
+<tr>
+<td>hcaptest-user</td>
+<td>Test Accelerator</td>
+<td>This group allows users to run and manage test jobs, view tests results, create and manage job schedules, view provider details, and view configuration details.</td>
+</tr>
+<tr>
+<td>hcaptest-view</td>
+<td>Test Accelerator</td>
+<td>This group allows users to view test jobs, test results, job schedules, provider details, and configuration details in Test Accelerator.</td>
+</tr>
+<tr>
+<td>HELM_USER</td>
+<td>Workflow Accelerator</td>
+<td>This group allows users to create Helm repositories and deploy Helm charts using Workflow Accelerator solution packages.</td>
+</tr>
+<tr>
+<td>HELM_VIEWER</td>
+<td>Workflow Accelerator</td>
+<td>This group allows users to only view Helm repository and Helm chart data defined in Workflow Accelerator solution packages.</td>
+</tr>
+<tr>
+<td>MIGRATE_USER</td>
+<td>Migrate Accelerator</td>
+<td>This group allows users to perform all actions in Migrate Accelerator, such as create discovery and migration jobs, connections, and migration credentials.</td>
+</tr>
+<tr>
+<td>MIGRATE_VIEWER</td>
+<td>Migrate Accelerator</td>
+<td>This group allows users to only view data in Migrate Accelerator.</td>
+</tr>
+<tr>
+<td>PROVIDER_USER</td>
+<td>Migrate Accelerator</td>
+<td>This group allows Migrate Accelerator users to create and edit the providers they have created.</td>
+</tr>
+<tr>
+<td>PROVIDER_VIEWER</td>
+<td>Migrate Accelerator</td>
+<td>This group allows Migrate Accelerator users to only view the providers they have previously created.</td>
+</tr>
+<tr>
+<td>SOLUTION_PACKAGE_DEPLOYMENT_USER</td>
+<td>Workflow Accelerator</td>
+<td>This group allows users to deploy registered solution packages.</td>
+</tr>
+<tr>
+<td>SOLUTION_PACKAGE_DEPLOYMENT_VIEWER</td>
+<td>Workflow Accelerator</td>
+<td>This group allows users to only view deployment data for registered solution packages.</td>
+</tr>
+<tr>
+<td>SOLUTION_PACKAGE_USER</td>
+<td>Workflow Accelerator</td>
+<td>This group allows users to perform all operations on solution packages, including creating and registering solution packages</td>
+</tr>
+<tr>
+<td>SOLUTION_PACKAGE_VIEWER</td>
+<td>Workflow Accelerator</td>
+<td>This group allows users to only view data for registered solution packages.</td>
+</tr>
+<tr>
+<td>VIEW_ALL_USER'S_ENTITIES</td>
+<td>Deploy Accelerator</td>
+<td>This group allows users to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'access-env'})" style="text-decoration:none">view the environments and deployments of all users in Deploy Accelerator</a>.<br><br>It also allows users to view additional entities (providers, connections, and packages) of all users in Deploy Accelerator but only by using API commands.<br><br>However, to perform any actions on these entities, users must also be members of the ADMIN group.<br><br><em><strong>Note:</strong> You cannot view or modify the policies that are attached to the VIEW_ALL_USER'S ENTITIES groups.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-a-new-group"><a id="add-group" name="add-group"></a>Add a new group<a class="headerlink" href="#add-a-new-group" title="Permanent link">&para;</a></h3>
+<p>While adding a new group, you can either assign out-of-the-box policies to the group or assign share permissions for specific resources.</p>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) icon in the top-right corner and then click <strong>Groups</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Add Group</strong>, enter the group name and description.</p>
+</li>
+</ol>
+<p><img alt="" src="../platform-common/console_addgroup.PNG" /></p>
+<ol>
+<li>
+<p>To assign policies to the group, perform the following actions:</p>
+</li>
+<li>
+<p>From the <strong>Select Policy</strong> list, select the appropriate policies.</p>
+<p>By selecting a policy, you are adding permissions that are attached to the policy. </p>
+<p><em><strong>Note:</strong> You can add a new group without selecting a policy.</em></p>
+</li>
+<li>
+<p><em>(Optional)</em> To view details of the selected policies, select <strong>view Policies</strong>.</p>
+</li>
+<li>
+<p>From the <strong>Select Users</strong> list, select the users you want to add to this group.</p>
+<p>The selected users get permissions attached to the selected policies.</p>
+</li>
+<li>
+<p>To assign share permissions for specific resources to the group, perform the following actions:</p>
+</li>
+<li>
+<p>Turn on the <strong>Group Level Sharing</strong> toggle.</p>
+<p>The resources for which you can configure share permissions appear under the <strong>Select Resources</strong> section.</p>
+<p><em><strong>Important:</strong> You can currently configure share permissions for only Test Accelerator resources.</em></p>
+</li>
+<li>
+<p>Expand the resource for which you want to configure share permissions and select the appropriate permission check boxes. </p>
+<p>Repeat this step for each resource for which you want to configure share permissions. </p>
+<p><em><strong>Note:</strong> In the case of Test Accelerator resources, ensure that you select the <strong>View</strong> permission along with other permissions, such as <strong>Stop</strong> and <strong>Schedule</strong>.</em></p>
+</li>
+<li>
+<p>From the <strong>Select Users</strong> list, select the users you want to add to this group.</p>
+<p>The selected users can view the resources created by other users in the group. They can also perform other actions based on the additional permissions that are selected for that resource.</p>
+<p><em><strong>Note:</strong> The selected users must also be a part of another group that contains appropriate policies to perform the selected actions on the shared resources. For example, to schedule test jobs, users must also be a part of the <strong>reantest-user</strong> group.</em></p>
+</li>
+<li>
+<p>Click <strong>CREATE GROUP</strong>.</p>
+</li>
+</ol>
+<p>A new group appears under the <strong>Groups List</strong> section.</p>
+<h3 id="modify-an-existing-group"><a id="modify-group" name="modify-group"></a>Modify an existing group<a class="headerlink" href="#modify-an-existing-group" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Groups</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Groups List</strong>, in the <strong>Actions</strong> column for the group that you want to modify, perform one of the following actions:</p>
+</li>
+<li>
+<p>To add users to the group, click <strong>EDIT</strong>, make the required changes under the <strong>Edit Group</strong> section, and click <strong>SAVE GROUP</strong>.</p>
+</li>
+<li>
+<p>To delete the group, click <strong>DELETE</strong>.</p>
+<p>You can delete a group only if it does not have any selected policies or assigned users. </p>
+</li>
+</ol>
+<h2 id="customizing-the-password-policy-for-user-accounts"><a id="password-policy" name="password-policy"></a>Customizing the password policy for user accounts<a class="headerlink" href="#customizing-the-password-policy-for-user-accounts" title="Permanent link">&para;</a></h2>
+<p>By default, the following password policy is used for user accounts in Cloud Accelerator Platform:</p>
+<ul>
+<li>Password must be between 10 and 50 characters in length.</li>
+<li>Password must be a mix of upper and lower case characters.</li>
+<li>Password must have at least one numeric character.</li>
+</ul>
+<p>Administrators can choose to customize the password policy by setting any of the following parameters:</p>
+<ul>
+<li>Maximum length</li>
+<li>Minimum length</li>
+<li>Minimum special characters</li>
+<li>Minimum digit characters (numeric characters)</li>
+<li>Minimum upper case characters</li>
+<li>Minimum lower case characters </li>
+</ul>
+<p>The values that you set for these parameters do not have to be within any pre-defined range. However, you must ensure that the values that you set do not contradict each other. For example, if you set the value of minimum special, upper case, lower case, and numeric characters to three each, your minimum length value must be at least 12.</p>
+<p><em><strong>Note:</strong> To customize the password policy for user accounts, you must have administrative access to the instance on which Cloud Accelerator Platform is deployed.</em></p>
+<p><strong>To customize the password policy for user accounts, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Connect to the instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/deployment</strong> folder.</p>
+</li>
+<li>
+<p>Open the <strong>core.yml</strong> file and locate the <strong>services: authnz: environment</strong> section.</p>
+</li>
+<li>
+<p>If the <strong>PWD_POLICY</strong> property is not available in the <strong>core.yml</strong> file, add the property.</p>
+</li>
+<li>
+<p>For the <strong>PWD_POLICY</strong> property, set one or more of the following parameters: </p>
+</li>
+<li>
+<p>max_length</p>
+</li>
+<li>min_length</li>
+<li>min_spl_chars</li>
+<li>min_digits </li>
+<li>min_upper_case_chars</li>
+<li>min_lower_case_chars</li>
+</ol>
+<p>The parameters that you set must be comma separated, as shown in the example below.</p>
+<p><code>PWD_POLICY: min_upper_case_chars=3,min_lower_case_chars=6,min_length=9,max_length=20</code></p>
+<ol>
+<li>
+<p>Save the <strong>core.yml</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-core</strong> service.</p>
+</li>
+</ol>
+<h2 id="customizing-user-account-lockout-settings"><a id="lockout-settings" name="lockout-settings"></a>Customizing user account lockout settings<a class="headerlink" href="#customizing-user-account-lockout-settings" title="Permanent link">&para;</a></h2>
+<p>By default, Cloud Accelerator Platform users are locked out of their account for two hours after three unsuccessful sign-in attempts. If required, administrators can modify the number of failed sign-in attempts and the lockout duration.</p>
+<p><em><strong>Note:</strong> To customize the lockout settings for user accounts, you must have administrative access to the instance on which Cloud Accelerator Platform is deployed.</em></p>
+<p><strong>To customize lockout settings for user accounts, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Connect to the instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/deployment</strong> folder.</p>
+</li>
+<li>
+<p>Open the <strong>core.yml</strong> file and locate the <strong>services: authnz: environment</strong> section.</p>
+</li>
+<li>
+<p>To modify the number of failed login attempts, perform the following actions:</p>
+</li>
+<li>
+<p>If the <strong>rean.platform.security.brute.failed_attempts</strong> property is not available in the <strong>core.yml</strong> file, add the property.</p>
+</li>
+<li>
+<p>Update the number of failed sign-in attempts, as shown below:</p>
+<p><code>rean.platform.security.brute.failed_attempts=${BRUTE_FAILED_ATTEMPTS:5}</code></p>
+</li>
+<li>
+<p>To modify the lockout duration, perform the following actions:</p>
+</li>
+<li>
+<p>If the <strong>rean.platform.security.brute.locked_duration_in_min</strong> property is not available in the <strong>core.yml</strong> file, add the property.</p>
+</li>
+<li>
+<p>Update the lockout duration (in minutes), as shown below:</p>
+<p><code>rean.platform.security.brute.locked_duration_in_min=${BRUTE_LOCKED_DURATION_IN_MIN:60}</code></p>
+</li>
+<li>
+<p>Save the <strong>core.yml</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-core</strong> service.</p>
+</li>
+</ol>
+<h2 id="configuring-the-session-timeout-for-user-accounts"><a id="session-timeout" name="session-timeout"></a>Configuring the session timeout for user accounts<a class="headerlink" href="#configuring-the-session-timeout-for-user-accounts" title="Permanent link">&para;</a></h2>
+<p>By default, Cloud Accelerator Platform users are automatically logged out of their account if they do not perform any action for 30 minutes. If required, administrators can modify this session timeout duration (in minutes).<br></p>
+<p>If users close their browser tab or window, their working session remains active for the duration that is configured.<br></p>
+<p><em><strong>Note:</strong> To configure the session timeout duration, you must have administrative access to the instance on which Cloud Accelerator Platform is deployed.</em></p>
+<p><strong>To configure the session timeout for user accounts, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Connect to the instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/deployment</strong> folder.</p>
+</li>
+<li>
+<p>Open the <strong>core.yml</strong> file and locate the <strong>services: apigateway: environment</strong> section.</p>
+</li>
+<li>
+<p>If the <strong>com.reancloud.platform.token.expiration.time</strong> property is not available in the <strong>core.yml</strong> file, add the property.</p>
+</li>
+<li>
+<p>Update the session timeout duration (in minutes), as shown below:</p>
+</li>
+</ol>
+<p><code>com.reancloud.platform.token.expiration.time=45</code></p>
+<ol>
+<li>
+<p>Save the <strong>core.yml</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-core</strong> service.</p>
+</li>
+</ol>
+<h2 id="integrating-cloud-accelerator-platform-with-active-directory"><a id="active" name="active"></a>Integrating Cloud Accelerator Platform with Active Directory<a class="headerlink" href="#integrating-cloud-accelerator-platform-with-active-directory" title="Permanent link">&para;</a></h2>
+<p>Cloud Accelerator Platform enables you to use your existing Microsoft Active Directory setup to authenticate users in Cloud Accelerator Platform and provide user-group authorization. In this case, you can only view users in the Admin Console.<br></p>
+<p>As a part of configuring this integration, administrators must map Active Directory groups to the appropriate Cloud Accelerator Platform groups. At least one Active Directory group must be mapped to the ADMIN group in Cloud Accelerator Platform. Users who are members of this Active Directory group can access the Admin Console. Going forward, they can manage groups, update the group mapping, and view users in the Admin Console. However, they can add and delete users only in Active Directory.<br></p>
+<p>After the Active Directory integration is completed, users need to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">sign in to Cloud Accelerator Platform</a> with their Active Directory email ID and password. Cloud Accelerator Platform uses Active Directory to authenticate users. The authenticated users can perform actions based on the C loud Accelerator Platform group that is mapped to their Active Directory group.</p>
+<p>If Cloud Accelerator Platform is in use before it is integrated with Active Directory, you must <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'migrate-ad-users'})" style="text-decoration:none">migrate existing users from Cloud Accelerator Platform to Active Directory</a>.  </p>
+<p><em><strong>Note:</strong> Administrators can integrate Cloud Accelerator Platform with only one Active Directory server.</em></p>
+<h3 id="before-you-begin"><a id="before-ad" name="before-ad"></a>Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h3>
+<p>Before you configure the Active Directory server in the Admin Console, ensure that you have performed the following actions:</p>
+<ul>
+<li>
+<p>Whitelisted the Cloud Accelerator Platform server's IP address in the Active Directory server's security group.</p>
+</li>
+<li>
+<p>Ensured that the email ID of the default administrator in Cloud Accelerator Platform is added in Active Directory.</p>
+</li>
+<li>
+<p>Configured the <strong>LDAP_ADMIN_USERDN</strong> and <strong>LDAP_ADMIN_PASSWORD</strong> properties in the <strong>customer.yml</strong> file, as shown in the following example:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>LDAP_ADMIN_USERDN=CN=Administrator,CN=Users,DC=reancloud,DC=com
+LDAP_ADMIN_PASSWORD=D$jn*JHG)
+</code></pre></div>
+<ul>
+<li>
+<p><em>(Only if you want to use LDAP over SSL)</em> Copied the certificate that you have generated while setting up Active Directory to the <strong>cacert</strong> folder on the Cloud Accelerator Platform instance.</p>
+</li>
+<li>
+<p>Restarted the Cloud Accelerator Platform services after updating the <strong>customer.yml</strong> file and copying the certificate to the <strong>cacert</strong> folder. </p>
+</li>
+</ul>
+<h3 id="configure-the-active-directory-server"><a id="configure-ad" name="configure-ad"></a>Configure the Active Directory server<a class="headerlink" href="#configure-the-active-directory-server" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>LDAP Configuration</strong>.</p>
+</li>
+</ol>
+<p><img alt="" src="../platform-common/rd_ldap.PNG" /></p>
+<ol>
+<li>Under <strong>LDAP Configuration</strong>, enter the following information:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server URL</td>
+<td>URL of the server on which Active Directory is configured.<br><br>To use LDAP over SSL, you must specify the URL in the following format:<br><strong>ldaps://<em>HostName</em>:636</strong></td>
+</tr>
+<tr>
+<td>User DN</td>
+<td>A unique user name that is used to find the administrator user in Active Directory.</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Password of the administrator user specified in <strong>User DN</strong>.</td>
+</tr>
+<tr>
+<td>Base DN</td>
+<td>A Base DN in Active Directory that is used to authenticate users.</td>
+</tr>
+<tr>
+<td>Search Base DN</td>
+<td>A Base DN in Active Directory that is used to search for groups.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Click <strong>VALIDATE AND SAVE</strong>.</p>
+</li>
+<li>
+<p>In the confirmation message box, click <strong>SAVE</strong> to enable Active Directory integration.</p>
+</li>
+</ol>
+<p>After you have successfully integrated Cloud Accelerator Platform with Active Directory, the Active Directory groups that are available in the Organization Unit (OU) specified in <strong>Search Base DN</strong> appear under the <strong>Group Mappings</strong> section.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'map-ad'})" style="text-decoration:none">Map Active Directory and Cloud Accelerator Platform groups</a>.</li>
+</ol>
+<h3 id="map-active-directory-and-cloud-accelerator-platform-groups"><a id="map-ad" name="map-ad"></a>Map Active Directory and Cloud Accelerator Platform groups<a class="headerlink" href="#map-active-directory-and-cloud-accelerator-platform-groups" title="Permanent link">&para;</a></h3>
+<p>After you have successfully integrated Cloud Accelerator Platform with Active Directory, the Active Directory groups appear under the <strong>Group Mappings</strong> section based on your configuration. You must map these Active Directory groups to the appropriate Cloud Accelerator Platform groups.</p>
+<p><em><strong>Important:</strong> You must map at least one Active Directory group to the <strong>ADMIN</strong> group in Cloud Accelerator Platform. This Active Directory group must contain users who should be given administrative permissions in Cloud Accelerator Platform.</em></p>
+<p><strong>To map Active Directory and Cloud Accelerator Platform groups, perform the following actions:</strong></p>
+<ol>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</p>
+</li>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>LDAP Configuration</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Group Mappings</strong>, in the <strong>Local Group</strong> column for an Active Directory group, select the appropriate Cloud Accelerator Platform group.</p>
+</li>
+</ol>
+<p><img alt="" src="../platform-common/rd_groupmap.PNG" /></p>
+<ol>
+<li>
+<p>Repeat step 4 for each Active Directory group that is listed in the <strong>LDAP Group</strong> column.</p>
+</li>
+<li>
+<p>Click <strong>SAVE MAPPINGS</strong>.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> You can continue to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'groups'})" style="text-decoration:none">add and manage groups in the Admin Console</a> even after you have integrated Cloud Accelerator Platform with Active Directory.</em></p>
+<h3 id="view-active-directory-users"><a id="view-ad-users" name="view-ad-users"></a>View Active Directory users<a class="headerlink" href="#view-active-directory-users" title="Permanent link">&para;</a></h3>
+<p>After the Active Directory integration is completed, you can only view user details in the Admin Console. You must add and manage users in Active Directory.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Cloud Accelerator Platform</a> as an administrator.</li>
+<li>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="../platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</li>
+<li>Click the <strong>More options</strong> icon (<img alt="" src="../platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Users</strong>.</li>
+<li>Under <strong>Users List</strong>, select the user whose details you want to view.</li>
+</ol>
+<h3 id="migrate-users-from-cloud-accelerator-platform-to-active-directory"><a id="migrate-ad-users" name="migrate-ad-users"></a>Migrate users from Cloud Accelerator Platform to Active Directory<a class="headerlink" href="#migrate-users-from-cloud-accelerator-platform-to-active-directory" title="Permanent link">&para;</a></h3>
+<p>If Cloud Accelerator Platform is in use before it is integrated with Active Directory, you must migrate the existing Cloud Accelerator Platform users to Active Directory. The data owned by the Cloud Accelerator Platform users must be available after the Active Directory integration is completed. </p>
+<h4 id="migrate-the-default-administrator-user-to-active-directory"><a id="migrate-admin" name="migrate-admin"></a>Migrate the default administrator user to Active Directory<a class="headerlink" href="#migrate-the-default-administrator-user-to-active-directory" title="Permanent link">&para;</a></h4>
+<p>Consider the following points while migrating the default administrator user:</p>
+<ul>
+<li>The user whose email ID was provided while deploying Cloud Accelerator Platform is considered as the default administrator of Cloud Accelerator Platform, irrespective of authorization groups association.</li>
+<li>The user who is integrating Cloud Accelerator Platform with Active Directory must ensure that the Active Directory has a user with the email ID of default administrator.</li>
+<li>After Active Directory integration is completed, the default administrator user must use the Active Directory credentials to sign in to Cloud Accelerator Platform.</li>
+</ul>
+<h4 id="migrate-existing-users-to-active-directory"><a id="migrate-existing-users" name="migrate-existing-users"></a>Migrate existing users to Active Directory<a class="headerlink" href="#migrate-existing-users-to-active-directory" title="Permanent link">&para;</a></h4>
+<p>Consider the following points while migrating existing Cloud Accelerator Platform users:</p>
+<ul>
+<li>If the email IDs of existing Cloud Accelerator Platform users are the same as in Active Directory, the Active Directory users automatically get mapped to Cloud Accelerator Platform users.</li>
+<li>All the data (environments, providers, connections, and so on) associated with the existing Cloud Accelerator Platform users is available to the Active Directory users with the same email IDs.</li>
+<li>The existing Cloud Accelerator Platform users must use the Active Directory credentials to sign in to Cloud Accelerator Platform.</li>
+<li>If the email IDs of existing Cloud Accelerator Platform users are not available in Active Directory, the existing Cloud Accelerator Platform users are not able to sign in to Cloud Accelerator Platform.</li>
+</ul>
+<!-- directive
+
+## <a id="stop-platform" name="stop-platform"></a>Stopping and restarting Cloud Accelerator Platform
+
+You might need to stop and restart Cloud Accelerator Platform in different scenarios. For example, if you update any containers after deploying the accelerators, you must restart Cloud Accelerator Platform. 
+
+1. Connect to the EC2 instance on which Cloud Accelerator Platform is deployed.
+
+2. On the EC2 instance, navigate to the folder where you extracted the Cloud Accelerator Platform deployment code.
+
+3. Navigate to the **deployment** folder within the **REAN-Platform** folder.
+
+4. To stop Cloud Accelerator Platform, run one of the following commands:
+
+   - If you have configured Cloud Accelerator Platform to use Amazon RDS, run the following command: 
+
+     <div class="highlight"><pre><span></span><code>docker-compose -f core.yml -f reandeploy.yml -f reanassess.yml -f reantest.yml stop
+</code></pre></div>
+
+   - If you are have configured REAN Accelerator Platform to use MySQL in a container, run the following command:
+
+     <div class="highlight"><pre><span></span><code>docker-compose -f core-db.yml -f reandeploy-db.yml -f reantest-db.yml -f core.yml -f reandeploy.yml -f reanassess.yml -f reantest.yml stop
+</code></pre></div>
+
+5. To restart Cloud Accelerator Platform, run one of the following commands:
+
+   - If you have configured Cloud Accelerator Platform to use Amazon RDS, run the following command: 
+
+     <div class="highlight"><pre><span></span><code>docker-compose -f core.yml -f reandeploy.yml -f reanassess.yml -f reantest.yml restart
+</code></pre></div>
+
+   - If you are have configured Cloud Accelerator Platform to use MySQL in a container, run the following command:
+
+     <div class="highlight"><pre><span></span><code>docker-compose -f core-db.yml -f reandeploy-db.yml -f reantest-db.yml -f core.yml -f reandeploy.yml -f reanassess.yml -f reantest.yml restart
+</code></pre></div>
+
+-->
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../deployAndConfigure/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Deploy and configure
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../createAndAccessAccount/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Create & access account
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

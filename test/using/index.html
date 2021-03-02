@@ -1,0 +1,4454 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Run tests - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#run-tests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Run tests
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Run tests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Run tests
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-tests" class="md-nav__link">
+    Overview of tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-test-accelerator" class="md-nav__link">
+    Accessing Test Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-your-automation-code" class="md-nav__link">
+    Customizing your automation code
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing your automation code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-environment-variables-in-your-automation-code" class="md-nav__link">
+    Configure environment variables in your automation code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-use-of-unique-data-for-each-test-run" class="md-nav__link">
+    Configure the use of unique data for each test run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-url-tests" class="md-nav__link">
+    Running URL tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-manual-tests" class="md-nav__link">
+    Running manual tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-security-tests" class="md-nav__link">
+    Running security tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-api-tests" class="md-nav__link">
+    Running API tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-automated-tests" class="md-nav__link">
+    Running automated tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running automated tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-an-automated-test-with-custom-code" class="md-nav__link">
+    Run an automated test with custom code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-scale-tests" class="md-nav__link">
+    Running scale tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-infrastructure-tests" class="md-nav__link">
+    Running infrastructure tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running infrastructure tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-serverspec-or-inspec-code" class="md-nav__link">
+    Run an infrastructure test with ServerSpec or InSpec code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-custom-azure-spec-code" class="md-nav__link">
+    Run an infrastructure test with custom Azure Spec code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-custom-aws-spec-code" class="md-nav__link">
+    Run an infrastructure test with custom AWS Spec code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-custom-gcp-spec-code" class="md-nav__link">
+    Run an infrastructure test with custom GCP Spec code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-codeless-infra-tests" class="md-nav__link">
+    Running codeless infra tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running codeless infra tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-infrastructure-test-data-file-for-azure-spec" class="md-nav__link">
+    Create the infrastructure test data file for Azure Spec
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the infrastructure test data file for Azure Spec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-json-file" class="md-nav__link">
+    Infrastructure JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-versions-for-azure-spec" class="md-nav__link">
+    Supported versions for Azure Spec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-resources-for-azure-spec" class="md-nav__link">
+    Supported resources for Azure Spec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-infrastructure-test-data-file-for-aws-spec" class="md-nav__link">
+    Create the infrastructure test data file for AWS Spec
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the infrastructure test data file for AWS Spec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-json-file_1" class="md-nav__link">
+    Infrastructure JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-versions-for-aws-spec" class="md-nav__link">
+    Supported versions for AWS Spec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-resources-for-aws-spec" class="md-nav__link">
+    Supported resources for AWS Spec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-infrastructure-test-data-file-for-gcp-spec" class="md-nav__link">
+    Create the infrastructure test data file for GCP Spec
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the infrastructure test data file for GCP Spec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-json-file_2" class="md-nav__link">
+    Infrastructure JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-versions-for-gcp-spec" class="md-nav__link">
+    Supported versions for GCP Spec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-resources-for-gcp-spec" class="md-nav__link">
+    Supported resources for GCP Spec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-downloading-test-results" class="md-nav__link">
+    Viewing and downloading test results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-downloading-logs" class="md-nav__link">
+    Viewing and downloading logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-jobs-list" class="md-nav__link">
+    Viewing jobs list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-test-jobs" class="md-nav__link">
+    Stopping test jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rerunning-test-jobs" class="md-nav__link">
+    Rerunning test jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-test-jobs" class="md-nav__link">
+    Scheduling test jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-job-schedules" class="md-nav__link">
+    Managing job schedules
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-tests" class="md-nav__link">
+    Overview of tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-test-accelerator" class="md-nav__link">
+    Accessing Test Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-your-automation-code" class="md-nav__link">
+    Customizing your automation code
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing your automation code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-environment-variables-in-your-automation-code" class="md-nav__link">
+    Configure environment variables in your automation code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-use-of-unique-data-for-each-test-run" class="md-nav__link">
+    Configure the use of unique data for each test run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-url-tests" class="md-nav__link">
+    Running URL tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-manual-tests" class="md-nav__link">
+    Running manual tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-security-tests" class="md-nav__link">
+    Running security tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-api-tests" class="md-nav__link">
+    Running API tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-automated-tests" class="md-nav__link">
+    Running automated tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running automated tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-an-automated-test-with-custom-code" class="md-nav__link">
+    Run an automated test with custom code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-scale-tests" class="md-nav__link">
+    Running scale tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-infrastructure-tests" class="md-nav__link">
+    Running infrastructure tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running infrastructure tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-serverspec-or-inspec-code" class="md-nav__link">
+    Run an infrastructure test with ServerSpec or InSpec code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-custom-azure-spec-code" class="md-nav__link">
+    Run an infrastructure test with custom Azure Spec code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-custom-aws-spec-code" class="md-nav__link">
+    Run an infrastructure test with custom AWS Spec code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-an-infrastructure-test-with-custom-gcp-spec-code" class="md-nav__link">
+    Run an infrastructure test with custom GCP Spec code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-codeless-infra-tests" class="md-nav__link">
+    Running codeless infra tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Running codeless infra tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-infrastructure-test-data-file-for-azure-spec" class="md-nav__link">
+    Create the infrastructure test data file for Azure Spec
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the infrastructure test data file for Azure Spec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-json-file" class="md-nav__link">
+    Infrastructure JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-versions-for-azure-spec" class="md-nav__link">
+    Supported versions for Azure Spec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-resources-for-azure-spec" class="md-nav__link">
+    Supported resources for Azure Spec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-infrastructure-test-data-file-for-aws-spec" class="md-nav__link">
+    Create the infrastructure test data file for AWS Spec
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the infrastructure test data file for AWS Spec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-json-file_1" class="md-nav__link">
+    Infrastructure JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-versions-for-aws-spec" class="md-nav__link">
+    Supported versions for AWS Spec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-resources-for-aws-spec" class="md-nav__link">
+    Supported resources for AWS Spec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-infrastructure-test-data-file-for-gcp-spec" class="md-nav__link">
+    Create the infrastructure test data file for GCP Spec
+  </a>
+  
+    <nav class="md-nav" aria-label="Create the infrastructure test data file for GCP Spec">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-json-file_2" class="md-nav__link">
+    Infrastructure JSON file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-versions-for-gcp-spec" class="md-nav__link">
+    Supported versions for GCP Spec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-resources-for-gcp-spec" class="md-nav__link">
+    Supported resources for GCP Spec
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-downloading-test-results" class="md-nav__link">
+    Viewing and downloading test results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-downloading-logs" class="md-nav__link">
+    Viewing and downloading logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-jobs-list" class="md-nav__link">
+    Viewing jobs list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stopping-test-jobs" class="md-nav__link">
+    Stopping test jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rerunning-test-jobs" class="md-nav__link">
+    Rerunning test jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-test-jobs" class="md-nav__link">
+    Scheduling test jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-job-schedules" class="md-nav__link">
+    Managing job schedules
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="run-tests">Run tests<a class="headerlink" href="#run-tests" title="Permanent link">&para;</a></h1>
+<p>Hitachi Cloud Accelerator Platform - Test (Test Accelerator) is a Continuous Testing (CT) platform that increases the delivery speed from Development to QA to Operations, while adopting DevOps best practices. Test Accelerator enables you to test your web applications with a wide range of browsers and provides state-of-the-art test result data analytics.<br></p>
+<p>This topic describes how you can use Test Accelerator to run different types of tests on your web application, run infrastructure and scale tests, view test results, and schedule test jobs.</p>
+<h2 id="contents"><a id="content" name="content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<p>Get started</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'overview'})" style="text-decoration:none">Overview of tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'access'})" style="text-decoration:none">Accessing Test Accelerator</a></li>
+</ul>
+<p>Run tests</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'custom-automated'})" style="text-decoration:none">Customizing your automation code</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'url'})" style="text-decoration:none">Running URL tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'manual'})" style="text-decoration:none">Running manual tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'security'})" style="text-decoration:none">Running security tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'api'})" style="text-decoration:none">Running API tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'automated'})" style="text-decoration:none">Running automated tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'load'})" style="text-decoration:none">Running scale tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'infra'})" style="text-decoration:none">Running infrastructure tests</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'codeless'})" style="text-decoration:none">Running codeless infrastructure tests</a></li>
+</ul>
+<p>View test results</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">Viewing and downloading test results</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'logs'})" style="text-decoration:none">Viewing and downloading logs</a></li>
+</ul>
+<p>Manage test jobs</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'jobs-list'})" style="text-decoration:none">Viewing jobs list</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'stop'})" style="text-decoration:none">Stopping test jobs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'rerun'})" style="text-decoration:none">Rerunning test jobs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'schedule-list'})" style="text-decoration:none">Managing job schedules</a></li>
+</ul>
+<h2 id="overview-of-tests"><a id="overview" name="overview"></a>Overview of tests<a class="headerlink" href="#overview-of-tests" title="Permanent link">&para;</a></h2>
+<p>Test Accelerator provides the ability to automate the creation of test setups and perform different types of tests on your web application. This enables you to concentrate on the actual use cases of your application and reduce the time required to deliver the application.</p>
+<p>Test Accelerator enables you to perform the following different types of tests:</p>
+<ul>
+<li><strong>URL test</strong> -- This test can instantly check the availability of a web application on different browsers.</li>
+<li><strong>Security test</strong> -- This test performs a security check of your web application by running different types of security packs on the application.</li>
+<li><strong>API test</strong> -- This test covers the testing of the application programming interfaces (APIs) of your applications to determine if they meet the functionality, reliability, performance, and security expectations.</li>
+<li><strong>Automated (Cross Browser) test</strong> -- This test automatically provisions machines with browsers of your choice and then runs your existing automation test suites in the selected browsers. </li>
+<li><strong>Scale test</strong> -- This test performs the scale testing of your web application across a range of browsers. It enables you to configure multiple browsers, the browser count to test the load, the automation test suite, and the run time in hours.</li>
+<li><strong>Manual test</strong> -- This test quickly provisions Kubernetes pods with the selected browsers and reduces the effort to create test setups. You can concentrate on testing the actual use cases.</li>
+<li><strong>Infrastructure test</strong> -- This test covers the testing of your IT infrastructure, such as servers, network switches, and routers. Test Accelerator supports the Serverspec, Inspec, Azure Spec, AWS Spec, and GCP Spec specification types.</li>
+<li><strong>Codeless Infra test</strong> -- This test covers the testing of your AWS, Azure, or Google Cloud Platform (GCP) resources by using the default spec code that is provided by Test Accelerator. It saves time and resources spent on writing your own custom code.</li>
+</ul>
+<p><em><strong>Note:</strong> The URL, manual, security, and codeless infra tests do not have a dependency on any automation test suite.</em></p>
+<h2 id="accessing-test-accelerator"><a id="access" name="access"></a>Accessing Test Accelerator<a class="headerlink" href="#accessing-test-accelerator" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Sign in to Hitachi Cloud Accelerator Platform</a>.</li>
+</ol>
+<p>For information about creating a Cloud Accelerator Platform account, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'create'})" style="text-decoration:none">Create &amp; access account</a>.</p>
+<ol>
+<li>
+<p>Click the <strong>Accelerator</strong> icon (<img alt="" src="/images/rean-platform-common/icon_accelerator.PNG" />) in the top-left corner.</p>
+</li>
+<li>
+<p>From the list of accelerators, select <strong>Hitachi Cloud Accelerator - Test</strong>.</p>
+</li>
+</ol>
+<p>The Home page of Test Accelerator appears.</p>
+<p><em><strong>Note:</strong> You can access Test Accelerator and perform various actions only if your Cloud Accelerator Platform administrator has granted you the appropriate permissions.</em></p>
+<h2 id="customizing-your-automation-code"><a id="custom-automated" name="custom-automated"></a>Customizing your automation code<a class="headerlink" href="#customizing-your-automation-code" title="Permanent link">&para;</a></h2>
+<p>Before you run the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'automated'})" style="text-decoration:none">automated (cross-browser) tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'load'})" style="text-decoration:none">scale (load) tests</a>, or <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'api'})" style="text-decoration:none">API tests</a> with your own automation code, perform the following procedures to customize your automation code:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'browser-support'})" style="text-decoration:none">Configure environment variables in your automation code</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'unique-data'})" style="text-decoration:none">Configure the use of unique data for each test run</a></li>
+</ul>
+<h3 id="configure-environment-variables-in-your-automation-code"><a id="browser-support" name="browser-support"></a>Configure environment variables in your automation code<a class="headerlink" href="#configure-environment-variables-in-your-automation-code" title="Permanent link">&para;</a></h3>
+<p>To use Test Accelerator effectively, you must customize your automation code to use the environment variables that are exposed by Test Accelerator. Using these environment variables makes your automation code URL- and browser-independent and enables it to run on any environment without requiring changes to your code.</p>
+<ul>
+<li><strong>BROWSER</strong></li>
+</ul>
+<p>This environment variable enables you to run your automation code on the browsers that are selected while creating automated (cross-browser) or scale test jobs in Test Accelerator.<br></p>
+<p>When the automated (cross-browser) or scale test job starts, the <strong>Browsers</strong> field value is exposed as the <strong>BROWSER</strong> environment variable, as shown below:</p>
+<div class="highlight"><pre><span></span><code>BROWSER=firefox
+BROWSER=chrome
+</code></pre></div>
+<p>To configure the browsers correctly, you must use this environment variable in your automation code, as shown in the following Java code example: </p>
+<div class="highlight"><pre><span></span><code>browser = System.getenv(Constants.BROWSER);
+</code></pre></div>
+<ul>
+<li><strong>TEST_URL</strong> </li>
+</ul>
+<p>Each web application has a URL on which the automated (cross browser), scale test, or API test is run. This URL can change with time, environment, and many other factors. Each time the URL changes, you also need to update your automation code.<br></p>
+<p>This environment variables enables you to run your automation code on the web application URL that is provided while creating automated (cross-browser), scale test, or API test jobs in Test Accelerator.<br></p>
+<p>When the automated (cross-browser), scale test, or API test job starts, the <strong>Application URL</strong> field value is exposed as the <strong>TEST_URL</strong> environment variable, as shown below:</p>
+<div class="highlight"><pre><span></span><code>TEST_URL=http://domain-name.com
+</code></pre></div>
+<p>To configure the web application URL correctly, you must use this environment variable in your automation code, as shown in the following Java code example:</p>
+<div class="highlight"><pre><span></span><code>test_url = System.getenv(Constants.TEST_URL);
+</code></pre></div>
+<p>Using the <strong>TEST_URL</strong> environment variable makes your automation code URL-independent and enables it to run on any environment without requiring any changes to your code.</p>
+<p><em><strong>Note:</strong> If you do not configure web drivers correctly, your tests might fail and you might not be able to use all features of Test Accelerator.</em></p>
+<h3 id="configure-the-use-of-unique-data-for-each-test-run"><a id= "unique-data" name="unique-data"></a>Configure the use of unique data for each test run<a class="headerlink" href="#configure-the-use-of-unique-data-for-each-test-run" title="Permanent link">&para;</a></h3>
+<p>In the case of automated (cross-browser) or scale tests, if you choose to run your automation code on multiple browsers, either sequentially or in parallel, you might want to use unique data for each execution. Test Accelerator exposes the <strong>RUN_INDEX</strong> environment variable, which has a unique incremental value for each browser.<br></p>
+<p>For example, if you are running tests on five browsers in parallel, the <strong>RUN_INDEX</strong> environment variable increments from 0 to 4 respectively for each browser:</p>
+<div class="highlight"><pre><span></span><code>RUN_INDEX=0     # Browser 1
+RUN_INDEX=1     # Browser 2
+RUN_INDEX=2     # Browser 3
+...
+...
+...
+RUN_INDEX=n-1   # Browser n
+</code></pre></div>
+<p>The following table lists a few scenarios in which you might need to use unique data for each execution. The table also describes how the <strong>RUN_INDEX</strong> variable might provide a solution in these scenarios.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Possible solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use a different login credential set for each execution when running 10 browsers in parallel</td>
+<td>Maintain a CSV file of multiple user-password pairs and use the <strong>RUN_INDEX</strong> value to fetch unique rows of credential pairs for each instance of your browser.</td>
+</tr>
+<tr>
+<td>Select a different drop-down value for each execution</td>
+<td>Pass the <strong>RUN_INDEX</strong> value to the Select Drop-down method, which in turn selects a value based on the drop-down index.</td>
+</tr>
+<tr>
+<td>Buy a unique product for every execution on an e-commerce website</td>
+<td>Use the <strong>RUN_INDEX</strong> value as the locator index to buy different products in every instance of the browser.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="running-url-tests"><a id="url" name="url"></a>Running URL tests<a class="headerlink" href="#running-url-tests" title="Permanent link">&para;</a></h2>
+<p>The URL test enables you to quickly test the availability of a web application by testing URL access to that application across various browsers. You must provide the application URL and the text that Test Accelerator must search for on the Home page of that application. The test passes only if Test Accelerator finds that text on the Home page.</p>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>URL Test</strong>.</p>
+</li>
+</ol>
+<p>The URL Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_urltest.PNG" /></p>
+<ol>
+<li>Under <strong>Select Browser</strong>, click the browser on which you want to run the URL test and then select the appropriate versions.</li>
+</ol>
+<p>Repeat this step for each browser on which you want to run the URL test.</p>
+<ol>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>In <strong>Application URL</strong>, enter the Home page of the web application whose availability you want to test.</p>
+</li>
+<li>
+<p>In <strong>Search Text</strong>, enter the text that Test Accelerator must search for on the Home page of the web application.</p>
+</li>
+</ol>
+<p>Test Accelerator considers the URL test to be successful if this specified text is available on the page.</p>
+<ol>
+<li>
+<p>In <strong>Timeout (secs)</strong>, define the duration, in seconds, for which Test Accelerator should wait to access the URL.  </p>
+</li>
+<li>
+<p><em>(Optional)</em> To check all the links that are available on the specified page, select <strong>Crawl URL</strong>.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>
+<p>Click <strong>SUBMIT</strong>.</p>
+<p>The tests in Test Accelerator run on Kubernetes cluster. Test Accelerator creates separate Kubernetes pods using a Kubernetes job to run the test in parallel on all selected browsers.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</p>
+</li>
+</ol>
+<h2 id="running-manual-tests"><a id="manual" name="manual"></a>Running manual tests<a class="headerlink" href="#running-manual-tests" title="Permanent link">&para;</a></h2>
+<p>While automation testing significantly reduces the time and effort required to test a web application, you might still need to run manual tests for a few specific scenarios. Also, if an automated test fails for any browser, you might need to create a setup with that browser and then manually run the tests.<br></p>
+<p>The Manual test enables you to quickly launch a Kubernetes pod with the appropriate browser version. </p>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Manual</strong>.</p>
+</li>
+</ol>
+<p>The Manual Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_manualtest.PNG" /></p>
+<ol>
+<li>Under <strong>Select Browser (s)</strong>, click the browser on which you want to run the manual test and select appropriate versions. </li>
+</ol>
+<p>Repeat this step for each browser on which you want to run the manual test. You can select multiple versions for each browser.</p>
+<ol>
+<li>
+<p>In <strong>Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>Click <strong>SUBMIT</strong>. </p>
+</li>
+</ol>
+<p>A Kubernetes job is launched for each browser version for running the manual test. </p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</li>
+</ol>
+<h2 id="running-security-tests"><a id="security" name="security"></a>Running security tests<a class="headerlink" href="#running-security-tests" title="Permanent link">&para;</a></h2>
+<p>The Security test enables you to perform a security check of your web application by running different types of security packs on the application. You can also view a detailed analysis of the test packs that are run on the web application. You can also enter the security credentials required for logging into your web application, if the web application requires a login.  </p>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Security</strong>.</p>
+</li>
+</ol>
+<p>The Security Test page appears, as shown in the following image.</p>
+<p><img alt="rt_securitytest.PNG" src="/images/rean-test/rt_securitytest.PNG" /></p>
+<ol>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>In <strong>Application URL</strong>, enter the URL on which you want to run the security test.</p>
+</li>
+<li>
+<p>In <strong>Spider-Depth</strong>, enter the depth of the spider crawl.</p>
+</li>
+<li>
+<p>Select <strong>Use Ajax Spider</strong>, to use the Ajax spider add-on.</p>
+</li>
+<li>
+<p>Select <strong>Login</strong>, to enter the user credentials for the application you want to test. To use the <strong>Login</strong> feature, make sure that the credentials tab (username and password), and the login button are on the same page. </p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-test/loginsecurity.png" /></p>
+<p>a.  Enter <strong>Username</strong> and <strong>Password</strong> for the web application. </p>
+<p>b.  In the <strong>Enter login field and button details field</strong>, enter the following parameters:</p>
+<ul>
+<li><strong>username_field_xpath</strong>: The xpath for the username field on the web application page.</li>
+<li><strong>password_field_xpath</strong>: The xpath for the password field on the web application page.</li>
+<li><strong>submit_button_xpath</strong>: The xpath for the submit button on the web application page.</li>
+<li><strong>login_url</strong>: The URL for logging in to the the web application page.</li>
+<li>
+<p><strong>logout_url</strong>: The URL for logging out of the the web application page.</p>
+</li>
+<li>
+<p>Under <strong>Select security Packs</strong>, select the appropriate check boxes:</p>
+</li>
+<li>
+<p><strong>App Scan</strong> -- This security pack runs automated application-level tests against the web application using OWASP Zed Attack Proxy (ZAP).</p>
+</li>
+<li>
+<p><strong>Http Header</strong> -- This security pack verifies that HTTP headers adequately protect data from attackers.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ul>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>
+<p>Click <strong>SUBMIT</strong>.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</p>
+</li>
+</ol>
+<h2 id="running-api-tests"><a id="api" name="api"></a>Running API tests<a class="headerlink" href="#running-api-tests" title="Permanent link">&para;</a></h2>
+<p>The API test covers the testing of the application programming interfaces (APIs) of your applications to determine if they meet the functionality, reliability, performance, and security expectations.</p>
+<ol>
+<li>
+<p>(<em>Optional</em>) <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'custom-automated'})" style="text-decoration:none">Customize your automation code</a> to use the TEST_URL environment variable that is exposed by Test Accelerator.</p>
+</li>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>API</strong>.</p>
+</li>
+</ol>
+<p>The API Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/API1.PNG" /></p>
+<ol>
+<li>
+<p>In the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>In <strong>Application URL</strong>, enter the API URL of the web application for testing.</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </li>
+</ul>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+<ul>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+</li>
+<li>
+<p>GitHub repository clone URL</p>
+</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, specify the path to the Output directory where reports are generated after running your automation code. This path must be relative to the automation code directory.</p>
+<p>You can see the contents of this directory by clicking the bubble that is created for the browser.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, specify the path of the file that has information about the test execution. This file path must be relative to the Output directory that you have specified.</p>
+<p>Test Accelerator uses this file to analyze the test results and generate a consolidated report. Test Accelerator supports the report file that is generated by some standard tools such as JUnit, Cucumber, and UFT. If Test Accelerator is not able to parse the report that the automation code generates, you must write code to parse the report file and generate the data that Test Accelerator supports.</p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+<li>
+<p>To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>. For information about scheduling tests, see <a href="https://reanplatform-help.reancloud.com/#/rean-platform-docs/accelerator?viewAccelerator=rean-test&amp;viewPage=run-tests&amp;viewSection=scheduled-job">Scheduling test jobs</a>.</p>
+</li>
+<li>
+<p>Click <strong>SUBMIT</strong>.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</p>
+</li>
+</ol>
+<h2 id="running-automated-tests"><a id="automated" name="automated"></a>Running automated tests<a class="headerlink" href="#running-automated-tests" title="Permanent link">&para;</a></h2>
+<p>The cross-browsers automated test covers the complete automation testing of your web application across a range of browsers. Test Accelerator supports the Selenium automation tool.<br></p>
+<p>You can select browsers and specify your test cases from a GitHub repository or upload a ZIP file. Test Accelerator runs all your test cases against the web application on all selected browsers. Cross-browser testing significantly reduces the effort to create the setups and overall testing, allowing you to concentrate on the actual use case.<br></p>
+<h3 id="run-an-automated-test-with-custom-code"><a id="run-automated" name="run-automated"></a>Run an automated test with custom code<a class="headerlink" href="#run-an-automated-test-with-custom-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>(<em>Optional</em>) <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'custom-automated'})" style="text-decoration:none">Customize your automation code</a> to use the environment variables that are exposed by Test Accelerator.</p>
+</li>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Cross Browser</strong>.</p>
+</li>
+</ol>
+<p>The Automated Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_automate.PNG" /></p>
+<p>The procedure to configure an automated test consists of three steps – select the browsers, provide the codebase, and define execution details.</p>
+<ol>
+<li>
+<p>In the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>Under <strong>Select Browser(s)</strong>, click the browser on which you want to run the test suite and select the appropriate versions. </p>
+<p>Repeat this step for each browser on which you want to run the automated test suite.</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your automation job.</p>
+</li>
+<li>
+<p>In <strong>Application URL</strong>, enter the application URL on which Test Accelerator must run the automation test suite.</p>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </li>
+</ul>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+<ul>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+</li>
+<li>
+<p>GitHub repository clone URL</p>
+</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, specify the path to the Output directory where reports are generated after running your automation code. This path must be relative to the automation code directory.</p>
+<p>You can see the contents of this directory by clicking the bubble that is created for the browser.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, specify the path of the file that has information about the test execution. This file path must be relative to the Output directory that you have specified. </p>
+<p>Test Accelerator uses this file to analyze the test results and generate a consolidated report. Test Accelerator supports the report file that is generated by some standard tools such as JUnit, Cucumber, and UFT. If Test Accelerator is not able to parse the report that the automation code generates, you must write code to parse the report file and generate the data that Test Accelerator supports.</p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-test/rt_automatedsummary.PNG" /></p>
+<ol>
+<li><em>(Optional)</em>  To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>Click <strong>SUBMIT</strong>.</li>
+</ol>
+<p>Test Accelerator provisions the selected browser versions, downloads and runs your automation test suite, and captures screenshots for each test that is run. </p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</li>
+</ol>
+<h2 id="running-scale-tests"><a id="load" name="load"></a>Running scale tests<a class="headerlink" href="#running-scale-tests" title="Permanent link">&para;</a></h2>
+<p>The ScaleNow test covers the scale testing of your web application across a range of browsers. You can select multiple browsers and their versions, the browser count to test the load, the automation test suite, and the run time in hours. ScaleNow significantly reduces your effort to create setups and simultaneously test on multiple machines, enabling you to concentrate on the actual use case.<br></p>
+<p>Test Accelerator runs all your test cases against your web application on all the selected browsers simultaneously and for the specified time. The ScaleNow test also has an incremental load feature that enables you to add users incrementally and create a real-time scenario for load testing. A new test job is created for each incremental load.<br></p>
+<p><strong>To scale test your web application, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>(<em>Optional</em>) <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'custom-automated'})" style="text-decoration:none">Customize your automation code</a> to use the environment variables that are exposed by Test Accelerator.</p>
+</li>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Scale Now</strong>.</p>
+</li>
+</ol>
+<p>The procedure to configure a scale test consists of three steps – select the browsers, provide the codebase, and define execution details.</p>
+<ol>
+<li>
+<p>On the ScaleNow page, in the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>Under <strong>Select Browser(s)</strong>, click the browser on which you want to run the test suite and select the appropriate versions.</p>
+<p>Repeat this step for each browser on which you want to run the automation test suite. You can select multiple versions of each browser.</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>In <strong>Application URL</strong>, enter the application URL on which Test Accelerator must run the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Parallel Users Count</strong>, select the number of browsers that Test Accelerator must create in parallel to put load on your web application.</p>
+</li>
+<li>
+<p>In <strong>Hours to Run</strong>, select the duration, in hours, for which the test suite must run continuously and in the repeat mode. </p>
+</li>
+<li>
+<p><em>(Optional)</em> To incrementally increase the users that Test Accelerator creates to put load on your web application, select <strong>Incremental Load</strong>.</p>
+<p>If you select this check box, you must also perform the following actions:</p>
+<ul>
+<li>In <strong>Increase Users with</strong>, enter the number of users that Test Accelerator must create in parallel after the specified interval.</li>
+<li>In <strong>Interval (min)</strong>, enter the duration, in minutes, after which Test Accelerator must create the specified number of users.</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </li>
+</ul>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+<ul>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+</li>
+<li>
+<p>GitHub repository clone URL</p>
+</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>
+<p>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</p>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the automation test suite.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, specify the path to the Output directory where reports are generated after running your automation code. This path must be relative to the automation code directory.</p>
+<p>You can see the contents of this directory by clicking the bubble that is created for the browser.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, specify the path of the file that has information about the test execution. This file path must be relative to the Output directory that you have specified. </p>
+<p>Test Accelerator uses this file to analyze the test result and generate a consolidated report. Test Accelerator supports the report file that is generated by some standard tools such as JUnit, Cucumber, and UFT.</p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-test/rt_scalenow.PNG" /></p>
+<ol>
+<li><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>Click <strong>SUBMIT</strong>. </li>
+</ol>
+<p>Test Accelerator provisions the selected browsers on Kubernetes pods, downloads and runs your automation test suite. </p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</li>
+</ol>
+<h2 id="running-infrastructure-tests"><a id="infra" name="infra"></a>Running infrastructure tests<a class="headerlink" href="#running-infrastructure-tests" title="Permanent link">&para;</a></h2>
+<p>The infrastructure test covers the testing of your IT infrastructure, such as servers, network switches, routers, and firewalls. Test Accelerator supports the specification types listed in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Specification type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serverspec</td>
+<td>Serverspec allows you to check if your servers are configured correctly and adhere to your policy requirements.<br>To test your servers, you can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'infra-inspec'})" style="text-decoration:none">provide your own ServerSpec code</a>.</td>
+</tr>
+<tr>
+<td>Inspec</td>
+<td>InSpec allows you to check if your servers are configured correctly and adhere to your policy requirements.<br>To test your servers, you can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'infra-inspec'})" style="text-decoration:none">provide your own Inspec code</a>.</td>
+</tr>
+<tr>
+<td>Azure Spec</td>
+<td>Azure Spec allows you to check if Azure resources have been deployed with the appropriate attribute values.<br>To test your Azure infrastructure, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'azure-infra'})" style="text-decoration:none">run an infrastructure test with custom Azure Spec code</a>.</td>
+</tr>
+<tr>
+<td>AWS Spec</td>
+<td>AWS Spec allows you to check if AWS resources have been deployed with the appropriate attribute values. For example, you can check that the appropriate AMI has been used to deploy an EC2 instance.<br>To test your AWS infrastructure, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'infra-ui'})" style="text-decoration:none">run an infrastructure test with custom AWS Spec code</a>.</td>
+</tr>
+<tr>
+<td>GCP Spec</td>
+<td>GCP Spec allows you to check if GCP resources have been deployed with the appropriate attribute values. To test your GCP infrastructure, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'gcp-infra'})" style="text-decoration:none">run an infrastructure test with custom GCP Spec code</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="run-an-infrastructure-test-with-serverspec-or-inspec-code"><a id="infra-inspec" name="infra-inspec"></a>Run an infrastructure test with ServerSpec or InSpec code<a class="headerlink" href="#run-an-infrastructure-test-with-serverspec-or-inspec-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Infra</strong>.</p>
+</li>
+</ol>
+<p>The Infra Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_infratest.PNG" /></p>
+<p>The procedure to configure an infrastructure test consists of three steps -- select the spec details, provide the codebase, and define execution details.</p>
+<ol>
+<li>
+<p>In the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>For <strong>Spec Type</strong>, select the appropriate specification type -- <strong>Server Spec</strong> or <strong>InSpec</strong>.</li>
+<li>Enter the IP address, user name, and password or key of the server that you want to test.</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>
+<p>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </p>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+</li>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+<ul>
+<li>GitHub repository clone URL</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the infrastructure test code.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the infrastructure test code.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the infrastructure test code.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, enter the directory in which Test Accelerator must save the test run results. This path must be relative to the directory in which your infrastructure test code is stored.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, enter the name of the report file that Test Accelerator must generate after running the infrastructure test code.</p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>
+<p>Click <strong>SUBMIT</strong>.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'infra-results'})" style="text-decoration:none">View the infrastructure test results</a>.</p>
+</li>
+</ol>
+<h3 id="run-an-infrastructure-test-with-custom-azure-spec-code"><a id="azure-infra" name="azure-infra"></a>Run an infrastructure test with custom Azure Spec code<a class="headerlink" href="#run-an-infrastructure-test-with-custom-azure-spec-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Infra</strong>.</p>
+</li>
+</ol>
+<p>The Infra Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_azureinfratest.PNG" /></p>
+<p>The procedure to configure an infrastructure test consists of three steps -- select the spec details, provide the codebase, and define execution details.</p>
+<ol>
+<li>
+<p>In the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>For <strong>Spec Type</strong>, select the <strong>Azure Spec</strong> specification type.</p>
+</li>
+<li>
+<p><a id="azure-prov" name="azure-prov"></a>Enter the following provider details to access your Azure account.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>subscription_id</td>
+<td>A single Azure account can have multiple subscriptions. Enter the unique ID of your subscription to use Azure services.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Enter the ID of your application in Azure Active Directory.</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>Enter the authentication key for the specified application.</td>
+</tr>
+<tr>
+<td>tenant_id</td>
+<td>Enter the ID of the Azure Active Directory tenant with which the specified subscription is associated.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </li>
+</ul>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+<ul>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+</li>
+<li>
+<p>GitHub repository clone URL</p>
+</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</li>
+<li>Click <strong>NEXT</strong>.</li>
+</ul>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the Azure Spec code.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the Azure Spec code.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the Azure Spec code.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, enter the directory in which Test Accelerator must save the test run results. This path must be relative to the directory in which your Azure Spec code is stored.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, enter the name of the report file that Test Accelerator must generate after running the Azure Spec code.</p>
+</li>
+<li>
+<p>If you want to upload a file that Test Accelerator must extract and provide while running your Azure Spec code, click <strong>Upload File</strong>. </p>
+<p>In the Upload Input Output File window, select the appropriate file as a <strong>ZIP</strong> file and click <strong>Upload File</strong>.</p>
+<p><em><strong>Note:</strong>  Test Accelerator extracts the contents of this ZIP file in the <strong>/home/seluser/hcaptest/code</strong> folder of the instance that it launches to run the infrastructure test.</em></p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>Click <strong>SUBMIT</strong>.</li>
+</ol>
+<p>When you start an <strong>Azure Spec</strong> infrastructure test job, Test Accelerator launches a test Kubernetes pod and downloads the infrastructure test code on the pod. It then connects to the Azure account for validating the infrastructure, and runs the test.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</li>
+</ol>
+<h3 id="run-an-infrastructure-test-with-custom-aws-spec-code"><a id="infra-ui" name="infra-ui"></a>Run an infrastructure test with custom AWS Spec code<a class="headerlink" href="#run-an-infrastructure-test-with-custom-aws-spec-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Infra</strong>.</p>
+</li>
+</ol>
+<p>The Infra Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_awsinfratest.PNG" /></p>
+<p>The procedure to configure an infrastructure test consists of three steps -- select the spec details, provide the codebase, and define execution details.</p>
+<ol>
+<li>
+<p>In the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>For <strong>Spec Type</strong>, select the <strong>Aws Spec</strong> specification type.</p>
+</li>
+<li>
+<p>For <strong>Credentials type</strong>, perform the following actions:</p>
+<ul>
+<li>Select <strong>Basic Credentials</strong>.</li>
+<li><em>(Optional)</em> To use a more secure way of cross-account access, select <strong>Assume Role</strong>.</li>
+</ul>
+</li>
+<li>
+<p><a id="infra-provider-details" name="infra-provider-details"></a>Based on the selected credential type, specify the authentication details to access the AWS account in which you want to validate the infrastructure.</p>
+<ul>
+<li><a id="basic-assume" name="basic-assume"></a><strong>Basic Credentials with Assume Role</strong></li>
+</ul>
+<p>You can use this credential type when the AWS account for validating infrastructure is different from the AWS account in which Test Accelerator launches test instances.</p>
+<p><u>Required actions and permissions</u>:</p>
+<p>To use this credential type, perform the following actions: </p>
+<ul>
+<li>In the AWS account for validating infrastructure, create a role that has <strong>readonly</strong> access to resources that need to be validated. This role must define as a trusted entity the AWS account for launching test instances.</li>
+<li>In the AWS account in which the Test Accelerator is deployed, create an IAM user and attach a policy with STS permission to assume the role that you have created in the AWS account for validating infrastructure. </li>
+</ul>
+<p><u>Provider details</u>: 
+   In the <strong>Provider Details</strong> section, specify the following details:</p>
+<ul>
+<li>In <strong>"access_key"</strong> and <strong>"secret_key"</strong>, enter the access key and secret key of the IAM user that you have created in the AWS account. </li>
+<li>In <strong>“assume_role”</strong>, enter ARN of the role that you have created in the AWS account for validating infrastructure. You must also specify the session name and external ID. The specified IAM user assumes this role to validate the infrastructure. </li>
+<li>In <strong>“region”</strong>, enter the region in which the infrastructure must be validated.</li>
+</ul>
+<p><u>JSON format with sample values</u>:</p>
+<div class="highlight"><pre><span></span><code>{
+ &quot;access_key&quot;: &quot;ACCESS-KEY&quot;,
+ &quot;secret_key&quot;: &quot;SECRET-KEY&quot;,
+ &quot;region&quot;: &quot;us-east-1&quot;,
+ &quot;assume_role&quot;: {
+ &quot;role_arn&quot;: &quot; arn:aws:iam::XXXXXXXXXXXX:role/readonly-role&quot;,
+ &quot;session_name&quot;: &quot;&quot;,
+ &quot;external_id&quot;: &quot;&quot;
+ }
+</code></pre></div>
+<ul>
+<li><a id="basic-creds" name="basic-creds"></a><strong>Basic Credentials</strong></li>
+</ul>
+<p>You can use this credential type in both scenarios: when the AWS account for validating infrastructure and the AWS account for launching instances is the same, or when they are two different accounts.</p>
+<p><u>Required actions and permissions</u>:</p>
+<p>To use this credential type, create an IAM user in the AWS account for validating infrastructure and attach a policy with <strong>readonly</strong> access to resources that need to be validated.</p>
+<p><u>Provider details</u>:</p>
+<p>In the <strong>Provider Details</strong> section, specify the following details:</p>
+<ul>
+<li>In <strong>"access_key"</strong> and <strong>"secret_key"</strong>, enter the access key and secret key of the IAM user that you have created in the AWS account for validating infrastructure.</li>
+<li>In <strong>“region”</strong>, enter the region in which the infrastructure must be validated.</li>
+</ul>
+<p><u>JSON format with sample values</u>:</p>
+<div class="highlight"><pre><span></span><code>{
+  &quot;access_key&quot;: &quot;XXXX&quot;,
+  &quot;secret_key&quot;: &quot;XXX&quot;,
+  &quot;region&quot;: &quot;XXXX&quot;,
+}
+</code></pre></div>
+<ul>
+<li><a id="basic-tempcreds" name="basic-tempcreds"></a><strong>Basic Credentials (using temporary credentials)</strong></li>
+</ul>
+<p>You can generate and use temporary credentials to access the AWS account for validating infrastructure. The temporary credentials that you specify can be for an IAM user or Assume Role.  </p>
+<p><u>Required actions and permissions</u>:</p>
+<p>To use temporary credentials for an IAM user, perform the following actions:</p>
+<ul>
+<li>In the AWS account for validating infrastructure, create an IAM user and attach a policy with <strong>readonly</strong> access to resources that need to be validated.</li>
+<li>Generate temporary credentials for the IAM user.</li>
+</ul>
+<p>To use temporary credentials for an Assume Role, perform the following actions:</p>
+<ul>
+<li>In the AWS account for validating infrastructure, create a role that has <strong>readonly</strong> access to resources that need to be validated. This role must define as a trusted entity the AWS account for launching test instances.</li>
+<li>Generate temporary credentials for the role that you have created in the AWS account for validating infrastructure.</li>
+</ul>
+<p><u>Provider details</u>:</p>
+<p>In the <strong>Provider Details</strong> section, specify the following details:</p>
+<ul>
+<li>In <strong>"access_key"</strong> and <strong>"secret_key"</strong>, enter the temporary credentials that you have generated for the IAM user or Assume Role in the AWS account for validating infrastructure.</li>
+<li>In <strong>“region”</strong>, enter the region in which the infrastructure must be validated.</li>
+<li>In <strong>"aws_session_token"</strong>, enter the session token for the temporary credentials that you have generated.  </li>
+</ul>
+<p><u>JSON format with sample values</u></p>
+<div class="highlight"><pre><span></span><code>{
+     &quot;access_key&quot;: &quot;ACCESS-KEY&quot;,
+    &quot;secret_key&quot;: &quot;SECREt-KEY&quot;,
+     &quot;region&quot;: &quot;us-east-1&quot;,
+    &quot;aws_session_token&quot;: &quot;SESSION-TOKEN&quot;
+}    
+</code></pre></div>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </li>
+</ul>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+<ul>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+</li>
+<li>
+<p>GitHub repository clone URL</p>
+</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the AWS Spec code.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the AWS Spec code.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the AWS Spec code.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, enter the directory in which Test Accelerator must save the test run results. This path must be relative to the directory in which your AWS Spec code is stored.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, enter the name of the report file that Test Accelerator must generate after running the AWS Spec code.</p>
+</li>
+<li>
+<p>If you want to upload a file that Test Accelerator must extract and provide while running your AWS Spec code, click <strong>Upload File</strong>. </p>
+<p>In the Upload Input Output File window, select the appropriate file as a <strong>ZIP</strong> file and click <strong>Upload File</strong>.</p>
+<p><em><strong>Note:</strong> Test Accelerator extracts the contents of this ZIP file in the <strong>/home/seluser/hcaptest/code</strong> folder of the instance that it launches to run the infrastructure test.</em></p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>Click <strong>SUBMIT</strong>.</li>
+</ol>
+<p>When you start an <strong>AWS Spec</strong> infrastructure test job, Test Accelerator launches a test Kubernetes pod and downloads the infrastructure test code on the pod. It then connects to the AWS account for validating the infrastructure, and runs the test.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</li>
+</ol>
+<h3 id="run-an-infrastructure-test-with-custom-gcp-spec-code"><a id="gcp-infra" name="gcp-infra"></a>Run an infrastructure test with custom GCP Spec code<a class="headerlink" href="#run-an-infrastructure-test-with-custom-gcp-spec-code" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Infra</strong>.</p>
+</li>
+</ol>
+<p>The Infra Test page appears, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_gcp.PNG" /></p>
+<p>The procedure to configure an infrastructure test consists of three steps -- select the spec details, provide the codebase, and define execution details.</p>
+<ol>
+<li>
+<p>In the <strong>BASICS</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Job Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>For <strong>Spec Type</strong>, select the <strong>GCP Spec</strong> specification type.</p>
+</li>
+<li>
+<p><a id="gcp-prov" name="gcp-prov"></a>Enter the following provider details to access your GCP account.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>project</td>
+<td>The project for managing GCP resources.</td>
+</tr>
+<tr>
+<td>credentials</td>
+<td>The credentials can either be the path to, or the content of the GCP <a href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">service account key file</a> in JSON format.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>CODEBASE</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>For <strong>Automation Code</strong>, select one of the following options:</p>
+<ul>
+<li>If you want to upload your automation code as a ZIP file, select <strong>Upload Code</strong> and <strong>Click to upload</strong>. </li>
+</ul>
+<p>In the Upload File window, select the ZIP file and click <strong>Upload Zip File</strong>.</p>
+<ul>
+<li>
+<p>If your automation code is available in a GitHub repository, select <strong>Git</strong>, and enter the following details about the GitHub repository:</p>
+</li>
+<li>
+<p>GitHub repository clone URL</p>
+</li>
+<li>If your automation code is stored in a private repository, then select <strong>Private Repository</strong>, and enter your GitHub user ID and password. </li>
+<li>Branch name <em>(If you do not enter the branch name, Test Accelerator downloads the automation code from the **master*</em> branch by default.)*</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>NEXT</strong>.</p>
+</li>
+<li>
+<p>In the <strong>EXECUTION</strong> step, perform the following actions:</p>
+</li>
+<li>
+<p>In <strong>Pre-script</strong>, enter any Shell script that Test Accelerator must run before running the GCP Spec code.</p>
+</li>
+<li>
+<p>In <strong>Test Run Command</strong>, enter the command for running the GCP Spec code.</p>
+</li>
+<li>
+<p>In <strong>Post-script</strong>, enter any Shell script that Test Accelerator must run after running the GCP Spec code.</p>
+</li>
+<li>
+<p>In <strong>Output Directory</strong>, enter the directory in which Test Accelerator must save the test run results. This path must be relative to the directory in which your GCP Spec code is stored.</p>
+</li>
+<li>
+<p>In <strong>Report File</strong>, enter the name of the report file that Test Accelerator must generate after running the GCP Spec code.</p>
+</li>
+<li>
+<p>If you want to upload a file that Test Accelerator must extract and provide while running your GCP Spec code, click <strong>Upload File</strong>. </p>
+<p>In the Upload Input Output File window, select the appropriate file as a <strong>ZIP</strong> file and click <strong>Upload File</strong>.</p>
+<p><em><strong>Note:</strong>  Test Accelerator extracts the contents of this ZIP file in the <strong>/home/seluser/hcaptest/code</strong> folder of the instance that it launches to run the infrastructure test.</em></p>
+</li>
+<li>
+<p>In the right panel, verify that the details you have specified are correct.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>Click <strong>SUBMIT</strong>.</li>
+</ol>
+<p>When you start an <strong>GCP Spec</strong> infrastructure test job, Test Accelerator launches a test Kubernetes pod and downloads the infrastructure test code on the pod. It then connects to the GCP account for validating the infrastructure, and runs the test.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</li>
+</ol>
+<h2 id="running-codeless-infra-tests"><a id="codeless" name="codeless"></a>Running codeless infra tests<a class="headerlink" href="#running-codeless-infra-tests" title="Permanent link">&para;</a></h2>
+<p>The codeless infra test covers the testing of your AWS, Azure or GCP resources by using the default spec code that is provided by Test Accelerator. It saves time and resources spent on writing your own custom code.</p>
+<ol>
+<li>Create an infrastructure test data JSON file. </li>
+</ol>
+<p>For more information, see input and expected output JSON parameters for <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'IO-azure'})" style="text-decoration:none">Azure Spec</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'IO-aws'})" style="text-decoration:none">AWS Spec</a>, and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'IO-gcp'})" style="text-decoration:none">GCP Spec</a></p>
+<ol>
+<li>
+<p>On the Home page, click <strong>New Test</strong>.</p>
+</li>
+<li>
+<p>In the Select Test window, click <strong>Codeless Infra</strong>.</p>
+</li>
+</ol>
+<p>The <strong>Codeless Infra</strong> test page appears, as shown in the following image.</p>
+<p><img alt="rt_securitytest.PNG" src="/images/rean-test/codeless1.png" /></p>
+<ol>
+<li>
+<p>In the <strong>Spec Type</strong>, select <strong>AWS Spec</strong>, <strong>Azure Spec</strong>, <strong>GCP Spec</strong>.</p>
+</li>
+<li>
+<p>In  <strong>Name</strong>, enter a unique name for your test job.</p>
+</li>
+<li>
+<p>In the <strong>Provider Details</strong> section, specify the details provider details:</p>
+</li>
+<li>
+<p>For AWS Spec, enter <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'basic-creds'})" style="text-decoration:none">basic credentials</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'basic-tempcreds'})" style="text-decoration:none">basic Credentials (using temporary credentials)</a>, or <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'basic-assume'})" style="text-decoration:none">basic credentials with assume role</a>.</p>
+</li>
+<li>For Azure Spec, enter the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'azure-prov'})" style="text-decoration:none">Azure provider details</a>.</li>
+<li>For GCP Spec, enter the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'gcp-prov'})" style="text-decoration:none">GCP provider details</a>.</li>
+<li>
+<p>In the <strong>Infrastructure Details</strong> section, perform one of the following actions:</p>
+</li>
+<li>
+<p>Select <strong>JSON</strong>, and enter the <strong>Input</strong> and <strong>Expected Output JSON</strong> parameters.</p>
+</li>
+<li>
+<p>Select <strong>Upload Input File</strong>, and upload a zip file of the Input and Expected Output JSON parameters.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To run this test job multiple times based on a configured schedule, click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>For information about scheduling tests, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'scheduled-job'})" style="text-decoration:none">Scheduling test jobs</a>.</p>
+<ol>
+<li>
+<p>Click <strong>SUBMIT</strong>.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'results'})" style="text-decoration:none">View and download test results</a>.</p>
+</li>
+</ol>
+<h3 id="create-the-infrastructure-test-data-file-for-azure-spec"><a id="IO-azure" name="IO-azure"></a>Create the infrastructure test data file for Azure Spec<a class="headerlink" href="#create-the-infrastructure-test-data-file-for-azure-spec" title="Permanent link">&para;</a></h3>
+<p>To run an infrastructure test with Default Azure Spec code, you must first create a JSON file that contains the test data. Before you create a JSON file, see the list of <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'azure-resources'})" style="text-decoration:none">supported Azure resources</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'azure-versions'})" style="text-decoration:none">Azure spec versions</a>, </p>
+<h4 id="infrastructure-json-file">Infrastructure JSON file<a class="headerlink" href="#infrastructure-json-file" title="Permanent link">&para;</a></h4>
+<p>The following details are required to create the JSON file:</p>
+<p><strong>Input:</strong> This section contains the expected values that must be compared with the actual values that are retrieved for the resources defined in the <strong>Output</strong> section.</p>
+<p><u>Example JSON</u></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;input&quot;</span><span class="p">:</span> 
+<span class="p">{</span>
+  <span class="nt">&quot;azurerm_snapshot&quot;</span><span class="p">:</span> 
+  <span class="p">{</span>
+    <span class="nt">&quot;testAzureSnapshot&quot;</span><span class="p">:</span> 
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_snapshot&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;East US&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;resource_group_name&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_resources&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;create_option&quot;</span><span class="p">:</span> <span class="s2">&quot;Empty&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;disk_size_gb&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="nt">&quot;source_resource_id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">},</span>
+</code></pre></div>
+<p><strong>Expected Output:</strong> This section contains the names or IDs of all Azure resources that need to be validated.</p>
+<p><u>Example JSON</u></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;output&quot;</span><span class="p">:</span> 
+<span class="p">{</span>
+    <span class="nt">&quot;azurerm_snapshot&quot;</span><span class="p">:</span> 
+    <span class="p">{</span>
+    <span class="nt">&quot;testAzureSnapshot&quot;</span><span class="p">:</span> <span class="s2">&quot;sample_snapshot&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="supported-versions-for-azure-spec"><a id="azure-versions" name="azure-versions"></a>Supported versions for Azure Spec<a class="headerlink" href="#supported-versions-for-azure-spec" title="Permanent link">&para;</a></h4>
+<p>The following table lists the Azure Spec code version that is available out of the box based on the version of Test Accelerator.</p>
+<table>
+<thead>
+<tr>
+<th>Version of Test Accelerator</th>
+<th>Version of Default Azure Spec code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.22.3 and later</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>-- 2.22.2<br>-- 2.22.1<br>-- 2.21.0<br>-- 2.20.0<br>-- 2.19.0</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td><a id="azure-spec18" name="azure-spec18"></a>-- 2.18.0<br><a id="azure-spec18" name="azure-spec18"></a>-- 2.17.0</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-resources-for-azure-spec"><a id="azure-resources" name="azure-resources"></a>Supported resources for Azure Spec<a class="headerlink" href="#supported-resources-for-azure-spec" title="Permanent link">&para;</a></h4>
+<p>The following table lists the resources that the Default Azure Spec code supports. The naming convention used for the supported resources is based on the HashiCorp Terraform resource names. </p>
+<table>
+<thead>
+<tr>
+<th>Resource Name</th>
+<th>Available Release Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>azurerm_resource_group</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_machine</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_network</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_machine_extension</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_network_interface</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_availability_set</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_public_ip</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_subnet</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_subnet_network_security_group_association</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_subnet_route_table_association</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_image</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_shared_image</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_shared_image_gallery</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_shared_image_version</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_snapshot</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_local_network_gateway</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb_backend_address_pool</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb_outbound_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb_probe</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb_nat_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_lb_nat_pool</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_key_vault</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_mysql_database</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_mysql_server</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_network_security_group</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_network_security_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_network_profile</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_mysql_firewall_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_mysql_configuration</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_network_peering</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_mysql_virtual_network_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_network_gateway</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_network_gateway_connection</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_user_assigned_identity</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_user</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_group</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_product</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_group_user</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_api_operation</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_property</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_api_operation_policy</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_version_set</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_api</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_route_table</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_route</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_managed_disk</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_cdn_endpoint</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_cdn_profile</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_container_group</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_kubernetes_cluster</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_role_definition</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_role_assignment</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_postgresql_configuration</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_postgresql_database</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_postgresql_firewall_rules</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_batch_account</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_batch_pool</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_batch_certificate</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_storage_account</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_postgresql_server</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_postgresql_virtual_network_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_sql_database</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_sql_firewall_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_sql_server</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_sql_virtual_network_rule</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_key_vault_access_policy</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_api_policy</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_api_management_api_schema</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_virtual_machine_data_disk_attachment</td>
+<td>1.0 and later</td>
+</tr>
+<tr>
+<td>azurerm_redis_cache</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>azurerm_app_service_plan</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>azurerm_app_service</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>azurerm_application_insights</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>azurerm_cosmosdb_account</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>azurerm_container_group</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>azurerm_storage_container</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_cosmosdb_sql_database</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_key_vault_secret</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_cosmosdb_sql_container</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_trigger_recurrence</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_trigger_custom</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_trigger_http_request</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_log_analytics_workspace</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_template_deployment</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_workflow</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_integration_account</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_action_http</td>
+<td>1.3 and later</td>
+</tr>
+<tr>
+<td>azurerm_logic_app_action_custom</td>
+<td>1.3 and later</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-the-infrastructure-test-data-file-for-aws-spec"><a id="IO-aws" name="IO-aws"></a>Create the infrastructure test data file for AWS Spec<a class="headerlink" href="#create-the-infrastructure-test-data-file-for-aws-spec" title="Permanent link">&para;</a></h3>
+<p>To run an infrastructure test with Default AWS Spec code, you must first create a JSON file that contains the test data.  Before you create a JSON file, see the list of <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'resources'})" style="text-decoration:none">supported AWS resources</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'aws-versions'})" style="text-decoration:none">AWS spec versions</a>.</p>
+<h4 id="infrastructure-json-file_1">Infrastructure JSON file<a class="headerlink" href="#infrastructure-json-file_1" title="Permanent link">&para;</a></h4>
+<p>The following details are required to create the JSON file:</p>
+<p><strong>Input</strong></p>
+<p>This section contains the expected values that must be compared with the actual values that are retrieved for the resources defined in the <strong>Output</strong> section. </p>
+<p>A corresponding entry with the unique name specified in the <strong>Output</strong> section is configured in the <strong>Input</strong> section under the same resource type. Only the attributes defined in the <strong>Input</strong> section are compared with the actual state.</p>
+<p>The resource type values in the <strong>Input</strong> section differ based on the version of the Default AWS Spec code. You can select one of the following options.</p>
+<ul>
+<li>Default AWS Spec code 1.3 and later</li>
+</ul>
+<p>In version 1.3, the resource type values are based on the Terraform resource names. For example, <strong>aws_vpc</strong> is the resource type under which VPC resources are defined. For details about the resource types that you must specify, see <a href="https://reanplatform-help.reancloud.com/#/rean-platform-docs/accelerator?viewAccelerator=rean-test&amp;viewPage=run-tests&amp;viewSection=resources">Supported resources</a>.</p>
+<p>Example JSON</p>
+<div class="highlight"><pre><span></span><code>&quot;input&quot;: {
+  &quot;aws_vpc&quot;: {
+      &quot;devVPC&quot;: {
+          &quot;cidr_block&quot;: &quot;172.16.0.0/16&quot;,
+          &quot;tags&quot;: {
+              &quot;CreatedBy&quot;: &quot;Deploy&quot;,
+              &quot;Name&quot;: &quot;dev-datalake-quickstart-vpc&quot;,
+              &quot;Environment&quot;: &quot;dev&quot;,
+              &quot;Owner&quot;: &quot;a.g&quot;,
+              &quot;Product&quot;: &quot;datalake-quickstart&quot;
+          },
+          &quot;enable_dns_support&quot;: true,
+          &quot;enable_dns_hostnames&quot;: true
+      }
+  }
+}
+</code></pre></div>
+<ul>
+<li>Default AWS Spec code 1.2</li>
+</ul>
+<p>In version 1.2, the resource type values are based on custom types defined in Test Accelerator. For example, <strong>VPC</strong> is the resource type under which VPC resources are defined. For details about the resource types that you must specify, see <a href="https://reanplatform-help.reancloud.com/downloads/rean-test/Resource types in Default AWS Spec code 1.2.pdf">Resource types in Default AWS Spec code 1.2</a>.</p>
+<p>Example JSON</p>
+<div class="highlight"><pre><span></span><code>```
+{
+    &quot;VPC&quot;:{
+    &quot;vpc&quot;: {
+        &quot;cidr_block&quot;: &quot;10.0.0.0/16&quot;
+    }
+    },
+    &quot;EC2&quot;: {
+    &quot;Demo_EC2_Instance&quot;: {
+        &quot;instance_type&quot;: &quot;t2.micro&quot;,
+        &quot;tags&quot;: {
+        &quot;Name&quot;: &quot;Platform-bastion-us-east-1b&quot;
+        }
+    }
+    }
+}
+```
+
+
+_**Note:** While Default AWS Spec code 1.3 is backward compatible and supports the older format of Input JSON, it is recommended that you switch to the latest format of Input JSON._
+</code></pre></div>
+<p><strong>Expected Output</strong></p>
+<p>This section contains the names or IDs of all AWS resources that need to be validated.</p>
+<p>Each key-value pair under each resource type represents the unique name of the resource and the corresponding ID of that resource. This ID is used to retrieve the attributes of the resource and validate them with the expected values defined in the <strong>Input</strong> section.</p>
+<p>Example JSON</p>
+<div class="highlight"><pre><span></span><code>&quot;output&quot;: {
+    &quot;aws_vpc&quot;: {
+        &quot;devVPC&quot;: &quot;vpc-XXXXXXX&quot;,
+        &quot;prdVPC&quot;: &quot;vpc-XXXXXXX&quot;
+    }
+}
+</code></pre></div>
+<p><em><strong>Note:</strong> The resource type values in the <strong>Output</strong> section are based on the Terraform resource names. For example, in the above example, <strong>aws_vpc</strong> is used for the VPC resources.</em></p>
+<h4 id="supported-versions-for-aws-spec"><a id="aws-versions" name="aws-versions"></a>Supported versions for AWS Spec<a class="headerlink" href="#supported-versions-for-aws-spec" title="Permanent link">&para;</a></h4>
+<p>The following table lists the Default AWS Spec code version that is available out of the box based on the version of Test Accelerator.</p>
+<table>
+<thead>
+<tr>
+<th>Version of Test Accelerator</th>
+<th>Version of Default AWS Spec code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.22.1 and later</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>-- 2.20.0<br>-- 2.19.0<br>-- 2.18.0<br>-- 2.17.0<br>-- 2.16.0<br>-- 2.15.0</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>2.14.0</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>2.13.0</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>2.12.0</td>
+<td>1.2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-resources-for-aws-spec"><a id="resources" name="resources"></a>Supported resources for AWS Spec<a class="headerlink" href="#supported-resources-for-aws-spec" title="Permanent link">&para;</a></h4>
+<p>The following table lists the resources that the Default AWS Spec code supports. The naming convention that is used for the supported resources is based on the HashiCorp Terraform resource names. </p>
+<table>
+<thead>
+<tr>
+<th>Resource Name</th>
+<th>Available Release Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aws_instance</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_vpc</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_vpc_peering_connection</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_subnet</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_route_table</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_security_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_network_acl</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_autoscaling_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_launch_configuration</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_elb</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_nat_gateway</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_internet_gateway</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_eip</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_launch_template</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_efs_file_system</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_efs_mount_target</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_iam_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_iam_role</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_iam_policy</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_iam_instance_profile</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_iam_user</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_flow_log</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_vpc_endpoint</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_cloudwatch_log_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_route_table_association</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_sns_topic</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_sns_topic_policy</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_sns_topic_subscription</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_redshift_cluster</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_redshift_subnet_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_elasticsearch_domain</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_lb_target_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_alb</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_customer_gateway</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_db_option_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_db_parameter_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_db_subnet_group</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_db_instance</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_rds_cluster</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_sqs_queue</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_sqs_queue_policy</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_vpn_gateway</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_vpn_connection</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_dynamodb_table</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_active_receipt_rule_set</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_receipt_rule</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_receipt_rule_set</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_receipt_filter</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_domain_identity</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_configuration_set</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_ses_event_destination</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_alb_listener</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_alb_listener_rule</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_elb_load_balancer_listener_policy</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_route53_health_check</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_route53_zone</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_route53_record</td>
+<td>1.2 and later</td>
+</tr>
+<tr>
+<td>aws_kms_key</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_kms_alias</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_s3_bucket</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_iam_role_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_iam_group_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_kinesis_stream</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_cloudtrail</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_codecommit_repository</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_security_group_rule</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_volume_attachment</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_swf_domain</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_key_pair</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ami</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_lambda_function</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_s3_bucket_object</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_s3_bucket_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ebs_volume</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_route</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_alb_target_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_vpc_peering_connection_accepter</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ecs_service</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ecr_lifecycle_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ecr_repository_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_alb_target_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_iam_policy_attachment</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_vpc_dhcp_options_association</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_iam_group_policy_attachment</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_iam_role_policy_attachment</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ecs_cluster</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_appautoscaling_target</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_alb_listener_certificate</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_vpc_dhcp_options</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_alb_target_group_attachment</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_spot_instance_request</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_iam_server_certificate</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_network_interface</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ecr_repository</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_eip_association</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_elasticache_security_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_elasticache_subnet_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_lb_cookie_stickiness_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_s3_bucket_notification</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_elasticache_replication_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_autoscaling_policy</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_autoscaling_notification</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_autoscaling_attachment</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_autoscaling_lifecycle_hook</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_elasticache_parameter_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_placement_group</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_api_gateway_api_key</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_ebs_snapshot</td>
+<td>1.4 and later</td>
+</tr>
+<tr>
+<td>aws_autoscaling_schedule</td>
+<td>1.4 and later</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-the-infrastructure-test-data-file-for-gcp-spec"><a id="IO-gcp" name="IO-gcp"></a>Create the infrastructure test data file for GCP Spec<a class="headerlink" href="#create-the-infrastructure-test-data-file-for-gcp-spec" title="Permanent link">&para;</a></h3>
+<p>To run an infrastructure test with Default GCP Spec code, you must first create a JSON file that contains the test data. Before you create a JSON file, see the list of <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'gcp-resources'})" style="text-decoration:none">supported GCP resources</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'gcp-versions'})" style="text-decoration:none">GCP Spec versions</a> supported by Test Accelerator.</p>
+<h4 id="infrastructure-json-file_2">Infrastructure JSON file<a class="headerlink" href="#infrastructure-json-file_2" title="Permanent link">&para;</a></h4>
+<p>The following details are required to create the JSON file:</p>
+<p><strong>Input:</strong> This section contains the expected values that must be compared with the actual values that are retrieved for the resources defined in the <strong>Output</strong> section.</p>
+<p><u>Example JSON</u></p>
+<div class="highlight"><pre><span></span><code> <span class="nt">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;google_compute_address&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ip-bastion-host&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;test gcpspec&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;labels&quot;</span><span class="p">:{</span>
+          <span class="nt">&quot;owner&quot;</span><span class="p">:</span><span class="s2">&quot;hcap-test&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="s2">&quot;development&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="s2">&quot;10.0.0.26&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;address_type&quot;</span><span class="p">:</span><span class="s2">&quot;INTERNAL&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="s2">&quot;GCE_ENDPOINT&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;network_tier&quot;</span><span class="p">:</span><span class="s2">&quot;PREMIUM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;subnetwork&quot;</span><span class="p">:</span><span class="s2">&quot;subnet-hv-hcap-dev-central&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="s2">&quot;us-central1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="s2">&quot;hv-hcap-development&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+</code></pre></div>
+<p><strong>Expected Output:</strong> This section contains the names or IDs of all Azure resources that need to be validated.</p>
+<p><u>Example JSON</u></p>
+<div class="highlight"><pre><span></span><code> <span class="nt">&quot;output&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;google_compute_address&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;hcap-disk&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>
+<h4 id="supported-versions-for-gcp-spec"><a id="gcp-versions" name="gcp-versions"></a>Supported versions for GCP Spec<a class="headerlink" href="#supported-versions-for-gcp-spec" title="Permanent link">&para;</a></h4>
+<p>The following table lists the GCP Spec code version that is available out of the box based on the version of Test Accelerator.</p>
+<table>
+<thead>
+<tr>
+<th>Version of Test Accelerator</th>
+<th>Version of Default GCP Spec code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="gcp-spec18" name="gcp-spec18"></a>3.2.0</td>
+<td>1.1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supported-resources-for-gcp-spec"><a id="gcp-resources" name="gcp-resources"></a>Supported resources for GCP Spec<a class="headerlink" href="#supported-resources-for-gcp-spec" title="Permanent link">&para;</a></h4>
+<p>The following table lists the resources that the Default GCP Spec code supports. The naming convention used for the supported resources is based on the HashiCorp Terraform resource names. </p>
+<table>
+<thead>
+<tr>
+<th>Resource Name</th>
+<th>Available Release Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>google_compute_instance</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_network</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_subnetwork</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_disk</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_machine_image</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_firewall</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_router</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_instance_template</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_image</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_address</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_router_nat</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_autoscaler</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_instance_group_manager</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_storage_bucket_acl</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_storage_bucket</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_storage_default_object_acl</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_vpn_gateway</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_target_instance</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_route</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_instance_group</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_target_pool</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_node_group</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_network_endpoint_group</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_container_node_pool</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_ssl_policy</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_ssl_certificate</td>
+<td>1.1 and later</td>
+</tr>
+<tr>
+<td>google_compute_snapshot</td>
+<td>1.1 and later</td>
+</tr>
+</tbody>
+</table>
+<h2 id="viewing-and-downloading-test-results"><a id="results" name="results"></a>Viewing and downloading test results<a class="headerlink" href="#viewing-and-downloading-test-results" title="Permanent link">&para;</a></h2>
+<p>The Home page of Test Accelerator displays a summary of the total number of test cases that have passed and the total number of builds that are ready for release, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-test/rt_testsummary.PNG" /></p>
+<p><strong>To view and download the test results of a specific job, perform the following actions:</strong></p>
+<ol>
+<li>On the Home page of Test Accelerator, from the left panel, select the test job whose details you want to view. </li>
+</ol>
+<p>In the menu bar, you can view details such as when the job was last run and the total number of browsers that are in the <strong>Configuring</strong>, <strong>Running</strong>, <strong>Success</strong>, and <strong>Failed</strong> status. </p>
+<p><img alt="" src="/images/rean-test/rt_testbubbles.PNG" /></p>
+<p>In the right panel, each bubble represents a browser in the selected test job. The size of the bubble represents the time taken by the test run and the color represents the state (Configuring, Running, Success, and Failed). If you hover over a bubble, you can view details about the browser it represents.</p>
+<ol>
+<li>
+<p><em>(Optional)</em> To filter the list of test jobs, perform the following actions:</p>
+</li>
+<li>
+<p>To filter the job list based on keywords or the job ID, use the search box.</p>
+</li>
+<li>
+<p>To view only scheduled jobs, select the <strong>Scheduled</strong> check box.</p>
+</li>
+<li>
+<p>To view only your own jobs, select the <strong>Owned by me</strong> check box.</p>
+<p>This check box is helpful when you are part of a shared group and can view the jobs created by other users in that group.</p>
+</li>
+<li>
+<p>To view only your own scheduled jobs, select the <strong>Owned by me</strong> and <strong>Scheduled</strong> check boxes.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To view the actual tests that are running on a browser, click the bubble for that browser when it is in the <strong>Running</strong> state.</p>
+</li>
+<li>
+<p>To view and download the report of a test run, perform the following actions:</p>
+</li>
+<li>
+<p>To view the report of a test run for a specific browser, click the bubble for that browser when it is in the <strong>Success</strong> or <strong>Failed</strong> state.</p>
+<p>The HTML report displays the result of the automation suite for the selected browser. The test results include a screenshot for each test case that is run on the browser.</p>
+<p><img alt="" src="/images/rean-test/rt_testresults.PNG" /></p>
+</li>
+<li>
+<p>To download the report for a specific browser, right-click the bubble for that browser, and select <strong>Download Reports</strong>. </p>
+<p><img alt="" src="/images/rean-test/logs1.PNG" /></p>
+</li>
+<li>
+<p>To download the report of a test run for all selected browsers, click the <strong>Download Report</strong> icon (<img alt="" src="/images/rean-test/icon_downloadreport.PNG" />).</p>
+<p>A ZIP file is downloaded to your local computer. When you extract the contents of the ZIP file, you can see a folder for each browser version. To view the HTML report for a browser version, click the folder for that browser version and extract the contents of the <strong>reports.zip</strong> file.</p>
+</li>
+<li>
+<p>To view and download a summary report of the test run for all browsers, perform the following actions:</p>
+</li>
+<li>
+<p>Click the <strong>Full Report</strong> icon (<img alt="" src="/images/rean-test/icon_fullreport.PNG" />) in the menu bar.</p>
+<p>The consolidated report enables you to analyze the test results at any time while a job is in the <strong>Running</strong> state.</p>
+<p><img alt="" src="/images/rean-test/rt_consolidatedrun.PNG" /></p>
+</li>
+<li>
+<p>To download the summary report, click <strong>ExportToExcel</strong> or <strong>ExportToCSV</strong>. </p>
+</li>
+<li>
+<p><em>(Only for infrastructure test jobs)</em> To view the infrastructure test report, perform the following actions:</p>
+</li>
+<li>
+<p>From the left panel, select the infrastructure test job whose details you want to view. </p>
+</li>
+<li>
+<p>To view detailed reports for the selected infrastructure job, in the <strong>Reports</strong> panel, select the appropriate <strong>Report</strong> link.</p>
+<p><em><strong>Note:</strong> The Infra Dashboard displays a consolidated report for each resource type in the selected infrastructure job.</em></p>
+<p><img alt="" src="/images/rean-test/rt_infradashboard.PNG" /></p>
+</li>
+<li>
+<p><em>(Optional)</em> To download a report for the selected infrastructure job, perform the following actions:</p>
+<ul>
+<li>To download an Excel report that contains the test summary and detailed test analytics, click <strong>ExportToExcel</strong>.</li>
+<li>To download a ZIP file that contains detailed HTML reports for each resource type, click <strong>Download Report</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><em><strong>Important:</strong> To use the reporting feature in Test Accelerator, your automation suite must have a valid reporting framework that enables creation of reports in HTML and JSON formats. Test Accelerator does not create reports but instead, displays reports that are created by your automation suite. While creating a test job, you must specify the relative path to the home directory of the automation suite and enter the JSON format file.</em> </p>
+<h2 id="viewing-and-downloading-logs"><a id="logs" name="logs"></a>Viewing and downloading logs<a class="headerlink" href="#viewing-and-downloading-logs" title="Permanent link">&para;</a></h2>
+<p>From the Test accelerator home page, you can download logs for the ongoing and completed tests. To view and download logs for a test run, perform the following actions:</p>
+<ul>
+<li>To view the logs, right-click the bubble, and select <strong>Get Logs</strong>. </li>
+</ul>
+<p><img alt="" src="/images/rean-test/logs1.PNG" /></p>
+<ul>
+<li>To download the logs, right-click the bubble, and select <strong>Download Logs</strong>.</li>
+</ul>
+<h2 id="viewing-jobs-list"><a id="jobs-list" name="jobs-list"></a>Viewing jobs list<a class="headerlink" href="#viewing-jobs-list" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page of Test Accelerator, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) in the top-right corner.</p>
+</li>
+<li>
+<p>Click <strong>Job List</strong>.</p>
+</li>
+</ol>
+<p>On the Test Job List page, you can view the list of all test jobs that you have created and the test jobs that are shared with you. You can also view the job type, creation date, and status.</p>
+<ol>
+<li><em>(Optional)</em> To filter the list of test jobs, enter appropriate keywords in the Search box. </li>
+</ol>
+<h2 id="stopping-test-jobs"><a id="stop" name="stop"></a>Stopping test jobs<a class="headerlink" href="#stopping-test-jobs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On the Home page of Test Accelerator, from the left panel, select the test job that you want to stop.</li>
+<li>In the menu bar, click the <strong>Abort</strong> icon (<img alt="" src="/images/rean-test/icon_stop.PNG" />).</li>
+<li>In the confirmation message box, click <strong>YES</strong>.</li>
+</ol>
+<h2 id="rerunning-test-jobs"><a id="rerun" name="rerun"></a>Rerunning test jobs<a class="headerlink" href="#rerunning-test-jobs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page of Test Accelerator, from the left panel, select the test job that you want to rerun.</p>
+</li>
+<li>
+<p>In the menu bar, click the <strong>Re-run</strong> icon (<img alt="" src="/images/rean-test/icon_rerun.PNG" />).</p>
+</li>
+<li>
+<p><em>(Optional)</em> Update the job details based on your requirements.</p>
+</li>
+</ol>
+<p>For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'url'})" style="text-decoration:none">Running URL tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'manual'})" style="text-decoration:none">Running manual tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'security'})" style="text-decoration:none">Running security tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'automated'})" style="text-decoration:none">Running automated tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'load'})" style="text-decoration:none">Running scale tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'infra'})" style="text-decoration:none">Running infrastructure tests</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'codeless'})" style="text-decoration:none">Running codeless infrastructure tests</a>, and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-test', viewPage: 'run-tests', viewSection: 'api'})" style="text-decoration:none">Running API tests</a>.</p>
+<p><em><strong>Note:</strong> The password for Git repository is not stored in the test job. You must re-enter the Git password in the <strong>CODEBASE</strong> step of the test jobs.</em></p>
+<ol>
+<li>Submit the test job.</li>
+</ol>
+<p>A new test job appears in the jobs list.</p>
+<h2 id="scheduling-test-jobs"><a id="scheduled-job" name="scheduled-job"></a>Scheduling test jobs<a class="headerlink" href="#scheduling-test-jobs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page of Test Accelerator, from the left panel, select the test job that you want to run multiple times based on a configured schedule.</p>
+</li>
+<li>
+<p>In the menu bar, click the <strong>Schedule</strong> icon (<img alt="" src="/images/rean-test/icon_schedule.PNG" />).</p>
+</li>
+<li>
+<p>In the Schedule Job window, enter the schedule name.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-test/rt_schedulejob.PNG" /></p>
+<ol>
+<li>
+<p>To define how frequently the job must be run, for <strong>Repeats</strong> and <strong>Repeat every</strong>, select the appropriate options.</p>
+</li>
+<li>
+<p>To define when the scheduled jobs must start and end, for <strong>Starts</strong> and <strong>Ends</strong>, select the appropriate options.</p>
+</li>
+<li>
+<p>Click <strong>SCHEDULE</strong>.</p>
+</li>
+</ol>
+<p>Test Accelerator creates and displays the first test job in the job list. Additional test jobs are added to this list based on the schedule that you have configured.</p>
+<ol>
+<li><em>(Optional)</em> To view the scheduled test jobs, in the left panel on the Home page, select <strong>Scheduled</strong>.</li>
+</ol>
+<p><img alt="" src="/images/rean-test/rt_scheduledjob_toggle.PNG" /></p>
+<p>The list displays the name that you provided while scheduling the test jobs. You can search for a specific schedule name to view all test jobs that have been created based on that schedule.</p>
+<h2 id="managing-job-schedules"><a id="schedule-list" name="schedule-list"></a>Managing job schedules<a class="headerlink" href="#managing-job-schedules" title="Permanent link">&para;</a></h2>
+<p>Each time you schedule a test job, Test Accelerator creates a corresponding job schedule. You can view the list of all job schedules that have been created and the status of each schedule (Scheduled, Running, Completed, Failed, and Aborted).</p>
+<ol>
+<li>
+<p>On the Home page of Test Accelerator, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top-right corner.</p>
+</li>
+<li>
+<p>Click <strong>Schedule</strong>.</p>
+</li>
+</ol>
+<p>The Schedule List page displays all the job schedules that have been created. The <strong>Name</strong> column displays the name that was provided while scheduling test jobs.</p>
+<ol>
+<li>To view details about a job schedule, click that schedule in the Schedule list.</li>
+</ol>
+<p>The right panel displays a summary about the selected job schedule. You can also view the date and time when the next test job is scheduled to run.  </p>
+<p><img alt="" src="/images/rean-test/rt_jobschedule_list.PNG" /></p>
+<ol>
+<li>To abort a job schedule, click the <strong>Actions</strong> icon (<img alt="" src="/images/rean-test/icon_actions.PNG" />) for that job schedule, and click <strong>Abort</strong>.</li>
+</ol>
+<p>The <strong>Abort</strong> option is available only for job schedules with the <strong>Scheduled</strong> status. When you abort a schedule, corresponding future scheduled jobs are no longer created. </p>
+<ol>
+<li>To pause a job schedule, click the <strong>Actions</strong> icon (<img alt="" src="/images/rean-test/icon_actions.PNG" />) for that job schedule, and click <strong>Pause</strong>.</li>
+</ol>
+<p>The <strong>Pause</strong> option is available only for job schedules with the <strong>Scheduled</strong> status. When you pause a schedule, corresponding future scheduled jobs are not created until you resume the job schedule.</p>
+<p>To resume a paused job schedule, click the <strong>Actions</strong> icon (<img alt="" src="/images/rean-test/icon_actions.PNG" />) for that job schedule, and click <strong>Resume</strong>. </p>
+<ol>
+<li>To delete a job schedule from the list, click the <strong>Actions</strong> icon (<img alt="" src="/images/rean-test/icon_actions.PNG" />) for that job schedule, and click <strong>Remove</strong>.</li>
+</ol>
+<p>When you delete a job schedule, corresponding future scheduled jobs are no longer created.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../getting-started/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../administer/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Administer
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

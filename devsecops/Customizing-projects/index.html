@@ -1,0 +1,2367 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Customize Projects - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#customize-projects" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Customize Projects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link md-tabs__link--active">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Customize projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Customize projects
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-configuration-settings" class="md-nav__link">
+    Adding configuration settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding configuration settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setters" class="md-nav__link">
+    Setters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters" class="md-nav__link">
+    Getters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-json-and-yaml-files" class="md-nav__link">
+    Reading JSON and YAML files
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading JSON and YAML files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-json-files" class="md-nav__link">
+    Read JSON files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-yaml-files" class="md-nav__link">
+    Read YAML files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-aws-clients" class="md-nav__link">
+    Initializing AWS clients
+  </a>
+  
+    <nav class="md-nav" aria-label="Initializing AWS clients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-client" class="md-nav__link">
+    S3 Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-client" class="md-nav__link">
+    AWS Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-client-advanced" class="md-nav__link">
+    AWS Client Advanced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-cloud-client" class="md-nav__link">
+    Generic Cloud Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-server-and-website-objects" class="md-nav__link">
+    Adding server and website objects
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding server and website objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-servers" class="md-nav__link">
+    About servers
+  </a>
+  
+    <nav class="md-nav" aria-label="About servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-server" class="md-nav__link">
+    Using server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-server_source" class="md-nav__link">
+    Using server_source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#website" class="md-nav__link">
+    website
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-files" class="md-nav__link">
+    Uploading  files
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading  files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-files-to-servers" class="md-nav__link">
+    Uploading files to servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-files-to-s3" class="md-nav__link">
+    Uploading files to S3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-rake-tasks" class="md-nav__link">
+    Using Rake Tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Rake Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-rake-tasks" class="md-nav__link">
+    Adding new rake tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rake-namespaces" class="md-nav__link">
+    rake namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancing-rake-tasks" class="md-nav__link">
+    Enhancing rake tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-frameworks-dsl-methods-in-rake-tasks" class="md-nav__link">
+    Using framework's DSL methods in rake tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-before-and-after-hooks" class="md-nav__link">
+    Adding before and after hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding before and after hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-before-and-after-hooks-for-rake-tasks" class="md-nav__link">
+    About before and after hooks for Rake tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="About before and after hooks for Rake tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-hook" class="md-nav__link">
+    before hook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-hook" class="md-nav__link">
+    after hook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-configuration-settings" class="md-nav__link">
+    Adding configuration settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding configuration settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setters" class="md-nav__link">
+    Setters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters" class="md-nav__link">
+    Getters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-json-and-yaml-files" class="md-nav__link">
+    Reading JSON and YAML files
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading JSON and YAML files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-json-files" class="md-nav__link">
+    Read JSON files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-yaml-files" class="md-nav__link">
+    Read YAML files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initializing-aws-clients" class="md-nav__link">
+    Initializing AWS clients
+  </a>
+  
+    <nav class="md-nav" aria-label="Initializing AWS clients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-client" class="md-nav__link">
+    S3 Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-client" class="md-nav__link">
+    AWS Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-client-advanced" class="md-nav__link">
+    AWS Client Advanced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generic-cloud-client" class="md-nav__link">
+    Generic Cloud Client
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-server-and-website-objects" class="md-nav__link">
+    Adding server and website objects
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding server and website objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-servers" class="md-nav__link">
+    About servers
+  </a>
+  
+    <nav class="md-nav" aria-label="About servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-server" class="md-nav__link">
+    Using server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-server_source" class="md-nav__link">
+    Using server_source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#website" class="md-nav__link">
+    website
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-files" class="md-nav__link">
+    Uploading  files
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading  files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-files-to-servers" class="md-nav__link">
+    Uploading files to servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-files-to-s3" class="md-nav__link">
+    Uploading files to S3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-rake-tasks" class="md-nav__link">
+    Using Rake Tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Rake Tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-rake-tasks" class="md-nav__link">
+    Adding new rake tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rake-namespaces" class="md-nav__link">
+    rake namespaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancing-rake-tasks" class="md-nav__link">
+    Enhancing rake tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-frameworks-dsl-methods-in-rake-tasks" class="md-nav__link">
+    Using framework's DSL methods in rake tasks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-before-and-after-hooks" class="md-nav__link">
+    Adding before and after hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding before and after hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-before-and-after-hooks-for-rake-tasks" class="md-nav__link">
+    About before and after hooks for Rake tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="About before and after hooks for Rake tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-hook" class="md-nav__link">
+    before hook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-hook" class="md-nav__link">
+    after hook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="customize-projects"><a id="cust" name="cust"></a>Customize projects<a class="headerlink" href="#customize-projects" title="Permanent link">&para;</a></h1>
+<p>Customize the projects by modifying <code>config.rb</code> and adding new rake tasks.</p>
+<p><code>config.rb</code> is automatically loaded by the framework. It is the best option for loading your configuration files and set up your custom variables.  </p>
+<p>In the example below, the following variables are defined:<code>:application</code>, <code>:application_type</code>, <code>::custom_var</code>, and <code>:source_ami</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># config.rb</span>
+
+<span class="c1"># Set the application name.</span>
+<span class="n">set</span> <span class="ss">:application</span><span class="p">,</span> <span class="s1">&#39;custom-ami-123&#39;</span>
+
+<span class="c1"># Set the application type to AMI.</span>
+<span class="n">set</span> <span class="ss">:application_type</span><span class="p">,</span> <span class="ss">:ami</span>
+
+<span class="c1"># Set the custom variable</span>
+<span class="n">set</span> <span class="ss">:custom_var</span><span class="p">,</span> <span class="s1">&#39;12345&#39;</span>
+
+<span class="c1"># Set the source AMI. This AWS AMI will be used to build the custom AMI.</span>
+<span class="c1"># This code block will</span>
+<span class="c1">#   read the &#39;SOURCE_IMAGE_FILE&#39; environment variable to get the file name</span>
+<span class="c1">#   read the JSON file returning the &#39;ami_id&#39; value</span>
+<span class="n">set</span> <span class="ss">:source_ami</span><span class="p">,</span> <span class="nb">lambda</span> <span class="p">{</span>
+  <span class="no">ENV</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;SOURCE_IMAGE&#39;</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">ami_file</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;SOURCE_IMAGE_FILE&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="k">raise</span> <span class="s1">&#39;Either SOURCE_IMAGE or SOURCE_IMAGE_FILE env var must be set!&#39;</span> <span class="p">}</span>
+    <span class="n">read_json</span><span class="p">(</span><span class="n">ami_file</span><span class="p">)</span><span class="o">[</span><span class="s1">&#39;ami_id&#39;</span><span class="o">]</span>
+  <span class="k">end</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'Add'})" style="text-decoration:none">Adding configuration settings </a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'Reading'})" style="text-decoration:none">Read JSON and YAML files</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'Initializing'})" style="text-decoration:none">Initializing AWS clients </a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'server'})" style="text-decoration:none">Adding server and website objects</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'Uploading'})" style="text-decoration:none">Uploading files </a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'rake'})" style="text-decoration:none">Using Rake Tasks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'hook'})" style="text-decoration:none">Adding before and after hooks</a></li>
+</ul>
+<h2 id="adding-configuration-settings"><a id="Add" name="Add"></a>Adding configuration settings<a class="headerlink" href="#adding-configuration-settings" title="Permanent link">&para;</a></h2>
+<p>The framework stores current configuration in the global configuration hash.  It includes internally provisioned configuration values and values provisioned directly with setters. </p>
+<p>The global configuration hash should be accessed only via the helper methods.  </p>
+<ul>
+<li><code>fetch(key, default=nil)</code></li>
+<li>Retrieves the value from the hash of globally defined values. If the key is not found, it will return the default value.  </li>
+<li><code>set(key, value)</code> </li>
+<li>Adds the key-value pair to the hash of globally defined values.</li>
+<li><code>set_if_empty(key, value)</code></li>
+<li>Adds the key-value pair to the globally defined values only if the key is not configured.   </li>
+</ul>
+<h3 id="setters"><a id="Setters" name="Setters"></a>Setters<a class="headerlink" href="#setters" title="Permanent link">&para;</a></h3>
+<p>The framework provides the following methods for setting configuration values.  </p>
+<ul>
+<li><code>set</code></li>
+<li><code>set_if_empty</code></li>
+</ul>
+<p>Let's look at the <code>set</code> example:  </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sets :application to `not-my-application`</span>
+<span class="n">set</span> <span class="ss">:application</span><span class="p">,</span> <span class="s1">&#39;not-my-application&#39;</span>
+
+<span class="c1"># Sets :application to `my-application`, the older value is overwritten</span>
+<span class="n">set</span> <span class="ss">:application</span><span class="p">,</span> <span class="s1">&#39;my-application&#39;</span>
+</code></pre></div>
+<p>Let's look at the <code>set_if_empty</code> example:  </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sets :application to `my-application`</span>
+<span class="n">set</span> <span class="ss">:application</span><span class="p">,</span> <span class="s1">&#39;my-application&#39;</span>
+
+<span class="c1"># This set command has no effect because :application is already set</span>
+<span class="n">set_if_empty</span> <span class="ss">:application</span><span class="p">,</span> <span class="s1">&#39;the-greatest-application-ever-created&#39;</span>
+</code></pre></div>
+<h3 id="getters"><a id="Getters" name="Getters"></a>Getters<a class="headerlink" href="#getters" title="Permanent link">&para;</a></h3>
+<p>The framework provides the following methods for getting the configuration values.  </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example, we are retrieving the `:application` value</span>
+<span class="n">application</span> <span class="o">=</span>  <span class="n">fetch</span><span class="p">(</span><span class="ss">:application</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="reading-json-and-yaml-files"><a id="Reading" name="Reading"></a>Reading JSON and YAML files<a class="headerlink" href="#reading-json-and-yaml-files" title="Permanent link">&para;</a></h2>
+<p>JSON and YAML files are very popular ways of storing configuration and data.</p>
+<p>The framework supports reading files in JSON and YAML formats. </p>
+<h3 id="read-json-files"><a id="Read" name="Read"></a>Read JSON files<a class="headerlink" href="#read-json-files" title="Permanent link">&para;</a></h3>
+<p>The method <code>read_json</code> is used for reading JSON files.</p>
+<p><code>read_json(path)</code> 
+    Returns the JSON file content, if the file exists
+    Returns nil, if the file doesn't exits</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># if this example, we are reading the content of &#39;target/infra-core-bucket.json&#39;</span>
+<span class="c1"># and we are looking for the &#39;platform_bucket&#39; element</span>
+<span class="n">config_bucket</span> <span class="o">=</span> <span class="n">read_json</span><span class="p">(</span><span class="n">target</span><span class="p">(</span><span class="s2">&quot;infra-core-bucket.json&quot;</span><span class="p">))</span><span class="o">[</span><span class="s1">&#39;platform_bucket&#39;</span><span class="o">]</span>
+</code></pre></div>
+<h3 id="read-yaml-files"><a id="YAML" name="YAML"></a>Read YAML files<a class="headerlink" href="#read-yaml-files" title="Permanent link">&para;</a></h3>
+<p>The method <code>read_yaml</code> is used for reading YAML files.</p>
+<p><code>read_yaml(path)</code> 
+    Returns the YAML file content, if the file exists
+    Returns nil, if the file doesn't exits</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># if this example, we are reading the content of &#39;config/customer.yml&#39;</span>
+<span class="n">customer</span> <span class="o">=</span> <span class="n">read_yaml</span><span class="p">(</span><span class="s1">&#39;config/customer.yml&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="initializing-aws-clients"><a id="Initializing" name="Initializing"></a>Initializing AWS clients<a class="headerlink" href="#initializing-aws-clients" title="Permanent link">&para;</a></h2>
+<p>The framework supports connections to multiple AWS accounts/regions at the same time by means of named AWS clients. </p>
+<p>AWS connections will always use the credentials that were used at the initialization time.  </p>
+<p>If the credentials haven't been set, the AWS clients will use the credentials loaded from:<br />
+  - AWS environment variables
+  - AWS instance profile
+  - <code>AWS_PROFILE</code> environment variable 
+  - AWS profile</p>
+<p>If the AWS region haven't been set, the AWS clients will use the default AWS region:<br />
+  -  <code>AWS_REGION</code> environment variable
+  -  <code>AWS_DEFAULT_REGION</code> environment variable
+  -  The region associated with the AWS profile</p>
+<p>The framework supports four methods of AWS client initialization: S3 Client, AWS Client, AWS Client Advanced, and Generic Cloud Client.</p>
+<h3 id="s3-client"><a id="S3" name="S3"></a>S3 Client<a class="headerlink" href="#s3-client" title="Permanent link">&para;</a></h3>
+<p><code>s3_client</code> is a very simple method with a single argument. 
+This method uses the default AWS credentials.</p>
+<p>The parameter value for the <code>s3_client</code> is:</p>
+<ul>
+<li><strong>region:</strong> [String] AWS Region. Defaults to nil.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example, we call the `s3_client` method to get an AWS S3 client in the &#39;us-east-1&#39; region. </span>
+<span class="n">s3_client</span> <span class="o">=</span> <span class="n">s3_client</span><span class="p">(</span><span class="s1">&#39;us-east-1&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="aws-client"><a id="AWS" name="AWS"></a>AWS Client<a class="headerlink" href="#aws-client" title="Permanent link">&para;</a></h3>
+<p><code>aws_client</code> method creates an AWS client for the specific AWS API. 
+This method uses the default AWS credentials.</p>
+<p>The parameter values for the <code>aws_client</code> are:</p>
+<ul>
+<li><strong>api:</strong> [String] AWS API</li>
+<li><strong>region:</strong> [String] AWS Region. Defaults to nil.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example, we call the `aws_client` method to get an AWS S3 client in the &#39;us-east-1&#39; region. </span>
+<span class="n">s3_client</span> <span class="o">=</span> <span class="n">aws_client</span><span class="p">(</span><span class="ss">:S3</span><span class="p">,</span> <span class="s1">&#39;us-east-1&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="aws-client-advanced"><a id="Advanced" name="Advanced"></a>AWS Client Advanced<a class="headerlink" href="#aws-client-advanced" title="Permanent link">&para;</a></h3>
+<p><code>aws_client_advanced</code> method creates an AWS client for the specific AWS API. 
+This methods gives an option to use named clients allowing connections to multiple regions.
+This method uses the default AWS credentials.</p>
+<p>The parameter values for <code>aws_client_advanced</code> are:</p>
+<ul>
+<li><strong>name:</strong> [String] client name. Defaults to :default.</li>
+<li><strong>client_type:</strong> [Symbol] AWS API</li>
+<li><strong>region:</strong> [String] AWS Region. Defaults to nil.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example, we call `aws_client_advanced` to get named AWS EC2 clients for calls to EC2 services in `us-east-1` and `us-west-1`.</span>
+
+<span class="n">ec2_useast1</span> <span class="o">=</span> <span class="o">::</span><span class="no">PipelineTasks</span><span class="o">::</span><span class="no">Dsl</span><span class="o">::</span><span class="no">CloudHelper</span><span class="o">.</span><span class="n">aws_client_advanced</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="ss">:useast1</span><span class="p">,</span> <span class="ss">client_type</span><span class="p">:</span> <span class="ss">:EC2</span><span class="p">,</span> <span class="ss">region</span><span class="p">:</span> <span class="s1">&#39;us-east-1&#39;</span><span class="p">)</span>
+
+<span class="n">ec2_uswest1</span> <span class="o">=</span> <span class="o">::</span><span class="no">PipelineTasks</span><span class="o">::</span><span class="no">Dsl</span><span class="o">::</span><span class="no">CloudHelper</span><span class="o">.</span><span class="n">aws_client_advanced</span><span class="p">(</span><span class="nb">name</span><span class="p">:</span> <span class="ss">:uswest1</span><span class="p">,</span> <span class="ss">client_type</span><span class="p">:</span> <span class="ss">:EC2</span><span class="p">,</span> <span class="ss">region</span><span class="p">:</span> <span class="s1">&#39;us-west-1&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="generic-cloud-client"><a id="Generic" name="Generic"></a>Generic Cloud Client<a class="headerlink" href="#generic-cloud-client" title="Permanent link">&para;</a></h3>
+<p>The generic cloud client or <code>cloud_client</code> is called to create AWS or Azure cloud clients.<br />
+This methods allows connections to multiple AWS regions using named clients and connections using multiple AWS accounts with the help of AWS profiles.</p>
+<p>The basic parameter values passed into the <code>cloud_client</code> for AWS connections are:</p>
+<ul>
+<li><strong>client_type:</strong> [Symbol] client API type (:EC2, :AutoScaling, :S3, etc.)</li>
+<li><strong>name:</strong> [Symbol] client name, defaults to :default</li>
+<li><strong>provider</strong>: [Symbol] cloud provider, :aws or :azure. Defaults to AWS.</li>
+<li><strong>region</strong>: [String] AWS region </li>
+<li><strong>aws_profile</strong>: [String] Named AWS profile (in the config/credentials files)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># In this example, we call the `cloud_client` method to get an AWS EC2 client in the default AWS region. </span>
+<span class="n">ec2_client</span> <span class="o">=</span> <span class="o">::</span><span class="no">PipelineTasks</span><span class="o">::</span><span class="no">Dsl</span><span class="o">::</span><span class="no">CloudHelper</span><span class="o">.</span><span class="n">cloud_client</span><span class="p">(</span><span class="ss">client_type</span><span class="p">:</span> <span class="ss">:EC2</span><span class="p">)</span>
+
+<span class="c1"># In this example, we call the `cloud_client` method to get an AWS EC2 client in the us-east-1 AWS region using the &#39;abc&#39; profile</span>
+<span class="n">ec2_client</span> <span class="o">=</span> <span class="o">::</span><span class="no">PipelineTasks</span><span class="o">::</span><span class="no">Dsl</span><span class="o">::</span><span class="no">CloudHelper</span><span class="o">.</span><span class="n">cloud_client</span><span class="p">(</span><span class="ss">client_type</span><span class="p">:</span> <span class="ss">:EC2</span><span class="p">,</span> <span class="ss">region</span><span class="p">:</span> <span class="s1">&#39;us-east-1&#39;</span><span class="p">,</span> <span class="ss">aws_profile</span><span class="p">:</span> <span class="s1">&#39;abc&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="adding-server-and-website-objects"><a id="server" name="server"></a>Adding server and website objects<a class="headerlink" href="#adding-server-and-website-objects" title="Permanent link">&para;</a></h2>
+<h3 id="about-servers"><a id="About" name="About"></a>About servers<a class="headerlink" href="#about-servers" title="Permanent link">&para;</a></h3>
+<p><code>server</code> is a Ruby object defining a logical server. The object contains all information necessary to connect to the underlying server.</p>
+<h4 id="using-server"><a id="Using" name="Using"></a>Using <em>server</em><a class="headerlink" href="#using-server" title="Permanent link">&para;</a></h4>
+<p>The <strong><em>server</em></strong> creation requires a name and a variety of options depending on the configuration details.</p>
+<ul>
+<li><strong>name:</strong> [String/Symbol] server name</li>
+<li><strong>protocol</strong>: [String] server protocol (winrm, winrms, wsman, wsmans, ssh, docker, local)</li>
+<li><strong>host</strong>: [String] server host name or IP address</li>
+<li><strong>port</strong>: [Integer/String] server port</li>
+<li><strong>user</strong>: [String] server user name</li>
+<li><strong>password</strong>: [String] server password. Either password or SSH keys is required.</li>
+<li><strong>keys</strong>: [String] file path to the SSH key. Either password or SSH keys is required.</li>
+<li><strong>bastion_user</strong>: [String] bastion user name. all bastion options are optional.</li>
+<li><strong>bastion_host</strong>: [String] bastion host name or IP address. all bastion options are optional.</li>
+<li><strong>bastion_port</strong>: [String] bastion port. all bastion options are optional.</li>
+<li><strong>test_profile</strong>: [String] test profile. This is used for inspec tests. The value must be set if server_test_tool is :inspec.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># in this example, we are defining &#39;server_no_bastion&#39;</span>
+    <span class="n">server</span> <span class="s1">&#39;server_no_bastion&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s2">&quot;ssh&quot;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s2">&quot;ec2-user&quot;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">host</span><span class="p">:</span> <span class="s1">&#39;1.1.1.1&#39;</span><span class="p">,</span>
+      <span class="ss">keys</span><span class="p">:</span> <span class="s1">&#39;sshkey&#39;</span> 
+
+    <span class="c1"># in this example, we are defining &#39;server_with_bastion&#39;</span>
+    <span class="n">server</span> <span class="s1">&#39;server_with_bastion&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s2">&quot;ssh&quot;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s2">&quot;ec2-user&quot;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">host</span><span class="p">:</span> <span class="s1">&#39;1.1.1.1&#39;</span><span class="p">,</span>
+      <span class="ss">keys</span><span class="p">:</span> <span class="s1">&#39;sshkey&#39;</span><span class="p">,</span>
+      <span class="ss">bastion_user</span><span class="p">:</span> <span class="s2">&quot;ec2-user&quot;</span><span class="p">,</span>
+      <span class="ss">bastion_host</span><span class="p">:</span> <span class="s1">&#39;1.1.1.2&#39;</span><span class="p">,</span>
+      <span class="ss">bastion_port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">test_profile</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span>
+
+    <span class="c1"># in this example, we are defining &#39;server_efg&#39; that is using server &#39;bastion_123&#39;</span>
+    <span class="n">server</span> <span class="s1">&#39;bastion_123&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s1">&#39;ec2-user&#39;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">keys</span><span class="p">:</span> <span class="s1">&#39;ssh_key_path&#39;</span>
+
+    <span class="n">server</span> <span class="s1">&#39;server_efg&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s2">&quot;ssh&quot;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s2">&quot;ec2-user&quot;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">host</span><span class="p">:</span> <span class="s1">&#39;1.1.1.1&#39;</span><span class="p">,</span>
+      <span class="ss">keys</span><span class="p">:</span> <span class="s1">&#39;sshkey&#39;</span><span class="p">,</span>
+      <span class="ss">bastion</span><span class="p">:</span> <span class="s1">&#39;bastion123&#39;</span>
+      <span class="ss">test_profile</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span>
+</code></pre></div>
+<h4 id="using-server_source"><a id="server_source" name="server_source"></a>Using <em>server_source</em><a class="headerlink" href="#using-server_source" title="Permanent link">&para;</a></h4>
+<p>The <strong><em>server</em></strong> creation requires a name, a provider, and a resource_type and a variety of properties depending on the configuration details.</p>
+<p>If the resource type is <code>aws_instance</code>, the server name should be set to the value of either <code>tag:Name</code> or <code>instance_id</code> to allow the host to be fetched automatically.  </p>
+<ul>
+<li><strong>name:</strong> [String/Symbol] server name</li>
+<li><strong>provider</strong>: [String] should be set to <code>aws</code> for AWS pipelines</li>
+<li><strong>resource_type</strong>: [String] should be either <code>aws_instance</code> or <code>aws_autoscaling_group</code></li>
+<li><strong>protocol</strong>: [String] server protocol (winrm, winrms, wsman, wsmans, ssh, docker, local)</li>
+<li><strong>host</strong>: [String] server host name or IP address</li>
+<li><strong>port</strong>: [Integer/String] server port</li>
+<li><strong>user</strong>: [String] server user name</li>
+<li><strong>password</strong>: [String] server password. Either password or SSH keys is required.</li>
+<li><strong>keys</strong>: [String] file path to the server's SSH key. Either password or SSH keys is required.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># in this example, we are defining a new server &#39;my_server_123&#39; that is using the bastion options</span>
+    <span class="n">bastion_options</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;bastion_123&#39;</span><span class="p">,</span>
+      <span class="ss">provider</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+      <span class="ss">resource_type</span><span class="p">:</span> <span class="s1">&#39;aws_autoscaling_group&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s1">&#39;ec2-user&#39;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">keys</span><span class="p">:</span> <span class="s1">&#39;ssh_key_path&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">server_source</span> <span class="s1">&#39;my_server_123&#39;</span><span class="p">,</span>
+      <span class="ss">provider</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+      <span class="ss">resource_type</span><span class="p">:</span> <span class="s1">&#39;aws_instance&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s1">&#39;ec2-user&#39;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">password</span><span class="p">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+      <span class="ss">bastion</span><span class="p">:</span> <span class="n">bastion_options</span><span class="p">,</span>
+      <span class="ss">test_profile</span><span class="p">:</span> <span class="s1">&#39;common&#39;</span>
+
+    <span class="c1"># in this example, we are defining &#39;my_server_456&#39; that is using server &#39;bastion_asg&#39;</span>
+    <span class="n">server_source</span> <span class="s1">&#39;bastion_asg&#39;</span><span class="p">,</span> 
+      <span class="ss">provider</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+      <span class="ss">resource_type</span><span class="p">:</span> <span class="s1">&#39;aws_autoscaling_group&#39;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s1">&#39;ec2-user&#39;</span><span class="p">,</span> 
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span> 
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> 
+      <span class="ss">keys</span><span class="p">:</span> <span class="s1">&#39;ssh_key_path&#39;</span>
+
+     <span class="n">server_source</span> <span class="s1">&#39;my_server_456&#39;</span><span class="p">,</span>
+      <span class="ss">provider</span><span class="p">:</span> <span class="s1">&#39;aws&#39;</span><span class="p">,</span>
+      <span class="ss">resource_type</span><span class="p">:</span> <span class="s1">&#39;aws_instance&#39;</span><span class="p">,</span>
+      <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span>
+      <span class="ss">user</span><span class="p">:</span> <span class="s1">&#39;ec2-user&#39;</span><span class="p">,</span>
+      <span class="ss">port</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+      <span class="ss">password</span><span class="p">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+      <span class="ss">bastion</span><span class="p">:</span> <span class="s1">&#39;bastion_asg&#39;</span><span class="p">,</span>
+      <span class="ss">test_profile</span><span class="p">:</span> <span class="s1">&#39;common&#39;</span> 
+</code></pre></div>
+<p>Looking at the <code>server_source</code> example, we are not providing the host parameter for the bastion. The framework uses AWS APIs to get host(s) at the execution time based on <code>provider</code>, <code>resource_type</code>, and the server name. </p>
+<h3 id="website"><a id="website" name="website"></a>website<a class="headerlink" href="#website" title="Permanent link">&para;</a></h3>
+<p><code>website</code> is a Ruby object defining a logical web site. The object contains all necessary information to produce the URL.</p>
+<p>The <strong><em>website</em></strong> creation requires a name and a variety of options depending on the configuration details.</p>
+<ul>
+<li><strong>name:</strong> [String/Symbol] web site name</li>
+<li><strong>protocol</strong>: [String] web site protocol (http, https). <code>http</code> is the default.</li>
+<li><strong>host</strong>: [String] web site host name</li>
+<li><strong>port</strong>: [Integer/String] web site port</li>
+<li><strong>user</strong>: [String] web site user name</li>
+<li><strong>password</strong>: [String] web site password</li>
+<li><strong>path</strong>: [String] web site path</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are creating a web site, which will be reachable by https://www.iamawebsite.com/</span>
+<span class="n">website</span> <span class="ss">:classic</span><span class="p">,</span> <span class="ss">protocol</span><span class="p">:</span> <span class="ss">:https</span><span class="p">,</span> <span class="ss">host</span><span class="p">:</span> <span class="s1">&#39;www.iamawebsite.com&#39;</span>
+</code></pre></div>
+<h2 id="uploading-files"><a id="Uploading" name="Uploading"></a>Uploading  files<a class="headerlink" href="#uploading-files" title="Permanent link">&para;</a></h2>
+<h3 id="uploading-files-to-servers"><a id="Uploading-server" name="Uploading-server"></a>Uploading files to servers<a class="headerlink" href="#uploading-files-to-servers" title="Permanent link">&para;</a></h3>
+<p><strong><em>scp_upload</em></strong></p>
+<p>Upload local files to a remote server, using <strong><em>scp</em></strong>.</p>
+<p><code>scp_upload</code> parameters are:</p>
+<ul>
+<li><strong>server:</strong> [String] server</li>
+<li><strong>locals:</strong> [Array<String>] array of local files</li>
+<li><strong>remote</strong>: [String] remote path</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are uploading the file at local_file_path to server123 at remote_path</span>
+<span class="n">scp_upload</span> <span class="n">server123</span><span class="p">,</span> <span class="o">[</span><span class="s1">&#39;local_file_path&#39;</span><span class="o">]</span><span class="p">,</span> <span class="s1">&#39;remote_path&#39;</span>
+</code></pre></div>
+<p><strong><em>train_upload</em></strong></p>
+<p>Upload local files to a remote server, using <strong><em>train</em></strong>. We recommend using <code>scp_upload</code> instead of this method.  </p>
+<p><code>train_upload</code> parameters are:</p>
+<ul>
+<li><strong>server:</strong> [String] server</li>
+<li><strong>locals:</strong> [Array<String>] array of local files</li>
+<li><strong>remote</strong>: [String] remote path</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are uploading the file at local_file_path to server123 at remote_path</span>
+<span class="n">train_upload</span> <span class="n">server123</span><span class="p">,</span> <span class="o">[</span><span class="s1">&#39;local_file_path&#39;</span><span class="o">]</span><span class="p">,</span> <span class="s1">&#39;remote_path&#39;</span>
+</code></pre></div>
+<h3 id="uploading-files-to-s3"><a id="Uploading-s3" name="Uploading-s3"></a>Uploading files to S3<a class="headerlink" href="#uploading-files-to-s3" title="Permanent link">&para;</a></h3>
+<p><strong><em>s3_folder_upload!</em></strong> uploads a folder to an S3 bucket. This method uses the default AWS region.</p>
+<p><code>s3_folder_upload!</code> parameters are:</p>
+<ul>
+<li><strong>bucket:</strong> [String] S3 bucket</li>
+<li><strong>local_folder:</strong> [String] local folder (source)</li>
+<li><strong>remote_folder</strong>: [String] remote path</li>
+<li><strong>thread_count</strong>: [Integer] Maximum number of simultaneous threads. Defaults to 5.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are uploading the content of the /opt/options/config-files directory </span>
+<span class="c1"># to the s3_destination_bucket under &#39;config-files&#39; </span>
+<span class="n">s3_folder_upload!</span><span class="p">(</span><span class="s1">&#39;s3_destination_bucket&#39;</span><span class="p">,</span> <span class="s1">&#39;/opt/options/config-files&#39;</span><span class="p">,</span> <span class="s1">&#39;config-files&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="using-rake-tasks"><a id="rake" name="rake"></a>Using Rake Tasks<a class="headerlink" href="#using-rake-tasks" title="Permanent link">&para;</a></h2>
+<p>See the following link for additional information about Rake <a href="learn-the-concepts.md#learn-the-tools-running-builds-with-rake">Learn the tools: Running builds with Rake</a>. </p>
+<h3 id="adding-new-rake-tasks"><a id="add-rake" name="add-rake"></a>Adding new rake tasks<a class="headerlink" href="#adding-new-rake-tasks" title="Permanent link">&para;</a></h3>
+<p>New rake tasks can be added directly to the Rakefile. Additional rake files (with the file extension .rake) can be added to the <em>rakelib</em> directory located at the top project level (i.e. the same directory that contains the main Rakefile).</p>
+<p>In the following example, we are adding one new rake task.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are adding a new rake task directly to Rakefile</span>
+<span class="nb">load</span> <span class="s1">&#39;packer-tasks/rake/image/ami.rake&#39;</span>
+
+<span class="n">task</span> <span class="ss">:do_something</span> <span class="k">do</span>
+  <span class="c1"># the task code goes here</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>In the following example, we are adding two new rake tasks in <code>do.rake</code> and another task in <code>qa.rake</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># This is the file content of &#39;rakelib/do.rake&#39;</span>
+<span class="c1"># in this example, we are adding new rake tasks to a .rake file in rakelib</span>
+<span class="n">task</span> <span class="ss">:do_something</span> <span class="k">do</span>
+  <span class="c1"># the task code goes here</span>
+<span class="k">end</span>
+
+<span class="n">task</span> <span class="ss">:do_something_else</span> <span class="k">do</span>
+  <span class="c1"># the task code goes here</span>
+<span class="k">end</span>
+
+<span class="c1"># This is the file content of &#39;rakelib/qa.rake&#39;</span>
+<span class="c1"># in this example, we are adding a new rake task to a .rake file in rakelib</span>
+<span class="n">task</span> <span class="ss">:qa</span> <span class="k">do</span>
+  <span class="c1"># the task code goes here</span>
+<span class="k">end</span>
+</code></pre></div>
+<h3 id="rake-namespaces"><a id="rake-name" name="rake-name"></a>rake namespaces<a class="headerlink" href="#rake-namespaces" title="Permanent link">&para;</a></h3>
+<p>Rake <em>namespaces</em> are used to avoid clashes between tasks with the same names. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># the build task in the main namespace</span>
+<span class="n">namespace</span> <span class="s1">&#39;main&#39;</span> <span class="k">do</span>
+  <span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span>
+    <span class="c1"># the task code goes here</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># the build task in the samples namespace</span>
+<span class="n">namespace</span> <span class="s1">&#39;samples&#39;</span> <span class="k">do</span>
+  <span class="n">task</span> <span class="ss">:build</span> <span class="k">do</span>
+    <span class="c1"># the task code goes here</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># the top level build task now has dependencies on two other tasks</span>
+<span class="n">task</span> <span class="ss">build</span><span class="p">:</span> <span class="sx">%w[main:build samples:build]</span>
+</code></pre></div>
+<p>We can call each task individually or we can use prerequisites to define another task (see the example above).</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># calling the main:build task</span>
+rake main:build
+
+<span class="c1"># calling the samples:build task</span>
+rake samples:build
+
+<span class="c1"># calling the top level build task. the build task depends on main:build and samples:build</span>
+rake build
+</code></pre></div>
+<h3 id="enhancing-rake-tasks"><a id="enhance-rake" name="enhance-rake"></a>Enhancing rake tasks<a class="headerlink" href="#enhancing-rake-tasks" title="Permanent link">&para;</a></h3>
+<p>A rake task may be defined more than once. Each definition adds its prerequisites and actions to the existing definition.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are showing different ways to define the same task</span>
+<span class="c1"># the following is equivalent to the single task specification given below</span>
+<span class="n">task</span> <span class="ss">:name</span>
+<span class="n">task</span> <span class="nb">name</span><span class="p">:</span> <span class="ss">:prereq1</span>
+<span class="n">task</span> <span class="nb">name</span><span class="p">:</span> <span class="sx">%w[prereq2]</span>
+<span class="n">task</span> <span class="ss">:name</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+  <span class="c1"># actions</span>
+<span class="k">end</span>
+
+<span class="c1"># the following is equivalent to the multiple task specifications given above</span>
+<span class="n">task</span> <span class="nb">name</span><span class="p">:</span> <span class="o">[</span><span class="ss">:prereq1</span><span class="p">,</span> <span class="ss">:prereq2</span><span class="o">]</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+  <span class="c1"># actions (may reference t)</span>
+<span class="k">end</span>
+</code></pre></div>
+<h3 id="using-frameworks-dsl-methods-in-rake-tasks"><a id="dsl" name="dsl"></a>Using framework's DSL methods in rake tasks<a class="headerlink" href="#using-frameworks-dsl-methods-in-rake-tasks" title="Permanent link">&para;</a></h3>
+<p>If you want to use framework's DSL (Domain Specific Language) in your rake tasks, you just need to import the framework into your .rake files.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, we are using the pipeline-task framework methods</span>
+<span class="nb">require</span> <span class="s1">&#39;pipeline-tasks&#39;</span>
+
+<span class="n">set</span> <span class="ss">:a_custom_variable</span><span class="p">,</span> <span class="s1">&#39;value_123&#39;</span>
+
+<span class="n">set_if_empty</span> <span class="ss">:do_compex_test</span><span class="p">,</span> <span class="kp">false</span>
+</code></pre></div>
+<h2 id="adding-before-and-after-hooks"><a id="hook" name="hook"></a>Adding before and after hooks<a class="headerlink" href="#adding-before-and-after-hooks" title="Permanent link">&para;</a></h2>
+<h3 id="about-before-and-after-hooks-for-rake-tasks"><a id="about-hook" name="about-hook"></a>About before and after hooks for Rake tasks<a class="headerlink" href="#about-before-and-after-hooks-for-rake-tasks" title="Permanent link">&para;</a></h3>
+<p>The <em>before</em> and <em>after</em> hooks allow customization by enabling any rake tasks to call a task (or code block) before or after its own execution. If you don't have much experience with Ruby Rake management, think of a rake task as implementation steps packaged into a <code>task</code> scope that can be called from the command line.  </p>
+<p>As this may be obvious, <em>the order of the arguments matters</em> when methods such as before and after are called. In both the before and after hooks, the current task is first and then following by the prerequisite or post task and any additional arguments or do-end code blocks.  </p>
+<h4 id="before-hook"><em>before</em> hook<a class="headerlink" href="#before-hook" title="Permanent link">&para;</a></h4>
+<p>The <em>before</em> hook should be created in the following way: <code>before(task, prerequisite, *args, &amp;block)</code>.</p>
+<p><code>before</code> parameters are:</p>
+<ul>
+<li><strong>task:</strong> [String] task</li>
+<li><strong>prerequisite:</strong> [String] this task should be executed before <em>task</em></li>
+<li><strong>args</strong>: [String] prerequisite task arguments</li>
+<li><strong>block</strong>: [Object] optional code block</li>
+</ul>
+<p>In the example below, <code>:starting</code> would be the task to be called and <code>:ensure_user</code> would be the task to run before <code>:starting</code> is invoked. </p>
+<div class="highlight"><pre><span></span><code>  <span class="c1"># :ensure_user will be called before :starting</span>
+  <span class="n">before</span> <span class="ss">:starting</span><span class="p">,</span> <span class="ss">:ensure_user</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># in this example, &#39;infra:destroy:core-bucket-pre&#39; will be executed before &#39;infra:destroy:core-bucket:destroy&#39;</span>
+<span class="c1"># the code block (the code between do-end) contains some additional code that we want to execute</span>
+<span class="n">before</span> <span class="s1">&#39;infra:destroy:core-bucket:destroy&#39;</span><span class="p">,</span> <span class="s1">&#39;infra:destroy:core-bucket-pre&#39;</span> <span class="k">do</span>
+  <span class="c1"># Identify the bucket that will hold remote state.</span>
+  <span class="n">backend_bucket</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="ss">:terraform_backend_bucket</span><span class="p">)</span>
+
+  <span class="c1"># Build the TF args that target the core account.</span>
+  <span class="n">options</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">environment</span><span class="p">:</span> <span class="n">fetch</span><span class="p">(</span><span class="ss">:accounts</span><span class="p">,</span> <span class="p">{})</span><span class="o">[</span><span class="n">fetch</span><span class="p">(</span><span class="ss">:core_vars</span><span class="p">,</span> <span class="p">{})</span><span class="o">[</span><span class="s1">&#39;account_code&#39;</span><span class="o">]]</span> <span class="p">}</span>
+
+  <span class="c1"># Remove the bucket from the TF state.</span>
+  <span class="n">status</span> <span class="s2">&quot;Removing bucket:  </span><span class="si">#{</span><span class="n">backend_bucket</span><span class="si">}</span><span class="s2"> from terraform state&quot;</span>
+  <span class="n">cd</span> <span class="s1">&#39;terraform/core-bucket&#39;</span> <span class="k">do</span>
+    <span class="n">terraform</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="kp">nil</span><span class="p">,</span> <span class="s1">&#39;rm&#39;</span><span class="p">,</span> <span class="s1">&#39;aws_s3_bucket.platform&#39;</span><span class="p">,</span> <span class="n">options</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="ss">ignore_failure</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<h4 id="after-hook"><em>after</em> hook<a class="headerlink" href="#after-hook" title="Permanent link">&para;</a></h4>
+<p>The <em>after</em> hook should be created in the following way: <code>after(task, post_task, *args, &amp;block)</code>.</p>
+<p><code>after</code> parameters are:</p>
+<ul>
+<li><strong>task:</strong> [String] task</li>
+<li><strong>post_task:</strong> [String] this task should be executed after <em>task</em></li>
+<li><strong>args</strong>: [String] post_task task arguments</li>
+<li><strong>block</strong>: [Object] optional code block</li>
+</ul>
+<p>The <strong>after hook</strong> example below shows the after method name and then the arguments being passed with the first argument as <code>security:compliance</code> being the initial task to be called and the next argument <code>security:check_audit_results</code> being the post task to be called after the first task is completed. </p>
+<div class="highlight"><pre><span></span><code>  <span class="c1"># in this example, `security:check_audit_results` will be called after `security:compliance`</span>
+  <span class="n">after</span> <span class="s2">&quot;security:compliance&quot;</span><span class="p">,</span> <span class="s2">&quot;security:check_audit_results&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>  <span class="c1"># in this example, &#39;config:bootstrap:upload&#39; will be called after &#39;infra:deploy:core-bucket:apply&#39;</span>
+  <span class="c1"># the code block will ensure we always upload generated configuration to the bucket by invoking task &#39;config:customer.yml:upload!&#39;</span>
+  <span class="n">after</span> <span class="s1">&#39;infra:deploy:core-bucket:apply&#39;</span><span class="p">,</span> <span class="s1">&#39;config:bootstrap:upload&#39;</span> <span class="k">do</span>
+    <span class="k">begin</span> <span class="n">invoke</span> <span class="s1">&#39;config:customer.yml:upload!&#39;</span>
+    <span class="k">rescue</span> <span class="no">RuntimeError</span> <span class="o">=&gt;</span> <span class="n">e</span>
+      <span class="n">error</span> <span class="n">e</span><span class="o">.</span><span class="n">message</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+</code></pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../External-Configuration/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              External configurations
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Learn-the-concepts/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Learn the concepts
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

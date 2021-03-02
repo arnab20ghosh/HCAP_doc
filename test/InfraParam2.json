@@ -1,0 +1,34 @@
+"provider":
+{
+
+  "subscription_id": "XXXXXXXXXXXXXXXXXXXXXXXXXX7b7e",
+  "client_id": "XXXXXXXXXXXXXXXXXXXXXXXXXX9e25",
+  "client_secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXPl2i",
+  "tenant_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXc4bc"
+
+},
+	
+"input": 
+{
+  "azurerm_snapshot": 
+  {
+    "testAzureSnapshot": 
+	{
+      "name": "sample_snapshot",
+      "location": "East US",
+      "resource_group_name": "sample_resources",
+      "create_option": "Empty",
+      "disk_size_gb": 10,
+      "source_resource_id": null,
+      "tags": {}
+    }
+  }
+},
+	
+"output": 
+{
+	"azurerm_snapshot": 
+	{
+    "testAzureSnapshot": "sample_snapshot"
+	}
+}

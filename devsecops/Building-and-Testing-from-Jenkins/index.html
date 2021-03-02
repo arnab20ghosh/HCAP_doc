@@ -1,0 +1,2462 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Build and test from Jenkins - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-and-test-from-jenkins" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build and test from Jenkins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link md-tabs__link--active">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Build and test from Jenkins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Build and test from Jenkins
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-folder-structure" class="md-nav__link">
+    Jenkins Folder Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenkins Folder Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs-structure" class="md-nav__link">
+    Jobs Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-ami-pipelines" class="md-nav__link">
+    Configuring AMI pipelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring AMI pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-seed-jobs" class="md-nav__link">
+    About Seed jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="About Seed jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-seed-jobs" class="md-nav__link">
+    Platform Seed Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-seed-jobs" class="md-nav__link">
+    Standard Seed Jobs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-jenkins-configuration-for-seed-jobs" class="md-nav__link">
+    Initial Jenkins Configuration for Seed Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-required-plugins" class="md-nav__link">
+    Installing the required plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-jenkins-environment-variables" class="md-nav__link">
+    Configure Jenkins environment variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Jenkins environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-platform-seed-jobs" class="md-nav__link">
+    Creating Platform Seed Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-platform-seed-jobs" class="md-nav__link">
+    Running Platform Seed jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-standard-seed-job" class="md-nav__link">
+    Creating standard Seed Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-standard-seed-job" class="md-nav__link">
+    Running standard Seed Job
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-ami-builds" class="md-nav__link">
+    Running AMI builds
+  </a>
+  
+    <nav class="md-nav" aria-label="Running AMI builds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ami-jobs-folder-structure" class="md-nav__link">
+    AMI jobs folder structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-ami-jobs" class="md-nav__link">
+    Running AMI jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-ad-hoc-pipeline" class="md-nav__link">
+    Running Ad-Hoc pipeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Ad-Hoc pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-develop-pipeline" class="md-nav__link">
+    Running Develop Pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-release-pipeline" class="md-nav__link">
+    Running Release Pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-configuration" class="md-nav__link">
+    Jenkins Configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-folder-structure" class="md-nav__link">
+    Jenkins Folder Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenkins Folder Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobs-structure" class="md-nav__link">
+    Jobs Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-ami-pipelines" class="md-nav__link">
+    Configuring AMI pipelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring AMI pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#about-seed-jobs" class="md-nav__link">
+    About Seed jobs
+  </a>
+  
+    <nav class="md-nav" aria-label="About Seed jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-seed-jobs" class="md-nav__link">
+    Platform Seed Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-seed-jobs" class="md-nav__link">
+    Standard Seed Jobs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-jenkins-configuration-for-seed-jobs" class="md-nav__link">
+    Initial Jenkins Configuration for Seed Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-required-plugins" class="md-nav__link">
+    Installing the required plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-jenkins-environment-variables" class="md-nav__link">
+    Configure Jenkins environment variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Jenkins environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-platform-seed-jobs" class="md-nav__link">
+    Creating Platform Seed Jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-platform-seed-jobs" class="md-nav__link">
+    Running Platform Seed jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-standard-seed-job" class="md-nav__link">
+    Creating standard Seed Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-standard-seed-job" class="md-nav__link">
+    Running standard Seed Job
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-ami-builds" class="md-nav__link">
+    Running AMI builds
+  </a>
+  
+    <nav class="md-nav" aria-label="Running AMI builds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ami-jobs-folder-structure" class="md-nav__link">
+    AMI jobs folder structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-ami-jobs" class="md-nav__link">
+    Running AMI jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-ad-hoc-pipeline" class="md-nav__link">
+    Running Ad-Hoc pipeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Ad-Hoc pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-develop-pipeline" class="md-nav__link">
+    Running Develop Pipeline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-release-pipeline" class="md-nav__link">
+    Running Release Pipeline
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-configuration" class="md-nav__link">
+    Jenkins Configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="build-and-test-from-jenkins">Build and test from Jenkins<a class="headerlink" href="#build-and-test-from-jenkins" title="Permanent link">&para;</a></h1>
+<h4 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'jen-fold'})" style="text-decoration:none">Jenkins Folder Structure</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'config'})" style="text-decoration:none">Configuring AMI Pipelines</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'seed-job'})" style="text-decoration:none">About Seed Jobs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'config-seed'})" style="text-decoration:none">Initial Jenkins Configuration for Seed Jobs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'ami-build'})" style="text-decoration:none">Running AMI build</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'jen-config'})" style="text-decoration:none">Jenkins Configuration</a></li>
+</ul>
+<h2 id="jenkins-folder-structure"><a id="jen-fold" name="jen-fold"></a>Jenkins Folder Structure<a class="headerlink" href="#jenkins-folder-structure" title="Permanent link">&para;</a></h2>
+<p>This section explains how to configure the platform Jenkins instance for running AMI jobs. The platform Jenkins is created and configured by the platform installation process.  </p>
+<p>To add these capabilities to other Jenkins instances, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'jen-config'})" style="text-decoration:none">Jenkins Configuration</a>.   </p>
+<h3 id="jobs-structure">Jobs Structure<a class="headerlink" href="#jobs-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>.
+└── Seed Jobs                         - Folder containing all seed jobs
+    ├── baseAmis                      - Platform provided AMIs seed job
+    └── amis                          - Standard AMI seed job
+</code></pre></div>
+<h2 id="configuring-ami-pipelines"><a id="config" name="config"></a>Configuring AMI pipelines<a class="headerlink" href="#configuring-ami-pipelines" title="Permanent link">&para;</a></h2>
+<p>AMI pipelines are used to build, test, and deliver AMIs in an automated way. The pipelines abstracts away the logic and processes required to Build, Test, and Deliver AMIs.</p>
+<h3 id="about-seed-jobs"><a id="seed-job" name="seed-job"></a>About Seed jobs<a class="headerlink" href="#about-seed-jobs" title="Permanent link">&para;</a></h3>
+<p>Seed jobs are Jenkins jobs that create one or more Jenkins jobs. Seeds jobs execute Jenkins Job DSL code.</p>
+<p>There are two types of seed jobs available for image pipelines:</p>
+<h4 id="platform-seed-jobs"><a id="platform" name="platform"></a>Platform Seed Jobs<a class="headerlink" href="#platform-seed-jobs" title="Permanent link">&para;</a></h4>
+<p>Platform seed jobs are already existing AMI jobs provided by the platform. They include the hardened BaseOS and other AMIs to run the platform. The Platform Seed jobs creates the required pipelines to build, test, and deliver the platform images.</p>
+<h4 id="standard-seed-jobs"><a id="seed" name="seed"></a>Standard Seed Jobs<a class="headerlink" href="#standard-seed-jobs" title="Permanent link">&para;</a></h4>
+<p>Standard seed jobs are used to create customer image pipelines. <strong>Pipeline-generator</strong> creates skeleton projects. The standard seed job then creates pipelines for each of the pipeline projects created with the help of the <strong>pipeline-generator</strong> gem.</p>
+<h3 id="initial-jenkins-configuration-for-seed-jobs"><a id="config-seed" name="config-seed"></a>Initial Jenkins Configuration for Seed Jobs<a class="headerlink" href="#initial-jenkins-configuration-for-seed-jobs" title="Permanent link">&para;</a></h3>
+<p>It is necessary to complete the initial Jenkins configuration before creating the Seed jobs. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'building-jenkins', viewSection: 'jen-config'})" style="text-decoration:none">Jenkins Configuration</a>. </p>
+<p><strong>Following is the list of required Jenkins Plugins:</strong></p>
+<ul>
+<li>Folders Plugin</li>
+<li>Job DSL</li>
+<li>Environment Injector</li>
+<li>Credentials Binding</li>
+<li>Git</li>
+<li>Pipeline: Job (workflow-job)</li>
+<li>Pipeline</li>
+</ul>
+<h3 id="installing-the-required-plugins"><a id="plugin" name="plugin"></a>Installing the required plugins<a class="headerlink" href="#installing-the-required-plugins" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Login to Jenkins.</p>
+</li>
+<li>
+<p>On the Jenkins homepage, click <strong>Manage Jenkins</strong>.</p>
+</li>
+</ol>
+<p><img alt="jenkins-1" src="/images/rean-devsecops/jenkins-1.png" /></p>
+<ol>
+<li>Click <strong>Manage Plugins</strong>.</li>
+</ol>
+<p><img alt="jenkins-34" src="/images/rean-devsecops/jenkins-34.png" /></p>
+<ol>
+<li>Click <strong>Available</strong> and wait for it to finish loading.</li>
+</ol>
+<p><img alt="jenkins-35" src="/images/rean-devsecops/jenkins-35.png" /></p>
+<ol>
+<li>Type the name of the plugin in the search bar <strong>Filter</strong> (e.g.  <em>environment injector</em>). Select the plugin in the list of results and click the check mark to the left of the plugin name. Similarly, search for the other plugins and select the check boxes. After installing all required plugins, click on <strong>Download now and install after restart</strong>. </li>
+</ol>
+<p><img alt="jenkins-36" src="/images/rean-devsecops/jenkins-36.png" /></p>
+<ol>
+<li>Select the check box for <strong>Restart Jenkins when installation is complete and no jobs are running</strong>.  Wait for all the plugins to install. The Jenkins will restart itself automatically once all plugins are installed.</li>
+</ol>
+<p><img alt="jenkins-37" src="/images/rean-devsecops/jenkins-37.png" /></p>
+<h3 id="configure-jenkins-environment-variables"><a id="config-jen" name="config-jen"></a>Configure Jenkins environment variables<a class="headerlink" href="#configure-jenkins-environment-variables" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On the Jenkins homepage, click <strong>Manage Jenkins</strong>.</li>
+</ol>
+<p><img alt="jenkins-1" src="/images/rean-devsecops/jenkins-1.png" /></p>
+<ol>
+<li>Click <strong>Configure System</strong>.</li>
+</ol>
+<p><img alt="jenkins-2" src="/images/rean-devsecops/jenkins-2.png" /></p>
+<ol>
+<li>Under <strong>Global Properties</strong>, select the <strong>Environment variables</strong> checkbox and click <strong>Add</strong>.</li>
+</ol>
+<p><img alt="jenkins-3" src="/images/rean-devsecops/jenkins-3.png" /></p>
+<p><img alt="jenkins-4" src="/images/rean-devsecops/jenkins-4.png" /></p>
+<ol>
+<li>Add the <strong>Name</strong> to what is shown in the image below but the value should be your own artifactory values (these values are merely examples). After adding all the values, scroll to the bottom of the page and click <strong>Save</strong>.
+   Additionally, STIGTOOL_S3_BUCKET should have the bucket created during installation.</li>
+</ol>
+<p><img alt="jenkins-global-properties" src="/images/rean-devsecops/jenkins-global-properties.png" /></p>
+<h4 id="creating-platform-seed-jobs"><a id="plat-seed" name="plat-seed"></a>Creating Platform Seed Jobs<a class="headerlink" href="#creating-platform-seed-jobs" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Jenkins homepage, click <strong>New Item</strong>.</li>
+</ol>
+<p><img alt="jenkins-6" src="/images/rean-devsecops/jenkins-6.png" /></p>
+<ol>
+<li>Enter the name as <strong>Seed Jobs</strong>, select type <strong>Folder</strong> and click <strong>OK</strong>.</li>
+</ol>
+<p><img alt="jenkins-7" src="/images/rean-devsecops/jenkins-7.png" /></p>
+<ol>
+<li>Enter the <strong>Display Name</strong>, <strong>Description</strong> and then click <strong>Save</strong>.</li>
+</ol>
+<p><img alt="jenkins-8" src="/images/rean-devsecops/jenkins-8.png" /></p>
+<ol>
+<li>On the Jenkins homepage, click <strong>New Item</strong>.</li>
+</ol>
+<p><img alt="jenkins-9" src="/images/rean-devsecops/jenkins-9.png" /></p>
+<ol>
+<li>Enter the data as shown in the image below and click <strong>OK</strong>.</li>
+</ol>
+<p><img alt="jenkins-10" src="/images/rean-devsecops/jenkins-10.png" /></p>
+<ol>
+<li>Fill in the <strong>Description</strong>, then select the <strong>This project is parameterized</strong> checkbox, and from the drop-down select <strong>String Parameter</strong>.</li>
+</ol>
+<p><img alt="jenkins-11" src="/images/rean-devsecops/jenkins-11.png" /></p>
+<ol>
+<li>Enter the following entries as shown below:</li>
+</ol>
+<p><img alt="jenkins-12" src="/images/rean-devsecops/jenkins-12.png" /></p>
+<ol>
+<li>Under <strong>Source Code Management</strong>, enter the details as shown in the image below.</li>
+</ol>
+<p><strong>Note:</strong> The Git Credentials must be configured as part of Jenkins initial configuration. The <strong>Repository URL</strong> must be updated to the repo URL of <strong>platform-jenkins-customerjobs</strong> in your Git Server</p>
+<p><img alt="jenkins-13" src="/images/rean-devsecops/jenkins-13.png" /></p>
+<ol>
+<li>Under the <strong>Build</strong> section, click on <strong>Add build step</strong>, select <strong>Process Job DSLs</strong>.</li>
+</ol>
+<p><img alt="jenkins-14" src="/images/rean-devsecops/jenkins-14.png" /></p>
+<ol>
+<li>
+<p>Select <strong>Look on Filesystem</strong>, under <strong>DSL Scripts</strong>, provide the path as shown below:</p>
+<p><img alt="jenkins-15" src="/images/rean-devsecops/jenkins-15.png" /></p>
+</li>
+<li>
+<p>Click <strong>Advanced</strong>, the view will expand. Fill in <em>src/main/jobs</em> under <strong>Additional classpath</strong> and then click on <strong>Save</strong>.
+    <em>Make sure that <strong>Script Security</strong> is disabled for Job DSL under Jenkins Global Security</em></p>
+<p><img alt="jenkins-16" src="/images/rean-devsecops/jenkins-16.png" /></p>
+</li>
+</ol>
+<h4 id="running-platform-seed-jobs"><a id="run-seed" name="run-seed"></a>Running Platform Seed jobs<a class="headerlink" href="#running-platform-seed-jobs" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Jenkins homepage, click <strong>Seed Jobs</strong>.</li>
+</ol>
+<p><img alt="jenkins-17" src="/images/rean-devsecops/jenkins-17.png" /></p>
+<ol>
+<li>Click <strong>baseAMIs</strong>.</li>
+</ol>
+<p><img alt="jenkins-18" src="/images/rean-devsecops/jenkins-18.png" /></p>
+<ol>
+<li>Click <strong>Build with Parameters</strong>.</li>
+</ol>
+<p><img alt="jenkins-19" src="/images/rean-devsecops/jenkins-19.png" /></p>
+<ol>
+<li>
+<p>Enter the following details:</p>
+</li>
+<li>
+<p><strong>extraEnvVars</strong> - Any extra environmental variables to be added to the created jobs, keep empty if not needed.</p>
+</li>
+<li><strong>configRepo</strong> - <em>External configuration repository</em> in your Git server.</li>
+<li>
+<p><strong>branch</strong> - The branch to pull the seed job logic from.</p>
+</li>
+<li>
+<p>Click <strong>Build</strong>.</p>
+</li>
+</ol>
+<p><img alt="jenkins-20" src="/images/rean-devsecops/jenkins-20.png" /></p>
+<ol>
+<li>On the Jenkins UI, there should be a folder named <strong>AMIs</strong>.</li>
+</ol>
+<p><img alt="jenkins-21" src="/images/rean-devsecops/jenkins-21.png" /></p>
+<h4 id="creating-standard-seed-job"><a id="stan-seed" name="stan-seed"></a>Creating standard Seed Job<a class="headerlink" href="#creating-standard-seed-job" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Jenkins homepage, click <strong>Seed Jobs</strong>.</li>
+</ol>
+<p><img alt="jenkins-17" src="/images/rean-devsecops/jenkins-17.png" /></p>
+<ol>
+<li>Click <strong>New Item</strong>.</li>
+</ol>
+<p><img alt="jenkins-22" src="/images/rean-devsecops/jenkins-22.png" /></p>
+<ol>
+<li>Enter an item name, select <strong>Freestyle</strong> <strong>project</strong> and click <strong>OK</strong>.</li>
+</ol>
+<p><img alt="jenkins-23" src="/images/rean-devsecops/jenkins-23.png" /></p>
+<ol>
+<li>Fill in the job <strong>Description</strong> and fill in the job parameters as shown in the image below.</li>
+</ol>
+<p><img alt="jenkins-24" src="/images/rean-devsecops/jenkins-24.png" /></p>
+<ol>
+<li>
+<p>Scroll down to the <strong>Source Code Management</strong> section and fill in the details as shown below:</p>
+</li>
+<li>
+<p><strong>Note</strong>: <em>The Git Credentials must be configured as part of Jenkins initial configuration. The <strong>Repository URL</strong> needs to be updated to the repo URL of <strong>platform-jenkins-customerjobs</strong> from your Git Server.</em></p>
+</li>
+</ol>
+<p><img alt="jenkins-25" src="/images/rean-devsecops/jenkins-25.png" /></p>
+<ol>
+<li>Under the <strong>Build</strong> section, click <strong>Add build step**</strong>, select <strong>Process Job DSLs</strong>.</li>
+</ol>
+<p><img alt="jenkins-14" src="/images/rean-devsecops/jenkins-14.png" /></p>
+<ol>
+<li>Fill in the config as below and then click <strong>Advanced</strong>.</li>
+</ol>
+<p><img alt="jenkins-26" src="/images/rean-devsecops/jenkins-26.png" /></p>
+<ol>
+<li>Add the <strong>Additional classpath</strong> as <em>src/main/jobs</em>. Scroll to the bottom of the page and click <strong>Save</strong>.</li>
+</ol>
+<p><img alt="jenkins-27" src="/images/rean-devsecops/jenkins-27.png" /></p>
+<h4 id="running-standard-seed-job"><a id="run-seed" name="run-seed"></a>Running standard Seed Job<a class="headerlink" href="#running-standard-seed-job" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Jenkins homepage, click <strong>Seed Jobs</strong>.</li>
+</ol>
+<p><img alt="jenkins-17" src="/images/rean-devsecops/jenkins-17.png" /></p>
+<ol>
+<li>Click <strong>ami</strong>.</li>
+</ol>
+<p><img alt="jenkins-28" src="/images/rean-devsecops/jenkins-28.png" /></p>
+<ol>
+<li>Click <strong>Build with Parameters</strong>.</li>
+</ol>
+<p><img alt="jenkins-29" src="/images/rean-devsecops/jenkins-29.png" /></p>
+<ol>
+<li>
+<p>Enter the following details that are applicable to the build:</p>
+</li>
+<li>
+<p><strong>application</strong> - The name of the application. Can be separated into folders by using <code>/</code></p>
+</li>
+<li><strong>appName</strong> - Human readable application name</li>
+<li><strong>sourceCodeRepo</strong> - The Git repository that holds the application source code</li>
+<li><strong>sourceCodeCredsId</strong> - Jenkins credentials id that has the remote git user credentials</li>
+<li><strong>configRepo</strong> - <em>External configuration repository</em> in your Git server.</li>
+<li><strong>extraEnvVars</strong> - extra environmental variables to be added to the created jobs, keep empty if not needed.</li>
+<li>
+<p><strong>branch</strong> - The branch to pull the seed job logic from.</p>
+</li>
+<li>
+<p>Click <strong>Build</strong>.</p>
+</li>
+</ol>
+<p><img alt="jenkins-30" src="/images/rean-devsecops/jenkins-30.png" /></p>
+<ol>
+<li>On the Jenkins homepage, click <strong>AMIs</strong>.</li>
+</ol>
+<p><img alt="jenkins-21" src="/images/rean-devsecops/jenkins-21.png" /></p>
+<ol>
+<li>Click the**Rhel7** folder.</li>
+</ol>
+<p><img alt="jenkins-31" src="/images/rean-devsecops/jenkins-31.png" /></p>
+<ol>
+<li>Click the <strong>ColdFusion</strong> folder.</li>
+</ol>
+<p><img alt="jenkins-32" src="/images/rean-devsecops/jenkins-32.png" /></p>
+<p>The ColdFusion folder must contain three sub-folders AdHoc, Develop, and Release.</p>
+<p><img alt="jenkins-33" src="/images/rean-devsecops/jenkins-33.png" /></p>
+<h3 id="running-ami-builds"><a id="ami-build" name="ami-build"></a>Running AMI builds<a class="headerlink" href="#running-ami-builds" title="Permanent link">&para;</a></h3>
+<h4 id="ami-jobs-folder-structure"><a id="folder" name="folder"></a>AMI jobs folder structure<a class="headerlink" href="#ami-jobs-folder-structure" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>.
+└── amis                              - Top level folder containing all AMIs jobs.
+    └── rhel7                         - OS specific images
+        └── baseos                    - A version of the OS specific image pipeline supporting different environments
+            ├── adhoc                 - Adhoc AMI jobs
+            │   └── Build             - Adhoc has only build, this is purely for testing purposes before pull requests are merged to develop
+            ├── dev                   - Development AMI jobs (daily CI and development purposes).
+            │   ├── Build             - Builds an image, optionally running tests and compliance scans.
+            │   └── Deliver           - Creates encrypted copies of the image and copies to workload accounts.
+            └── prod                  - Production AMI jobs (production AMIs releases).
+                ├── Start             - Cuts a release branch from develop
+                ├── Build             - Build the source code of release branch and rollback if anything fails
+                ├── Finish            - Finish the release process by merging the release branch to master and publishing source code and manifests to artifactory
+                └── Deliver           - Creates encrypted copies of the image in workload accounts
+</code></pre></div>
+<h4 id="running-ami-jobs"><a id="ami-job" name="ami-job"></a>Running AMI jobs<a class="headerlink" href="#running-ami-jobs" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Jenkins homepage, click <strong>AMIs</strong>.</li>
+</ol>
+<p><img alt="jenkins-38" src="/images/rean-devsecops/jenkins-38.png" /></p>
+<ol>
+<li>To build <em>RHEL</em> based images, click <strong>RHEL 7.x</strong>. (The steps for any other images types are similar.)</li>
+</ol>
+<p><img alt="jenkins-39" src="/images/rean-devsecops/jenkins-39.png" /></p>
+<ol>
+<li>To build a baseOS image, click <strong>BaseOS</strong>.</li>
+</ol>
+<p><img alt="jenkins-40" src="/images/rean-devsecops/jenkins-40.png" /></p>
+<ol>
+<li>
+<p>Select one of the three pipelines:</p>
+</li>
+<li>
+<p><strong>Ad-Hoc</strong>: Used for testing changes in image builds without delivering them from an arbitrary SCM branch and from any arbitrary external configuration SCM branch.</p>
+</li>
+<li><strong>Develop</strong>: Used for building and delivering images from the develop branch of SCM.</li>
+<li><strong>Release</strong>: Used for creating a release branch, building from that branch and releasing a new version and then delivering the image.</li>
+</ol>
+<blockquote>
+<p>The folder structure for these folders is explained at <a href="#ami-jobs-folder-structure">Image jobs folder structure</a>.</p>
+</blockquote>
+<h4 id="running-ad-hoc-pipeline"><a id="ad-hoc" name="ad-hoc"></a>Running Ad-Hoc pipeline<a class="headerlink" href="#running-ad-hoc-pipeline" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Click <strong>Ad-Hoc</strong>.</li>
+</ol>
+<p><img alt="jenkins-41" src="/images/rean-devsecops/jenkins-41.png" /></p>
+<ol>
+<li>Click <strong>Build</strong>.</li>
+</ol>
+<p><img alt="jenkins-44" src="/images/rean-devsecops/jenkins-44.png" /></p>
+<ol>
+<li>Click <strong>Build with Parameters</strong>.</li>
+</ol>
+<p><img alt="jenkins-45" src="/images/rean-devsecops/jenkins-45.png" /></p>
+<ol>
+<li>Enter the following details, and click <strong>Build</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>branch</td>
+<td>The SCM branch for the pipeline repository</td>
+</tr>
+<tr>
+<td>pipelineEnv</td>
+<td>The environment tag to use for the launched instances</td>
+</tr>
+<tr>
+<td>pipelineConfigRef</td>
+<td>The SCM branch for the external config repository</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="jenkins-46" src="/images/rean-devsecops/jenkins-46.png" /></p>
+<h5 id="running-develop-pipeline"><a id="develop" name="develop"></a>Running Develop Pipeline<a class="headerlink" href="#running-develop-pipeline" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Click <strong>Develop</strong>.</li>
+</ol>
+<p><img alt="jenkins-42" src="/images/rean-devsecops/jenkins-42.png" /></p>
+<ol>
+<li>Click <strong>Build</strong>.</li>
+</ol>
+<p><img alt="jenkins-47" src="/images/rean-devsecops/jenkins-47.png" /></p>
+<ol>
+<li>Click <strong>Build Now</strong>. This will build the image and after a successful run it will automatically trigger the <strong>Deliver</strong> job.</li>
+</ol>
+<p><img alt="jenkins-48" src="/images/rean-devsecops/jenkins-48.png" /></p>
+<h5 id="running-release-pipeline"><a id="release" name="release"></a>Running Release Pipeline<a class="headerlink" href="#running-release-pipeline" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Click <strong>Release</strong>.</li>
+</ol>
+<p><img alt="jenkins-43" src="/images/rean-devsecops/jenkins-43.png" /></p>
+<ol>
+<li>Click <strong>Start</strong>.</li>
+</ol>
+<p><img alt="jenkins-49" src="/images/rean-devsecops/jenkins-49.png" /></p>
+<ol>
+<li>Click <strong>Build Now</strong>.</li>
+</ol>
+<p><img alt="jenkins-50" src="/images/rean-devsecops/jenkins-50.png" /></p>
+<ol>
+<li>After a successful run of the <strong>Start</strong> job, the subsequent jobs will be started automatically.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Job</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>Creates a release branch from the develop branch</td>
+</tr>
+<tr>
+<td>Build</td>
+<td>Builds the image from the created release branch</td>
+</tr>
+<tr>
+<td>Finish</td>
+<td>Finishes the release and merges the release branch into master and bumps the version in develop branch</td>
+</tr>
+<tr>
+<td>Deliver</td>
+<td>Delivers the images to respective accounts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="jenkins-configuration"><a id="jen-config" name="jen-config"></a>Jenkins Configuration<a class="headerlink" href="#jenkins-configuration" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>The below steps only needs to be performed if your Jenkins is not configured using the Jenkins bootstrap.</p>
+</blockquote>
+<p>This section provides instructions how to enhance existing Jenkins with the platform capabilities.</p>
+<p><strong>Prerequisites</strong>:</p>
+<p>JENKINS_HOME directory is used to provide disk space for builds and archives. JENKINS_HOME is an environment variable.
+The value of JENKINS_HOME is available in the Jenkins configuration screen (<code>Manage Jenkins\Configure System</code>).</p>
+<p><strong>Artifactory</strong></p>
+<ul>
+<li>Artifactory DNS: This is the URL of artifactory where you will download and install packages from.</li>
+<li>Artifactory UserName: This is the username to authenticate artifactory.</li>
+<li>Artifactory Password: This is the Password to authenticate artifactory.</li>
+</ul>
+<p><strong>Git Server</strong></p>
+<ul>
+<li>Git server DNS</li>
+<li>Git server credentials</li>
+</ul>
+<p><strong>Installation and configuration instructions</strong>:</p>
+<ol>
+<li>Configuring REAN Platform Artifactory repo to download packages</li>
+</ol>
+<p>To resolve <em>.rpm</em> files using the YUM client, edit or create the <em>artifactory.repo</em> file with root privileges:</p>
+<p><code>sudo vi /etc/yum.repos.d/artifactory.repo</code></p>
+<p>update file with following contents:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>Artifactory<span class="o">]</span>
+<span class="nv">name</span><span class="o">=</span>Artifactory
+<span class="nv">baseurl</span><span class="o">=</span>https://&lt;URL_ENCODED_USERNAME&gt;:&lt;PASSWORD&gt;@&lt;Artifactory DNS&gt;/artifactory/virtual-yum-rhel7
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span>
+</code></pre></div>
+<ol>
+<li>
+<p>Installing necessary yum packages</p>
+</li>
+<li>
+<p>Some yum packages are pre-requisites for jenkins.</p>
+</li>
+<li>command to install package wget <code>sudo yum -y install wget</code></li>
+<li>command to install package git <code>sudo yum -y install git</code></li>
+<li>command to install package jq <code>sudo yum -y install jq</code></li>
+<li>
+<p>command to install package maven <code>sudo yum -y install maven</code></p>
+</li>
+<li>
+<p>Python</p>
+</li>
+</ol>
+<p>If you don't have Python 3, please use instructions below to install it</p>
+<div class="highlight"><pre><span></span><code>sudo yum update
+sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+python3.6 -V
+</code></pre></div>
+<ol>
+<li>python-pip</li>
+</ol>
+<p>pip is the standard package manager for Python.</p>
+<div class="highlight"><pre><span></span><code>curl -O https://bootstrap.pypa.io/get-pip.py
+<span class="c1"># if you are using python2.X</span>
+python get-pip.py --user
+<span class="c1"># if you are using python 3.X</span>
+python3 get-pip.py --user
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>~/.local/bin:<span class="nv">$PATH</span>
+<span class="nb">source</span> ~/.bash_profile
+</code></pre></div>
+<p>Now you can test to verify that <code>pip</code> is installed correctly.</p>
+<div class="highlight"><pre><span></span><code>pip3 --version
+</code></pre></div>
+<ol>
+<li>AWS CLI</li>
+</ol>
+<p>This is required for executing AWS commands.</p>
+<div class="highlight"><pre><span></span><code>pip3 install awscli --upgrade --user
+</code></pre></div>
+<p>When you use the <code>--user</code> switch, <code>pip</code> installs the AWS CLI to <code>~/.local/bin</code>.</p>
+<p>Verify that the AWS CLI installed correctly.</p>
+<div class="highlight"><pre><span></span><code>$ aws --version
+aws-cli/1.16.116 Python/3.6.8 Linux/4.14.77-81.59-amzn2.x86_64 botocore/1.12.106
+</code></pre></div>
+<p>AWS CLI configuration after AWS CLI is installed, configure AWS credentials using the command below.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Command to configure AWS credentials</span>
+aws configure --profile &lt;account-name&gt;
+AWS Access Key ID <span class="o">[</span>None<span class="o">]</span>: &lt;your access key ID&gt;
+AWS Secret Access Key <span class="o">[</span>None<span class="o">]</span>: &lt;your secret key&gt;
+Default region: &lt;Region of AWS&gt;
+Default output format <span class="o">[</span>None<span class="o">]</span>: &lt; we prefer <span class="sb">`</span>json<span class="sb">`</span> &gt;
+</code></pre></div>
+<ol>
+<li>Installing necessary jenkins plugins.</li>
+</ol>
+<p>Please see below for the list of required Jenkins plugins. You should have Jenkins admin permissions to install the plugins.
+   You have to navigate to <code>Manage Jenkins</code> and then select <code>Manage Plugins</code>. On the menu tab, please select <code>Available</code>. You will see a small filter on the top right below the username (not the filter to the lest of the username). Paste the plugins one by one and then install them. Some plugins need Jenkins restarts (make sure no jobs are running). You may find some plugins are already installed just skip them or update them if you think they are old.</p>
+<div class="highlight"><pre><span></span><code>ansicolor
+build-name-setter
+build-with-parameters
+cloudbees-folder
+config-file-provider
+configuration-as-code
+configuration-as-code-support
+copyartifact
+credentials
+credentials-binding
+doclinks
+envinject
+git
+github
+greenballs
+htmlpublisher
+htmlresource
+job-dsl
+jobConfigHistory
+matrix-auth
+multiple-scms
+parameterized-trigger
+plain-credentials
+role-strategy
+RubyMetrics
+rvm
+ssh-agent
+ssh-credentials
+workflow-aggregator
+workflow-aggregator
+ws-cleanup
+</code></pre></div>
+<ol>
+<li>Installing Terraform.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
+tar -zxvf terraform_0.11.8_linux_amd64.zip
+chmod +x terraform
+sudo mv terraform /usr/bin
+</code></pre></div>
+<ol>
+<li>Installing Terraform Providers.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># installing terraform providers</span>
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-aws/2.25.0/terraform-provider-aws_v2.25.0_x4
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-external/1.0.0_x4/terraform-provider-external_v1.0.0_x4
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-helm/0.10.2/terraform-provider-helm_v0.10.2_x4
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-kubernetes/1.8.1/terraform-provider-kubernetes_v1.8.1_x4
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-local/1.3.0/terraform-provider-local_v1.3.0_x4
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-null/1.0.0_x4/terraform-provider-null_v1.0.0_x4
+wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/terraform-provider-template/1.0.0_x4/terraform-provider-template_v1.0.0_x4
+chmod +x terraform-provider-*
+mv terraform-provider-* /usr/local
+</code></pre></div>
+<ol>
+<li>Installing Packer</li>
+</ol>
+<div class="highlight"><pre><span></span><code>wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/packer/1.4.3/packer_1.4.3_linux_amd64.zip
+tar -zxvf packer_1.4.3_linux_amd64.zip
+chmod +x packer
+sudo mv packer /usr/bin
+</code></pre></div>
+<ol>
+<li>
+<p>Installing RVM</p>
+<div class="highlight"><pre><span></span><code>wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/rvm/1.29.3/rvm-1.29.3.tar
+mkdir rvm <span class="o">&amp;&amp;</span> <span class="nb">cd</span> rvm
+tar --strip-components<span class="o">=</span><span class="m">1</span> -xzf ../rvm-stable.tar.gz
+./install --auto-dotfiles
+<span class="nb">source</span> ~/.rvm/scripts/rvm
+ wget https://&lt;Artifactory DNS&gt;/artifactory/virtual-misc/ruby/2.5.7/ruby-2.5.7.tar.bz2
+
+<span class="c1"># Save these packages for offline use by storing them in the rvm archive folder</span>
+<span class="nv">$rvm_path</span>/archives/
+
+<span class="c1"># An alternate archive folder can be specified in the .rvmrc file</span>
+<span class="nb">echo</span> <span class="nv">rvm_archives_path</span><span class="o">=</span>/path/to/tarballs/ &gt;&gt; ~/.rvmrc
+
+<span class="c1"># Disable automatic dependencies (&quot;requirements&quot;) fetching: rvm autolibs read-fail</span>
+<span class="c1"># Clean default gems:</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> &gt; ~/.rvm/gemsets/default.gems
+
+<span class="c1"># Clean global gems:</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> &gt; ~/.rvm/gemsets/global.gems
+
+rvm install <span class="m">2</span>.5.7 <span class="c1">#  (this may require sudo password for autolibs)</span>
+
+<span class="c1"># Set default Ruby version:</span>
+rvm use <span class="m">2</span>.5.7 --default
+</code></pre></div>
+</li>
+<li>
+<p>Configuring RubyGems</p>
+<p>```bash</p>
+<h1 id="add-new-gem-source-as-artifactory">add new gem source as artifactory<a class="headerlink" href="#add-new-gem-source-as-artifactory" title="Permanent link">&para;</a></h1>
+<p>gem source -a https://<USERNAME>:<API_KEY>@<Artifactory DNS>/artifactory/api/gems/virtual-rubygems/</p>
+<h1 id="remove-community-gem-server">remove community gem server<a class="headerlink" href="#remove-community-gem-server" title="Permanent link">&para;</a></h1>
+<p>gem sources -r <a href="https://rubygems.org">https://rubygems.org</a></p>
+<h1 id="configure-jenkins-to-release-gems-into-artifactory">Configure jenkins to release gems into artifactory<a class="headerlink" href="#configure-jenkins-to-release-gems-into-artifactory" title="Permanent link">&para;</a></h1>
+<p>curl -u<USERNAME>:<API_KEY> https://<Artifactory DNS>/artifactory/api/gems/virtual-rubygems/api/v1/api_key.yaml &gt; ~/.gem/credentials</p>
+<h1 id="configure-bundle-to-use-artifactory-gem-repo">Configure bundle to use artifactory gem repo<a class="headerlink" href="#configure-bundle-to-use-artifactory-gem-repo" title="Permanent link">&para;</a></h1>
+<p>bundle config mirror.<a href="https://rubygems.org">https://rubygems.org</a> https://<USERNAME>:<API_KEY>@<Artifactory DNS>/artifactory/api/gems/virtual-rubygems/</p>
+<p>```</p>
+</li>
+<li>
+<p>Installing ChefDk</p>
+<div class="highlight"><pre><span></span><code>sudo yum -y install chefdk
+</code></pre></div>
+</li>
+<li>
+<p>Configure Knife</p>
+<p>Knife is a command-line tool providing communications between the local chef-repo and the Chef server.</p>
+<div class="highlight"><pre><span></span><code>sudo su tomcat -
+<span class="nb">cd</span> <span class="nv">$TOMCAT_HOME</span>
+mkdir .chef
+touch ./.chef/knife.rb
+<span class="c1"># update following env vars and update it</span>
+<span class="nb">export</span> <span class="nv">$ARTIFACTORY_USER</span><span class="o">=</span><span class="s1">&#39;&lt; update with your artifactory user account &gt;&#39;</span>
+<span class="nb">export</span> <span class="nv">$ARTIFACTORY_KEY</span><span class="o">=</span><span class="s1">&#39;&lt; update with you artifactory password &gt;&#39;</span>
+<span class="nb">export</span> <span class="nv">$ARTIFACTORY_DNS</span><span class="o">=</span><span class="s1">&#39;&lt; update with artifactory dns eg.. artifactory.reancloud.com &gt;&#39;</span>
+<span class="nb">export</span> <span class="nv">$SUPERMARKET_REPO</span><span class="o">=</span><span class="s1">&#39;&lt; virtual supermarket repo name &gt;&#39;</span>
+<span class="nb">echo</span> <span class="s2">&quot;knife[:supermarket_site]=&quot;</span>https://<span class="nv">$ARTIFACTORY_USER</span>:<span class="nv">$ARTIFACTORY_KEY</span>@<span class="nv">$ARTIFACTORY_DNS</span>/api/chef/<span class="nv">$SUPERMARKET_REPO</span><span class="s2">&quot; &gt; ./.chef/knife.rb</span>
+<span class="s2">echo &quot;</span>knife<span class="o">[</span>:cookbook_path<span class="o">]=</span> <span class="o">[</span><span class="s1">&#39;.&#39;</span>, <span class="s1">&#39;..&#39;</span>, <span class="s1">&#39;./cookbooks&#39;</span>, <span class="s1">&#39;~/cookbooks&#39;</span><span class="o">]</span><span class="s2">&quot; &gt;&gt; ./.chef/knife.rb</span>
+</code></pre></div>
+</li>
+<li>
+<p>Configure Git</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># create a .gitconfig file in the Jenkins Home</span>
+
+<span class="nb">cd</span> <span class="nv">$JENKINS_HOME</span>
+touch .gitconfig
+
+<span class="c1"># add content below to that file</span>
+<span class="c1"># This is Git&#39;s per-user configuration file.</span>
+<span class="o">[</span>user<span class="o">]</span>
+<span class="nv">name</span> <span class="o">=</span> &lt; Jenkins Git User Name &gt;
+<span class="nv">email</span> <span class="o">=</span> &lt; Jenkins Email Account &gt;
+</code></pre></div>
+</li>
+<li>
+<p>Install REAN-platform CLI</p>
+<div class="highlight"><pre><span></span><code>gem install reanplatform-tools
+</code></pre></div>
+</li>
+<li>
+<p>Install Radar publisher</p>
+<div class="highlight"><pre><span></span><code>wget <span class="nv">$ArtifactoryURL</span>/virtual-misc/&lt;PATH to RADAR Publisher&gt;/radar-publisher.hpi
+cp radar-publisher.hpi <span class="nv">$JENKINS_HOME</span>/plugins/radar-publisher.hpi
+
+<span class="c1"># restart tomcat or jenkins service</span>
+
+<span class="c1"># restart tomcat service</span>
+sudo systemctl tomcat restart
+
+<span class="c1"># If jenkins is installed with embedded tomcat</span>
+sudo systemctl jenkins restart
+</code></pre></div>
+</li>
+<li>
+<p>Installing kubernetes client.</p>
+<p>```bash</p>
+<h1 id="download-kubectl-cli-tools-from-artifactory">download kubectl CLI tools from Artifactory<a class="headerlink" href="#download-kubectl-cli-tools-from-artifactory" title="Permanent link">&para;</a></h1>
+<p>wget $ARTIFACTORY_URL/virtual-misc/KUBECTL-PATH/kubectl_<insert latest VERSION>
+sudo cp kubectl_<insert latest VERSION> /usr/local/bin/kubectl
+   ```</p>
+</li>
+<li>
+<p>Installing HELM Package</p>
+<p>```bash</p>
+<h1 id="download-desired-version-of-helm">download desired version of HELM<a class="headerlink" href="#download-desired-version-of-helm" title="Permanent link">&para;</a></h1>
+<p>wget  $ArtifactoryURL/virtual-misc/<HELM Path>/helm-v<insert latest VERSION>-linux-amd64.tgz </p>
+<p>tar -zxvf helm-v<insert latest VERSION>-linux-amd64.tgz</p>
+<p>mv linux-amd64/helm /usr/local/bin/helm
+   ```</p>
+</li>
+<li>
+<p>Post Install configuration credentials setup</p>
+<p>Git Credentials Setup, add your GIT credentials for your GIT server with the global scope.</p>
+<p><img alt="git-creds" src="/images/rean-devsecops/git-creds-image.png" /></p>
+</li>
+<li>
+<p>Setup ENV Vars for Jenkins Global Properties.</p>
+<div class="highlight"><pre><span></span><code>ARTIFACTORY_ENDPOINT
+ARTIFACTORY_INSPEC_URL
+ARTIFACTORY_USERNAME
+AWS_DEFAULT_REGION
+AWS_REGION
+ENABLE_NESSUS
+PIPELINE_COLORS
+RUBYGEMS_PUSH_URL
+STIGTOOL_S3_BUCKET   
+</code></pre></div>
+<blockquote>
+<p>STIGTOOL_S3_BUCKET should have the bucket created during installation.</p>
+</blockquote>
+<p><em><em>ARTIFACTORY_ENDPOINT</em>, <em>ARTIFACTORY_INSPEC_URL</em>, <em>ARTIFACTORY_USERNAME</em>, <em>RUBYGEMS_PUSH_URL</em> should be configured with values from the customer artifactory.</em></p>
+<blockquote>
+<p>The variable jenkins-global-propertiess should be configured like below.</p>
+</blockquote>
+<p><strong>Note: The artifactory values in the image below should be replaced with your artifactory URL</strong>.</p>
+<p><img alt="" src="/images/rean-devsecops/jenkins-global-properties.png" /></p>
+</li>
+<li>
+<p>Configuring the Jenkins shared library.</p>
+</li>
+<li>
+<p>You have to upload the Jenkins shared library into your version control system (git server).</p>
+</li>
+<li>
+<p>Then you have to configure Jenkins to use it like below.</p>
+</li>
+<li>
+<p>Navigate to <strong>Manage Jenkins &rarr; Configure System</strong>.</p>
+</li>
+<li>
+<p>Update the Global Pipeline Libraries, as shown below.</p>
+<p><img alt="jenkins-shared-library" src="/images/rean-devsecops/jenkins-shared-library.png" /></p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Creating-Projects/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Configure project
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Building-and-Testing-from-your-Workstation/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Build and test from your workstation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3044 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Assessment Checks Reference - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assessment-checks-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assessment Checks Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Assessment checks reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Assessment checks reference
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prowler-checks" class="md-nav__link">
+    Prowler checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Prowler checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access-management-checks" class="md-nav__link">
+    Identity and Access Management checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-checks" class="md-nav__link">
+    Logging checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-checks" class="md-nav__link">
+    Monitoring checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-checks" class="md-nav__link">
+    Networking checks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hcap-assess-checks" class="md-nav__link">
+    HCAP Assess checks
+  </a>
+  
+    <nav class="md-nav" aria-label="HCAP Assess checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access-management-checks-security-policy" class="md-nav__link">
+    Identity and Access Management checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-checks-security-policy" class="md-nav__link">
+    Logging checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-checks-security-policy" class="md-nav__link">
+    Monitoring checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-checks-security-policy" class="md-nav__link">
+    Networking checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-checks-security-policy" class="md-nav__link">
+    Other checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ops-checks-operations-policy" class="md-nav__link">
+    Ops checks (Operations Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-checks-operations-policy" class="md-nav__link">
+    Performance checks (Operations Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerance-checks-operations-policy" class="md-nav__link">
+    Fault Tolerance checks (Operations Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-optimization-checks-cost-optimization-policy" class="md-nav__link">
+    Cost Optimization checks (Cost Optimization Policy)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-cis-blueprint-checks" class="md-nav__link">
+    Azure CIS Blueprint checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure CIS Blueprint checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access-management" class="md-nav__link">
+    Identity and Access Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-center-checks" class="md-nav__link">
+    Security Center checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-accounts-checks" class="md-nav__link">
+    Storage Accounts checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-services-checks" class="md-nav__link">
+    Database Services checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring-checks" class="md-nav__link">
+    Logging and Monitoring checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-checks_1" class="md-nav__link">
+    Networking checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machines-checks" class="md-nav__link">
+    Virtual Machines checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-security-considerations-checks" class="md-nav__link">
+    Other Security Considerations checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appservice-checks" class="md-nav__link">
+    AppService checks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prowler-checks" class="md-nav__link">
+    Prowler checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Prowler checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access-management-checks" class="md-nav__link">
+    Identity and Access Management checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-checks" class="md-nav__link">
+    Logging checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-checks" class="md-nav__link">
+    Monitoring checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-checks" class="md-nav__link">
+    Networking checks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hcap-assess-checks" class="md-nav__link">
+    HCAP Assess checks
+  </a>
+  
+    <nav class="md-nav" aria-label="HCAP Assess checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access-management-checks-security-policy" class="md-nav__link">
+    Identity and Access Management checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-checks-security-policy" class="md-nav__link">
+    Logging checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-checks-security-policy" class="md-nav__link">
+    Monitoring checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-checks-security-policy" class="md-nav__link">
+    Networking checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-checks-security-policy" class="md-nav__link">
+    Other checks (Security Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ops-checks-operations-policy" class="md-nav__link">
+    Ops checks (Operations Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-checks-operations-policy" class="md-nav__link">
+    Performance checks (Operations Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerance-checks-operations-policy" class="md-nav__link">
+    Fault Tolerance checks (Operations Policy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-optimization-checks-cost-optimization-policy" class="md-nav__link">
+    Cost Optimization checks (Cost Optimization Policy)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-cis-blueprint-checks" class="md-nav__link">
+    Azure CIS Blueprint checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure CIS Blueprint checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identity-and-access-management" class="md-nav__link">
+    Identity and Access Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-center-checks" class="md-nav__link">
+    Security Center checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-accounts-checks" class="md-nav__link">
+    Storage Accounts checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-services-checks" class="md-nav__link">
+    Database Services checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring-checks" class="md-nav__link">
+    Logging and Monitoring checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-checks_1" class="md-nav__link">
+    Networking checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machines-checks" class="md-nav__link">
+    Virtual Machines checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-security-considerations-checks" class="md-nav__link">
+    Other Security Considerations checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appservice-checks" class="md-nav__link">
+    AppService checks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="assessment-checks-reference">Assessment Checks Reference<a class="headerlink" href="#assessment-checks-reference" title="Permanent link">&para;</a></h1>
+<p>Hitachi Cloud Accelerator Platform - Assess ( Assess Accelerator) is a tool that automates the assessment of your cloud environment against the relevant security and compliance standards. It contains out-of-the-box policies that help you to assess if your cloud infrastructure meets the best-practice standards. For each assessment tool that it supports, Assess Accelerator provides a set of checks against which the cloud accounts are evaluated. These checks are categorized under the out-of-the-box policies in Assess Accelerator.<br></p>
+<p>This topic lists the set of checks provided for each assessment tool. You must use the Assess Check IDs while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-templates', viewSection: 'Content'})" style="text-decoration:none">creating assessment templates</a>.</p>
+<h2 id="contents"><a id="Content" name="Content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'prowler'})" style="text-decoration:none">Prowler checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'checks'})" style="text-decoration:none">HCAP Assess checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'azure'})" style="text-decoration:none">Azure CIS Blueprint checks</a></li>
+</ul>
+<h2 id="prowler-checks"><a id="prowler" name="prowler"></a>Prowler checks<a class="headerlink" href="#prowler-checks" title="Permanent link">&para;</a></h2>
+<p>Prowler is an open-source third-party tool that can be used to run security assessments of your AWS cloud infrastructure. The Prowler checks that are included in Assess Accelerator adhere to the Centre for Internet Security (CIS) standard.<br></p>
+<p>Assess Accelerator provides the following checks for the Prowler tool. <strong>These checks are categorized under the Security policy in Assess Accelerator</strong>.</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'iam-prowler'})" style="text-decoration:none">Identity and Access Management checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'log-prowler'})" style="text-decoration:none">Logging checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'monitor-prowler'})" style="text-decoration:none">Monitoring checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'network-prowler'})" style="text-decoration:none">Networking checks</a></li>
+</ul>
+<p>The format of check IDs in the Prowler tool is <strong>check</strong> followed by a number (for example, <strong>check11</strong> and <strong>check12</strong>). However, the reports in Assess Accelerator use a different format for the Prowler checks (for example, <strong>CIS1.1</strong> and <strong>CIS1.2</strong>).<br></p>
+<p>In the following tables, the <strong>Prowler Check ID</strong> column lists the original check IDs; whereas the <strong>Assess Check ID</strong> column lists the corresponding check IDs that are used in the reports generated by Assess Accelerator.<br></p>
+<p><em><strong>Important:</strong> You must use the Prowler Check IDs while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-templates', viewSection: 'Content'})" style="text-decoration:none">creating assessment templates</a> for the Prowler tool.</em></p>
+<h3 id="identity-and-access-management-checks"><a id="iam-prowler" name="iam-prowler"></a>Identity and Access Management checks<a class="headerlink" href="#identity-and-access-management-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Prowler Check ID</strong></th>
+<th>Assess Check ID</th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">check11</td>
+<td>CIS1.1</td>
+<td align="left">Avoid the use of the "root" account</td>
+</tr>
+<tr>
+<td align="left">check12</td>
+<td>CIS1.2</td>
+<td align="left">Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password</td>
+</tr>
+<tr>
+<td align="left">check13</td>
+<td>CIS1.3</td>
+<td align="left">Ensure credentials unused for 90 days or greater are disabled</td>
+</tr>
+<tr>
+<td align="left">check14</td>
+<td>CIS1.4</td>
+<td align="left">Ensure access keys are rotated every 90 days or less</td>
+</tr>
+<tr>
+<td align="left">check15</td>
+<td>CIS1.5</td>
+<td align="left">Ensure IAM password policy requires at least one uppercase letter</td>
+</tr>
+<tr>
+<td align="left">check16</td>
+<td>CIS1.6</td>
+<td align="left">Ensure IAM password policy require at least one lowercase letter</td>
+</tr>
+<tr>
+<td align="left">check17</td>
+<td>CIS1.7</td>
+<td align="left">Ensure IAM password policy require at least one symbol</td>
+</tr>
+<tr>
+<td align="left">check18</td>
+<td>CIS1.8</td>
+<td align="left">Ensure IAM password policy require at least one number</td>
+</tr>
+<tr>
+<td align="left">check19</td>
+<td>CIS1.9</td>
+<td align="left">Ensure IAM password policy requires minimum length of 14 or greater</td>
+</tr>
+<tr>
+<td align="left">check110</td>
+<td>CIS1.10</td>
+<td align="left">Ensure IAM password policy prevents password reuse: 24 or greater</td>
+</tr>
+<tr>
+<td align="left">check111</td>
+<td>CIS1.11</td>
+<td align="left">Ensure IAM password policy expires passwords within 90 days or less</td>
+</tr>
+<tr>
+<td align="left">check112</td>
+<td>CIS1.12</td>
+<td align="left">Ensure no root account access key exists</td>
+</tr>
+<tr>
+<td align="left">check113</td>
+<td>CIS1.13</td>
+<td align="left">Ensure MFA is enabled for the root account</td>
+</tr>
+<tr>
+<td align="left">check114</td>
+<td>CIS1.14</td>
+<td align="left">Ensure hardware MFA is enabled for the root account</td>
+</tr>
+<tr>
+<td align="left">check115</td>
+<td>CIS1.15</td>
+<td align="left">Ensure security questions are registered in the AWS account</td>
+</tr>
+<tr>
+<td align="left">check116</td>
+<td>CIS1.16</td>
+<td align="left">Ensure IAM policies are attached only to groups or roles</td>
+</tr>
+<tr>
+<td align="left">check117</td>
+<td>CIS1.17</td>
+<td align="left">Maintain current contact details</td>
+</tr>
+<tr>
+<td align="left">check118</td>
+<td>CIS1.18</td>
+<td align="left">Ensure security contact information is registered</td>
+</tr>
+<tr>
+<td align="left">check119</td>
+<td>CIS1.19</td>
+<td align="left">Ensure IAM instance roles are used for AWS resource access from instances</td>
+</tr>
+<tr>
+<td align="left">check120</td>
+<td>CIS1.20</td>
+<td align="left">Ensure a support role has been created to manage incidents with AWS Support</td>
+</tr>
+<tr>
+<td align="left">check121</td>
+<td>CIS1.21</td>
+<td align="left">Do not setup access keys during initial user setup for all IAM users that have a console password</td>
+</tr>
+<tr>
+<td align="left">check122</td>
+<td>CIS 1.22</td>
+<td align="left">Ensure IAM policies that allow full "<em>:</em>" administrative privileges are not created</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logging-checks"><a id="log-prowler" name="log-prowler"></a>Logging checks<a class="headerlink" href="#logging-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Prowler Check ID</strong></th>
+<th>Assess Check ID</th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">check21</td>
+<td>CIS2.1</td>
+<td align="left">Ensure CloudTrail is enabled in all regions</td>
+</tr>
+<tr>
+<td align="left">check22</td>
+<td>CIS2.2</td>
+<td align="left">Ensure CloudTrail log file validation is enabled</td>
+</tr>
+<tr>
+<td align="left">check23</td>
+<td>CIS2.3</td>
+<td align="left">Ensure the S3 bucket CloudTrail logs to is not publicly accessible</td>
+</tr>
+<tr>
+<td align="left">check24</td>
+<td>CIS2.4</td>
+<td align="left">Ensure CloudTrail trails are integrated with CloudWatch Logs</td>
+</tr>
+<tr>
+<td align="left">check25</td>
+<td>CIS2.5</td>
+<td align="left">Ensure AWS Config is enabled in all regions</td>
+</tr>
+<tr>
+<td align="left">check26</td>
+<td>CIS2.6</td>
+<td align="left">Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket</td>
+</tr>
+<tr>
+<td align="left">check27</td>
+<td>CIS2.7</td>
+<td align="left">Ensure CloudTrail logs are encrypted at rest using KMS CMKs</td>
+</tr>
+<tr>
+<td align="left">check28</td>
+<td>CIS2.8</td>
+<td align="left">Ensure rotation for customer created CMKs is enabled</td>
+</tr>
+<tr>
+<td align="left">check29</td>
+<td>CIS2.9</td>
+<td align="left">Ensure VPC Flow Logging is Enabled in all VPCs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitoring-checks"><a id="monitor-prowler" name="monitor-prowler"></a>Monitoring checks<a class="headerlink" href="#monitoring-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Prowler Check ID</th>
+<th>Assess Check ID</th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">check31</td>
+<td>CIS3.1</td>
+<td align="left">Ensure a log metric filter and alarm exist for unauthorized API calls</td>
+</tr>
+<tr>
+<td align="left">check32</td>
+<td>CIS3.2</td>
+<td align="left">Ensure a log metric filter and alarm exist for Management Console sign-in without MFA</td>
+</tr>
+<tr>
+<td align="left">check33</td>
+<td>CIS3.3</td>
+<td align="left">Ensure a log metric filter and alarm exist for usage of root account</td>
+</tr>
+<tr>
+<td align="left">check34</td>
+<td>CIS3.4</td>
+<td align="left">Ensure a log metric filter and alarm exist for IAM policy changes</td>
+</tr>
+<tr>
+<td align="left">check35</td>
+<td>CIS3.5</td>
+<td align="left">Ensure a log metric filter and alarm exist for CloudTrail configuration changes</td>
+</tr>
+<tr>
+<td align="left">check36</td>
+<td>CIS3.6</td>
+<td align="left">Ensure a log metric filter and alarm exist for AWS Management Console authentication failures</td>
+</tr>
+<tr>
+<td align="left">check37</td>
+<td>CIS3.7</td>
+<td align="left">Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer created CMKs</td>
+</tr>
+<tr>
+<td align="left">check38</td>
+<td>CIS3.8</td>
+<td align="left">Ensure a log metric filter and alarm exist for S3 bucket policy changes</td>
+</tr>
+<tr>
+<td align="left">check39</td>
+<td>CIS3.9</td>
+<td align="left">Ensure a log metric filter and alarm exist for AWS Config configuration changes</td>
+</tr>
+<tr>
+<td align="left">check310</td>
+<td>CIS3.10</td>
+<td align="left">Ensure a log metric filter and alarm exist for security group changes</td>
+</tr>
+<tr>
+<td align="left">check311</td>
+<td>CIS3.11</td>
+<td align="left">Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL)</td>
+</tr>
+<tr>
+<td align="left">check312</td>
+<td>CIS3.12</td>
+<td align="left">Ensure a log metric filter and alarm exist for changes to network gateways</td>
+</tr>
+<tr>
+<td align="left">check313</td>
+<td>CIS3.13</td>
+<td align="left">Ensure a log metric filter and alarm exist for route table changes</td>
+</tr>
+<tr>
+<td align="left">check314</td>
+<td>CIS3.14</td>
+<td align="left">Ensure a log metric filter and alarm exist for VPC changes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="networking-checks"><a id="network-prowler" name="network-prowler"></a>Networking checks<a class="headerlink" href="#networking-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Prowler Check ID</th>
+<th>Assess Check ID</th>
+<th align="left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">check41</td>
+<td>CIS4.1</td>
+<td align="left">Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 22</td>
+</tr>
+<tr>
+<td align="left">check42</td>
+<td>CIS4.2</td>
+<td align="left">Ensure no security groups allow ingress from 0.0.0.0/0 or ::/0 to port 3389</td>
+</tr>
+<tr>
+<td align="left">check43</td>
+<td>CIS4.3</td>
+<td align="left">Ensure the default security group of every VPC restricts all traffic</td>
+</tr>
+<tr>
+<td align="left">check44</td>
+<td>CIS4.4</td>
+<td align="left">Ensure routing tables for VPC peering are "least access"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hcap-assess-checks"><a id="checks" name="checks"></a>HCAP Assess checks<a class="headerlink" href="#hcap-assess-checks" title="Permanent link">&para;</a></h2>
+<p>HCAP Assess is an inbuilt tool that can be used to run security, operations, and cost optimization assessments of your AWS cloud infrastructure.<br></p>
+<p>Assess Accelerator provides the following checks for the HCAP Assess tool. <strong>These checks are categorized under multiple policies in Assess Accelerator</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Assess Accelerator Policy</th>
+<th>HCAP Assess Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security</td>
+<td>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'iam-hcap'})" style="text-decoration:none">Identity and Access Management checks</a><br>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'log-hcap'})" style="text-decoration:none">Logging checks</a><br>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'monitor-hcap'})" style="text-decoration:none">Monitoring checks</a><br>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'network-hcap'})" style="text-decoration:none">Networking checks</a><br>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'other-hcap'})" style="text-decoration:none">Other checks</a></td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'ops-hcap'})" style="text-decoration:none">Ops checks</a><br>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'perf-hcap'})" style="text-decoration:none">Performance checks</a><br>--   <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'fault-hcap'})" style="text-decoration:none">Fault Tolerance checks</a></td>
+</tr>
+<tr>
+<td>Cost Optimization</td>
+<td>-- <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'cost-hcap'})" style="text-decoration:none">Cost Optimization checks</a></td>
+</tr>
+</tbody>
+</table>
+<p>The check IDs in the HCAP Assess tool use one of the following prefixes:  </p>
+<ul>
+<li><strong>CIS</strong> (Centre for Internet Security): This prefix is used for checks that adhere to the CIS standard. <strong>Example:</strong> CIS1.1 and CIS1.2</li>
+<li><strong>CAP</strong> (Custom Assess Policies): This prefix is used for checks that are custom checks provided by the Assess Accelerator. The <strong>CAP</strong> prefix is available only with the HCAP Assess tool. <strong>Example:</strong> CAP4.2 and CAP4.3</li>
+</ul>
+<p><em><strong>Important:</strong> You must use the Assess Check IDs listed in the following tables while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-templates', viewSection: 'Content'})" style="text-decoration:none">creating assessment templates</a> for the HCAP Assess tool.</em></p>
+<h3 id="identity-and-access-management-checks-security-policy"><a id="iam-hcap" name="iam-hcap"></a>Identity and Access Management checks (Security Policy)<a class="headerlink" href="#identity-and-access-management-checks-security-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CIS1.1</td>
+<td align="left">Avoid the use of the "root" account</td>
+</tr>
+<tr>
+<td align="left">CIS1.2</td>
+<td align="left">Ensure multi-factor authentication (MFA) is enabled for all IAM users that have a console password</td>
+</tr>
+<tr>
+<td align="left">CIS1.3A</td>
+<td align="left">Disable all console passwords that are unused for 90 days or more</td>
+</tr>
+<tr>
+<td align="left">CIS1.3B</td>
+<td align="left">Disable all access keys that are unused for 90 days or more</td>
+</tr>
+<tr>
+<td align="left">CIS1.4</td>
+<td align="left">Ensure access keys are rotated every 90 days or less</td>
+</tr>
+<tr>
+<td align="left">CIS1.5</td>
+<td align="left">Ensure IAM password policy requires at least one uppercase letter</td>
+</tr>
+<tr>
+<td align="left">CIS1.6</td>
+<td align="left">Ensure IAM password policy require at least one lowercase letter</td>
+</tr>
+<tr>
+<td align="left">CIS1.7</td>
+<td align="left">Ensure IAM password policy require at least one symbol</td>
+</tr>
+<tr>
+<td align="left">CIS1.8</td>
+<td align="left">Ensure IAM password policy require at least one number</td>
+</tr>
+<tr>
+<td align="left">CIS1.9</td>
+<td align="left">Ensure IAM password policy requires minimum password length of 14 or greater</td>
+</tr>
+<tr>
+<td align="left">CIS1.10</td>
+<td align="left">Ensure IAM password policy prevents password reuse</td>
+</tr>
+<tr>
+<td align="left">CIS1.11</td>
+<td align="left">Ensure IAM password policy expires passwords within 90 days or less</td>
+</tr>
+<tr>
+<td align="left">CIS1.12</td>
+<td align="left">Ensure no root account access key exists</td>
+</tr>
+<tr>
+<td align="left">CIS1.13</td>
+<td align="left">Ensure MFA is enabled for the "root" account</td>
+</tr>
+<tr>
+<td align="left">CIS1.16</td>
+<td align="left">Ensure IAM policies are attached only to groups or roles</td>
+</tr>
+<tr>
+<td align="left">CIS1.19</td>
+<td align="left">Ensure IAM instance roles are used for AWS resource access from instances</td>
+</tr>
+<tr>
+<td align="left">CIS1.22</td>
+<td align="left">Ensure IAM policies that allow full administrative privileges (i.e. "<em>:</em>") are not created</td>
+</tr>
+<tr>
+<td align="left">CAP1.1</td>
+<td align="left">Verify that there are no IAM users without password</td>
+</tr>
+<tr>
+<td align="left">CAP1.2</td>
+<td align="left">Verify that no IAM user have access keys</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logging-checks-security-policy"><a id="log-hcap" name="log-hcap"></a>Logging checks (Security Policy)<a class="headerlink" href="#logging-checks-security-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CIS2.1</td>
+<td align="left">Ensure CloudTrail is enabled in all regions</td>
+</tr>
+<tr>
+<td align="left">CIS2.2</td>
+<td align="left">Ensure CloudTrail log file validation is enabled</td>
+</tr>
+<tr>
+<td align="left">CIS2.3</td>
+<td align="left">Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible</td>
+</tr>
+<tr>
+<td align="left">CIS2.4</td>
+<td align="left">Ensure CloudTrail trails are integrated with CloudWatch Logs</td>
+</tr>
+<tr>
+<td align="left">CIS2.5</td>
+<td align="left">Ensure AWS Config is enabled in all regions</td>
+</tr>
+<tr>
+<td align="left">CIS2.6</td>
+<td align="left">Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket</td>
+</tr>
+<tr>
+<td align="left">CIS2.7</td>
+<td align="left">Ensure CloudTrail logs are encrypted at rest using KMS CMKs</td>
+</tr>
+<tr>
+<td align="left">CIS2.8</td>
+<td align="left">Ensure rotation for customer created CMKs is enabled</td>
+</tr>
+<tr>
+<td align="left">CAP2.1</td>
+<td align="left">Verify that the Cloudtrail SNS topic is not missing</td>
+</tr>
+<tr>
+<td align="left">CAP2.2</td>
+<td align="left">Verify that an alert is displayed if CloudTrail Global Service Events is not enabled</td>
+</tr>
+<tr>
+<td align="left">CAP2.3</td>
+<td align="left">Verify that the SNS Notifications being sent from CloudTrail is not failing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitoring-checks-security-policy"><a id="monitor-hcap" name="monitor-hcap"></a>Monitoring checks (Security Policy)<a class="headerlink" href="#monitoring-checks-security-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CIS3.1</td>
+<td align="left">Ensure a log metric filter and alarm exist for unauthorized API calls</td>
+</tr>
+<tr>
+<td align="left">CIS3.2</td>
+<td align="left">Ensure a log metric filter and alarm exist for Management Console sign-in without MFA</td>
+</tr>
+<tr>
+<td align="left">CIS3.3</td>
+<td align="left">Ensure a log metric filter and alarm exist for usage of "root" account</td>
+</tr>
+<tr>
+<td align="left">CIS3.4</td>
+<td align="left">Ensure a log metric filter and alarm exist for IAM policy changes</td>
+</tr>
+<tr>
+<td align="left">CIS3.5</td>
+<td align="left">Ensure a log metric filter and alarm exist for CloudTrail configuration changes</td>
+</tr>
+<tr>
+<td align="left">CIS3.6</td>
+<td align="left">Ensure a log metric filter and alarm exist for AWS Management Console authentication failures</td>
+</tr>
+<tr>
+<td align="left">CIS3.7</td>
+<td align="left">Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer created CMKs</td>
+</tr>
+<tr>
+<td align="left">CIS3.8</td>
+<td align="left">Ensure a log metric filter and alarm exist for S3 bucket policy changes</td>
+</tr>
+<tr>
+<td align="left">CIS3.9</td>
+<td align="left">Ensure a log metric filter and alarm exist for AWS Config configuration changes</td>
+</tr>
+<tr>
+<td align="left">CIS3.10</td>
+<td align="left">Ensure a log metric filter and alarm exist for security group changes</td>
+</tr>
+<tr>
+<td align="left">CIS3.11</td>
+<td align="left">Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL)</td>
+</tr>
+<tr>
+<td align="left">CIS3.12</td>
+<td align="left">Ensure a log metric filter and alarm exist for changes to network gateways</td>
+</tr>
+<tr>
+<td align="left">CIS3.13</td>
+<td align="left">Ensure a log metric filter and alarm exist for route table changes</td>
+</tr>
+<tr>
+<td align="left">CIS3.14</td>
+<td align="left">Ensure a log metric filter and alarm exist for VPC changes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="networking-checks-security-policy"><a id="network-hcap" name="network-hcap"></a>Networking checks (Security Policy)<a class="headerlink" href="#networking-checks-security-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CIS4.1</td>
+<td align="left">Ensure no security groups allow ingress from 0.0.0.0/0 to port 22</td>
+</tr>
+<tr>
+<td align="left">CIS4.2</td>
+<td align="left">Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389</td>
+</tr>
+<tr>
+<td align="left">CAP4.1</td>
+<td align="left">Ensure VPC flow logging is enabled in all VPCs</td>
+</tr>
+<tr>
+<td align="left">CIS4.3</td>
+<td align="left">Ensure the default security group of every VPC restricts all traffic</td>
+</tr>
+<tr>
+<td align="left">CIS4.4</td>
+<td align="left">Ensure routing tables for VPC peering are "least access"</td>
+</tr>
+<tr>
+<td align="left">CAP4.2</td>
+<td align="left">Verify that Telnet protocol is denied in the NACL rules of VPC</td>
+</tr>
+<tr>
+<td align="left">CAP4.3</td>
+<td align="left">Verify that POP3 protocol is denied in the NACL rules of VPC</td>
+</tr>
+<tr>
+<td align="left">CAP4.4</td>
+<td align="left">Verify that IMAP protocol is denied in the NACL rules of VPC</td>
+</tr>
+<tr>
+<td align="left">CAP4.5</td>
+<td align="left">Verify that ELB Back-end Authentication is enabled</td>
+</tr>
+<tr>
+<td align="left">CAP4.6</td>
+<td align="left">Verify that Cross Zone Load Balancing is enabled</td>
+</tr>
+<tr>
+<td align="left">CAP4.7</td>
+<td align="left">Verify that ELB Security Groups ports matches ELB Listener Configuration</td>
+</tr>
+<tr>
+<td align="left">CAP4.8</td>
+<td align="left">Verify that ELB SSL configuration is enabled</td>
+</tr>
+<tr>
+<td align="left">CAP4.9</td>
+<td align="left">Verify that ELB Cipher policies are the latest</td>
+</tr>
+<tr>
+<td align="left">CAP4.10</td>
+<td align="left">Verify that no S3 buckets are public</td>
+</tr>
+<tr>
+<td align="left">CAP4.11</td>
+<td align="left">Verify that no ICMP port is open to public</td>
+</tr>
+<tr>
+<td align="left">CAP4.12</td>
+<td align="left">Verify that the RDS DB Instances are not running On default Ports</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-checks-security-policy"><a id="other-hcap" name="other-hcap"></a>Other checks (Security Policy)<a class="headerlink" href="#other-checks-security-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CAP5.1</td>
+<td align="left">Verify that DB servers are not Public</td>
+</tr>
+<tr>
+<td align="left">CAP5.2</td>
+<td align="left">Verify that secondary volumes are encrypted</td>
+</tr>
+<tr>
+<td align="left">CAP5.3</td>
+<td align="left">Verify that CloudFront SSL Certificate on the Origin Server is expired</td>
+</tr>
+<tr>
+<td align="left">CAP5.4</td>
+<td align="left">Verify that CloudFront SSL Certificate on the Origin Server are about to expire</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ops-checks-operations-policy"><a id="ops-hcap" name="ops-hcap"></a>Ops checks (Operations Policy)<a class="headerlink" href="#ops-checks-operations-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CAP6.1</td>
+<td align="left">Verify that the use of generic user names are avoided for IAM Users</td>
+</tr>
+<tr>
+<td align="left">CAP6.2</td>
+<td align="left">Verify that all IAM groups are associated with IAM Users</td>
+</tr>
+<tr>
+<td align="left">CAP6.3</td>
+<td align="left">Verify that every Instance should have Name, Environment, Owner, CostCenter, ExpirationDate, Role, Application and Monitoring tags</td>
+</tr>
+<tr>
+<td align="left">CAP6.4</td>
+<td align="left">Verify that S3 VPC Endpoints are configured for VPC</td>
+</tr>
+<tr>
+<td align="left">CAP6.5</td>
+<td align="left">Verify that Cross-zone Load Balancing is enabled to ELB to experience better performance</td>
+</tr>
+<tr>
+<td align="left">CAP6.6</td>
+<td align="left">Verify that AutoMinorVersionUpgrade is enabled for all RDS Instances</td>
+</tr>
+<tr>
+<td align="left">CAP6.7</td>
+<td align="left">Verify that you are using new VPC for your servers. Default VPC is not a best practice</td>
+</tr>
+<tr>
+<td align="left">CAP6.8</td>
+<td align="left">Verify that S3 Bucket life cycle rules are provided for log buckets</td>
+</tr>
+<tr>
+<td align="left">CAP6.9</td>
+<td align="left">Verify that S3 bucket versioning is enabled for log buckets</td>
+</tr>
+<tr>
+<td align="left">CAP6.10</td>
+<td align="left">Verify that Multi-AZ deployment is used for production RDS instances</td>
+</tr>
+<tr>
+<td align="left">CAP6.11</td>
+<td align="left">Verify that for production RDS instances backups are enabled</td>
+</tr>
+<tr>
+<td align="left">CAP6.12</td>
+<td align="left">Verify that there are no unused network interfaces</td>
+</tr>
+<tr>
+<td align="left">CAP6.13</td>
+<td align="left">Verify that IAM-Instance-Profiles not used for more than 90 days are removed</td>
+</tr>
+<tr>
+<td align="left">CAP6.14</td>
+<td align="left">Verify that unused IAM certificates for more than 90 days are removed</td>
+</tr>
+<tr>
+<td align="left">CAP6.15</td>
+<td align="left">Verify that backups are taken of instances with Deregistered AMIs</td>
+</tr>
+<tr>
+<td align="left">CAP6.16</td>
+<td align="left">Verify that instances are not launched with Public AMIs</td>
+</tr>
+<tr>
+<td align="left">CAP6.17</td>
+<td align="left">Verify that data stored in RDS instances is encrypted</td>
+</tr>
+<tr>
+<td align="left">CAP6.18</td>
+<td align="left">Verify that production ELBs attached with more than one EC2 instance</td>
+</tr>
+<tr>
+<td align="left">CAP6.19</td>
+<td align="left">Verify that there are no unused route tables</td>
+</tr>
+<tr>
+<td align="left">CAP6.20</td>
+<td align="left">Verify the failed state for RDS DB instances</td>
+</tr>
+<tr>
+<td align="left">CAP6.21</td>
+<td align="left">Verify that the instances used in ELB are active with status as InService</td>
+</tr>
+<tr>
+<td align="left">CAP6.22</td>
+<td align="left">Verify that instances in stopped state for more than two weeks are deleted</td>
+</tr>
+<tr>
+<td align="left">CAP6.23</td>
+<td align="left">Verify IAM-Roles not used for more than 90 days are removed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance-checks-operations-policy"><a id="perf-hcap" name="perf-hcap"></a>Performance checks (Operations Policy)<a class="headerlink" href="#performance-checks-operations-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CAP7.1</td>
+<td align="left">Verify that provisioned IOPS volume is not attached to a non-EBS optimized instance</td>
+</tr>
+<tr>
+<td align="left">CAP7.2</td>
+<td align="left">Verify that the CloudFront distributions having alternate domain names are resolvable</td>
+</tr>
+<tr>
+<td align="left">CAP7.3</td>
+<td align="left">Verify that there are no security groups with more than 50 rules</td>
+</tr>
+<tr>
+<td align="left">CAP7.4</td>
+<td align="left">Verify that all instances are enabled with termination protection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fault-tolerance-checks-operations-policy"><a id="fault-hcap" name="fault-hcap"></a>Fault Tolerance checks (Operations Policy)<a class="headerlink" href="#fault-tolerance-checks-operations-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CAP8.1</td>
+<td align="left">Verify that Connection draining is enabled for ELB for better user experience</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cost-optimization-checks-cost-optimization-policy"><a id="cost-hcap" name="cost-hcap"></a>Cost Optimization checks (Cost Optimization Policy)<a class="headerlink" href="#cost-optimization-checks-cost-optimization-policy" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Assess Check ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CAP9.1</td>
+<td align="left">Verify that reserved instance is used, if there is any EC2 instance running for more than 30 days</td>
+</tr>
+<tr>
+<td align="left">CAP9.2</td>
+<td align="left">Verify that all auto-scaling launch configurations are associated with an auto-scaling group</td>
+</tr>
+<tr>
+<td align="left">CAP9.3</td>
+<td align="left">Verify that there are no unused Elastic Load Balancers (ELBs)</td>
+</tr>
+<tr>
+<td align="left">CAP9.4</td>
+<td align="left">Verify that there are no unused Elastic IPs (EIP)</td>
+</tr>
+<tr>
+<td align="left">CAP9.5</td>
+<td align="left">Verify that there are no unused available EBS Volumes</td>
+</tr>
+<tr>
+<td align="left">CAP9.6</td>
+<td align="left">Verify that there are no snapshots older than 90 days</td>
+</tr>
+</tbody>
+</table>
+<h2 id="azure-cis-blueprint-checks"><a id="azure" name="azure"></a>Azure CIS Blueprint checks<a class="headerlink" href="#azure-cis-blueprint-checks" title="Permanent link">&para;</a></h2>
+<p>Microsoft Azure assessments use CIS Microsoft Azure Foundations Benchmark 1.1.0 policy, which gets created by assigning CIS Microsoft Azure Foundations Benchmark blueprint.</p>
+<p>The Azure assessment checks that are included in Assess Accelerator adhere to the Centre for Internet Security (CIS) standard.<br>Assess Accelerator provides the following checks for Azure assessments. <strong>These checks are categorized under the Security policy in Assess Accelerator</strong>.</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'iam-azure'})" style="text-decoration:none">Identity and Access Management checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'security-azure'})" style="text-decoration:none">Security Center checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'store-azure'})" style="text-decoration:none">Storage Accounts checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'database-azure'})" style="text-decoration:none">Database Services checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'log-azure'})" style="text-decoration:none">Logging and Monitoring checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'network-azure'})" style="text-decoration:none">Networking checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'virtual-azure'})" style="text-decoration:none">Virtual Machines checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'other-azure'})" style="text-decoration:none">Other Security Applications checks</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'app-azure'})" style="text-decoration:none">AppService checks</a></li>
+</ul>
+<h3 id="identity-and-access-management"><a id="iam-azure" name="iam-azure"></a><strong>Identity and Access Management</strong><a class="headerlink" href="#identity-and-access-management" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS1.1</td>
+<td>Ensure that  multi-factor authentication is enabled for all privileged users</td>
+</tr>
+<tr>
+<td>CIS1.2</td>
+<td>Ensure that  multi-factor authentication is enabled for all non-privileged users</td>
+</tr>
+<tr>
+<td>CIS1.3</td>
+<td>Ensure that  there are no guest users</td>
+</tr>
+<tr>
+<td>CIS1.23</td>
+<td>Ensure that  no custom subscription owner roles are created</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-center-checks"><a id="security-azure" name="security-azure"></a>Security Center checks<a class="headerlink" href="#security-center-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS2.1</td>
+<td>Ensure that  standard pricing tier is selected</td>
+</tr>
+<tr>
+<td>CIS2.2</td>
+<td>Ensure that  'Automatic provisioning of monitoring agent' is set to 'On'</td>
+</tr>
+<tr>
+<td>CIS2.3</td>
+<td>Ensure ASC  Default policy setting "Monitor System Updates" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.4</td>
+<td>Ensure ASC  Default policy setting "Monitor OS Vulnerabilities" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.5</td>
+<td>Ensure ASC  Default policy setting "Monitor Endpoint Protection" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.6</td>
+<td>Ensure ASC  Default policy setting "Monitor Disk Encryption" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.7</td>
+<td>Ensure ASC  Default policy setting "Monitor Network Security Groups" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.9</td>
+<td>Ensure ASC  Default policy setting "Enable Next Generation Firewall(NGFW)  Monitoring" is not "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.10</td>
+<td>Ensure ASC  Default policy setting "Monitor Vulnerability Assessment" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.12</td>
+<td>Ensure ASC  Default policy setting "Monitor JIT Network Access" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.13</td>
+<td>Ensure ASC  Default policy setting "Monitor Adaptive Application Whitelisting"  is not "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.14</td>
+<td>Ensure ASC  Default policy setting "Monitor SQL Auditing" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.15</td>
+<td>Ensure ASC  Default policy setting "Monitor SQL Encryption" is not  "Disabled"</td>
+</tr>
+<tr>
+<td>CIS2.16</td>
+<td>Ensure that  'Security contact emails' is set</td>
+</tr>
+<tr>
+<td>CIS2.18</td>
+<td>Ensure that  'Send email notification for high severity alerts' is set to 'On'</td>
+</tr>
+<tr>
+<td>CIS2.19</td>
+<td>Ensure that  'Send email also to subscription owners' is set to 'On'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage-accounts-checks"><a id="store-azure" name="store-azure"></a>Storage Accounts checks<a class="headerlink" href="#storage-accounts-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS3.1</td>
+<td>Ensure that  'Secure transfer required' is set to 'Enabled'</td>
+</tr>
+<tr>
+<td>CIS3.6</td>
+<td>Ensure that  'Public access level' is set to Private for blob containers</td>
+</tr>
+<tr>
+<td>CIS3.7</td>
+<td>Ensure  default network access rule for Storage Accounts is set to deny</td>
+</tr>
+<tr>
+<td>CIS3.8</td>
+<td>Ensure  'Trusted Microsoft Services' is enabled for Storage Account access</td>
+</tr>
+</tbody>
+</table>
+<h3 id="database-services-checks"><a id="database-azure" name="database-azure"></a>Database Services checks<a class="headerlink" href="#database-services-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS4.1</td>
+<td>Ensure that  'Auditing' is set to 'On'</td>
+</tr>
+<tr>
+<td>CIS4.2</td>
+<td>Ensure that  'AuditActionGroups' in 'auditing' policy for a SQL server is set properly</td>
+</tr>
+<tr>
+<td>CIS4.3</td>
+<td>Ensure that  'Auditing' Retention is 'greater than 90 days'</td>
+</tr>
+<tr>
+<td>CIS4.4</td>
+<td>Ensure that  'Advanced Data Security' on a SQL server is set to 'On'</td>
+</tr>
+<tr>
+<td>CIS4.8</td>
+<td>Ensure that  Azure Active Directory Admin is configured</td>
+</tr>
+<tr>
+<td>CIS4.9</td>
+<td>Ensure that  'Data encryption' is set to 'On' on a SQL Database</td>
+</tr>
+<tr>
+<td>CIS4.10</td>
+<td>Ensure SQL  server's TDE protector is encrypted with BYOK (Use your own key)</td>
+</tr>
+<tr>
+<td>CIS4.11</td>
+<td>Ensure  'Enforce SSL connection' is set to 'ENABLED' for MySQL Database Server</td>
+</tr>
+<tr>
+<td>CIS4.12</td>
+<td>Ensure  server parameter 'log_checkpoints' is set to 'ON' for PostgreSQL Database  Server</td>
+</tr>
+<tr>
+<td>CIS4.13</td>
+<td>Ensure  'Enforce SSL connection' is set to 'ENABLED' for PostgreSQL Database Server</td>
+</tr>
+<tr>
+<td>CIS4.14</td>
+<td>Ensure  server parameter 'log_connections' is set to 'ON' for PostgreSQL Database  Server</td>
+</tr>
+<tr>
+<td>CIS4.15</td>
+<td>Ensure  server parameter 'log_disconnections' is set to 'ON' for PostgreSQL Database  Server</td>
+</tr>
+<tr>
+<td>CIS4.17</td>
+<td>Ensure  server parameter 'connection_throttling' is set to 'ON' for PostgreSQL  Database Server</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logging-and-monitoring-checks"><a id="log-azure" name="log-azure"></a>Logging and Monitoring checks<a class="headerlink" href="#logging-and-monitoring-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS 5.1.1</td>
+<td>Ensure that  a Log Profile exists</td>
+</tr>
+<tr>
+<td>CIS5.1.2</td>
+<td>Ensure that  Activity Log Retention is set 365 days or greater</td>
+</tr>
+<tr>
+<td>CIS5.1.3</td>
+<td>Ensure  audit profile captures all the activities</td>
+</tr>
+<tr>
+<td>CIS 5.1.4</td>
+<td>Ensure the  log profile captures activity logs for all regions including global</td>
+</tr>
+<tr>
+<td>CIS5.1.5</td>
+<td>Ensure the  storage container storing the activity logs is not publicly accessible</td>
+</tr>
+<tr>
+<td>CIS5.1.6</td>
+<td>Ensure the  storage account containing the container with activity logs is encrypted with  BYOK (Use Your Own Key)</td>
+</tr>
+<tr>
+<td>CIS5.1.7</td>
+<td>Ensure that  logging for Azure KeyVault is 'Enabled'</td>
+</tr>
+<tr>
+<td>CIS5.2.1</td>
+<td>Ensure that  Activity Log Alert exists for Create Policy Assignment</td>
+</tr>
+<tr>
+<td>CIS5.2.2</td>
+<td>Ensure that  Activity Log Alert exists for Create or Update Network Security Group</td>
+</tr>
+<tr>
+<td>CIS5.2.3</td>
+<td>Ensure that  Activity Log Alert exists for Delete Network Security Group</td>
+</tr>
+<tr>
+<td>CIS5.2.4</td>
+<td>Ensure that  Activity Log Alert exists for Create or Update Network Security Group Rule</td>
+</tr>
+<tr>
+<td>CIS5.2.5</td>
+<td>Ensure that  activity log alert exists for the Delete Network Security Group Rule</td>
+</tr>
+<tr>
+<td>CIS5.2.6</td>
+<td>Ensure that  Activity Log Alert exists for Create or Update Security Solution</td>
+</tr>
+<tr>
+<td>CIS5.2.7</td>
+<td>Ensure that  Activity Log Alert exists for Delete Security Solution</td>
+</tr>
+<tr>
+<td>CIS5.2.8</td>
+<td>Ensure that  Activity Log Alert exists for Create or Update or Delete SQL Server Firewall  Rule</td>
+</tr>
+<tr>
+<td>CIS5.2.9</td>
+<td>Ensure that  Activity Log Alert exists for Update Security Policy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="networking-checks_1"><a id="network-azure" name="network-azure"></a>Networking checks<a class="headerlink" href="#networking-checks_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS6.1</td>
+<td>Ensure that  RDP access is restricted from the internet</td>
+</tr>
+<tr>
+<td>CIS6.2</td>
+<td>Ensure that  SSH access is restricted from the internet</td>
+</tr>
+<tr>
+<td>CIS6.5</td>
+<td>Ensure that  Network Watcher is 'Enabled'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtual-machines-checks"><a id="virtual-azure" name="virtual-azure"></a>Virtual Machines checks<a class="headerlink" href="#virtual-machines-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS7.1</td>
+<td>Ensure that  'OS disk' are encrypted</td>
+</tr>
+<tr>
+<td>CIS7.2</td>
+<td>Ensure that  'Data disks' are encrypted</td>
+</tr>
+<tr>
+<td>CIS7.3</td>
+<td>Ensure that  'Unattached disks' are encrypted</td>
+</tr>
+<tr>
+<td>CIS7.4</td>
+<td>Ensure that  only approved extensions are installed</td>
+</tr>
+<tr>
+<td>CIS7.5</td>
+<td>Ensure that  the latest OS Patches for all Virtual Machines are applied</td>
+</tr>
+<tr>
+<td>CIS7.6</td>
+<td>Ensure that  the endpoint protection for all Virtual Machines is installed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-security-considerations-checks"><a id="other-azure" name="other-azure"></a>Other Security Considerations checks<a class="headerlink" href="#other-security-considerations-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS8.1</td>
+<td>Ensure that  the expiration date is set on all keys</td>
+</tr>
+<tr>
+<td>CIS8.2</td>
+<td>Ensure that  the expiration date is set on all Secrets</td>
+</tr>
+<tr>
+<td>CIS8.4</td>
+<td>Ensure the  key vault is recoverable</td>
+</tr>
+<tr>
+<td>CIS8.5</td>
+<td>Enable  role-based access control (RBAC) within Azure Kubernetes Services</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appservice-checks"><a id="app-azure" name="app-azure"></a>AppService checks<a class="headerlink" href="#appservice-checks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Check ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIS9.1</td>
+<td>Ensure App  Service Authentication is set on Azure App Service</td>
+</tr>
+<tr>
+<td>CIS9.2</td>
+<td>Ensure web  app redirects all HTTP traffic to HTTPS in Azure App Service</td>
+</tr>
+<tr>
+<td>CIS9.3</td>
+<td>Ensure web  app is using the latest version of TLS encryption</td>
+</tr>
+<tr>
+<td>CIS9.4</td>
+<td>Ensure the  web app has 'Client Certificates (Incoming client certificates)' set to 'On'</td>
+</tr>
+<tr>
+<td>CIS9.5</td>
+<td>Ensure that  Register with Azure Active Directory is enabled on App Service</td>
+</tr>
+<tr>
+<td>CIS9.7</td>
+<td>Ensure that  'PHP version' is the latest, if used to run the web app</td>
+</tr>
+<tr>
+<td>CIS9.8</td>
+<td>Ensure that  'Python version' is the latest, if used to run the web app</td>
+</tr>
+<tr>
+<td>CIS9.9</td>
+<td>Ensure that  'Java version' is the latest, if used to run the web app</td>
+</tr>
+<tr>
+<td>CIS9.10</td>
+<td>Ensure that  'HTTP Version' is the latest, if used to run the web app</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../assess-templates/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Create and manage assessment templates
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../migrate/getting-started/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2416 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Administer Deploy Accelerator - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#administer-deploy-accelerator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administer Deploy Accelerator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Administer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Administer
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-blueprint-gallery" class="md-nav__link">
+    Configuring the Blueprint Gallery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-environment-package-types" class="md-nav__link">
+    Configuring the environment package types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-default-access-token-for-the-packages-repository" class="md-nav__link">
+    Configuring the default access token for the packages repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-a-chef-server-in-deploy-accelerator" class="md-nav__link">
+    Registering a Chef Server in Deploy Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-chef-server-packages-and-roles" class="md-nav__link">
+    Sharing Chef Server packages and roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synching-with-a-registered-chef-server" class="md-nav__link">
+    Synching with a registered Chef Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-deploy-accelerator" class="md-nav__link">
+    Configuring Deploy Accelerator
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Deploy Accelerator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-accelerator-configuration-properties" class="md-nav__link">
+    Deploy Accelerator configuration properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy Accelerator configuration properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-properties" class="md-nav__link">
+    General properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-properties" class="md-nav__link">
+    Email properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-properties" class="md-nav__link">
+    Package properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifactory-properties" class="md-nav__link">
+    Artifactory properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-gallery-properties" class="md-nav__link">
+    Blueprint Gallery properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm-provider-properties" class="md-nav__link">
+    Helm Provider properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-deploy-accelerator-email-messages" class="md-nav__link">
+    Customizing Deploy Accelerator email messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Deploy Accelerator email messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-sending-of-status-emails-for-environments" class="md-nav__link">
+    Configure the sending of status emails for environments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-the-subject-of-status-emails" class="md-nav__link">
+    Customize the subject of status emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-email-template" class="md-nav__link">
+    Create a custom email template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-blueprint-gallery" class="md-nav__link">
+    Configuring the Blueprint Gallery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-environment-package-types" class="md-nav__link">
+    Configuring the environment package types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-default-access-token-for-the-packages-repository" class="md-nav__link">
+    Configuring the default access token for the packages repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-a-chef-server-in-deploy-accelerator" class="md-nav__link">
+    Registering a Chef Server in Deploy Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-chef-server-packages-and-roles" class="md-nav__link">
+    Sharing Chef Server packages and roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synching-with-a-registered-chef-server" class="md-nav__link">
+    Synching with a registered Chef Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-deploy-accelerator" class="md-nav__link">
+    Configuring Deploy Accelerator
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Deploy Accelerator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-accelerator-configuration-properties" class="md-nav__link">
+    Deploy Accelerator configuration properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy Accelerator configuration properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-properties" class="md-nav__link">
+    General properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-properties" class="md-nav__link">
+    Email properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-properties" class="md-nav__link">
+    Package properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artifactory-properties" class="md-nav__link">
+    Artifactory properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-gallery-properties" class="md-nav__link">
+    Blueprint Gallery properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm-provider-properties" class="md-nav__link">
+    Helm Provider properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-deploy-accelerator-email-messages" class="md-nav__link">
+    Customizing Deploy Accelerator email messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Deploy Accelerator email messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-sending-of-status-emails-for-environments" class="md-nav__link">
+    Configure the sending of status emails for environments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customize-the-subject-of-status-emails" class="md-nav__link">
+    Customize the subject of status emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-custom-email-template" class="md-nav__link">
+    Create a custom email template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="administer-deploy-accelerator">Administer Deploy Accelerator<a class="headerlink" href="#administer-deploy-accelerator" title="Permanent link">&para;</a></h1>
+<p>Hitachi Cloud Accelerator Platform - Deploy (Deploy Accelerator) is a deployment automation platform that is used to deploy and configure environments reliably and consistently. This topic describes how to configure Deploy Accelerator.</p>
+<h2 id="contents"><a id="Content" name="Content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'bp-configure'})" style="text-decoration:none">Configuring the Blueprint Gallery</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-type'})" style="text-decoration:none">Configuring the environment package types</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'access-token'})" style="text-decoration:none">Configuring the default access token for the packages repository</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'chef-server'})" style="text-decoration:none">Registering a Chef Server in Deploy Accelerator</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-share'})" style="text-decoration:none">Sharing Chef Server packages and roles</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'chef-sync'})" style="text-decoration:none">Synching with a registered Chef Server</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'configuration'})" style="text-decoration:none">Configuring Deploy Accelerator</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'customize-email'})" style="text-decoration:none">Customizing Deploy Accelerator email messages</a></li>
+</ul>
+<h2 id="configuring-the-blueprint-gallery"><a id="bp-configure" name="bp-configure"></a>Configuring the Blueprint Gallery<a class="headerlink" href="#configuring-the-blueprint-gallery" title="Permanent link">&para;</a></h2>
+<p>The Blueprint Gallery is a repository of blueprints that can be templates of industry-standard cloud or IT infrastructure architectures or custom solutions. Users can leverage blueprints to quickly create infrastructure for solutions. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'blueprint'})" style="text-decoration:none">Creating new environments from blueprints</a>.<br></p>
+<p>Users can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'export-blueprint'})" style="text-decoration:none">export their environments as blueprints</a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'bp-gallery'})" style="text-decoration:none">add the blueprints in the Blueprint Gallery</a>.<br></p>
+<p><strong>To configure the Blueprint Gallery, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Hitachi Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/rean-deploy/conf</strong> folder.</p>
+</li>
+<li>
+<p>If the <strong>dnow.properties</strong> file is not available in this folder, create the file.</p>
+</li>
+<li>
+<p>To display the <strong>Blueprint Gallery</strong> option when users click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top-right corner of the Deploy Accelerator Home page, add the <strong>com.reancloud.platform.show_blueprints</strong> property and set its value to <strong>true</strong>, as shown below.</p>
+</li>
+</ol>
+<p><strong>com.reancloud.platform.show_blueprints=true</strong></p>
+<p><em><strong>Note:</strong> To once again hide the <strong>Blueprint Gallery</strong> option, you must update the value of the <strong>com.reancloud.platform.show_blueprints</strong> property to <strong>false</strong>.</em></p>
+<ol>
+<li>To configure the Blueprint Gallery repository in the Artifactory that is used for Deploy Accelerator, add the <strong>dnow.blueprintsGallery.artifactory_repo_name</strong> property and set its value to the appropriate repository name.</li>
+</ol>
+<p>Only blueprints that are uploaded to the specified repository appear in the Blueprint Gallery. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'bp-gallery'})" style="text-decoration:none">adding blueprints in the Blueprint Gallery</a>.</p>
+<p><em><strong>Note:</strong> You must ensure that Deploy Accelerator users who are allowed to add blueprints in the Blueprint Gallery have access to the Artifactory and the specified repository.</em></p>
+<ol>
+<li><a id="bp-syncconfig" name="bp-syncconfig"></a><em>(Optional)</em> To modify the default interval between two successive syncs of the blueprint metadata that is shown in the Blueprint Gallery with the Artifactory, add the <strong>dnow.blueprintsGallery.sync.interval</strong> property and specify the appropriate value in minutes.</li>
+</ol>
+<p>The default interval between two successive syncs is 30 minutes. </p>
+<p><strong>Example:</strong> To modify the sync interval to an hour, you must update the property value to 60 (unit of measurement for this property is minutes), as shown in the example below:</p>
+<p><strong>dnow.blueprintsGallery.sync.interval=60</strong></p>
+<p><em><strong>Note:</strong></em></p>
+<ul>
+<li><em>The blueprint metadata that is synchronized contains the blueprint name, description, version, and image name.</em></li>
+<li>
+<p><em>Updated image files with the same name are not synchronized. Therefore, the old image continues to be shown in the Blueprint Gallery.</em></p>
+</li>
+<li>
+<p>Save the <strong>dnow.properties</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-deploy</strong> service.</p>
+</li>
+</ul>
+<h2 id="configuring-the-environment-package-types"><a id="package-type" name="package-type"></a>Configuring the environment package types<a class="headerlink" href="#configuring-the-environment-package-types" title="Permanent link">&para;</a></h2>
+<p>Deploy Accelerator provides out-of-the-box support for Chef Solo, Chef Server, Ansible, and Puppet. However, only Chef Solo and Chef Server are configured as the default environment package types. While creating an environment, users can select either Ansible Solo, Chef Solo, or Chef Server as the environment package type.<br></p>
+<p>Based on the requirements, administrators can choose to individually configure Chef Solo, Chef Server, Ansible Solo, Puppet, or a combination of these three as the environment package types.<br></p>
+<p><em><strong>Important:</strong> To configure the environment package types, you must have administrative access to the instance on which Cloud Accelerator Platform is deployed.</em></p>
+<p><strong>To configure the environment package type, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/rean-deploy/conf</strong> folder.</p>
+</li>
+<li>
+<p>If the <strong>dnow.properties</strong> file is not available in this folder, create the file.</p>
+</li>
+<li>
+<p>If the <strong>com.reancloud.platform.deploy.environment.configuration_types</strong> property is not available in the <strong>dnow.properties</strong> file, add the property.</p>
+</li>
+<li>
+<p>Set the value of the <strong>com.reancloud.platform.deploy.environment.configuration_types</strong> property to the appropriate environment package types, as shown in the example below:</p>
+</li>
+</ol>
+<p><em>Example for Chef package:</em></p>
+<p><strong>com.reancloud.platform.deploy.environment.configuration_types=chef-solo,chef-server</strong></p>
+<p><em>Example for Ansible package:</em></p>
+<p><strong>com.reancloud.platform.deploy.environment.configuration_types=ansible-solo</strong></p>
+<p>The supported values for this property are <strong>chef-solo</strong>, <strong>chef-server</strong>, <strong>ansible-solo</strong> and <strong>puppet</strong>. By default, Deploy Accelerator supports Ansible Solo, Chef Solo and Chef Server as the environment package types.</p>
+<ol>
+<li>
+<p><em>(Optional)</em> If Chef Server is configured as the environment package type, update the following additional properties.</p>
+</li>
+<li>
+<p>To access the Chef Server without self-signed SSL certificates, add the <strong>chefserver.no_verify_ssl</strong> property and set its value to <strong>true</strong>, as shown below:</p>
+<p><strong>chefserver.no_verify_ssl=true</strong></p>
+<p><em><strong>Note:</strong> To once again enable access to the Chef Server with self-signed SSL certificates, you must update the value of the <strong>chefserver.no_verify_ssl</strong> property to <strong>false</strong>.</em></p>
+</li>
+<li>
+<p>To modify the interval between two successive syncs with the Chef Server, add the <strong>hcap.chefserver.sync.interval</strong> property and set its value (in minutes), as shown in the example below:</p>
+<p><strong>hcap.chefserver.sync.interval=30</strong></p>
+<p>The default interval between two successive syncs is 10 minutes. After each successful sync, any cookbooks, roles, and groups that are added or updated in the Chef Server become available in Deploy Accelerator.</p>
+</li>
+<li>
+<p>Save the <strong>dnow.properties</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-deploy</strong> service.</p>
+</li>
+</ol>
+<h2 id="configuring-the-default-access-token-for-the-packages-repository"><a id="access-token" name="access-token"></a>Configuring the default access token for the packages repository<a class="headerlink" href="#configuring-the-default-access-token-for-the-packages-repository" title="Permanent link">&para;</a></h2>
+<p>Users can add their own custom (or user-defined) packages based on the environment package types that are configured. In the package definition, they have to define the repository type, package download URL, and the access token for the repository.<br></p>
+<p>Administrators must define the default access token for the packages repository (GitHub or GitLab). If users do not specify an access token while adding a user-defined package, Deploy Accelerator uses this default access token to download the package.<br></p>
+<p><strong>To configure the default access token for the packages repository, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/rean-deploy/conf</strong> folder.</p>
+</li>
+<li>
+<p>If the <strong>dnow.properties</strong> file is not available in this folder, create the file.</p>
+</li>
+<li>
+<p>In the <strong>dnow.properties</strong> file, locate one of the following properties based on the repository type in which packages are stored:</p>
+</li>
+<li>
+<p>dnow.git.access.token</p>
+</li>
+<li>dnow.gitlab.access.token</li>
+</ol>
+<p>If the property is not available in the <strong>dnow.properties</strong> file, add the property.</p>
+<ol>
+<li>
+<p>Set the value of the property to the default access token for accessing the packages repository.</p>
+</li>
+<li>
+<p>Save the <strong>dnow.properties</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-deploy</strong> service.</p>
+</li>
+</ol>
+<h2 id="registering-a-chef-server-in-deploy-accelerator"><a id="chef-server" name="chef-server"></a>Registering a Chef Server in Deploy Accelerator<a class="headerlink" href="#registering-a-chef-server-in-deploy-accelerator" title="Permanent link">&para;</a></h2>
+<p>By default, Deploy Accelerator supports Chef Solo and Chef Server as the environment package types. While creating an environment, users can choose whether they want to use Chef Solo or Chef Server packages to configure compute instances.<br></p>
+<p>While users can add their own custom (or user-defined) Chef Solo packages, only administrators can register a Chef Server in Deploy Accelerator. When you register a Chef Server, cookbooks (along with all the recipes it contains) and roles from that Chef Server become available in Deploy Accelerator. In addition, groups from the selected Chef Server organization are automatically created in Cloud Accelerator Platform. You can then manually share each package (or cookbook) and role with these groups and assign appropriate permissions.<br></p>
+<p>When users select the Chef Server package type while creating an environment, they also have to select the registered Chef Server. For that environment, the <strong>Packages</strong> tab displays packages (or cookbooks) and roles from the selected Chef Server only. However, users can see only the packages and roles that are shared with a group to which they belong. While adding a Chef Server package (or cookbook) to a resource, users can select multiple recipes in the order in which they must be run on the resource. If no recipe is selected, Deploy Accelerator runs the default recipe defined in the cookbook.<br></p>
+<p><em><strong>Note:</strong> Deploy Accelerator polls the registered Chef Server every 10 minutes for new and updated cookbooks and roles. However, new groups that are added in the registered Chef Server are not automatically shown in Cloud Accelerator Platform. To view the latest cookbooks, roles, and groups at any given time, you can manually <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'chef-sync'})" style="text-decoration:none">sync with the registered Chef Server</a>.</em><br></p>
+<p><strong>Before you begin</strong></p>
+<p>Before you register a Chef Server, you must map the IP address and host name of that Chef Server in the <strong>/etc/hosts</strong> file of the Deploy Accelerator docker container.  </p>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Deploy Accelerator is deployed.</p>
+</li>
+<li>
+<p>To connect to the Deploy Accelerator docker container, run the following command:</p>
+<p><code>docker exec -it containerID bash</code></p>
+</li>
+</ol>
+<p>In this command, specify the ID of the Deploy Accelerator docker container.</p>
+<ol>
+<li>To open the <strong>etc/hosts</strong> file, run the following command </li>
+</ol>
+<p><code>vi /etc/hosts</code></p>
+<ol>
+<li>In the <strong>etc/hosts</strong> file, add an entry that maps the IP address and hostname of the Chef Server.</li>
+</ol>
+<p><em><strong>Note:</strong> If you have configured a load balancer for the Chef Server, you must map the IP address and host name of that load  balancer.</em></p>
+<p><strong>To register a Chef Server in Deploy Accelerator, perform the following actions:</strong></p>
+<ol>
+<li>In the Chef Server organization that you want to configure in Deploy Accelerator, ensure that the  <strong>clients</strong> group is a member of all other groups in that organization.</li>
+</ol>
+<p>If you do not perform this action, groups are not automatically created in Deploy Accelerator. </p>
+<ol>
+<li>
+<p>On the Home page, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top-right corner and then click <strong>Chef Servers</strong>.</p>
+</li>
+<li>
+<p>On the Chef Server page, click <strong>NEW</strong>.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-deploy/chefserver_add.PNG" /></p>
+<ol>
+<li>Enter the following details about the Chef Server that you want to configure in Deploy Accelerator:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Enter a unique name for the Chef Server.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Select the type of Chef Server that you want to configure. The available options are <strong>Chef</strong>, <strong>OpsWorks</strong>, and <strong>Enterprise Chef</strong>.</td>
+</tr>
+<tr>
+<td>Host Name</td>
+<td>Enter the host name of the Chef Server that you want to configure in Deploy Accelerator.<br><strong>Example:</strong> chef-server.example.com</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Enter details about the Chef Server that you are configuring.</td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>Enter the organization from which you want to display packages in Deploy Accelerator.</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>Enter the name of the Chef client that Deploy Accelerator must use to connect to the Chef Server. This client must be installed on the Chef Server.</td>
+</tr>
+<tr>
+<td>Client Key</td>
+<td>Enter the key that Deploy Accelerator must use to connect to the Chef client that you have specified.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click <strong>SAVE</strong>.</li>
+</ol>
+<p>A new Chef Server appears under the <strong>Chef Server List</strong> section.</p>
+<p>In addition, groups from the selected Chef Server organization are automatically created in Cloud Accelerator Platform. The naming convention used for these groups is <strong>organizationName-groupName</strong>.</p>
+<ol>
+<li>Add users to the groups (from the Chef Server organization) that have been created in Cloud Accelerator Platform. </li>
+</ol>
+<p>For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'groups'})" style="text-decoration:none"> Managing groups</a>.</p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-share'})" style="text-decoration:none">Share each Chef Server package and role with the appropriate groups</a>.</li>
+</ol>
+<p>By default, only administrators can view the Chef Server packages and roles. </p>
+<ol>
+<li><em>(Optional)</em> To configure access to the Chef Server without self-signed SSL certificates, add the <strong>chefserver.no_verify_ssl</strong> property in the <strong>dnow.properties</strong> file and set its value to <strong>true</strong>. </li>
+</ol>
+<p>For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-type'})" style="text-decoration:none">Configuring the environment package types</a>.</p>
+<h2 id="sharing-chef-server-packages-and-roles"><a id="package-share" name="package-share"></a><strong>Sharing Chef Server packages</strong> and roles<a class="headerlink" href="#sharing-chef-server-packages-and-roles" title="Permanent link">&para;</a></h2>
+<p>By default, Chef Server packages (or cookbooks) and roles are shared with only administrators. You can control access to Chef Server packages and roles by sharing them with specific groups and assigning appropriate permissions. </p>
+<ol>
+<li>On the Home page, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" /> icon in the top-right corner and then click <strong>Packages</strong>.</li>
+</ol>
+<p>The Package List page displays packages and roles from the Chef Server that is registered in Deploy Accelerator. The <strong>Package Type</strong> column enables you to identify a Chef Server package or role and the <strong>Chef Server</strong> column enables you to identify the Chef Server from which the package or role is displayed.</p>
+<ol>
+<li>To share one or more Chef Server packages or roles, select the check box next to those packages and roles and then click <strong>SHARE</strong>.</li>
+</ol>
+<p><img alt="" src="/images/rean-deploy/rd_packagelist.PNG" /></p>
+<ol>
+<li>In the Share Packages window, click the <strong>Share</strong> icon (<img alt="" src="/images/rean-deploy/icon_sharegroup.PNG" />) icon for the <strong>Group</strong> with which you want to share the selected packages and roles.</li>
+</ol>
+<p><img alt="" src="/images/rean-deploy/rd_packagesharegroups.PNG" /></p>
+<p><em><strong>Note:</strong></em></p>
+<ul>
+<li><em>When a Chef Server is registered, all groups in the selected Chef Server organization are also automatically created in Cloud Accelerator Platform. The naming convention used for these groups is <strong>organizationName-groupName</strong>. However, you can add new groups or manage users in these groups. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'administer', viewSection: 'groups'})" style="text-decoration:none">Managing groups</a>.</em></li>
+<li>
+<p><em>New groups that are added in the registered Chef Server are not automatically displayed in Cloud Accelerator Platform. To view the new groups, you must manually <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'chef-sync'})" style="text-decoration:none">sync with the registered Chef Server</a>.</em></p>
+</li>
+<li>
+<p>Select the permissions that you want to grant to the group and click <strong>DONE</strong>.</p>
+</li>
+</ul>
+<p><img alt="" src="/images/rean-deploy/rd_packagesharepermissions.PNG" /></p>
+<p><em><strong>Note:</strong> If you have selected multiple packages and roles, any permissions that were previously assigned to the packages and roles are not displayed.</em></p>
+<ol>
+<li>
+<p><em>(Optional)</em> To share the packages and roles with additional groups, repeat steps 3 and 4.</p>
+</li>
+<li>
+<p>Read the warning message and perform one of the following actions:</p>
+</li>
+<li>
+<p>If you want to proceed with sharing the packages, select the Warning check box and click <strong>SUBMIT</strong>.</p>
+<p>All users who are members of the selected groups can now view the packages and roles in Deploy Accelerator. The actions that they can perform on the packages and roles are based on the selected permissions.</p>
+<p><em><strong>Note:</strong> Sharing of Chef Server packages and roles with the selected groups might take several minutes</em></p>
+</li>
+<li>
+<p>If you no longer want to share the packages, click <strong>CANCEL</strong>.</p>
+</li>
+</ol>
+<h2 id="synching-with-a-registered-chef-server"><a id="chef-sync" name="chef-sync"></a>Synching with a registered Chef Server<a class="headerlink" href="#synching-with-a-registered-chef-server" title="Permanent link">&para;</a></h2>
+<p>When you register a Chef Server with Deploy Accelerator, cookbooks (along with all the recipes it contains) and roles from that Chef Server become available in Deploy Accelerator. In addition, groups from the selected Chef Server organization are automatically created in Cloud Accelerator Platform.<br></p>
+<p>Deploy Accelerator polls the registered Chef Server every 10 minutes for new and updated cookbooks and roles. However, new groups that are added in the selected Chef Server organization are not automatically shown in Cloud Accelerator Platform. To view the latest cookbooks, roles, and groups at any given time, you can manually sync with the registered Chef Server.<br></p>
+<p>Based on your requirements, you can also modify the default interval between two successive syncs with the Chef Server. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-type'})" style="text-decoration:none">Configuring the environment package types</a>.<br></p>
+<p><em><strong>Note:</strong> Any new cookbooks, roles, and groups that are added in the Chef Server also become available when you manually update the Chef Server details in Deploy Accelerator.</em></p>
+<p><strong>To sync with a registered Chef Server, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>On the Home page, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top-right corner and then click <strong>Chef Servers</strong>.</p>
+</li>
+<li>
+<p>On the ChefServer List page, click the <strong>Sync Chef Server</strong> (<img alt="" src="/images/rean-deploy/icon_chefserverrefresh.PNG" />) icon next to the Chef Server.</p>
+</li>
+</ol>
+<p>In the Chef Server Last Sync window, you can view the start time, end time, and status (InProgress, Success, or Failed) of the most recent sync, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-deploy/chefserversync.PNG" /></p>
+<ol>
+<li>Click <strong>Sync Chef Server</strong>.</li>
+</ol>
+<p>If the previous sync is in progress, you have to wait for it to complete before starting another sync with the registered Chef Server.</p>
+<h2 id="configuring-deploy-accelerator"><a id="configuration" name="configuration"></a>Configuring Deploy Accelerator<a class="headerlink" href="#configuring-deploy-accelerator" title="Permanent link">&para;</a></h2>
+<p>To update the Deploy Accelerator configuration properties, you must have administrative access to the instance on which Cloud Accelerator Platform is deployed.</p>
+<ol>
+<li>Connect to the EC2 instance on which Cloud Accelerator Platform is deployed.</li>
+<li>Locate the <strong>${PLATFORM_HOME}/rean-deploy/conf</strong> folder.</li>
+<li>If the <strong>dnow.properties</strong> file is not available in this folder, create the file.</li>
+<li>If the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'properties'})" style="text-decoration:none">configuration properties</a> that you want to update are not available in the <strong>dnow.properties</strong> file, add those properties.</li>
+<li>Set the value of the appropriate properties in the <strong>dnow.properties</strong> file.</li>
+<li>Save the <strong>dnow.properties</strong> file.</li>
+<li>Restart the <strong>rean-deploy</strong> service.</li>
+</ol>
+<h3 id="deploy-accelerator-configuration-properties"><a id="properties" name="properties"></a>Deploy Accelerator configuration properties<a class="headerlink" href="#deploy-accelerator-configuration-properties" title="Permanent link">&para;</a></h3>
+<p>The following sections list the Deploy Accelerator configuration properties that you can update based on your requirements:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'general-properties'})" style="text-decoration:none">General properties</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'email-properties'})" style="text-decoration:none">Email properties</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'package-properties'})" style="text-decoration:none">Package properties</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'artifactory-properties'})" style="text-decoration:none">Artifactory properties</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'bpgallery-properties'})" style="text-decoration:none">Blueprint Gallery properties</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'helm-properties'})" style="text-decoration:none">Helm Provider properties</a></li>
+</ul>
+<h4 id="general-properties"><a id="general-properties" name="general-properties"></a>General properties<a class="headerlink" href="#general-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dnow.url</td>
+<td>Defines the URL to access Deploy Accelerator.<br><br>The URL specified must be https://<em>ipAddress</em>, where <em>ipAddress</em> refers to the public IP address of the instance on which Deploy Accelerator is installed.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="email-properties"><a id="email-properties" name="email-properties"></a>Email properties<a class="headerlink" href="#email-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>send_status_mails</td>
+<td>Enables or disables the sending of status emails for an environment.</td>
+<td>true</td>
+</tr>
+<tr>
+<td>com.hcap.deploy.notification.deployment-initiation</td>
+<td>Enables or disables the sending of destroy initiation email for all environments in Deploy Accelerator.<br><br><em><strong>Note</strong>: The environment-level setting has the highest precedence, followed by the user-level setting, and finally the application-level setting.</em></td>
+<td>true</td>
+</tr>
+<tr>
+<td>com.hcap.deploy.notification.deployment-completion</td>
+<td>Enables or disables the sending of deploy or destroy completion emails for all environments in Deploy Accelerator.<br><br><em><strong>Note</strong>: The environment-level setting has the highest precedence, followed by the user-level setting, and finally the application-level setting.</em></td>
+<td>true</td>
+</tr>
+<tr>
+<td>smtp.host</td>
+<td>Defines the host name of the SMTP server from which deployment status emails must be sent to users.</td>
+<td>email-smtp.us-east-1.amazonaws.com</td>
+</tr>
+<tr>
+<td>smtp.port</td>
+<td>Defines the port on which the SMTP server can be accessed.</td>
+<td>587</td>
+</tr>
+<tr>
+<td>smtp.username</td>
+<td>Defines the user name that must be used to access the SMTP server from which emails are sent to users.<br><br>This property is required only if you have enabled authentication for your SMTP server.</td>
+<td></td>
+</tr>
+<tr>
+<td>smtp.password</td>
+<td>Defines the encrypted password for the user name that must be used to access the SMTP server.<br><br>This property is required only if you have enabled authentication for your SMTP server.</td>
+<td></td>
+</tr>
+<tr>
+<td>from.email</td>
+<td>Defines the From email address that is used in status emails that are sent to users.</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#101;&#97;&#110;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#64;&#104;&#105;&#116;&#97;&#99;&#104;&#105;&#118;&#97;&#110;&#116;&#97;&#114;&#97;&#46;&#99;&#111;&#109;">&#114;&#101;&#97;&#110;&#46;&#110;&#111;&#114;&#101;&#112;&#108;&#121;&#64;&#104;&#105;&#116;&#97;&#99;&#104;&#105;&#118;&#97;&#110;&#116;&#97;&#114;&#97;&#46;&#99;&#111;&#109;</a></td>
+</tr>
+<tr>
+<td>mail.destroying_started.subject</td>
+<td>Defines the subject of the email that is sent when an environment starts being destroyed.</td>
+<td>Environment destroying started</td>
+</tr>
+<tr>
+<td>mail.destroy_failed.subject</td>
+<td>Defines the subject of the email that is sent when an environment is not destroyed successfully.</td>
+<td>Environment deployment failed</td>
+</tr>
+<tr>
+<td>mail.deploy_successful.subject</td>
+<td>Defines the subject of the email that is sent when an environment is successfully deployed.</td>
+<td>Environment deployment successful</td>
+</tr>
+<tr>
+<td>mail.environment_status.subject</td>
+<td>Defines the subject of the email that is sent to inform users about the deployment status of an environment.</td>
+<td>Environment deployment status</td>
+</tr>
+</tbody>
+</table>
+<h4 id="package-properties"><a id="package-properties" name="package-properties"></a>Package properties<a class="headerlink" href="#package-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.reancloud.platform.deploy.environment.configuration_types</td>
+<td>Defines the environment package types that are displayed when users create an environment.<br><br>The supported values for this property are <strong>chef-server</strong>, <strong>chef-solo</strong>, and <strong>puppet</strong>.</td>
+<td>chef-solo,chef-server</td>
+</tr>
+<tr>
+<td>chefserver.no_verify_ssl</td>
+<td>To disable SSL certificate validation when a self-signed certificate is configured for the registered Chef Server, set the value of this property as <strong>true</strong>.</td>
+<td>false</td>
+</tr>
+<tr>
+<td>hcap.chefserver.sync.interval</td>
+<td>Defines the interval (in minutes) between two successive syncs with the registered Chef Server.<br><br>Defines the interval (in minutes) between two successive syncs with the registered Chef Server.<br><br>After each successful sync, any new cookbooks, roles, and groups that are added in the Chef Server become available in Deploy Accelerator.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>dnow.git.access.token</td>
+<td>Defines the access token for the GitHub repository from which Deploy Accelerator must download packages.<br>If users do not provide an access token while adding user-defined packages, Deploy Accelerator uses this default access token to download the packages from the GitHub repository.</td>
+<td></td>
+</tr>
+<tr>
+<td>dnow.gitlab.access.token</td>
+<td>Defines the access token for the Git Lab repository from which Deploy Accelerator must download packages.<br><br>If users do not provide an access token while adding user-defined packages, Deploy Accelerator uses this default access token to download the packages from the Git Lab repository.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="artifactory-properties"><a id="artifactory-properties" name="artifactory-properties"></a>Artifactory properties<a class="headerlink" href="#artifactory-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.reancloud.platform.artifactory_support</td>
+<td>Defines whether a repository is configured for Deploy Accelerator.</td>
+<td>true</td>
+</tr>
+<tr>
+<td>com.reancloud.platform.artifactory_repo_type</td>
+<td>Defines the type of repository that is configured for Deploy Accelerator.</td>
+<td>Jfrog</td>
+</tr>
+<tr>
+<td>com.reancloud.platform.artifactory_url</td>
+<td>Defines the URL to access the artifactory.</td>
+<td></td>
+</tr>
+<tr>
+<td>com.reancloud.platform.artifactory_username</td>
+<td>Defines the username to access the artifactory.</td>
+<td></td>
+</tr>
+<tr>
+<td>com.reancloud.platform.artifactory_api_key</td>
+<td>Defines the API key of the username that you have specified. This API key must have all required permissions to access the artifactory.</td>
+<td></td>
+</tr>
+<tr>
+<td>com.reancloud.platform.super_market_repo</td>
+<td>Defines the repository in which Chef cookbooks are stored. In an offline deployment, Deploy Accelerator downloads Chef cookbooks from this repository.</td>
+<td>virtual-supermarket</td>
+</tr>
+</tbody>
+</table>
+<h4 id="blueprint-gallery-properties"><a id="bpgallery-properties" name="bpgallery-properties"></a>Blueprint Gallery properties<a class="headerlink" href="#blueprint-gallery-properties" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.reancloud.platform.show_blueprints</td>
+<td>Shows or hides the <strong>Blueprint Gallery</strong> option when users click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top-right corner of the Deploy Accelerator Home page.</td>
+<td>false</td>
+</tr>
+<tr>
+<td>dnow.blueprintsGallery.artifactory_repo_name</td>
+<td>Defines the repository in which blueprints are stored. Deploy Accelerator shows blueprints from this repository in the Blueprint Gallery.</td>
+<td></td>
+</tr>
+<tr>
+<td>dnow.blueprintsGallery.sync.interval</td>
+<td>Defines the interval (in minutes) between two successive syncs of the blueprint metadata that is shown in the Blueprint Gallery with the Artifactory.<br><br>The blueprint metadata that is synchronized contains the blueprint name, description, version, and image name.</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<h4 id="helm-provider-properties"><a id="helm-properties" name="helm-properties"></a>Helm Provider properties<a class="headerlink" href="#helm-provider-properties" title="Permanent link">&para;</a></h4>
+<p>These properties are for the default helm repository from which Deploy Accelerator downloads helm charts while deploying environments with the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'helm-details'})" style="text-decoration:none">Helm provider type</a>. Users do not have to add the <strong>Helm Repository</strong> data source in their environment if their helm chart is available in this repository.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.reancloud.deploy.helm.repository.name</td>
+<td>Chart repository name</td>
+<td>true</td>
+</tr>
+<tr>
+<td>com.reancloud.deploy.helm.repository.url</td>
+<td>Chart repository URL</td>
+<td>true</td>
+</tr>
+<tr>
+<td>com.reancloud.deploy.helm.repository.key_file</td>
+<td>Identify HTTPS client using this SSL key file</td>
+<td>false</td>
+</tr>
+<tr>
+<td>com.reancloud.deploy.helm.repository.cert_file</td>
+<td>Identify HTTPS client using this SSL certificate file</td>
+<td>false</td>
+</tr>
+<tr>
+<td>com.reancloud.deploy.helm.repository.ca_file</td>
+<td>Verify certificates of HTTPS-enabled servers using this CA bundle</td>
+<td>false</td>
+</tr>
+<tr>
+<td>com.reancloud.deploy.helm.repository.username</td>
+<td>Username for HTTP basic authentication</td>
+<td>false</td>
+</tr>
+<tr>
+<td>com.reancloud.deploy.helm.repository.password</td>
+<td>Password for HTTP basic authentication</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="customizing-deploy-accelerator-email-messages"><a id="customize-email" name="customize-email"></a>Customizing Deploy Accelerator email messages<a class="headerlink" href="#customizing-deploy-accelerator-email-messages" title="Permanent link">&para;</a></h2>
+<p>When the deployment of an environment has succeeded or failed, an email is sent to the user whose email address is specified at the time of deploying the environment. Similarly, when an environment starts being destroyed, an email is sent to the specified email address.<br></p>
+<p>All emails related to an environment are also sent to the registered email address of the user who has created the environment, also known as the owner of the environment. You can choose to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'email-owner'})" style="text-decoration:none">configure the sending of status emails for environments</a>.<br></p>
+<p>The content of these emails is based on the default email templates that are selected. You can choose to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'email'})" style="text-decoration:none">create custom email templates</a> and even <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'administer', viewSection: 'subject'})" style="text-decoration:none">customize the subject of status emails</a>.</p>
+<p><em><strong>Important:</strong> To customize Deploy Accelerator email messages, you must have administrative access to the instance on which Cloud Accelerator Platform is deployed.</em></p>
+<h3 id="configure-the-sending-of-status-emails-for-environments"><a id="email-owner" name="email-owner"></a>Configure the sending of status emails for environments<a class="headerlink" href="#configure-the-sending-of-status-emails-for-environments" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/rean-deploy/conf</strong> folder.</p>
+</li>
+<li>
+<p>If the <strong>dnow.properties</strong> file is not available in this folder, create the file.</p>
+</li>
+<li>
+<p>In the <strong>dnow.properties</strong> file, locate the <strong>send_status_mails</strong> property.</p>
+</li>
+</ol>
+<p>If this property is not available in the <strong>dnow.properties</strong> file, add the property.</p>
+<ol>
+<li>To stop sending status emails for environments, change the value of the <strong>send_status_mails</strong> property to <strong>false</strong>, as shown in the example below:</li>
+</ol>
+<p><strong>send_status_mails=false</strong> </p>
+<ol>
+<li>
+<p>Save the <strong>dnow.properties</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-deploy</strong> service.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> To once again send status emails for environments, update the value of the <strong>send_status_mails</strong> property to <strong>true</strong>.</em></p>
+<h3 id="customize-the-subject-of-status-emails"><a id="subject" name="subject"></a>Customize the subject of status emails<a class="headerlink" href="#customize-the-subject-of-status-emails" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Cloud Accelerator Platform is deployed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/rean-deploy/conf</strong> folder.</p>
+</li>
+<li>
+<p>If the <strong>dnow.properties</strong> file is not available in this folder, create the file.</p>
+</li>
+<li>
+<p>In the <strong>dnow.properties</strong> file, locate the following properties:</p>
+</li>
+<li>
+<p><strong>mail.destroying_started.subject</strong></p>
+</li>
+<li><strong>mail.destroy_failed.subject</strong></li>
+<li><strong>mail.deploy_successful.subject</strong></li>
+<li><strong>mail.environment_status.subject</strong></li>
+</ol>
+<p>If these properties are not available in the <strong>dnow.properties</strong> file, add the properties.</p>
+<ol>
+<li>
+<p>Update the value of these properties.</p>
+</li>
+<li>
+<p>Save the <strong>dnow.properties</strong> file.</p>
+</li>
+<li>
+<p>Restart the <strong>rean-deploy</strong> service.</p>
+</li>
+</ol>
+<h3 id="create-a-custom-email-template"><a id="email" name="email"></a>Create a custom email template<a class="headerlink" href="#create-a-custom-email-template" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><em>(Optional)</em> To add data about an environment in the email template, perform the following actions:</p>
+</li>
+<li>
+<p>In Deploy Accelerator, open the environment for which you are creating a custom email template.</p>
+</li>
+<li>
+<p>From the left panel, click the <strong>Resources</strong> tab, and drag the <strong>Output</strong> resource to the canvas.</p>
+</li>
+<li>
+<p>Rename the resource and click it to open the right panel.</p>
+</li>
+<li>
+<p>On the <strong>RESOURCE</strong> tab, select the <strong>Set Json</strong> link for the <strong>output</strong> attribute.</p>
+</li>
+<li>
+<p>In the Set Json value for : output window, define the output variables that you want to use in the email template, as shown in the example below:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${output_1.public_ip}&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;privateip&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${output_1.private_ip}&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;first_name&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;peter&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;last_name&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;morgan&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Click <strong>Set Value</strong>.</p>
+</li>
+<li>
+<p>To update your changes to the environment, click <strong>Save</strong>. </p>
+</li>
+<li>
+<p>Create a new HTML file.</p>
+</li>
+<li>
+<p>In the HTML file, add the content to be included in the email.</p>
+</li>
+<li>
+<p><em>(Optional)</em> Based on your requirements, use the custom output variables that you defined in step 1. You can also use any of the following output variables in the email content:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Output variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$status</td>
+<td>Displays the status of the deployment</td>
+</tr>
+<tr>
+<td>$envName</td>
+<td>Displays the name of the environment for which an email is being sent to the user</td>
+</tr>
+<tr>
+<td>$url</td>
+<td>Displays the URL to access Deploy Accelerator</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Save the HTML file.</li>
+</ol>
+<p>Ensure that the file name enables users to easily identify the purpose of the template. For example, you can use the name <strong>customerName_deploysuccess.html</strong>.</p>
+<ol>
+<li>
+<p>Connect to the EC2 instance on which Cloud Accelerator Platform is installed.</p>
+</li>
+<li>
+<p>Locate the <strong>${PLATFORM_HOME}/rean-deploy/dnow-data-dir/email-templates</strong> folder.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> If the <strong>email-templates</strong> folder is not available, you must create the folder.</em></p>
+<ol>
+<li>Copy the custom email template file that you have created to the <strong>email-templates</strong> folder.</li>
+</ol>
+<p><em><strong>Note:</strong> The custom email templates are not displayed in the Deploy Accelerator UI. Therefore, you must share the list of custom email templates with other Deploy Accelerator users as required. Users have to manually enter the names of these email templates before <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'deploy'})" style="text-decoration:none">starting new deployments of an environment</a> . Alternatively, users can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'config'})" style="text-decoration:none">configure an environment</a> to use these templates for all its deployments.</em></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../using_copy/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Deploy
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../howto-guides/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              How-to guides
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

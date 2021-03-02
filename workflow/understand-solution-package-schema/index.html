@@ -1,0 +1,3696 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Understand the solution package schema - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#understand-the-solution-package-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Understand the solution package schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Understand the solution package schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Understand the solution package schema
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-solution-package" class="md-nav__link">
+    Sample solution package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-objects-in-solution-package-schema" class="md-nav__link">
+    Data objects in solution package schema
+  </a>
+  
+    <nav class="md-nav" aria-label="Data objects in solution package schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schemaversion" class="md-nav__link">
+    schemaVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-mandatory-parameter" class="md-nav__link">
+    name (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-mandatory-parameter" class="md-nav__link">
+    version (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icon" class="md-nav__link">
+    icon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicationversion" class="md-nav__link">
+    applicationVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownername" class="md-nav__link">
+    ownerName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owneremail" class="md-nav__link">
+    ownerEmail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licensename" class="md-nav__link">
+    licenseName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudregion-mandatory-parameter" class="md-nav__link">
+    cloudRegion (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical" class="md-nav__link">
+    vertical
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule" class="md-nav__link">
+    schedule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprints" class="md-nav__link">
+    blueprints
+  </a>
+  
+    <nav class="md-nav" aria-label="blueprints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    condition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customdata" class="md-nav__link">
+    customData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providers" class="md-nav__link">
+    providers
+  </a>
+  
+    <nav class="md-nav" aria-label="providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_provider_name" class="md-nav__link">
+    default_provider_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+    <nav class="md-nav" aria-label="input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    inputParameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputmapping" class="md-nav__link">
+    inputMapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    output
+  </a>
+  
+    <nav class="md-nav" aria-label="output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_3" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-workflow-actions" class="md-nav__link">
+    Supported workflow actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported workflow actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-workflow-action-details" class="md-nav__link">
+    Summary of workflow action details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployenv-action" class="md-nav__link">
+    deployEnv action
+  </a>
+  
+    <nav class="md-nav" aria-label="deployEnv action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createprovider" class="md-nav__link">
+    createProvider
+  </a>
+  
+    <nav class="md-nav" aria-label="createProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_1" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_1" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_1" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createhelmrepo-action" class="md-nav__link">
+    createHelmRepo action
+  </a>
+  
+    <nav class="md-nav" aria-label="createHelmRepo action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_2" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_2" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_2" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployhelmchart" class="md-nav__link">
+    deployHelmChart
+  </a>
+  
+    <nav class="md-nav" aria-label="deployHelmChart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_3" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_3" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_3" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createfoundrysolutionpackage-action" class="md-nav__link">
+    createFoundrySolutionPackage action
+  </a>
+  
+    <nav class="md-nav" aria-label="createFoundrySolutionPackage action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_4" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_4" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_4" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployfoundrysolutionpackage" class="md-nav__link">
+    deployFoundrySolutionPackage
+  </a>
+  
+    <nav class="md-nav" aria-label="deployFoundrySolutionPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_5" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_5" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_5" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploysolutionpackage" class="md-nav__link">
+    deploySolutionPackage
+  </a>
+  
+    <nav class="md-nav" aria-label="deploySolutionPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_6" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_6" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_6" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-solution-package" class="md-nav__link">
+    Sample solution package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-objects-in-solution-package-schema" class="md-nav__link">
+    Data objects in solution package schema
+  </a>
+  
+    <nav class="md-nav" aria-label="Data objects in solution package schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schemaversion" class="md-nav__link">
+    schemaVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-mandatory-parameter" class="md-nav__link">
+    name (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-mandatory-parameter" class="md-nav__link">
+    version (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icon" class="md-nav__link">
+    icon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicationversion" class="md-nav__link">
+    applicationVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownername" class="md-nav__link">
+    ownerName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owneremail" class="md-nav__link">
+    ownerEmail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licensename" class="md-nav__link">
+    licenseName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudregion-mandatory-parameter" class="md-nav__link">
+    cloudRegion (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical" class="md-nav__link">
+    vertical
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule" class="md-nav__link">
+    schedule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprints" class="md-nav__link">
+    blueprints
+  </a>
+  
+    <nav class="md-nav" aria-label="blueprints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action" class="md-nav__link">
+    action
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    condition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customdata" class="md-nav__link">
+    customData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providers" class="md-nav__link">
+    providers
+  </a>
+  
+    <nav class="md-nav" aria-label="providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_provider_name" class="md-nav__link">
+    default_provider_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+    <nav class="md-nav" aria-label="input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    inputParameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputmapping" class="md-nav__link">
+    inputMapping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    output
+  </a>
+  
+    <nav class="md-nav" aria-label="output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_3" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-workflow-actions" class="md-nav__link">
+    Supported workflow actions
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported workflow actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-workflow-action-details" class="md-nav__link">
+    Summary of workflow action details
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployenv-action" class="md-nav__link">
+    deployEnv action
+  </a>
+  
+    <nav class="md-nav" aria-label="deployEnv action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createprovider" class="md-nav__link">
+    createProvider
+  </a>
+  
+    <nav class="md-nav" aria-label="createProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_1" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_1" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_1" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createhelmrepo-action" class="md-nav__link">
+    createHelmRepo action
+  </a>
+  
+    <nav class="md-nav" aria-label="createHelmRepo action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_2" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_2" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_2" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployhelmchart" class="md-nav__link">
+    deployHelmChart
+  </a>
+  
+    <nav class="md-nav" aria-label="deployHelmChart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_3" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_3" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_3" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createfoundrysolutionpackage-action" class="md-nav__link">
+    createFoundrySolutionPackage action
+  </a>
+  
+    <nav class="md-nav" aria-label="createFoundrySolutionPackage action">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_4" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_4" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_4" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployfoundrysolutionpackage" class="md-nav__link">
+    deployFoundrySolutionPackage
+  </a>
+  
+    <nav class="md-nav" aria-label="deployFoundrySolutionPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_5" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_5" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_5" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploysolutionpackage" class="md-nav__link">
+    deploySolutionPackage
+  </a>
+  
+    <nav class="md-nav" aria-label="deploySolutionPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-parameters_6" class="md-nav__link">
+    Data parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-mapping-parameters_6" class="md-nav__link">
+    Input Mapping parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-parameters_6" class="md-nav__link">
+    Output parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="understand-the-solution-package-schema"><a id="sp-schema" name="sp-schema"></a>Understand the solution package schema<a class="headerlink" href="#understand-the-solution-package-schema" title="Permanent link">&para;</a></h1>
+<p>Solution package in Workflow Accelerator is a JSON file that allows you to define all the information that is required for installing end-to-end solutions across various cloud platforms. To register and deploy the solution packages that you create, you have to use REST APIs.<br></p>
+<p>This page describes the most recent major version (for example: 2.x) of the solution package schema. To view the schema for older versions, see <a href="downloads/rean-workflow/solution-package-schema-v1.html" target="_blank">Solution Package schema 1.0</a>.</p>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'sample'})" style="text-decoration:none">Sample solution package</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'data-object'})" style="text-decoration:none">Data objects in solution package schema</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'actions'})" style="text-decoration:none">Supported workflow actions</a></li>
+</ul>
+<h2 id="sample-solution-package"><a id="sample" name="sample"></a>Sample solution package<a class="headerlink" href="#sample-solution-package" title="Permanent link">&para;</a></h2>
+<p>The following is an example of a solution package for installing an application. For information about the different JSON blocks in the solution package, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'data-object'})" style="text-decoration:none">Data objects in solution package schema</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;schemaVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;00.00.01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;https://google.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;applicationVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;english&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;japanese&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;ownerName&quot;</span><span class="p">:</span> <span class="s2">&quot;demo-user&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ownerEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;demo.user@companyname.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cloudRegion&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;us-west-1&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;vertical&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;tag1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;tag2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;app&quot;</span> <span class="p">:</span> <span class="s2">&quot;SampleApp&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;cidr&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;AMI ID&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.0/16&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isApp&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;AMI ID&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;isVpc&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;AMI ID&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_type&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;instance type&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_name&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;instance name&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Environment like prod, qa, etc&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;list-value&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;defaultValue&quot;</span><span class="p">:</span> <span class="s2">&quot;&#39;demo-one&#39;,&#39;demo-two&#39;&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;json-value&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Json&quot;</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;vpc&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;deployInput&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.cidr}&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_name&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;customer_name&#39;]}&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;env&#39;]}&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;pqr&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;list-value&#39;]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;json-value&#39;]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;deployInput&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_type&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;instance_type&#39;]}&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_name&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;vpc&#39;][&#39;customer&#39;]}&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;{ &#39;${#input[&#39;customer_name&#39;]}&#39; : &#39;${#input[&#39;customer_name&#39;]}&#39; }&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_id&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;vpc&#39;][&#39;vpc_id&#39;]}&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;dns&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;blueprints&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Demo-BP&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1.1&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+ <span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory_repo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;default_provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;default_artifactory&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.cidr}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output sample example with default type and directly from inputs of SP&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;vpc&#39;][&#39;customer&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output sample example from output of layer&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output3&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;app&#39;][&#39;app_url&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output sample example from layer 2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output4&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;vpc&#39;][&#39;prq-value&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output sample example with list type&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output5&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;vpc&#39;][&#39;json-value&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output sample example with map type&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;workflow&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> 
+      <span class="nt">&quot;action&quot;</span> <span class="p">:</span> <span class="s2">&quot;deployEnv&quot;</span><span class="p">,</span> 
+      <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;vpc&quot;</span><span class="p">,</span> 
+      <span class="nt">&quot;condition&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input.isVpc}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span> 
+        <span class="nt">&quot;envName&quot;</span> <span class="p">:</span> <span class="s2">&quot;vpc-demo&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;envVersion&quot;</span> <span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span> 
+      <span class="p">}</span> 
+    <span class="p">},</span>
+    <span class="p">{</span> 
+      <span class="nt">&quot;action&quot;</span> <span class="p">:</span> <span class="s2">&quot;deployEnv&quot;</span><span class="p">,</span> 
+      <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;app&quot;</span><span class="p">,</span> 
+      <span class="nt">&quot;condition&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input.isApp}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span> 
+        <span class="nt">&quot;envName&quot;</span> <span class="p">:</span> <span class="s2">&quot;app_demo&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;envVersion&quot;</span> <span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span> 
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="data-objects-in-solution-package-schema"><a id="data-object" name="data-object"></a>Data objects in solution package schema<a class="headerlink" href="#data-objects-in-solution-package-schema" title="Permanent link">&para;</a></h2>
+<p>The solution package schema contains multiple JSON blocks for the following data objects:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'schemaversion'})" style="text-decoration:none">schemaVersion</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'metadata'})" style="text-decoration:none">metadata</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'sp-schema'})" style="text-decoration:none">schedule</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'blueprints'})" style="text-decoration:none">blueprints</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'workflow'})" style="text-decoration:none">workflow</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'sp-schema'})" style="text-decoration:none">customData</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'providers'})" style="text-decoration:none">providers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'input'})" style="text-decoration:none">input</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'output'})" style="text-decoration:none">output</a></li>
+</ul>
+<h3 id="schemaversion"><a id="schemaversion" name="schemaversion"></a>schemaVersion<a class="headerlink" href="#schemaversion" title="Permanent link">&para;</a></h3>
+<p>The version of the solution package schema. You can search a solution package using the <strong>schemaVersion</strong> attribute. This is a mandatory parameter.</p>
+<p>It is recommended that you use the latest schema version to create a new solution package. For example, the entry for this parameter can be <strong>2.0</strong>. However, older schema versions continue to be supported. If you are updating an existing solution package, specify the schema version that was used to create that solution package.</p>
+<p><strong><em>Note*:** <em>All solution packages created with schema version 2.x must be registered or edited using the REST API version v2, as shown below:</em>
+***https://{HCAP-base-URL}/api/reansolutionpackage/solution_package/v2</em></strong></p>
+<h3 id="metadata"><a id="metadata" name="metadata"></a>metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h3>
+<p>This data object contains the metadata about the solution package and the application to be installed using the solution package. The information in the metadata section is used to display, access, and search the solution package by using parameters such as name, version, language, and cloud region.</p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;magento&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;00.00.01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This solution package is for installing Magento commerce application.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;http://https://magento.com/log.png&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;applicationVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ownerName&quot;</span><span class="p">:</span> <span class="s2">&quot;MFI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ownerEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;customer.mfi@hitachivantara.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;minDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 1h 20m&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;maxDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 2h 30m&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;en_US&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;licenseName&quot;</span><span class="p">:</span> <span class="s2">&quot;license-321&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cloudRegion&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;us-east-1&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;vertical&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;commerce&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;has_free_trials&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Following are the attributes of the <strong>metadata</strong> object:</p>
+<ul>
+<li>name (mandatory parameter)</li>
+<li>version (mandatory parameter)</li>
+<li>description</li>
+<li>icon</li>
+<li>applicationVersion</li>
+<li>ownerName</li>
+<li>ownerEmail</li>
+<li>duration</li>
+<li>language</li>
+<li>licenseName</li>
+<li>cloudRegion (mandatory parameter)</li>
+<li>vertical</li>
+<li>tags</li>
+</ul>
+<h4 id="name-mandatory-parameter">name (mandatory parameter)<a class="headerlink" href="#name-mandatory-parameter" title="Permanent link">&para;</a></h4>
+<p>The name of the solution package. The solution name and version must be unique per user </p>
+<h4 id="version-mandatory-parameter">version (mandatory parameter)<a class="headerlink" href="#version-mandatory-parameter" title="Permanent link">&para;</a></h4>
+<p>The version of the solution package. You can create multiple versions for a single solution name. </p>
+<h4 id="description">description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>Description of the solution. You can add a detailed information about the application in this parameter.</p>
+<h4 id="icon">icon<a class="headerlink" href="#icon" title="Permanent link">&para;</a></h4>
+<p>URL to the location of the Application icon image.</p>
+<h4 id="applicationversion">applicationVersion<a class="headerlink" href="#applicationversion" title="Permanent link">&para;</a></h4>
+<p>The version of the application which is getting deployed as a part of this solution package </p>
+<h4 id="ownername">ownerName<a class="headerlink" href="#ownername" title="Permanent link">&para;</a></h4>
+<p>The name of the owner of the solution package. This is a mandatory parameter.</p>
+<h4 id="owneremail">ownerEmail<a class="headerlink" href="#owneremail" title="Permanent link">&para;</a></h4>
+<p>The email ID of the owner of the solution package. This is a mandatory parameter.</p>
+<h4 id="duration">duration<a class="headerlink" href="#duration" title="Permanent link">&para;</a></h4>
+<p>A user entry to define the minimum and maximum deployment time required by the solution package. The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;minDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 1h 20m&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;maxDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 2h 30m&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The correct format for entry of time 1d 3h 20m for 1 day, 3 hours and 20 minutes. This format does not support time entry in seconds. </p>
+<h4 id="language">language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h4>
+<p>List of languages supported by the application to be deployed using solution package.  The list must be the language code in ISO standard. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;en_US&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>For more information on the language codes, in the ISO website, see <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">Codes for the Representation of Names of Languages</a>.</p>
+<h4 id="licensename">licenseName<a class="headerlink" href="#licensename" title="Permanent link">&para;</a></h4>
+<p>The license required for using the solution package. Before entering the license name here, make sure that the license is created for the solution package. For more information on the creation of the license key, see the license-controller API documentation in Solution Package. </p>
+<p>The license-control API documentation is available at following URL: 
+<strong>https://{HCAP-base-URL}/api-documentation/solutionpackagedoc/swagger-ui.html#/license-controller</strong></p>
+<h4 id="cloudregion-mandatory-parameter">cloudRegion (mandatory parameter)<a class="headerlink" href="#cloudregion-mandatory-parameter" title="Permanent link">&para;</a></h4>
+<p>List of cloud regions where the solution package is to be deployed. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;cloudRegion&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;us-east-1&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="vertical">vertical<a class="headerlink" href="#vertical" title="Permanent link">&para;</a></h4>
+<p>Vertical of the organization to which the application belongs.</p>
+<h4 id="tags">tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h4>
+<p>Additional properties for the solution. The tags must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;tags&quot;</span><span class="p">:{</span>
+    <span class="nt">&quot;tagname1&quot;</span><span class="p">:</span> <span class="s2">&quot;tag1 value&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tagname2&quot;</span><span class="p">:</span> <span class="s2">&quot;tag value&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>These tags can be used for creating a tag and searching a solution with the tag name for a specific tag value. For example,  you can tag a solution package as { "domain" : "commerce" }, which can be used for searching all the applications in the Finance domain. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;commerce&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;has_free_trials&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="schedule"><a id="schedule" name="schedule"></a>schedule<a class="headerlink" href="#schedule" title="Permanent link">&para;</a></h3>
+<p>This data object allows you to set a schedule for deploying a solution package multiple times. When a solution package with a <strong>schedule</strong> parameter is deployed successfully, the subsequent deployments are scheduled and triggered based on the specified schedule.<br></p>
+<p>The <strong>schedule</strong> object is optional.</p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code>schedule&quot;: {        
+&quot;cron&quot;: &quot;0 */2 * ? * *&quot;    
+}
+</code></pre></div>
+<p>Consider the following points about the deployment of solution packages with the schedule parameter:</p>
+<ul>
+<li>If a solution deployment is destroyed, the scheduling is stopped.</li>
+<li>If a solution deployment is in a running state, the scheduled deployment is skipped.</li>
+<li>The next scheduled deployment starts even if the previous deployment job fails.</li>
+<li>The scheduling of next deployment is automatically triggered after the Workflow Accelerator services are up from a downtime. For example, if a job is schedules at 10:00, 12:00, and 14:00, and the Workflow Accelerator services face a downtime from 11:00 to 13:00, then the next deployment scheduled at 14:00 is automatically triggered.</li>
+</ul>
+<p><em><strong>Note:</strong> If required, you can update a solution package to add, update, or remove the <strong>schedule</strong> object and then redeploy the solution package deployment.</em></p>
+<h3 id="blueprints"><a id="blueprints" name="blueprints"></a>blueprints<a class="headerlink" href="#blueprints" title="Permanent link">&para;</a></h3>
+<p>This object contains the list of blueprints that will get automatically imported from the artifactory before starting the deployment of the solution package. In the artifactory, these blueprints must be stored in the repository that is configured in Deploy Accelerator.</p>
+<p>Environments in the blueprint are imported into Deploy Accelerator with the naming convention <code>&lt;solution_package_name&gt;_&lt;environment_name&gt;</code>.</p>
+<p><em><strong>Note</strong>: Blueprints will get imported only once, the solution package will reuse the previously imported blueprints if they are already present in Deploy Accelerator. The blueprints must be present in the artifactory with the provided name and version, otherwise complete deployment of the solution package will fail.</em></p>
+<p>The object must be in the following format: </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;blueprints&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1.1&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Magento&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Following are the attributes of the <strong>blueprints</strong> object:</p>
+<ul>
+<li>name</li>
+<li>version</li>
+</ul>
+<h4 id="name">name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h4>
+<p>Name of the blueprint. The entry must be exactly same as the name of the blueprint in the artifactory.</p>
+<h4 id="version">version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h4>
+<p>Version of the blueprint for the specified name.</p>
+<p><em><strong>Note:</strong> You can also choose to manually import blueprints into Deploy Accelerator. In this case, you must specify an empty section for the <strong>blueprints</strong> object, as shown below.</em></p>
+<p><code>"blueprints": []</code></p>
+<h3 id="workflow"><a id="workflow" name="workflow"></a>workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
+<p>This data object contains the list of actions that will get executed. The actions are executed in the same order in which they are listed. </p>
+<p>The <strong>workflow</strong> object is defined using the following format. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;workflow&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;WorkflowActionName&gt;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sampleName&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;Is_solution_package_deployment&#39;]}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="err">&lt;da</span><span class="kc">ta</span> <span class="err">a</span><span class="kc">ttr</span><span class="err">ibu</span><span class="kc">tes</span> <span class="err">based</span> <span class="err">o</span><span class="kc">n</span> <span class="kc">t</span><span class="err">he</span> <span class="err">work</span><span class="kc">fl</span><span class="err">ow</span> <span class="err">ac</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">&gt;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;WorkflowActionName&gt;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sampleName&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;Is_solution_package_deployment&#39;]}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="err">&lt;da</span><span class="kc">ta</span> <span class="err">a</span><span class="kc">ttr</span><span class="err">ibu</span><span class="kc">tes</span> <span class="err">based</span> <span class="err">o</span><span class="kc">n</span> <span class="kc">t</span><span class="err">he</span> <span class="err">work</span><span class="kc">fl</span><span class="err">ow</span> <span class="err">ac</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">&gt;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>  
+<span class="p">]</span>
+</code></pre></div>
+<p>The following example uses the <strong>deploySolutionPackage</strong> action.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;workflow&quot;</span><span class="p">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+       <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;deploySolutionPackage&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sc_dependency1&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;Is_solution_package_deployment&#39;]}&quot;</span><span class="p">,</span>
+       <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+           <span class="nt">&quot;solution_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SolutionPackage_A1&quot;</span><span class="p">,</span>
+           <span class="nt">&quot;solution_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;00.00.100&quot;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Following are the attributes of the <strong>workflow</strong> object:</p>
+<ul>
+<li>action</li>
+<li>name</li>
+<li>condition</li>
+<li>data</li>
+</ul>
+<h4 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h4>
+<p>The action that must be executed by the workflow layer. For the list of supported workflow actions, along with the data attributes, input mapping parameters, and output for each action, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'actions'})" style="text-decoration:none">Supported workflow actions</a>. </p>
+<h4 id="name_1">name<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h4>
+<p>Name of the workflow layer. All other objects in the solution package must use this layer name to reference the details that are defined in the <strong>data</strong> attribute. </p>
+<h4 id="condition">condition<a class="headerlink" href="#condition" title="Permanent link">&para;</a></h4>
+<p>Condition based on which the layer is either executed or skipped. It allows you to control whether or not an optional layer of the solution package will be executed.</p>
+<p>This attribute is a Spring expression that can be resolved to Boolean based on the value of the condition:</p>
+<ul>
+<li>If the value is <strong>true</strong> or resolves to <strong>true</strong>, the layer will be executed.</li>
+<li>If the value is <strong>false</strong> or resolves to <strong>false</strong>, the layer will be skipped.</li>
+</ul>
+<p>The Spring expression for the condition can use input parameters, combination of multiple conditions, or output of a previous layer.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="nt">&quot;${#input[‘Is_subnet_deployment’]}&quot;</span>
+
+<span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;network-layer&#39;][&#39;vpc_cidr&#39;] == &#39;10.0.0.0/16&#39;}&quot;</span>
+</code></pre></div>
+<p><em><strong>Note:</strong> The <strong>condition</strong> attribute is optional. If you do not use the <strong>condition</strong> attribute, the layer will be executed.</em></p>
+<h4 id="data">data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h4>
+<p>Details that are required to execute the defined action. The data parameters that you can declare are based on the action that has been defined for the workflow layer. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'actions'})" style="text-decoration:none">Supported workflow actions</a>.</p>
+<h3 id="customdata"><a id="customdata" name="customdata"></a>customData<a class="headerlink" href="#customdata" title="Permanent link">&para;</a></h3>
+<p>This object allows you to define custom attributes for the solution package. These custom attributes can be used as a search parameter for the solution package. </p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;customData&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SAP Hana&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0.0&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="providers"><a id="providers" name="providers"></a>providers<a class="headerlink" href="#providers" title="Permanent link">&para;</a></h3>
+<p>This data object lists all providers that are required to deploy the workflow layers in the solution package. </p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory_repo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;default_provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;default_artifactory&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Following are the attributes of the <strong>providers</strong> object:</p>
+<ul>
+<li>name</li>
+<li>type</li>
+<li>default_provider_name</li>
+</ul>
+<h4 id="name_2">name<a class="headerlink" href="#name_2" title="Permanent link">&para;</a></h4>
+<p>Name of the provider. The entry must be exactly same as the provider declared in the blueprint.</p>
+<h4 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>Cloud service provider. For example, AWS, Google Cloud, and Microsoft Azure.</p>
+<p>Depending on the target cloud provider and account in the blueprint, you can define the providers list in the following ways:</p>
+<ul>
+<li><strong>Case 1</strong>: All the blueprints for the solution are to be deployed on the same Cloud service Provider account.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_account1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<ul>
+<li><strong>Case 2</strong>: Blueprints in the solution package are to be deployed on two different accounts of the same cloud service provider.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_account1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_account2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<ul>
+<li><strong>Case 3</strong>: Blueprints in the solution package targeting multiple cloud providers.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_account1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;k8s_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;helm&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="default_provider_name">default_provider_name<a class="headerlink" href="#default_provider_name" title="Permanent link">&para;</a></h4>
+<p>The default_provider_name parameter allows you to define a default provider for your solution package. The value of this parameter must be same as the name of the provider created in Deploy Accelerator. If required, you can override the default provider value at the time of deployment.</p>
+<p>You can define multiple default providers in solution package.</p>
+<p>This is an optional parameter. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory_repo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;default_provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;default_artifactory&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="input"><a id="input" name="input"></a>input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<p>The <strong>input</strong> object contains 2 sub objects <strong>inputParameters</strong> and <strong>inputMapping</strong>. </p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">/*Parame</span><span class="kc">ter</span> <span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">*/</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">/*</span><span class="s2">&quot;Workflow layer name&quot;</span><span class="err">*/</span>
+        <span class="p">{</span>
+         <span class="err">/*Parame</span><span class="kc">ter</span> <span class="err">Mappi</span><span class="kc">n</span><span class="err">g*/</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="inputparameters">inputParameters<a class="headerlink" href="#inputparameters" title="Permanent link">&para;</a></h4>
+<p>The <strong>inputParameters</strong> object contains the declaration of unique parameters that are required for deploying the workflow layer.  This section consists of all unique sets of inputs that the solution owner wants the user to enter while deploying the solution package. For example, instance_size, which can be used in the one of the blueprint to set the EC2 instance size.</p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC CIDR&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelisted_ip&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;List of IP&#39;s to whitelist&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsTest&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Resource tags&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Following are the attributes of the <strong>inputParameters</strong> object:</p>
+<ul>
+<li><strong>name:</strong> Name of the parameter. The name must be a single string without any space.</li>
+<li><strong>type:</strong> The data type of the input parameter. The supported types are List, String, Boolean, Map, and Integer.</li>
+<li><strong>description:</strong> Description of the parameter. You can add a detailed information about the application in this parameter. It is a free text area.</li>
+<li><strong>defaultValue:</strong> The default value of the parameter, if no value is entered while deployment.</li>
+<li><strong>possibleValues:</strong> The list of possible values from which the user must select a value. </li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;possibleValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;t2.large&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;t2.xlarge&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="inputmapping">inputMapping<a class="headerlink" href="#inputmapping" title="Permanent link">&para;</a></h4>
+<p>The <strong>inputMapping</strong> object contains the declaration of parameters that are used to deploy a workflow layer. The parameters that you can declare are based on the action that has been defined for the workflow layer. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'actions'})" style="text-decoration:none">Supported workflow actions</a>.</p>
+<p>You can declare parameters for multiple workflow layers in a single <strong>inputMapping</strong> object.</p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;workflowLayerName&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">&lt;I</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span> <span class="err">Mappi</span><span class="kc">n</span><span class="err">g</span> <span class="err">parame</span><span class="kc">ters</span> <span class="kc">f</span><span class="err">or</span> <span class="kc">t</span><span class="err">he</span> <span class="err">work</span><span class="kc">fl</span><span class="err">ow</span> <span class="err">layer&gt;</span>
+    <span class="p">},</span>
+     <span class="nt">&quot;workflowLayerName&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">&lt;I</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span> <span class="err">Mappi</span><span class="kc">n</span><span class="err">g</span> <span class="err">parame</span><span class="kc">ters</span> <span class="kc">f</span><span class="err">or</span> <span class="kc">t</span><span class="err">he</span> <span class="err">work</span><span class="kc">fl</span><span class="err">ow</span> <span class="err">layer&gt;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="output"><a id="output" name="output"></a>output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<p>This data object is used to declare the output parameters of a solution package. You can define multiple parameters in the <strong>output</strong> object. You can view the result of the parameters defined in the <strong>output</strong> object after the solution package is deployed. </p>
+<p>The output parameters can also be used as input parameters in another solution package. </p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+   <span class="nt">&quot;outputs&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.cidr}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output example with default type and directly from inputs of the solution package&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;output2&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;vpc&#39;][&#39;customer&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Output  example from the output of a workflow layer&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Following are the attributes of the <strong>output</strong> object:</p>
+<ul>
+<li>name</li>
+<li>value</li>
+<li>description</li>
+<li>type</li>
+</ul>
+<h4 id="name_3">name<a class="headerlink" href="#name_3" title="Permanent link">&para;</a></h4>
+<p>The name of the output parameter.</p>
+<h4 id="value">value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h4>
+<p>The value for the <strong>output</strong> parameter. There are multiple ways to define values for output parameters.</p>
+<ul>
+<li><strong>Case 1</strong>: Use the value of an input parameter that is defined in the solution package.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;vpc_cidr&#39;]}&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Case 2</strong>: Use the value of an output parameter of any workflow layer defined in the solution package.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_id&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;network-layer&#39;][&#39;vpc_id&#39;]}&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In this case, <strong>network-layer</strong> is name of the workflow layer from where the output parameter will be received.</p>
+<ul>
+<li><strong>Case 3</strong>: Use the combined value of multiple input parameters or output parameters of any workflow layer defined in the solution package.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-name-prefix&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;network-layer&#39;][&#39;customer_name&#39;]}-${#output[&#39;network-layer&#39;][&#39;env&#39;]}&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="description_1">description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>The description of the output parameter. This is a free text section.</p>
+<h4 id="type_1">type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>The type of the <strong>output</strong> parameter. The supported types are List, String, Boolean, Map, and Integer. The default value of the parameter is <strong>String</strong>, if no value is specified while creating the solution package.</p>
+<h2 id="supported-workflow-actions"><a id="actions" name="actions"></a>Supported workflow actions<a class="headerlink" href="#supported-workflow-actions" title="Permanent link">&para;</a></h2>
+<p>The <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'workflow'})" style="text-decoration:none">workflow</a> data object contains the list of actions that a solution package must execute. For each workflow action, you must specify the appropriate data, input mapping, and output parameters.</p>
+<p>The Solution Package schema supports the following workflow actions:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-env'})" style="text-decoration:none">deployEnv</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'create-provider'})" style="text-decoration:none">createProvider</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'create-helm'})" style="text-decoration:none">createHelmRepo</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-helm'})" style="text-decoration:none">deployHelmChart</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'create-foundry'})" style="text-decoration:none">createFoundrySolutionPackage</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-foundry'})" style="text-decoration:none">deployFoundrySolutionPackage</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-sp'})" style="text-decoration:none">deploySolutionPackage</a></li>
+</ul>
+<h3 id="summary-of-workflow-action-details">Summary of workflow action details<a class="headerlink" href="#summary-of-workflow-action-details" title="Permanent link">&para;</a></h3>
+<p>This section provides a quick overview of the data parameters, input mapping parameters, and output of each workflow action that the Solution Package schema supports. For more information, see the detailed section on each workflow action.</p>
+<table>
+<thead>
+<tr>
+<th>Workflow action</th>
+<th>Data parameters</th>
+<th>Input Mapping parameters</th>
+<th>Output of the workflow action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-env'})" style="text-decoration:none">deployEnv</a><br>Deploys the environment that is defined in the <strong>data</strong> parameters.</td>
+<td>envName<br>envVersion</td>
+<td>provider<br>deployInput</td>
+<td>All outputs from the environment's deployment</td>
+</tr>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'create-provider'})" style="text-decoration:none">createProvider</a><br>Creates a provider in Deploy Accelerator.</td>
+<td>provider_name<br>provider_type</td>
+<td>provider_json_string<br>provider_json</td>
+<td>provider_id<br>provider_name<br>provider_type<br>globalProvider</td>
+</tr>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'create-helm'})" style="text-decoration:none">createHelmRepo</a><br>Registers a new Helm repository. You can use this action when helm charts to be installed by the <strong>deployHelmChart</strong> action are not present in the default repository.</td>
+<td>repo_name</td>
+<td>repo_url<br>username<br>password<br>is_oci_registry<br>caFile<br>inSecureSkipTlsVerify</td>
+<td>repo_name<br>repo_url</td>
+</tr>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-helm'})" style="text-decoration:none">deployHelmChart</a><br>Deploys Helm charts to the Kubernetes cluster from the Helm repository that is defined in the <strong>Input Mapping</strong> parameters.</td>
+<td>chart_name<br>chart_version</td>
+<td>providerId<br>repoName<br>namespace<br>values</td>
+<td>helmStatus<br>helmDeploymentName<br>helmInstallLogs</td>
+</tr>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'create-foundry'})" style="text-decoration:none">createFoundrySolutionPackage</a><br>Registers the Foundry solution package that is defined in the <strong>data</strong> parameters. The Foundry solution package must be located in the configured Artifactory of Hitachi Cloud Accelerator Platform.<br><br>This action initially pushes the Foundry solution package to the Harbor registry that is configured for the Foundry Control Plane. Next, it registers the Foundry solution package, which then starts showing up in the list of available Foundry solution packages in the Foundry Control Plane.</td>
+<td>solution_package_name<br>solution_package_version</td>
+<td>provider<br>oci_url<br>oci_username<br>oci_password</td>
+<td>None</td>
+</tr>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-foundry'})" style="text-decoration:none">deployFoundrySolutionPackage</a><br>Deploys the Foundry solution package that is defined in the <strong>data</strong> parameters. Only Foundry solution packages that are available in the Foundry Control Plane can be deployed.</td>
+<td>solution_package_name<br>solution_package_version</td>
+<td>auth<br>solution_config</td>
+<td>chartName<br>chartVersion<br>chartDescription<br>applicationVersion<br>modelVersion<br>solutionName<br>updateDate<br>solutionResources<br>status</td>
+</tr>
+<tr>
+<td><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'understand-solution-package-schema', viewSection: 'deploy-sp'})" style="text-decoration:none">deploySolutionPackage</a><br>Deploys the solution package that is defined in the data parameters. This solution package can be a prerequisite for the current solution package.</td>
+<td>solution_package_name<br>solution_package_version</td>
+<td>providers<br>deploySolutionPackageInput</td>
+<td>All outputs from the solution package's deployment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deployenv-action"><a id="deploy-env" name="deploy-env"></a>deployEnv action<a class="headerlink" href="#deployenv-action" title="Permanent link">&para;</a></h3>
+<p>The <strong>deployEnv</strong> workflow action deploys the environment that is defined in the <strong>data</strong> attribute.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span> <span class="p">:</span> <span class="s2">&quot;deployEnv&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;app&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input.isApp}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;envName&quot;</span> <span class="p">:</span> <span class="s2">&quot;app_demo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;envVersion&quot;</span> <span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters">Data parameters<a class="headerlink" href="#data-parameters" title="Permanent link">&para;</a></h4>
+<p>Following are the data parameters for the <strong>deployEnv</strong> workflow action:</p>
+<ul>
+<li>envName</li>
+<li>envVersion  </li>
+</ul>
+<p>You can define only one environment name and version per action. The environment name and version must be the same as used in the blueprint that is imported either automatically or manually. Make sure that the environment is present in Deploy Accelerator before starting the deployment.</p>
+<p><em><strong>Note:</strong> The naming convention used for environments in a blueprint that are imported from the artifactory is <strong>solutionPackageName_environmentName</strong>. However, while specifying these environments in the <strong>workflow</strong> object, make sure that you enter only the <strong>environmentName</strong>. Before starting the deployment, the <strong>solutionPackageName</strong> is automatically prefixed to the environment name.</em></p>
+<h4 id="input-mapping-parameters">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters" title="Permanent link">&para;</a></h4>
+<p>For the <strong>deployenv</strong> workflow action, you can declare the input mapping that will be used for the workflow layer with a specific provider.</p>
+<ul>
+<li>
+<p><strong>provider</strong> -- The provider to be used by the workflow layer for deployment. </p>
+</li>
+<li>
+<p><strong>region</strong> -- The region in which the environment is to be deployed. This is an optional parameter.</p>
+</li>
+<li>
+<p><strong>connection</strong> -- The connection ID that can be used to connect to the instances in the deployed environment. This is an optional parameter.</p>
+</li>
+<li>
+<p><strong>chefEnvironment</strong> -- The environment that is available on the selected Chef Server. This is an optional parameter.</p>
+</li>
+<li>
+<p><strong>deployInput</strong> -- The values to be used while deploying the workflow layer using the solution package. </p>
+</li>
+<li>
+<p><strong>key</strong> -- The exact name as defined in the <strong>Input Variables</strong> resource of the Deploy Accelerator environment for which you are configuring this input mapping. </p>
+</li>
+<li>
+<p><strong>value</strong> -- The value for the <strong>inputParameter</strong> key. There are three types of input mapping values, as described below.</p>
+<p><strong>Case 1</strong>: Mapping values for input parameters used in the solution package.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;vpc_cidr&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Case 2</strong>: Mapping output parameter of another workflow layer with the input parameter. When a solution package has two blueprints that are not connected using the <strong>Depends On</strong> feature of Deploy Accelerator, the <strong>output</strong> parameter of the parent blueprint must be used in the child blueprint.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_id&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;network-layer&#39;][&#39;vpc_id&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In this case <strong>network-layer</strong> is name of the workflow layer from where the output parameter will be received. </p>
+<p><strong>Case 3</strong>: Mapping input parameter with multiple input parameters or workflow layer output.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-name-prefix&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;network-layer&#39;][&#39;customer_name&#39;]}-${#output[&#39;network-layer&#39;][&#39;env&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;STRING&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>type</strong> -- The type of the <strong>inputParameter</strong> key. The supported types are List, String, Boolean, Map, and Integer. The default value of the parameter is <strong>String</strong>, if no value is entered while creating the Solution Package.</p>
+<p><em><strong>Note:</strong> The value of the <strong>inputParameter</strong> key is resolved based on the type of the inputParameter. If you specify an incorrect type, complete deployment of the solution package will fail.</em></p>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;AWS_1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;region&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input[&#39;region&#39;]}&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;connection&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;default&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input[&#39;default&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;some_resource&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input[&#39;some_resource&#39;]}&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;chefEnvironment&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input[&#39;chef_environment&#39;]}&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;deployInput&quot;</span><span class="p">:</span> <span class="p">[]</span>  
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters">Output parameters<a class="headerlink" href="#output-parameters" title="Permanent link">&para;</a></h4>
+<p>The output parameters for the <strong>deployEnv</strong> workflow action include all of the environment's deployment outputs.</p>
+<h3 id="createprovider"><a id="create-provider" name="create-provider"></a>createProvider<a class="headerlink" href="#createprovider" title="Permanent link">&para;</a></h3>
+<p>The <strong>createProvider</strong> workflow action creates a provider in Deploy Accelerator. Workflow Accelerator supports all providers and authentication methods that are available in Deploy Accelerator. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'provider'})" style="text-decoration:none">Configuring providers</a>. </p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;createProvider&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_provider_creation_helm&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;provider_creation_helm&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;helm_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;provider_type&quot;</span><span class="p">:</span> <span class="s2">&quot;helm3&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters_1">Data parameters<a class="headerlink" href="#data-parameters_1" title="Permanent link">&para;</a></h4>
+<p>Following are the data parameters for the <strong>createProvider</strong> action:</p>
+<ul>
+<li>provider_name</li>
+<li>provider_type</li>
+</ul>
+<h4 id="input-mapping-parameters_1">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters_1" title="Permanent link">&para;</a></h4>
+<p>For the <strong>createProvider</strong> action, you can define the inputs for providers with dynamic configuration. The parameters in the <strong>createProvider</strong> object must be same as the parameters used in Deploy Accelerator. You can define parameters for the provider in this section, or you can define the provider in the Solution package deployment object. You must use one of the following definition type.</p>
+<ul>
+<li><strong>provider_json_string</strong>: Used to pass the provider JSON at the time of deployment, and must be defined in the Solution Package Deployment Object.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:{</span>
+    <span class="nt">&quot;aws_provider_creation&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;provider_json_string&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;#input[&#39;provider-json&#39;]&quot;</span><span class="p">}</span>   
+    <span class="p">}</span> 
+<span class="p">}</span> 
+</code></pre></div>
+<ul>
+<li>
+<p><strong>provider_json:</strong> The parameters for defining a provider. The parameters are same as the parameters in the provider definition JSON in the Deploy Accelerator. You might need to modify the parameters as per the provider type. The provider parameters defined in this section are fixed.</p>
+</li>
+<li>
+<p><strong>access_key</strong>: Access key to the AWS account.</p>
+</li>
+<li><strong>secret_key</strong>: Secret key to the AWS account.</li>
+<li><strong>region</strong>: Region of the AWS account.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;aws_provider_creation&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;provider_json&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;access_key&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.access_key}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.secret_key}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.region}&quot;</span>        
+        <span class="p">}</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters_1">Output parameters<a class="headerlink" href="#output-parameters_1" title="Permanent link">&para;</a></h4>
+<p>Following are the output parameters for the <strong>createProvider</strong> workflow action:</p>
+<ul>
+<li>provider_id</li>
+<li>provider_name</li>
+<li>provider_type</li>
+<li>globalProvider</li>
+</ul>
+<h3 id="createhelmrepo-action"><a id="create-helm" name="create-helm"></a>createHelmRepo action<a class="headerlink" href="#createhelmrepo-action" title="Permanent link">&para;</a></h3>
+<p>The <strong>createHelmRepo</strong> action registers a new Helm repository. You can use this action when the helm charts to be installed by the <strong>deployHelmChart</strong> action are not available in the <strong>default</strong> repository in artifactory.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;createHelmRepo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;repoSP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;repoSP&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;repo_name&quot;</span><span class="p">:</span> <span class="s2">&quot;repo&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters_2">Data parameters<a class="headerlink" href="#data-parameters_2" title="Permanent link">&para;</a></h4>
+<p>The data parameter for the <strong>createHelmRepo</strong> workflow action is <strong>repo_name</strong>.</p>
+<p>A repository named <strong>default</strong> is already created in the Helm service. Therefore, ensure that you do not specify <strong>default</strong> as the repository name.</p>
+<h4 id="input-mapping-parameters_2">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters_2" title="Permanent link">&para;</a></h4>
+<p>For the <strong>createHelmRepo</strong> workflow action, you can define the parameters to register the Helm repository with the URL provided in the parameters.</p>
+<ul>
+<li><strong>repo_url</strong> -- URL for deployment of the Helm repository. </li>
+<li><strong>username</strong> -- Username for accessing the Helm repository.</li>
+<li><strong>password</strong> -- Password for accessing the Helm repository.</li>
+<li><strong>is_oci_registry</strong> -- Enable or disable support for OCI registry. Enter <strong>false</strong> for using Artifactory, and enter <strong>true</strong> for using Harbor.</li>
+<li><strong>caFile</strong>: The CA bundle to verify the certificates of the HTTPS enabled servers.</li>
+<li><strong>inSecureSkipTlsVerify</strong>: Enable or disable the TLS certificate check for the Helm repository.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;helmRepo&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;repo_url&quot;</span><span class="p">:</span><span class="s2">&quot;$(#input.repo_url)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;$(#input.username)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;$(#input.password)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;is_oci_registry&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;caFile&quot;</span><span class="p">:</span> <span class="s2">&quot;$(#input.caFile)&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;inSecureSkipTlsVerify&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters_2">Output parameters<a class="headerlink" href="#output-parameters_2" title="Permanent link">&para;</a></h4>
+<p>Following are the output parameters for the <strong>createHelmRepo</strong> workflow action:</p>
+<ul>
+<li>repo_name</li>
+<li>repo_url</li>
+</ul>
+<h3 id="deployhelmchart"><a id="deploy-helm" name="deploy-helm"></a>deployHelmChart<a class="headerlink" href="#deployhelmchart" title="Permanent link">&para;</a></h3>
+<p>The <strong>deployHelmChart</strong> workflow deploys Helm charts to the Kubernetes cluster from the Helm repository deployed in the earlier action. If no repository is declared in the <strong>createHelmRepo</strong> action, it refers to the the default repository in artifactory.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;deployHelmChart&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;deploy_helm&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;deploy_helm&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;chart_name&quot;</span><span class="p">:</span> <span class="s2">&quot;repo/platform-helm-sampleapp&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;chart_version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1.2&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters_3">Data parameters<a class="headerlink" href="#data-parameters_3" title="Permanent link">&para;</a></h4>
+<p>Following are the data parameters for the deployHelmChart workflow action:</p>
+<ul>
+<li>chart_name</li>
+<li>chart_version</li>
+</ul>
+<p>The chart_name must be in the format <strong>repo_name/chart_name</strong>. If you have not declared any <strong>repo_name</strong>, use <strong>default/chart_name</strong>.</p>
+<h4 id="input-mapping-parameters_3">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters_3" title="Permanent link">&para;</a></h4>
+<p>For the <strong>deployHelmChart</strong> workflow action, you can deploy a Helm chart in the recently deployed Helm repository.</p>
+<ul>
+<li><strong>namespace</strong> - The namespace in which the Helm Chart is deployed. If not defined, it is deployed in the default namespace.</li>
+<li><strong>repository</strong> - Registered repository name with the service from where it will deploy the helm charts. (mandatory)</li>
+<li><strong>provider</strong> - The provider for deploying Helm charts. It should be registered with Deploy Accelerator. (mandatory)</li>
+<li><strong>values</strong> - JSON for overriding the default values of the Helm Chart from Solution Package.</li>
+<li><strong>values_string</strong> - JSON for overriding the values from the Solution Package deployment object. The name must match the value defined in the solution package.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;deploy_helm&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;${#providers[&#39;provider_creation_helm&#39;][&#39;provider_id&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;repository&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;helm_repo_creation&#39;][&#39;repo_name&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;namespace&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;docker&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;reanplatform-sampleapp:0.0.1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;registry&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.username}&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.password}&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;server&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.server}&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters_3">Output parameters<a class="headerlink" href="#output-parameters_3" title="Permanent link">&para;</a></h4>
+<p>Following are the output parameters for the <strong>deployHelmChart</strong> workflow action:</p>
+<ul>
+<li>helmStatus</li>
+<li>helmDeploymentName</li>
+<li>helmInstallLogs</li>
+</ul>
+<h3 id="createfoundrysolutionpackage-action"><a id="create-foundry" name="create-foundry"></a>createFoundrySolutionPackage action<a class="headerlink" href="#createfoundrysolutionpackage-action" title="Permanent link">&para;</a></h3>
+<p>The <strong>createFoundrySolutionPackage</strong> workflow action registers the Foundry solution package that is defined in the <strong>data</strong> attribute. This action consists of the following steps:</p>
+<ul>
+<li>The Foundry solution package, which is located in the configured Artifactory of Hitachi Cloud Accelerator Platform, is pushed to the Harbor registry that is configured for the Foundry Control Plane. </li>
+<li>The Foundry solution package is registered and starts showing up in the list of available Foundry solution packages in the Foundry Control Plane.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;createFoundrySolutionPackage&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;foundry_package&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;foundry_package&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;solution_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;hello-world-changed&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;solution_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters_4">Data parameters<a class="headerlink" href="#data-parameters_4" title="Permanent link">&para;</a></h4>
+<p>Following are the data parameters for the <strong>createFoundrySolutionPackage</strong> workflow action:</p>
+<ul>
+<li>solution_package_name</li>
+<li>solution_package_version</li>
+</ul>
+<p>You can define only one Foundry solution package and version per action. The Foundry solution package name and version must be the same as the file name and version that is stored in the configured artifactory of Cloud Accelerator Platform. Before starting the deployment, make sure that the solution package is present in the configured repository of the artifactory.</p>
+<p>If the Foundry solution package is already registered in the Foundry Control Plane, this action checks if there is any change in the Foundry solution package that is present in the configured repository of the Artifactory. If a change is identified, the registered Foundry solution package is updated.</p>
+<p><em><strong>Note:</strong> If you destroy a deployment of the Workflow Accelerator solution package, the Foundry solution package that has already been registered does not get deregistered. It continues to be available in the Foundry Control Plane.</em></p>
+<h4 id="input-mapping-parameters_4">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters_4" title="Permanent link">&para;</a></h4>
+<p>For the <strong>createFoundrySolutionPackage</strong> workflow action, you can declare the credentials for accessing the Harbor registry in which the Foundry solution package will be pushed, along with the provider for the Kubernetes cluster in which the Foundry Control Plane is installed. This Kubernetes provider must exist in Deploy Accelerator.</p>
+<ul>
+<li><strong>provider</strong> -- The Kubernetes provider ID (in Deploy Accelerator) to be used by the workflow layer to connect to the cluster in which Foundry Control Plane is installed. You can get this provider ID either from the output of the previous layer or from the input parameters.</li>
+<li><strong>oci_url</strong> -- URL for accessing the Harbor registry that is configured for the Foundry Control Plane.</li>
+<li><strong>oci_username</strong> -- User name to sign-in to the Harbor registry.</li>
+<li><strong>oci_password</strong> -- Password to sign-in to the Harbor registry.</li>
+</ul>
+<p>For the OCI parameters, you can map values for input parameters used in the solution package.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;foundry-package&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;providerID&#39;]}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;oci_url&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;harborHost&#39;]}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;oci_username&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;harborUsername&#39;]}&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;oci_password&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;harborPassword&#39;]}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters_4">Output parameters<a class="headerlink" href="#output-parameters_4" title="Permanent link">&para;</a></h4>
+<p>The <strong>createFoundrySolutionPackage</strong> workflow action has no output parameters.</p>
+<h3 id="deployfoundrysolutionpackage"><a id="deploy-foundry" name="deploy-foundry"></a>deployFoundrySolutionPackage<a class="headerlink" href="#deployfoundrysolutionpackage" title="Permanent link">&para;</a></h3>
+<p>The <strong>deployFoundrySolutionPackage</strong> workflow action deploys the Foundry solution package that is defined in the <strong>data</strong> attribute. Only Foundry solution packages that are available in the Foundry Control Plane can be deployed.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;deployFoundrySolutionPackage&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;foundry_package_deploy&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;foundry_package&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;solution_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;hello-world-changed&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;solution_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.2.0&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters_5">Data parameters<a class="headerlink" href="#data-parameters_5" title="Permanent link">&para;</a></h4>
+<p>Following are the data parameters for the <strong>deployFoundrySolutionPackage</strong> workflow action:</p>
+<ul>
+<li>solution_package_name</li>
+<li>solution_package_version </li>
+</ul>
+<p>You can define only one Foundry solution package and version per action. The Foundry solution package name and version must be the same as the name and version that is registered in the Foundry control plane.</p>
+<h4 id="input-mapping-parameters_5">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters_5" title="Permanent link">&para;</a></h4>
+<p>For the <strong>deployFoundrySolutionPackage</strong> workflow action, you can declare the credentials for accessing the Foundry Control Plane, along with optional configuration information about the Foundry Control Plane. </p>
+<ul>
+<li>
+<p><strong>auth</strong> -- The authentication details required to connect to the Foundry Control Plane and deploy the Foundry solution package.</p>
+</li>
+<li>
+<p><strong>client_id</strong> -- Client ID to connect to the Foundry Control Plane.</p>
+</li>
+<li><strong>client_secret</strong> -- Client Secret to connect to the Foundry Control Plane.</li>
+<li><strong>username</strong> -- Username to connect to the Foundry Control Plane.</li>
+<li><strong>password</strong> -- Password to connect to the Foundry Control Plane.</li>
+<li><strong>foundry_host</strong> -- Host on which the Foundry Control Plane is installed. </li>
+<li>
+<p><strong>namespace</strong> -- Kubernetes namespace in which the Foundry Control Plane is installed.</p>
+</li>
+<li>
+<p><strong>solution_config</strong> -- Information about the Foundry solution package deployment.</p>
+</li>
+<li>
+<p><strong>modelVersion</strong> -- Version of the Foundry Control Plane.</p>
+</li>
+<li>
+<p><strong>values</strong> OR <strong>values_string</strong> -- You can either provide a fixed list of values or specify that the values will be taken from a JSON string that the user will provide as input while deploying the solution package.</p>
+<p><strong>Format for values</strong> </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;gatekeeperInitPullPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;IfNotPresent&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;pullPolicy&quot;</span><span class="p">:</span> <span class="s2">&quot;IfNotPresent&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;repository&quot;</span><span class="p">:</span> <span class="s2">&quot;harbor.prod.platfom/foundry/foundry-hello-world&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tag&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0.0.345&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Format for values_string</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;values_string&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;values_from_input_param&#39;]}&quot;</span>
+</code></pre></div>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;foundry-package-deploy&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;auth&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;clientId]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;clientSecret]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;username]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;password]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;foundry_host&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;foundryHost]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;namespace&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;namespace]}&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;solution_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;modelVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;modelversion&#39;]}&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;values_string&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;values&#39;]}&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters_5">Output parameters<a class="headerlink" href="#output-parameters_5" title="Permanent link">&para;</a></h4>
+<p>Following are the output parameters for the <strong>deployFoundrySolutionPackage</strong> workflow action:</p>
+<ul>
+<li>chartName</li>
+<li>chartVersion</li>
+<li>chartDescription</li>
+<li>applicationVersion</li>
+<li>modelVersion</li>
+<li>solutionName</li>
+<li>updateDate</li>
+<li>solutionResources</li>
+<li>status</li>
+</ul>
+<h3 id="deploysolutionpackage"><a id="deploy-sp" name="deploy-sp"></a>deploySolutionPackage<a class="headerlink" href="#deploysolutionpackage" title="Permanent link">&para;</a></h3>
+<p>The <strong>deploySolutionPackage</strong> workflow action deploys the Workflow Accelerator solution package that is a prerequisite for the current solution package.</p>
+<p>Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;deploySolutionPackage&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;sc_dependency1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;condition&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;Is_solution_package_deployment&#39;]}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;solution_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SolutionPackage_A1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;solution_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;00.00.100&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="data-parameters_6">Data parameters<a class="headerlink" href="#data-parameters_6" title="Permanent link">&para;</a></h4>
+<p>Following are data parameters for the <strong>deploySolutionPackage</strong> workflow action:</p>
+<ul>
+<li>solution_package_name</li>
+<li>solution_package_version</li>
+</ul>
+<p>You can define only one Workflow Accelerator solution package and version per action. The solution package name and version must be the same as defined in its solution package JSON.</p>
+<h4 id="input-mapping-parameters_6">Input Mapping parameters<a class="headerlink" href="#input-mapping-parameters_6" title="Permanent link">&para;</a></h4>
+<p>For the <strong>deploySolutionPackage</strong> workflow action, you can declare the providers and the input parameters required for deploying all the layers from the solution package declared in the action.</p>
+<ul>
+<li><strong>Layer name object</strong> (dynamic parameter): The name of the workflow layer to be deployed by the solution package defined in action.</li>
+<li><strong>providers</strong>: List of the providers required for deploying all the layers from referenced solution package.</li>
+<li><strong>deploySolutionPackageInput</strong>: List of all the input parameters required for deploying all the layers from referenced solution package.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;sc_dependency1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;providers&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;aws-provider&quot;</span><span class="p">:</span> <span class="s2">&quot;${#providers[&#39;aws-provider&#39;]}&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;deploySolutionPackageInput&quot;</span> <span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input.vpc_cidr}&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span> <span class="p">:</span> <span class="s2">&quot;${#input.env},</span>
+<span class="s2">                &quot;</span><span class="kc">t</span><span class="err">ype</span><span class="s2">&quot; : &quot;</span><span class="err">S</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span><span class="s2">&quot;</span>
+<span class="s2">            },</span>
+<span class="s2">            {</span>
+<span class="s2">                &quot;</span><span class="kc">na</span><span class="err">me</span><span class="s2">&quot; : &quot;</span><span class="err">cus</span><span class="kc">t</span><span class="err">omer</span><span class="s2">&quot;,</span>
+<span class="s2">                &quot;</span><span class="err">value</span><span class="s2">&quot; : &quot;</span><span class="err">$</span><span class="p">{</span><span class="err">#i</span><span class="kc">n</span><span class="err">pu</span><span class="kc">t</span><span class="err">.cus</span><span class="kc">t</span><span class="err">omer</span><span class="p">}</span><span class="s2">&quot;,</span>
+<span class="s2">                &quot;</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="output-parameters_6">Output parameters<a class="headerlink" href="#output-parameters_6" title="Permanent link">&para;</a></h4>
+<p>The output parameters for the <strong>deploySolutionPackage</strong> workflow action include all of the solution package's deployment outputs.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../getting-started/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../using/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Create and register solution package
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

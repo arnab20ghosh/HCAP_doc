@@ -1,0 +1,2872 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Discover and migrate resources - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#discover-and-migrate-resources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Discover and migrate resources
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" checked>
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Discover and migrate resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Discover and migrate resources
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-migrate-accelerator-works" class="md-nav__link">
+    How Migrate Accelerator works
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-scenario-for-migrating-servers-from-a-data-center-to-the-cloud" class="md-nav__link">
+    End-to-end scenario for migrating servers from a data center to the cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-discovery-and-migration-tools" class="md-nav__link">
+    Supported discovery and migration tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-in-to-migrate-accelerator" class="md-nav__link">
+    Signing in to Migrate Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-to-migrate-servers" class="md-nav__link">
+    Preparing to migrate servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing to migrate servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discover-servers-in-your-datacenter" class="md-nav__link">
+    Discover servers in your datacenter
+  </a>
+  
+    <nav class="md-nav" aria-label="Discover servers in your datacenter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bring-in-server-data-from-cloudscape" class="md-nav__link">
+    Bring in server data from CloudScape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-create-an-inventory-of-server-data" class="md-nav__link">
+    Manually create an inventory of server data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-cloudendure" class="md-nav__link">
+    Configure CloudEndure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-providers" class="md-nav__link">
+    Configure providers
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-provider" class="md-nav__link">
+    Create a provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-a-provider" class="md-nav__link">
+    Edit a provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share-a-provider" class="md-nav__link">
+    Share a provider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-migration-service-credentials" class="md-nav__link">
+    Create migration service credentials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-migration-configurations" class="md-nav__link">
+     Create migration configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-connections" class="md-nav__link">
+    Configure connections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovering-and-migrating-servers" class="md-nav__link">
+    Discovering and migrating servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Discovering and migrating servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discover-servers" class="md-nav__link">
+    Discover servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Discover servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-discovery-job" class="md-nav__link">
+    Create a discovery job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-the-status-of-risc-discovery-jobs" class="md-nav__link">
+    View the status of RISC discovery jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-upload-connectivity-data" class="md-nav__link">
+    Manually upload connectivity data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-a-discovery-job" class="md-nav__link">
+    Edit a discovery job
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-migration-of-servers" class="md-nav__link">
+    Plan migration of servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan migration of servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-operating-systems" class="md-nav__link">
+    Supported operating systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-details-of-discovered-servers" class="md-nav__link">
+    View details of discovered servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-application-group" class="md-nav__link">
+    Create a new application group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regroup-servers-in-an-application-group" class="md-nav__link">
+    Regroup servers in an application group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-build-plan-for-an-application-group" class="md-nav__link">
+    Download the build plan for an application group
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-servers" class="md-nav__link">
+    Migrate servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-migrated-resources-in-deploy-accelerator" class="md-nav__link">
+    Use migrated resources in Deploy Accelerator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-overall-migration-status-for-application-groups" class="md-nav__link">
+    Viewing the overall migration status for application groups
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-migrate-accelerator-works" class="md-nav__link">
+    How Migrate Accelerator works
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-scenario-for-migrating-servers-from-a-data-center-to-the-cloud" class="md-nav__link">
+    End-to-end scenario for migrating servers from a data center to the cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-discovery-and-migration-tools" class="md-nav__link">
+    Supported discovery and migration tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-in-to-migrate-accelerator" class="md-nav__link">
+    Signing in to Migrate Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-to-migrate-servers" class="md-nav__link">
+    Preparing to migrate servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing to migrate servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discover-servers-in-your-datacenter" class="md-nav__link">
+    Discover servers in your datacenter
+  </a>
+  
+    <nav class="md-nav" aria-label="Discover servers in your datacenter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bring-in-server-data-from-cloudscape" class="md-nav__link">
+    Bring in server data from CloudScape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-create-an-inventory-of-server-data" class="md-nav__link">
+    Manually create an inventory of server data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-cloudendure" class="md-nav__link">
+    Configure CloudEndure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-providers" class="md-nav__link">
+    Configure providers
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-provider" class="md-nav__link">
+    Create a provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-a-provider" class="md-nav__link">
+    Edit a provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share-a-provider" class="md-nav__link">
+    Share a provider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-migration-service-credentials" class="md-nav__link">
+    Create migration service credentials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-migration-configurations" class="md-nav__link">
+     Create migration configurations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-connections" class="md-nav__link">
+    Configure connections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovering-and-migrating-servers" class="md-nav__link">
+    Discovering and migrating servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Discovering and migrating servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discover-servers" class="md-nav__link">
+    Discover servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Discover servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-discovery-job" class="md-nav__link">
+    Create a discovery job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-the-status-of-risc-discovery-jobs" class="md-nav__link">
+    View the status of RISC discovery jobs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-upload-connectivity-data" class="md-nav__link">
+    Manually upload connectivity data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-a-discovery-job" class="md-nav__link">
+    Edit a discovery job
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-migration-of-servers" class="md-nav__link">
+    Plan migration of servers
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan migration of servers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-operating-systems" class="md-nav__link">
+    Supported operating systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-details-of-discovered-servers" class="md-nav__link">
+    View details of discovered servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-application-group" class="md-nav__link">
+    Create a new application group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regroup-servers-in-an-application-group" class="md-nav__link">
+    Regroup servers in an application group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-build-plan-for-an-application-group" class="md-nav__link">
+    Download the build plan for an application group
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrate-servers" class="md-nav__link">
+    Migrate servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-migrated-resources-in-deploy-accelerator" class="md-nav__link">
+    Use migrated resources in Deploy Accelerator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-overall-migration-status-for-application-groups" class="md-nav__link">
+    Viewing the overall migration status for application groups
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="discover-and-migrate-resources">Discover and migrate resources<a class="headerlink" href="#discover-and-migrate-resources" title="Permanent link">&para;</a></h1>
+<p>Hitachi Cloud Accelerator Platform - Migrate (Migrate Accelerator) helps you to migrate applications that are running in your existing data centers to the cloud. It brings in data from Discovery tools, enables you to pick and choose the servers for each application group, uses a migration tool for server replication, and then creates server images. This topic describes how you can use Migrate Accelerator to migrate discovered servers from your data centers to the cloud and show the migrated resources in Hitachi Cloud Accelerator Platform - Deploy (Deploy Accelerator).<br></p>
+<p><em><strong>Important:</strong> Migrate Accelerator currently supports the migration of servers from your data center to Amazon Web Services (AWS) only.</em></p>
+<h2 id="contents"><a id="Content" name="Content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'how'})" style="text-decoration:none">How Migrate Accelerator works</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'scenario'})" style="text-decoration:none">End-to-end scenario for migrating servers from a data center to the cloud</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'supported-tools'})" style="text-decoration:none">Supported discovery and migration tools</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'logon'})" style="text-decoration:none">Signing in to Migrate Accelerator</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'prepare'})" style="text-decoration:none">Preparing to discover and migrate servers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'endtoend'})" style="text-decoration:none">Discovering and migrating servers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'view'})" style="text-decoration:none">Viewing the overall migration status for application groups</a></li>
+</ul>
+<h2 id="how-migrate-accelerator-works"><a id="how" name="how"></a>How Migrate Accelerator works<a class="headerlink" href="#how-migrate-accelerator-works" title="Permanent link">&para;</a></h2>
+<p>Migrate Accelerator enables you to pick and choose what you migrate and track at the Data Center level. You can add these migrated servers on the Deploy Accelerator canvas and then build and deploy the infrastructure.<br></p>
+<p>The following image shows the end-to-end steps for using Migrate Accelerator to create resources in Deploy Accelerator.</p>
+<p><img alt="" src="/images/rean-migrate/rm_endtoendprocess.PNG" /></p>
+<p><em><strong>Note:</strong> When you deploy Migrate Accelerator on an AWS EC2 instance, you must ensure that the Migrate Accelerator instance can connect to servers in your data center.</em>  </p>
+<h2 id="end-to-end-scenario-for-migrating-servers-from-a-data-center-to-the-cloud"><a id="scenario" name="scenario"></a>End-to-end scenario for migrating servers from a data center to the cloud<a class="headerlink" href="#end-to-end-scenario-for-migrating-servers-from-a-data-center-to-the-cloud" title="Permanent link">&para;</a></h2>
+<p>Consider a scenario in which you want to migrate your application from a data center to the cloud. You can use Migrate Accelerator, the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'supported-tools'})" style="text-decoration:none">supported discovery and migration tools</a>, and Deploy Accelerator to perform the following end-to-end steps: </p>
+<ol>
+<li>Use the supported discovery tool to discover servers in your data center.
+   Alternatively, manually create a CSV file that contains an inventory of the servers in your data center.</li>
+<li>Bring in this discovered data into Migrate Accelerator and create logical application groups that include all servers that are required to run the application. 
+   For example, you can add the database server and web server used by an application into a logical application group.</li>
+<li>Use the supported migration tool to initiate server replication and test that all servers in the application group have been successfully replicated.</li>
+<li>Use Migrate Accelerator to create images of the target test servers. 
+   Launch an instance from this image to confirm that the server is replicated correctly. </li>
+<li>Plan and announce the downtime for your application.</li>
+<li>Use the supported migration tool to cutover the servers in the application group to stop further server replication.</li>
+<li>After the cutover servers are launched successfully, use Migrate Accelerator to create final images of all servers in the application group.</li>
+<li>Launch instances from the final images in the subnet in which you want to host your application.</li>
+<li>Point users to the migrated application in the cloud before the end of the planned downtime.      </li>
+</ol>
+<h2 id="supported-discovery-and-migration-tools"><a id="supported-tools" name="supported-tools"></a>Supported discovery and migration tools<a class="headerlink" href="#supported-discovery-and-migration-tools" title="Permanent link">&para;</a></h2>
+<p>Migrate Accelerator supports the following tools for discovering servers in your data center and migrating them to the cloud.</p>
+<ul>
+<li><strong>Discovery</strong>: <a href="https://www.riscnetworks.com/">RISC Networks CloudScape</a></li>
+</ul>
+<p><em><strong>Note:</strong> If you do not want to use CloudScape, you can also manually create a CSV file that contains an inventory of the servers in your data center.</em></p>
+<ul>
+<li><strong>Migration</strong>: <a href="https://www.cloudendure.com">CloudEndure</a></li>
+</ul>
+<h2 id="signing-in-to-migrate-accelerator"><a id="logon" name="logon"></a>Signing in to Migrate Accelerator<a class="headerlink" href="#signing-in-to-migrate-accelerator" title="Permanent link">&para;</a></h2>
+<p>The Migrate Accelerator and Admin Console deployment process creates a default administrator who can perform all required actions. This administrator can then create additional users or other users can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'create'})" style="text-decoration:none">create their own Hitachi Cloud Accelerator Platform account</a>.</p>
+<ol>
+<li>In a browser, type <strong>https://<em>ipAddress</em></strong>.</li>
+</ol>
+<p><strong><em>ipAddress</em></strong> refers to the IP address of the instance on which Migrate Accelerator is deployed. </p>
+<ol>
+<li>Enter your user name or email address and your password.</li>
+</ol>
+<p><img alt="" src="/images/rean-platform-common/console_signin.PNG" /></p>
+<ol>
+<li>Click <strong>SIGN IN</strong>.</li>
+</ol>
+<p>Until you create at least one discovery job, you are prompted to create a new discovery job each time you sign in to Migrate Accelerator.<br></p>
+<p>When you sign in to Migrate Accelerator after you have created one or more discovery jobs, the discovery job that you had previously opened appears by default.</p>
+<p><em><strong>Note:</strong></em></p>
+<ul>
+<li><em>You can perform various actions in Migrate Accelerator only if your administrator has granted you the appropriate permissions.</em></li>
+<li><em>You can access only the jobs, connections, and migration credentials that you have created.</em></li>
+</ul>
+<h2 id="preparing-to-migrate-servers"><a id="prepare" name="prepare"></a>Preparing to migrate servers<a class="headerlink" href="#preparing-to-migrate-servers" title="Permanent link">&para;</a></h2>
+<p>Before you create discovery and migration jobs in Migrate Accelerator, you must perform the following actions:</p>
+<ul>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'server-dc'})" style="text-decoration:none">Discover servers</a> in your data center.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'configure-ce'})" style="text-decoration:none">Configure CloudEndure</a> to migrate servers from your data center to AWS.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'provider'})" style="text-decoration:none">Configure providers</a> to store authentication details of the cloud service provider account in which Migrate Accelerator must create images of the migrated servers. </p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migration'})" style="text-decoration:none">Create  migration service credentials</a> to store the user name and password that Migrate Accelerator must use to connect to a migration service, such as CloudEndure. For each migration job, Migrate Accelerator communicates with the selected migration service to initiate server migration, track migration status, and perform other actions.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'mig-config'})" style="text-decoration:none">Create migration configurations</a> to store a predefined set of migration service, credentials to access that migration service, and the appropriate cloud service provider. While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">creating a migration job</a>, you must select the appropriate migration configuration.</p>
+</li>
+<li>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'connection'})" style="text-decoration:none">Configure connections</a> to store the user name and password that Migrate Accelerator can use to connect to the servers in your data center and install the CloudEndure agent. While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">creating a migration job</a>, you can select the appropriate connections.</p>
+</li>
+</ul>
+<p><em><strong>Note:</strong> You have to configure connections only if you want Migrate Accelerator to auto-install CloudEndure agents on the servers in your data center.</em></p>
+<h3 id="discover-servers-in-your-datacenter"><a id="server-dc" name="server-dc"></a>Discover servers in your datacenter<a class="headerlink" href="#discover-servers-in-your-datacenter" title="Permanent link">&para;</a></h3>
+<p>Before you create a discovery job in Migrate Accelerator, you must generate an inventory of the servers (or assets) in your data center by using one of the following methods.</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'cs'})" style="text-decoration:none">Bring in server data from CloudScape</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'csv'})" style="text-decoration:none">Manually create an inventory of server data</a> </li>
+</ul>
+<p><em><strong>Important:</strong> The CSV file that you import into Migrate Accelerator can include servers of any operating system. However, you can successfully run a migration job only for Microsoft Windows and Linux servers.</em></p>
+<h4 id="bring-in-server-data-from-cloudscape"><a id="cs" name="cs"></a>Bring in server data from CloudScape<a class="headerlink" href="#bring-in-server-data-from-cloudscape" title="Permanent link">&para;</a></h4>
+<p>If you are using CloudScape to discover servers in your data center, you can bring in this discovered data into Migrate Accelerator in one of the following ways:</p>
+<ul>
+<li><strong>Use RISC APIs:</strong> While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'discovery'})" style="text-decoration:none">creating a RISC discovery job</a>, specify the CloudScape account credentials, API endpoint and key, and the assessment. Migrate Accelerator brings in discovered data inventory directly from CloudScape.</li>
+<li><strong>Import data in a CSV format:</strong> While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'discovery'})" style="text-decoration:none">creating a RISC_EXPORTED_DISCOVERY discovery job</a>, specify the CSV file that you want to import into Migrate Accelerator. To export the discovered data from CloudScape in a CSV format, use the <strong>Consume Intelligence &gt; Foundation &gt; Assets</strong> option.</li>
+</ul>
+<p>For information about using CloudScape to discover servers in your data center, see the <a href="https://www.riscnetworks.com/">RISC Networks documentation</a>.</p>
+<h4 id="manually-create-an-inventory-of-server-data"><a id="csv" name="csv"></a>Manually create an inventory of server data<a class="headerlink" href="#manually-create-an-inventory-of-server-data" title="Permanent link">&para;</a></h4>
+<p>Create a CSV file that contains a manual inventory of the servers that need to be migrated. While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'discovery'})" style="text-decoration:none">creating a CSV discovery job</a>, specify this CSV file to be imported into Migrate Accelerator.</p>
+<p>The first row of your CSV file must contain the following data (or column headers):<br><strong>HostName,IPAddress,ServerId,OSType,Group</strong></p>
+<p><em><strong>Note:</strong> The <strong>Group</strong> column enables you to group servers that belong to the same application.</em></p>
+<h3 id="configure-cloudendure"><a id="configure-ce" name="configure-ce"></a>Configure CloudEndure<a class="headerlink" href="#configure-cloudendure" title="Permanent link">&para;</a></h3>
+<p>Before you create a migration job in Migrate Accelerator, perform the following steps to configure CloudEndure:</p>
+<ol>
+<li>
+<p>Register for the CloudEndure Live Migration solution through the <a href="https://aws.amazon.com/marketplace/pp/B01MQCH96B">AWS Marketplace</a> website with your AWS account.
+   The license package that you select must cover the number of CloudEndure agents that you need to install on the servers in your data center. For more information, see the <a href="https://docs.cloudendure.com/Content/Getting_Started_with_CloudEndure/Registering_to_CloudEndure_Solutions/Registering_to_CloudEndure_Solutions.htm#Migratio">CloudEndure documentation</a>.</p>
+</li>
+<li>
+<p>To migrate servers from your data center to AWS, create a Live Migration project in CloudEndure.
+   For information about setting up a Live Migration project, see the <a href="https://docs.cloudendure.com/#Getting_Started_with_CloudEndure/Working_with_Projects/Working_with_Projects.htm#Working_with_Projects%3FTocPath%3DNavigation%7CGetting%2520Started%2520with%2520CloudEndure%7CWorking%2520with%2520Projects%7C_____0">CloudEndure documentation</a>.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">creating a migration job</a> in Migrate Accelerator, you must select this Live Migration project.</em></p>
+<ol>
+<li>
+<p>In the Live Migration project, configure the following details:</p>
+</li>
+<li>
+<p>Configure the replication details and the credentials of the AWS account in which you want to create the infrastructure.</p>
+</li>
+<li>
+<p>Ensure that the license that you select for the Live Migration project covers the number of CloudEndure agents that you need to install in your data center. </p>
+<p>You can either manually install an agent on each server that you want to migrate or enable Migrate Accelerator to install agents on the servers.</p>
+</li>
+<li>
+<p>Ensure that the appropriate <a href="https://console.cloudendure.com/IAMPolicy.json">CloudEndure IAM policy</a> is attached to the AWS user whose credentials you have specified in the Live Migration project.</p>
+</li>
+</ol>
+<h3 id="configure-providers"><a id="provider" name="provider"></a>Configure providers<a class="headerlink" href="#configure-providers" title="Permanent link">&para;</a></h3>
+<p>When you <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">start a migration job</a> for a group of servers in the data center, CloudEndure creates test instances in AWS and replicates data from these servers on the test instances. After the data replication has completed successfully, you can create images of the test instances by using the provider that is configured in the migration job.<br></p>
+<p>Providers enable you to specify the cloud provider and credentials for accessing the account in which the images must be created. You can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'createprovider'})" style="text-decoration:none">create multiple providers</a> in the Admin Console and select the appropriate provider while creating a migration job. The providers that you create are accessible only to you by default. However, you can choose to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'shareprovider'})" style="text-decoration:none">share your provider</a> with other users who belong to specific Migrate Accelerator groups.<br></p>
+<p><em><strong>Important:</strong> Migrate Accelerator can create images only in the same AWS account in which CloudEndure launches test instances. Therefore, the provider that you select in a migration job must contain credentials that match the credentials that are specified in the CloudEndure Live Migration project.</em></p>
+<h4 id="create-a-provider"><a id="createprovider" name="createprovider"></a>Create a provider<a class="headerlink" href="#create-a-provider" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="/images/rean-platform-common/icon_accelerator.PNG" /> in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Providers</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Add Provider</strong>, click <strong>NEW</strong>.</p>
+</li>
+<li>
+<p>Enter the provider name and select the appropriate provider type (for example, AWS).</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> Migrate Accelerator currently supports only AWS as a cloud provider.</em></p>
+<ol>
+<li>In <strong>Select Accelerator</strong> list, select <strong>Migrate Accelerator</strong>. </li>
+</ol>
+<p>This allows creating provider for Migrate Accelerator in the Admin console. </p>
+<ol>
+<li>In <strong>Provider Details</strong>, specify authentication details (in JSON format) of the AWS account in which Migrate Accelerator must create the server images.</li>
+</ol>
+<p>Consider the following points while selecting the option to specify authentication details.</p>
+<ul>
+<li>
+<p><strong>Instance Profile with Assume Role</strong></p>
+<p>This method provides a secure way for cross-account access. Consider a scenario  in which Migrate Accelerator is deployed in an AWS account that is different from the accounts in which Migrate Accelerator must create the server images. Instead of storing the access credentials for all these accounts in Migrate Accelerator, you can attach a role to the instance on which Migrate Accelerator is deployed. Migrate Accelerator can then assume a role in the other accounts and create images. For more information about assuming roles, see the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-roles.html">AWS documentation</a>.<br></p>
+<p>To use the <strong>Instance Profile with Assume Role</strong> method, you must attach a role to the instance on which Migrate Accelerator is deployed. For the other accounts, you must specify a role that Migrate Accelerator can assume to create the images. The role that you specify must have permissions to create images. It must also define the account in which Migrate Accelerator is deployed as a trusted entity.<br><br><u>Sample JSON</u></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;xx-xxxx-x&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;assume_role&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;role_arn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::xxxxxxxxxxx:role/assume_role&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;session_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SESSION-NAME&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;external_id&quot;</span><span class="p">:</span> <span class="s2">&quot;assume_role&quot;</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Instance Profile</strong></p>
+<p>This method provides a secure way of accessing the account in which Migrate Accelerator must create the server images. However, you must use this method only if a role is attached to the instance on which Migrate Accelerator is deployed. This role must have the permissions to create images.<br><br>To use the <strong>Instance Profile</strong> method, you must specify the region in which the images must be created.</p>
+<p><u>Sample JSON</u></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;xx-xxxx-x&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Basic Credentials with Assume Role</strong></p>
+<p>This method provides another way for cross-account access. Consider a scenario in which Migrate Accelerator is deployed in an AWS account that is different from the accounts in which Migrate Accelerator must create the server images. Instead of storing access credentials for all these accounts in Migrate Accelerator, you can specify long-term access credentials for only the parent account. Migrate Accelerator can then assume a role in the other accounts and create images. For more information about assuming roles, see the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-roles.html">AWS documentation</a>.<br><br>To use the Basic Credentials with Assume Role method, you must specify the credentials for only the parent account. For all other accounts, you must specify a role that Migrate Accelerator can assume to create images. The role that you specify must have access to create images. It must also define the parent account as a trusted entity.<br><br><u>Sample JSON</u></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;access_key&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;xxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;xx-xxxx-x&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;assume_role&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;role_arn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::xxxxxxxxxxx:role/assume_role&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;session_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SESSION-NAME&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;external_id&quot;</span><span class="p">:</span> <span class="s2">&quot;assume_role&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Basic Credentials</strong></p>
+<p>To use this method, you must specify the IAM user credentials for accessing the account in which Migrate Accelerator must create the server images. The IAM user whose credentials you specify must have access to create images.<br><br><u>Sample JSON</u> </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;access_key&quot;</span><span class="p">:</span> <span class="s2">&quot;XXXXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;secret_key&quot;</span><span class="p">:</span> <span class="s2">&quot;XXXXXXXXXXXXX&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;xx-xxxx-x&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+<li>
+<p><a id="meta" name="meta"></a>In <strong>Optional Metadata</strong>, specify additional metadata for the provider. Make sure that you do not enter confidential data in the metadata as it is displayed in plain-text.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>{
+  &quot;description&quot;: &quot;This provider is for 001 and 002 blueprints&quot;,
+  &quot;migration_name&quot;: &quot;Migration 1&quot;
+}
+</code></pre></div>
+<ol>
+<li>Click <strong>SAVE</strong>.</li>
+</ol>
+<p>A new provider appears under the <strong>Provider List</strong> section.</p>
+<h4 id="edit-a-provider"><a id="editprovider" name="editprovider"></a>Edit a provider<a class="headerlink" href="#edit-a-provider" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="/images/rean-platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Providers</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Provider List</strong>, in the <strong>Actions</strong> column for the provider that you want to edit, click <strong>Edit</strong> (<img alt="" src="/images/rean-migrate/edit.PNG" />).</p>
+</li>
+<li>
+<p>Under <strong>Edit Provider</strong>, update the provider name or provider details.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> If you edit a provider, you must re-enter all values in the provider details before you click <strong>UPDATE</strong>. Otherwise, an error message might be shown while using this provider to create images of migrated servers.</em></p>
+<ol>
+<li>Click <strong>UPDATE</strong>.</li>
+</ol>
+<h4 id="share-a-provider"><a id="shareprovider" name="shareprovider"></a>Share a provider<a class="headerlink" href="#share-a-provider" title="Permanent link">&para;</a></h4>
+<p>You can share a provider with a Migrate Accelerator user-group in the Admin console. Sharing a provider assigns that provider to all the users in the selected user-group. This action can reduce the need for users to create their own providers.</p>
+<p><strong>To share a provider with a specific user group, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>On the Home page, click the <strong>Accelerator</strong> icon (<img alt="" src="/images/rean-platform-common/icon_accelerator.PNG" />) in the top-left corner and select <strong>Admin Console</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) in the top-right corner and then click <strong>Providers</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Provider List</strong>, in the <strong>Actions</strong> column for the provider that you want to share, click <strong>Share Provider</strong>  (<img alt="" src="/images/rean-migrate/share.PNG" />).</p>
+<p><img alt="" src="/images/rean-migrate/shareprovider.PNG" /></p>
+</li>
+<li>
+<p>In the <strong>Share Provider</strong> dialog box, for a user group, click the <strong>Add Permissions</strong>  icon (<img alt="" src="/images/rean-migrate/addper.PNG" />).</p>
+</li>
+<li>
+<p>Select the permissions you want to assign, and click <strong>DONE</strong>. </p>
+</li>
+<li>
+<p>In the <strong>Share Provider</strong> dialog box, click <strong>SUBMIT</strong>. </p>
+</li>
+</ol>
+<h3 id="create-migration-service-credentials"><a id="migration" name="migration"></a>Create migration service credentials<a class="headerlink" href="#create-migration-service-credentials" title="Permanent link">&para;</a></h3>
+<p>Migrate Accelerator uses migration credentials to communicate with the migration service to initiate migration, track migration status, and perform other actions. While configuring migration credentials, you must specify the migration service and credentials that Migrate Accelerator must use to migrate application groups from the data center.<br></p>
+<p>While <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'mig-config'})" style="text-decoration:none">creating a migration configuration</a>, you must select the credentials that Migrate Accelerator must use to communicate with the selected migration service.</p>
+<p><strong>To configure migration service credentials, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>On the Home page of Migrate Accelerator, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top right corner.</p>
+</li>
+<li>
+<p>Click <strong>Migration Configurations</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>MIGRATION SERVICE CREDENTIALS</strong> tab.</p>
+</li>
+<li>
+<p>Under <strong>Add/Edit Migration Service Credentials</strong>, click <strong>NEW</strong>.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-migrate/rm_migrationcredentials.PNG" /></p>
+<ol>
+<li>
+<p>Enter a unique name for the migration service credentials.</p>
+</li>
+<li>
+<p>From the <strong>Migration Service</strong> list, select the appropriate migration service.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> Currently, Migrate Accelerator supports only CloudEndure as a migration service.</em></p>
+<ol>
+<li>
+<p>Enter the credentials (user and password) that Migrate Accelerator must use to access the selected migration service.</p>
+</li>
+<li>
+<p>Click <strong>SAVE</strong>.</p>
+</li>
+</ol>
+<p>The new migration service credentials appear under the <strong>Migration Service Credentials List</strong> section.</p>
+<h3 id="create-migration-configurations"><a id="mig-config" name="mig-config"></a> Create migration configurations<a class="headerlink" href="#create-migration-configurations" title="Permanent link">&para;</a></h3>
+<p>Migration configurations allow you to store a predefined set of configurations that are required while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">creating a migration job</a>.  Each migration configuration comprises the following details:</p>
+<ul>
+<li>Migration service that Migrate Accelerator must use to migrate servers from the data center to the selected cloud service provider.</li>
+<li>Credentials to access the migration service.</li>
+<li>Authentication details for the cloud service provider account in which Migrate Accelerator must create images of the servers. </li>
+<li><em>(Only for the CloudEndure migration service)</em> Live Migration project from which Migrate Accelerator must migrate servers.</li>
+</ul>
+<p>You can specify a migration configuration once and use it in multiple migration jobs. Also, if your migration service credentials or cloud service provider authentication details change, you just need to update the appropriate migration configurations instead of editing multiple migration jobs.</p>
+<p><strong>To create a migration configuration, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>On the Home page of Migrate Accelerator, click the <strong>More options</strong> icon  (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />)  icon in the top right corner.</p>
+</li>
+<li>
+<p>Click <strong>Migration Configurations</strong>.</p>
+</li>
+<li>
+<p>Click the <strong>MIGRATION CONFIGURATION</strong> tab.</p>
+</li>
+<li>
+<p>Under <strong>Add/Edit Migration Configuration</strong>, click <strong>NEW</strong>.</p>
+</li>
+<li>
+<p>Enter a unique name and description for the migration configuration.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-migrate/rm_migrationconfig.PNG" /></p>
+<ol>
+<li>From the <strong>Migration Service</strong> list, select the appropriate migration service.</li>
+</ol>
+<p><em><strong>Note:</strong> Currently, Migrate Accelerator supports only CloudEndure as a migration service.</em></p>
+<ol>
+<li>From the <strong>Migration Service Credentials</strong> list, select the appropriate credentials.</li>
+</ol>
+<p>All credentials for the selected migration service appear in the list.</p>
+<p>For information about creating the credentials, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migration'})" style="text-decoration:none">Create migration service credentials</a>.</p>
+<ol>
+<li>
+<p>To fetch all projects from the CloudEndure migration service, perform the following actions:</p>
+</li>
+<li>
+<p>Click <strong>GET PROJECTS</strong>.</p>
+</li>
+<li>
+<p>From the <strong>Project</strong> list, select the appropriate Live Migration project in CloudEndure.</p>
+<p><em><strong>Important:</strong> Ensure that the selected project includes the license to install agents on all servers in the application group.</em></p>
+</li>
+<li>
+<p>From the <strong>Cloud Service Provider</strong> list, select the appropriate provider for creating images of the migrated servers.</p>
+</li>
+</ol>
+<p>Ensure that the credentials in the selected provider are the same as the AWS credentials that are configured in the selected Live Migration project.</p>
+<p>For information about creating providers, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'provider'})" style="text-decoration:none">Configure providers</a>.</p>
+<ol>
+<li>
+<p>Click <strong>SAVE</strong>.</p>
+<p>The new migration configuration appears under the <strong>Migration Configuration List</strong> section.</p>
+</li>
+</ol>
+<h3 id="configure-connections"><a id="connection" name="connection"></a>Configure connections<a class="headerlink" href="#configure-connections" title="Permanent link">&para;</a></h3>
+<p>Migrate Accelerator uses connections to connect to servers that are running in your data center so that it can install the CloudEndure agent on these servers. You must create an SSH connection to connect to servers that have the Linux operating system. Similarly, you must create a WinRM connection to connect to servers that have the Microsoft Windows operating system.<br></p>
+<p><em><strong>Note:</strong> You have to configure connections only if you want Migrate Accelerator to auto-install CloudEndure agents on the servers in your data center. When you select the <strong>Auto install agent</strong> option while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">creating a migration job</a>, you must also specify the appropriate connection to connect to the servers in your data center.</em></p>
+<p><strong>To configure a connection, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>On the Home page of Migrate Accelerator, click the <strong>More options</strong> icon (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) in the top-right corner.</p>
+</li>
+<li>
+<p>Click <strong>Connections</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Add/Edit Connection</strong>, click <strong>NEW</strong>.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-migrate/rm_connection.PNG" /></p>
+<ol>
+<li>
+<p>Enter the connection name and select the appropriate connection type.</p>
+</li>
+<li>
+<p>Based on the connection type that you have selected, perform the following actions:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Connection type</th>
+<th>Actions to perform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSH</td>
+<td>Enter the user and password or SSH key that Migrate Accelerator must use to connect to the servers.<br><br><em><strong>Note:</strong> Ensure that the user that you specify has Read-Write access to the <strong>/tmp</strong> directory on the servers. Also, ensure that this user has root access or is in the sudoers list.</em></td>
+</tr>
+<tr>
+<td>WinRM</td>
+<td>Enter the user and password that Migrate Accelerator must use to connect to the servers.<br><br>To set up a secure connection, select <strong>Https</strong>. Migrate Accelerator uses the CA certificates that were copied to the <strong>/root/rean-platform/ca-certs</strong> folder while deploying Migrate Accelerator.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click <strong>SAVE</strong>.</li>
+</ol>
+<p>A new connection appears under the <strong>Connection List</strong> section.</p>
+<h2 id="discovering-and-migrating-servers"><a id="endtoend" name="endtoend"></a>Discovering and migrating servers<a class="headerlink" href="#discovering-and-migrating-servers" title="Permanent link">&para;</a></h2>
+<p>The end-to-end process to bring in discovered servers into Migrate Accelerator, perform server replication, and migrate server images to the cloud includes multiple steps, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-migrate/rm_flow.PNG" /></p>
+<ol>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'discovery'})" style="text-decoration:none">Discover servers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'plan'})" style="text-decoration:none">Plan migration of servers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">Migrate servers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate-resource'})" style="text-decoration:none">Use migrated resources in Deploy Accelerator</a></li>
+</ol>
+<h3 id="discover-servers"><a id="discovery" name="discovery"></a>Discover servers<a class="headerlink" href="#discover-servers" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="/images/rean-migrate/rm_flow1.PNG" /></p>
+<h4 id="create-a-discovery-job"><a id="create-disc-job" name="create-disc-job"></a>Create a discovery job<a class="headerlink" href="#create-a-discovery-job" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>To create a discovery job, perform one of the following actions:</p>
+</li>
+<li>
+<p>If you have not created any discovery job, in the dialog box that appears, click <strong>ADD DISCOVERY</strong>.</p>
+</li>
+<li>
+<p>If you have previously created a discovery job, on the Home page of Migrate Accelerator, click the <strong>Create Discovery</strong> icon (<img alt="" src="/images/rean-migrate/icon_create.PNG" />).</p>
+</li>
+<li>
+<p>On the Create Discovery page, enter the discovery name and description.</p>
+</li>
+<li>
+<p>From the <strong>Discovery Tool</strong> list, select the appropriate discovery tool.</p>
+</li>
+<li>
+<p>If you have selected <strong>RISC</strong> as the discovery tool, perform the following actions:</p>
+</li>
+<li>
+<p>Enter your CloudScape API endpoint, API key, user, and password.</p>
+</li>
+<li>
+<p>Click <strong>GET ASSESSMENTS</strong>.</p>
+</li>
+<li>
+<p>From the <strong>CloudScape Assessments</strong> list, select the assessment that contains the discovered servers that you want to migrate.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To retrieve asset data based on tags defined in RISC, perform the following actions:</p>
+<ul>
+<li>Click <strong>ADD TAG</strong>.</li>
+</ul>
+<p>In RISC, a tag is represented by a key-value pair. A key can be associated with multiple values, but the key, in combination with each value, represents a distinct tag. The same tag can be applied to multiple assets and multiple tags can be applied to an asset. To bring in asset data in Migrate Accelerator based on tags defined in RISC, you must specify the key-value pairs representing those tags while creating a discovery job.</p>
+<ul>
+<li>In <strong>Tag Key</strong>, type the tag key that is applied to assets that you want to bring into Migrate Accelerator.</li>
+</ul>
+<p><em><strong>Important:</strong> Ensure that the tag keys and values that you specify in Migrate Accelerator exactly match the tag keys and values defined in RISC. Otherwise, the discovery job will not complete successfully and no assets will be brought into Migrate Accelerator.</em></p>
+<ul>
+<li>In <strong>Tag values</strong>, type the appropriate tag values that correspond to the tag key you have specified.</li>
+</ul>
+<p>For example, say the <strong>OS</strong> key in RISC has two values - <strong>Windows</strong> and <strong>Linux</strong>. And you want to bring in assets that have the <strong>OS-Windows</strong> and <strong>OS-Linux</strong> tags (key-value pairs) assigned to them. While creating a discovery job in Migrate Accelerator, you must specify <strong>OS</strong> as the <strong>Tag key</strong> and <strong>Windows</strong> and <strong>Linux</strong> as the corresponding <strong>Tag values</strong>, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-migrate/rm_creatediscoveryrisc.PNG" /></p>
+<p><em><strong>Note:</strong> Ensure that you specify a unique set of tag values for a tag key--you cannot type the same tag value twice for a tag key.</em></p>
+<ul>
+<li>To add another tag, click <strong>ADD TAG</strong> and then type the tag key and corresponding tag values.</li>
+</ul>
+<p>You can add multiple tag keys and corresponding tag values for a discovery job.</p>
+</li>
+</ol>
+<p><em><strong>Important:</strong> You cannot modify or delete tag key values once they are saved. However, you can later <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'edit-disc-job'})" style="text-decoration:none">edit the discovery job</a> to add more tag keys or tag values.</em></p>
+<ol>
+<li>
+<p>If you have selected <strong>CSV</strong> as the discovery tool, perform the following actions:</p>
+</li>
+<li>
+<p>Click <strong>Choose File</strong>.</p>
+</li>
+<li>
+<p>Select the CSV file from your local machine and click <strong>Upload</strong>.</p>
+<p>The first row of your CSV file must contain the following data (or column headers):<br><strong>HostName,IPAddress,ServerId,OSType,Group</strong></p>
+</li>
+</ol>
+<p>The following image shows the Create Discovery page for the CSV discovery tool.</p>
+<p><img alt="" src="/images/rean-migrate/rm_creatediscoverycsv.PNG" /></p>
+<ol>
+<li>
+<p>If you have selected <strong>RISC_EXPORTED_DISCOVERY</strong> as the discovery tool, perform the following actions:</p>
+</li>
+<li>
+<p>Click <strong>Choose File</strong>, select the CSV file that you have exported from RISC CloudScape, and click <strong>Upload</strong>.</p>
+</li>
+<li>
+<p><em>(Optional)</em> Click <strong>MAP</strong>.</p>
+<p>The <strong>Discovery Field</strong> column displays the fields in which Migrate Accelerator stores the discovered data. In <strong>CSV Column</strong>, the drop-down list displays all columns from the CSV file that you have uploaded. </p>
+</li>
+<li>
+<p>For each field in the <strong>Discovery Field</strong> column, select the CSV column from which the data must be imported, as shown in the following image.</p>
+<p><img alt="" src="/images/rean-migrate/rm_creatediscoveryrisccsv.PNG" /></p>
+</li>
+<li>
+<p><em>(Optional)</em> To view how the discovered data will be mapped to the Migrate Accelerator fields, move through to the end of the <strong>Discovery Field</strong> column and click <strong>PREVIEW</strong>.</p>
+</li>
+<li>
+<p>Click <strong>CREATE DISCOVERY</strong>.</p>
+</li>
+</ol>
+<p>Application groups within the discovery job appear in the left panel.</p>
+<p><em><strong>Note:</strong> After you create a <strong>RISC</strong> or <strong>RISC_EXPORTED_DISCOVERY</strong> discovery job, you can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'connect-dataupload'})" style="text-decoration:none">manually upload the connectivity data</a> that RISC CloudScape has generated for your assessment.</em></p>
+<h4 id="view-the-status-of-risc-discovery-jobs"><a id="risc-jobstatus" name="risc-jobstatus"></a>View the status of RISC discovery jobs<a class="headerlink" href="#view-the-status-of-risc-discovery-jobs" title="Permanent link">&para;</a></h4>
+<p>In the case of <strong>RISC</strong> discovery jobs, Migrate Accelerator fetches data incrementally from CloudScape. While the data retrieval is still in progress, you can see the already retrieved assets in the Migrate Accelerator UI.<br>The banner for RISC discovery jobs shows the status, timestamps (for last fetch, last new asset, and last updated assets), and impacted actions. Until all assets have been successfully retrieved, it is recommended that you <em>do not</em> perform the following actions:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'connect-dataupload'})" style="text-decoration:none">Manually upload the connectivity data</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 're-group'})" style="text-decoration:none">Regroup servers in an application group</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'build-plan'})" style="text-decoration:none">Download the build plan for an application group</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate'})" style="text-decoration:none">Migrate servers in an application group</a></li>
+</ul>
+<p><em><strong>Note:</strong> To view updates to the discovery job status in the banner, you must manually refresh your browser.</em></p>
+<p>The following image shows an example of the banner that is shown for RISC discovery jobs. To hide the banner, click <strong>X</strong> in the top-right corner. To show the banner again, click the <strong>Show RISC progress</strong> icon (<img alt="" src="/images/rean-migrate/icon_showbanner.png" />).</p>
+<p><img alt="" src="/images/rean-migrate/rm_discbanner.PNG" /></p>
+<h4 id="manually-upload-connectivity-data"><a id="connect-dataupload" name="connect-dataupload"></a>Manually upload connectivity data<a class="headerlink" href="#manually-upload-connectivity-data" title="Permanent link">&para;</a></h4>
+<p>The option to manually upload connectivity data is available only for <strong>RISC</strong> and <strong>RISC_EXPORTED_CSV</strong> discovery jobs. The connectivity data helps to identify the inter-dependencies between servers in an application group. For example, it can highlight the dependency between the web and database servers of an application.<br></p>
+<p>Migrate Accelerator includes this connectivity data in the build plan, which can be used to plan the migration of application infrastructure to the cloud.</p>
+<p><strong>Before you begin</strong></p>
+<ol>
+<li>
+<p>Download the connectivity data for the appropriate assessment in CloudScape (use the <strong>Add Intelligence &gt; Available Reports</strong> option and then export the <strong>Detailed Application Dependency Data</strong> report as a CSV file).</p>
+</li>
+<li>
+<p>If required, customize the connectivity data in the CSV file based on the following considerations:</p>
+</li>
+<li>
+<p>Ensure that all the servers listed in the CSV file are a part of the same application group in Migrate Accelerator. Otherwise, none of the connectivity data is saved in the Migrate Accelerator database. </p>
+</li>
+<li>
+<p>If the CSV file size is too large, you might get an error while uploading the file in Migrate Accelerator. In this case, you can break up the connectivity data into multiple files. Migrate Accelerator consolidates the connectivity data across these multiple files. </p>
+<p><em><strong>Important:</strong> You must ensure that the same connectivity entry (which is a combination of source server, destination server, destination port, and connection protocol) is not listed in multiple files. Otherwise, duplicate connectivity entries are created in the database.</em></p>
+</li>
+<li>
+<p>Migrate Accelerator requires data from only the following three columns in the CSV file that is downloaded from CloudScape:</p>
+<ul>
+<li>destport</li>
+<li>destaddr</li>
+<li>scraddr</li>
+</ul>
+<p>To reduce the file size, you can choose to remove all other columns from the CSV file.</p>
+</li>
+</ol>
+<p><strong>To manually upload connectivity data, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>In the <strong>Pick Discovery Job</strong> box at the top, locate the discovery job for which you want to upload the connectivity data.</p>
+</li>
+<li>
+<p>Next to the appropriate discovery job, click the <strong>Upload</strong> icon (<img alt="" src="/images/rean-migrate/icon_uploaddata.PNG" />).</p>
+</li>
+<li>
+<p>In the Manual Upload RISC Connectivity Data window, click <strong>Choose File</strong>. </p>
+</li>
+<li>
+<p>Locate and select the CSV file that contains the connectivity data for the discovery job.</p>
+</li>
+<li>
+<p>Click <strong>SUBMIT</strong>.</p>
+</li>
+</ol>
+<p>The <strong>Upload</strong> icon for the discovery job is not available until the CSV file has been uploaded successfully. </p>
+<p><em><strong>Note:</strong> In case of any error, none of the connectivity data in the CSV file is saved in the Migrate Accelerator database.</em></p>
+<h4 id="edit-a-discovery-job"><a id="edit-disc-job" name="edit-disc-job"></a>Edit a discovery job<a class="headerlink" href="#edit-a-discovery-job" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>In the <strong>Pick Discovery Job</strong> box at the top, locate the discovery job that you want to edit.</p>
+</li>
+<li>
+<p>Next to the appropriate discovery job, click the <strong>Edit</strong> icon (<img alt="" src="/images/rean-migrate/icon_discedit.PNG" />).</p>
+</li>
+<li>
+<p>In the Edit Discovery window, make the required updates to the discovery job.</p>
+</li>
+</ol>
+<p>For <strong>CSV</strong> and <strong>RISC_EXPORTED_CSV</strong> discovery jobs, you can edit only the description.</p>
+<p>For <strong>RISC</strong> discovery jobs, you can edit the description, CloudScape API Endpoint, and CloudScape credentials (password and API key). You can also add a new tag key and corresponding tag values, or add new tag values to an existing tag key. For information about adding tag keys and tag values, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'create-disc-job', viewSection: 'discovery'})" style="text-decoration:none">Create a discovery job</a>.</p>
+<p><em><strong>Note:</strong> To save any updates that you make to a <strong>RISC</strong> discovery job, you must specify the CloudScape password and API key again.</em></p>
+<ol>
+<li>Click <strong>SAVE</strong>.</li>
+</ol>
+<p>If you have added a new tag key or tag value to a completed <strong>RISC</strong> discovery job, its status changes to <strong>In Progress</strong> again. If you have added a tag key or tag value to an in-progress <strong>RISC</strong> discovery job, Migrate Accelerator waits for the job to complete and then again changes its status to <strong>In Progress</strong>.</p>
+<p>In both these cases, the discovery job retrieves asset data that corresponds to the new tag keys and tag values. It also retrieves any new asset data that corresponds to existing tag keys and tag values. </p>
+<h3 id="plan-migration-of-servers"><a id="plan" name="plan"></a>Plan migration of servers<a class="headerlink" href="#plan-migration-of-servers" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="/images/rean-migrate/rm_flow2.PNG" /></p>
+<p>Migrate Accelerator migrates servers as a part of an application group. An application group is a logical grouping of discovered servers that can be migrated to the cloud at the same time. A few discovery tools logically group servers as a part of the discovery process. For example, the database server and the web server used by an application can be a part of one logical application group.<br></p>
+<p>By default, Migrate Accelerator groups the servers in an application group based on the discovery tool that you have selected. However, you can change the default grouping of servers based on your requirements.<br></p>
+<p>As a part of planning the migration of application groups, you can perform the following tasks:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'server-details'})" style="text-decoration:none">View details of discovered servers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'new-group'})" style="text-decoration:none">Create a new application group</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 're-group'})" style="text-decoration:none">Regroup servers in an application group</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'build-plan'})" style="text-decoration:none">Download the build plan for an application group</a></li>
+</ul>
+<h4 id="supported-operating-systems"><a id="supported-os" name="supported-os"></a>Supported operating systems<a class="headerlink" href="#supported-operating-systems" title="Permanent link">&para;</a></h4>
+<p>Migrate Accelerator supports the migration of servers that use the following operating systems:</p>
+<table>
+<thead>
+<tr>
+<th>Operating system</th>
+<th>Supported versions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>- 2016<br>- 2012<br>- 2008</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>- 16.04<br>- 14.04</td>
+</tr>
+<tr>
+<td>Red Hat Linux</td>
+<td>7.6</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Note:</strong> Migrate Accelerator does not support auto-installation of the CloudEndure agent on Windows 2008.</em></p>
+<h4 id="view-details-of-discovered-servers"><a id="server-details" name="server-details"></a>View details of discovered servers<a class="headerlink" href="#view-details-of-discovered-servers" title="Permanent link">&para;</a></h4>
+<ol>
+<li>On the Home page, from the left panel, select an application group.</li>
+</ol>
+<p>All servers that are a part of the selected application group appear in the Servers for Group panel.</p>
+<p><em><strong>Note:</strong> The <strong>Ungrouped</strong> group contains servers that are not a part of any application group.</em></p>
+<ol>
+<li>Click the server whose details you want to view.</li>
+</ol>
+<p>A panel with details of the selected server appears on the right, as shown in the image below. </p>
+<p><img alt="" src="/images/rean-migrate/rm_serverdetails.PNG" /></p>
+<ol>
+<li><em>(Optional)</em> To hide the panel, click <strong>X</strong> in the top-right corner.</li>
+</ol>
+<h4 id="create-a-new-application-group"><a id="new-group" name="new-group"></a>Create a new application group<a class="headerlink" href="#create-a-new-application-group" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Ensure that the discovery job for which you want to create a new application group is selected in the <strong>Pick Discovery Job</strong> box at the top.</p>
+</li>
+<li>
+<p>On the Home page, click <strong>Create Group</strong>.</p>
+</li>
+<li>
+<p>In the Create Group panel, enter the group name.</p>
+</li>
+</ol>
+<p>The group name that you specify must be unique for the selected discovery job.</p>
+<ol>
+<li>
+<p>To move servers to the new group, perform the following actions:</p>
+</li>
+<li>
+<p>In the Groups panel, select an existing application group.</p>
+<p>Servers in the selected application group appear in the Servers for Group panel.</p>
+</li>
+<li>
+<p>In the Servers for Group panel, select the servers that you want to move to the new group.</p>
+<p>The selected servers also appear in the Create Group panel.</p>
+<p><em><strong>Note:</strong> The Search option in the Servers for Group panel filters servers listed on the current page only.</em></p>
+</li>
+<li>
+<p><em>(Optional)</em> Repeat the above actions to move servers from other existing groups to the new group.</p>
+<p>The <strong>Ungrouped</strong> group contains servers that are not a part of any application group.</p>
+</li>
+</ol>
+<p>To create a new application group, you must add at least one server in that group. Each server can be a part of only one group.</p>
+<p><img alt="" src="/images/rean-migrate/RM_addgroup.PNG" /></p>
+<ol>
+<li>
+<p>Click <strong>CREATE GROUP</strong>.</p>
+</li>
+<li>
+<p>In the confirmation box, click <strong>YES</strong>.</p>
+</li>
+</ol>
+<p>A new application group appears in the left panel on the Home page.</p>
+<h4 id="regroup-servers-in-an-application-group"><a id="re-group" name="re-group"></a>Regroup servers in an application group<a class="headerlink" href="#regroup-servers-in-an-application-group" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Ensure that the appropriate discovery job is selected in the <strong>Pick Discovery Job</strong> box at the top.</p>
+</li>
+<li>
+<p>On the Home page, click <strong>Regroup</strong>.</p>
+</li>
+<li>
+<p>In the Regroup panel, from the <strong>Group Name</strong> list, select the application group to which you want to add servers.</p>
+</li>
+</ol>
+<p>Only application groups that contain at least one server appear in the list.</p>
+<ol>
+<li>
+<p>To add servers to the selected application group, perform the following actions:</p>
+</li>
+<li>
+<p>In the Groups panel, select an existing application group.</p>
+<p>Servers in the selected application group appear in the Servers for Group panel.</p>
+</li>
+<li>
+<p>In the Servers for Group panel, select the servers that you want to move to the group selected in the Regroup panel.</p>
+<p>The selected servers also appear in the Regroup panel.</p>
+<p><em><strong>Note:</strong> The Search option in the Servers for Group panel filters servers listed on the current page only.</em></p>
+</li>
+<li>
+<p><em>(Optional)</em> Repeat the above actions to move servers from other existing groups.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-migrate/rm_regroup.PNG" /></p>
+<p>Each server can be a part of only one group.</p>
+<ol>
+<li>
+<p>Click <strong>REGROUP</strong>.</p>
+</li>
+<li>
+<p>In the confirmation box, click <strong>YES</strong>. </p>
+</li>
+</ol>
+<h4 id="download-the-build-plan-for-an-application-group"><a id="build-plan" name="build-plan"></a>Download the build plan for an application group<a class="headerlink" href="#download-the-build-plan-for-an-application-group" title="Permanent link">&para;</a></h4>
+<p>Migrate Accelerator generates a build plan for each application group. This build plan is a specification document that you can download and use to plan the migration of your application infrastructure to the cloud. </p>
+<ol>
+<li>
+<p>Ensure that the appropriate discovery job is selected in the <strong>Pick Discovery Job</strong> box at the top.</p>
+</li>
+<li>
+<p>On the Home page, from the left panel, select the application group for which you want to download the build plan.</p>
+</li>
+<li>
+<p>Click the <strong>Download Build Plan</strong> icon (<img alt="" src="/images/rean-migrate/icon_buildplan.PNG" />).</p>
+</li>
+</ol>
+<p>The build plan is downloaded to your local machine. Migrate Accelerator automatically populates data in a few columns across multiple tabs in the build plan. You can identify these columns based on the green background color.</p>
+<p><em><strong>Note:</strong> By default, Migrate Accelerator generates a generic build plan that is not customized for any specific cloud provider. However, your administrator can configure Migrate Accelerator to generate a build plan that is customized for AWS.</em></p>
+<ol>
+<li><em>(Optional)</em> Enter details in the other sheets based on your requirements, add your existing application architecture diagram, and capture the dependencies for the various resources of the application that you are migrating.</li>
+</ol>
+<p>A cloud engineer can use this build plan to create the application infrastructure in Deploy Accelerator.</p>
+<h3 id="migrate-servers"><a id="migrate" name="migrate"></a>Migrate servers<a class="headerlink" href="#migrate-servers" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="/images/rean-migrate/rm_flow3.PNG" /></p>
+<p>You must perform the following steps for each application group that you want to migrate to the cloud.</p>
+<ol>
+<li>
+<p>Ensure that the appropriate discovery job is selected in the <strong>Pick Discovery Job</strong> box at the top.</p>
+</li>
+<li>
+<p>On the Home page, from the left panel, select the application group that you want to migrate.</p>
+</li>
+<li>
+<p>To start the migration process, click the <strong>Migrate</strong> icon (<img alt="" src="/images/rean-migrate/icon_migrate.PNG" />).</p>
+</li>
+<li>
+<p>On the Create Migration Job page, perform the following actions:</p>
+</li>
+<li>
+<p>Enter the migration name and description.</p>
+<p><img alt="" src="/images/rean-migrate/rm_createmigration.PNG" /></p>
+</li>
+<li>
+<p>From the <strong>Migration Service</strong> list, select the appropriate migration service.</p>
+<p><em><strong>Note:</strong> Migrate Accelerator currently supports only <strong>CloudEndure</strong> as a migration service.</em></p>
+</li>
+<li>
+<p>From the <strong>Migration Configuration</strong> list, select the appropriate configuration.</p>
+<p>The migration configuration is a predefined set of credentials to access the selected migration service and the authentication details for the cloud service provider in which Migrate Accelerator must create images of the servers. For the CloudEndure migration service, it also defines the Live Migration project from which Migrate Accelerator must migrate servers.</p>
+<p>For information about creating migration configurations, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'mig-config'})" style="text-decoration:none">Create migration configurations</a>.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To enable Migrate Accelerator to install CloudEndure agents on the servers that need to be migrated, perform the following actions:</p>
+<ul>
+<li>
+<p>Select <strong>Auto install agents</strong>.</p>
+<p>Ensure that the servers in the data center meet the following requirements for installing the CloudEndure agent.</p>
+<table>
+<thead>
+<tr>
+<th>Operating system</th>
+<th>Supported versions</th>
+<th>Software requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>- 2016<br>- 2012</td>
+<td>.NET framework 4.5</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>- 16.04<br>- 14.04</td>
+<td>- Python 2.4 or higher<br>- GNU Wget</td>
+</tr>
+<tr>
+<td>Red Hat Linux</td>
+<td>7.6</td>
+<td>- Python 2.4 or higher<br/>- GNU Wget</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Note:</strong> Consider the following points if Migrate Accelerator is unable to auto install the CloudEndure agent on the servers in the data center:</em></p>
+<ul>
+<li>
+<p><em>Ensure that the folder that was specified in the <strong>com.reancloud.migration.server.windows.agent_folder</strong> property in the <strong>application.properties</strong> file while deploying Migrate Accelerator exists on the Windows servers in the data center.</em></p>
+</li>
+<li>
+<p><em>For secure connection to Windows servers, ensure that the thumbprint of the certificates that were copied to the <strong>ca-certs</strong> folder while deploying Migrate Accelerator matches the WinRM HTTPS Listener certificate thumbprint.</em></p>
+</li>
+<li>
+<p><em>Ensure that the Linux servers in the data center have access to a valid YUM repository.</em></p>
+</li>
+<li>
+<p><em>For Ubuntu 16.04 servers, run the following command to set the symbolic link for the appropriate version of Python:</em></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>ln -s python&lt;Version&gt; python
+</code></pre></div>
+<p><em><strong>For example:</strong> To set the symbolic link for Python 2.7, run the following command:</em></p>
+<div class="highlight"><pre><span></span><code>ln -s python2.7 python
+</code></pre></div>
+<ul>
+<li>To enable Migrate Accelerator to connect to Ubuntu and Red Hat Linux servers with the user name and key (instead of password) that is specified in the selected connection, ensure that the user has sudo access with NOPASSWD.</li>
+</ul>
+<p>To set the PASSWD for the user, run the following command on the Ubuntu or Red Hat Linux server:</p>
+<div class="highlight"><pre><span></span><code>sudo visudo
+</code></pre></div>
+<p>In the file that opens, enter the following property:</p>
+<p><USERNAME> ALL = NOPASSWD: ALL</p>
+</li>
+<li>
+<p><em>(To connect to Linux servers in the data center)</em> From the <strong>Linux Connection</strong> list, select the appropriate SSH migration connection.</p>
+</li>
+<li>
+<p><em>(To connect to Windows servers in the data center)</em> From the <strong>Windows Connection</strong> list, select the appropriate WinRM migration connection.</p>
+<p>For information about creating connections, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'connection'})" style="text-decoration:none">Configure connections</a>.</p>
+</li>
+</ul>
+<p>When you start the migration job, Migrate Accelerator connects to the servers in the application group by using the SSH or WinRM connection that you have specified and installs the CloudEndure agent on the servers.</p>
+<p><em><strong>Note:</strong> If you do not select the <strong>Auto install agents</strong> check box, ensure that you have manually installed the CloudEndure agents on the servers in the data center. For more information about installing the CloudEndure agents, see the <a href="https://docs.cloudendure.com/#Installing_the_CloudEndure_Agents/Installing_the_CloudEndure_Agents.htm">CloudEndure documentation</a>.</em></p>
+</li>
+<li>
+<p>To start the migration process, click <strong>CREATE MIGRATION</strong>.</p>
+<p>You can view the status of your migration job on the following page:</p>
+<p><img alt="" src="/images/rean-migrate/rm_migrationstatus.PNG" /></p>
+<p>To view the status of the agent installation process for a server, click the <strong>Action</strong> icon (<img alt="" src="/images/rean-migrate/icon_action.PNG" />)  next to that server in the Server List panel and then select <strong>Logs</strong>.</p>
+<p>The <strong>Migration Tool Status</strong> column displays the CloudEndure status for each server in the application group. You can also view the overall migration status in Migrate Accelerator in the chart on the right panel.</p>
+<p>After the server replication is successful, the <strong>Migration Tool Status</strong> column displays the <strong>Ready for Test</strong> status.</p>
+</li>
+<li>
+<p>Perform the following actions for each server in the application group:</p>
+</li>
+<li>
+<p>To launch a test instance for the server, click the <strong>Action</strong> icon (<img alt="" src="/images/rean-migrate/icon_action.PNG" />) and select <strong>Launch Test Instance</strong>.</p>
+</li>
+<li>
+<p>After the test instance is successfully launched, create an image from the test instance by clicking the <strong>Action</strong> icon and selecting <strong>Create Image</strong>. </p>
+<p>Migrate Accelerator uses the provider that is configured in the migration job to create the images. The image ID appears in <strong>Image ID</strong> the column.</p>
+</li>
+<li>
+<p>To confirm that the server data has been successfully replicated, perform the following actions:</p>
+<ul>
+<li>Sign in to the AWS Management Console.</li>
+<li>Launch an EC2 instance by using the image ID (AMI) that you have created through Migrate Accelerator.</li>
+<li>Connect to the EC2 instance and confirm that the server data has been successfully replicated.</li>
+</ul>
+</li>
+<li>
+<p>After confirming that the server data has been successfully replicated, stop the server data replication by clicking the <strong>Action</strong> icon and selecting <strong>Launch Cutover Instance</strong>.</p>
+<p>This action also uninstalls the agent from the server in your data center.</p>
+</li>
+<li>
+<p>To create the final image of the server, click the <strong>Action</strong> icon and select <strong>Create Image</strong>.</p>
+<p>Migrate Accelerator uses the provider that is configured in the migration job to create the images.  The new image ID is updated in the <strong>Image ID</strong> column.</p>
+</li>
+<li>
+<p><em>(Optional)</em> <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-migrate', viewPage: 'discover-and-migrate-resources', viewSection: 'migrate-resource'})" style="text-decoration:none">Use migrated resources in Deploy Accelerator</a>.</p>
+</li>
+</ol>
+<h3 id="use-migrated-resources-in-deploy-accelerator"><a id="migrate-resource" name="migrate-resource"></a>Use migrated resources in Deploy Accelerator<a class="headerlink" href="#use-migrated-resources-in-deploy-accelerator" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="/images/rean-migrate/rm_flow4.PNG" /></p>
+<ol>
+<li>
+<p>In a browser, type your Cloud Accelerator Platform URL.</p>
+</li>
+<li>
+<p>Sign in to Cloud Accelerator Platform.</p>
+</li>
+<li>
+<p>On the Home page of Deploy Accelerator, create a new environment for one of the migrated applications.</p>
+</li>
+</ol>
+<p>Ensure that you select the same provider and region as your target environment in the Live Migration project in CloudEndure.</p>
+<ol>
+<li>
+<p>From the <strong>Resources</strong> tab in the left panel, drag an EC2 Instance resource to the canvas.</p>
+</li>
+<li>
+<p>Click the resource you have created and in the right panel, enter the AMI ID of your migrated server and other attribute details.</p>
+</li>
+<li>
+<p>Repeat steps 4 and 5 for each migrated server that is a part of the application that you want to deploy.</p>
+</li>
+<li>
+<p>To build your environment, drag additional network and other resources to the canvas. </p>
+</li>
+<li>
+<p>Create appropriate dependencies between these resources.</p>
+</li>
+<li>
+<p>Save the environment.</p>
+</li>
+<li>
+<p>Start a deployment of this environment.</p>
+</li>
+</ol>
+<p>For more information about creating and deploying environments in Deploy Accelerator, see the <em><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-deploy', viewPage: 'deploy-and-manage-environments', viewSection: 'Content'})" style="text-decoration:none">Deploy and manage environments</a></em>.</p>
+<h2 id="viewing-the-overall-migration-status-for-application-groups"><a id="view" name="view"></a>Viewing the overall migration status for application groups<a class="headerlink" href="#viewing-the-overall-migration-status-for-application-groups" title="Permanent link">&para;</a></h2>
+<p>You can view the overall migration status for one or more application groups in a discovery job.</p>
+<ol>
+<li>
+<p>Ensure that the appropriate discovery job is selected in the <strong>Pick Discovery Job</strong> box at the top.</p>
+</li>
+<li>
+<p>In the icon panel, click <strong>DISCOVERY VIEW</strong>.</p>
+</li>
+<li>
+<p>From the left panel, select the application groups for which you want to view the dashboard.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-migrate/rm_dashboard.PNG" /></p>
+<p>You can view the following information on the dashboard:</p>
+<table>
+<thead>
+<tr>
+<th>Panel</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DISCOVERED</td>
+<td>This panel displays the total number of discovered servers in your data center.</td>
+</tr>
+<tr>
+<td>AGENTS</td>
+<td>This panel displays the total number of servers on which Migrate Accelerator is currently installing the CloudEndure agents, the total number of servers on which the agents are successfully installed, and the total number of servers on which the agents failed to be installed.<br><br><em><strong>Note:</strong> When the agent installation process starts, the Discovered panel displays 0 discovered servers. Instead, these servers are displayed as INSTALLING, COMPLETE, or FAILED in the AGENTS panel.</em></td>
+</tr>
+<tr>
+<td>MIGRATIONS</td>
+<td>This panel displays the total number of servers that are being currently migrated, total number of servers that were successfully migrated, and total number of servers that failed to be migrated.<br><br><em><strong>Note:</strong> When the migration process starts, the AGENTS panel displays 0 COMPLETE servers. Instead, these servers are displayed as MIGRATING, COMPLETE, or FAILED in the MIGRATIONS panel.</em></td>
+</tr>
+<tr>
+<td>Migrated jobs</td>
+<td>This panel displays the migration jobs that were run for the selected application group. You can view the job name, job description, job start time, and the migration tool that was used.</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../getting-started/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../administering/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Administer
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2329 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Build and test from your workstation - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-and-test-from-your-workstation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build and test from your workstation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link md-tabs__link--active">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Build and test from your workstation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Build and test from your workstation
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-to-build" class="md-nav__link">
+    Preparing to build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-an-amazon-machine-image-ami-using-the-projector-generator" class="md-nav__link">
+    Building an Amazon Machine Image (AMI) using the Projector Generator
+  </a>
+  
+    <nav class="md-nav" aria-label="Building an Amazon Machine Image (AMI) using the Projector Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-build" class="md-nav__link">
+    Setting up the Build
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-the-buildjson-file" class="md-nav__link">
+    Overview of the build.json file
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of the build.json file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-an-ami-project-with-the-project-generator-using-the-packer-style-template" class="md-nav__link">
+    Step 1: Create an AMI project with the project generator using the packer style template.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-environment-env-variables" class="md-nav__link">
+    Step 2: Configure Environment (ENV) Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-modifying-configrb" class="md-nav__link">
+    Step 3: Modifying config.rb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-modify-the-buildjson-file" class="md-nav__link">
+    Step 4: Modify the build.json file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-build" class="md-nav__link">
+    Running the build
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-rake-task-dependencies" class="md-nav__link">
+    build rake task dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests-and-compliance-scans" class="md-nav__link">
+    Running tests and compliance scans
+  </a>
+  
+    <nav class="md-nav" aria-label="Running tests and compliance scans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-test" class="md-nav__link">
+    Running Test
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1" class="md-nav__link">
+    Option 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" class="md-nav__link">
+    Option 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-rake-task-dependencies-listing" class="md-nav__link">
+    Test rake task dependencies listing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-inspecting-a-server" class="md-nav__link">
+    Manually inspecting a server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroying-an-image" class="md-nav__link">
+    Destroying an image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-an-image" class="md-nav__link">
+    Publishing an image
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing an image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deliver-rake-task-dependencies" class="md-nav__link">
+    deliver rake task dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-to-build" class="md-nav__link">
+    Preparing to build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-an-amazon-machine-image-ami-using-the-projector-generator" class="md-nav__link">
+    Building an Amazon Machine Image (AMI) using the Projector Generator
+  </a>
+  
+    <nav class="md-nav" aria-label="Building an Amazon Machine Image (AMI) using the Projector Generator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-build" class="md-nav__link">
+    Setting up the Build
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up the Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-the-buildjson-file" class="md-nav__link">
+    Overview of the build.json file
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of the build.json file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-an-ami-project-with-the-project-generator-using-the-packer-style-template" class="md-nav__link">
+    Step 1: Create an AMI project with the project generator using the packer style template.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-environment-env-variables" class="md-nav__link">
+    Step 2: Configure Environment (ENV) Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-modifying-configrb" class="md-nav__link">
+    Step 3: Modifying config.rb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-modify-the-buildjson-file" class="md-nav__link">
+    Step 4: Modify the build.json file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-build" class="md-nav__link">
+    Running the build
+  </a>
+  
+    <nav class="md-nav" aria-label="Running the build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-rake-task-dependencies" class="md-nav__link">
+    build rake task dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests-and-compliance-scans" class="md-nav__link">
+    Running tests and compliance scans
+  </a>
+  
+    <nav class="md-nav" aria-label="Running tests and compliance scans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-test" class="md-nav__link">
+    Running Test
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1" class="md-nav__link">
+    Option 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" class="md-nav__link">
+    Option 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-rake-task-dependencies-listing" class="md-nav__link">
+    Test rake task dependencies listing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-inspecting-a-server" class="md-nav__link">
+    Manually inspecting a server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destroying-an-image" class="md-nav__link">
+    Destroying an image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-an-image" class="md-nav__link">
+    Publishing an image
+  </a>
+  
+    <nav class="md-nav" aria-label="Publishing an image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deliver-rake-task-dependencies" class="md-nav__link">
+    deliver rake task dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="build-and-test-from-your-workstation">Build and test from your workstation<a class="headerlink" href="#build-and-test-from-your-workstation" title="Permanent link">&para;</a></h1>
+<h2 id="preparing-to-build">Preparing to build<a class="headerlink" href="#preparing-to-build" title="Permanent link">&para;</a></h2>
+<p>The process of building an AMI (Amazon Machine Image) uses various tools such as Chef, Packer, Direnv, and Git.
+If you are unfamiliar with any of these DevOps tools please take time to read the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'devops'})" style="text-decoration:none">Learn the Concepts</a>. </p>
+<h2 id="building-an-amazon-machine-image-ami-using-the-projector-generator">Building an Amazon Machine Image (AMI) using the Projector Generator<a class="headerlink" href="#building-an-amazon-machine-image-ami-using-the-projector-generator" title="Permanent link">&para;</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<p>The image build/test/deliver stage is responsible for building an AMI, testing it against baseline specifications, running compliance scans against them and then sharing it to multiple workload accounts and creating encrypted copies of the AMI.</p>
+<p>Machine image pipelines are set of rake tasks defined by the framework. For more information, in the Learn the Concepts topic, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'rake'})" style="text-decoration:none">Running builds with Rake</a>.</p>
+<p>These Rake tasks can be used either in local machine or on Jenkins with appropriate settings and configurations. Before starting we need to set up the machine with appropriate tools. For this please refer the topics <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'configure-workstation', viewSection: 'dev'})" style="text-decoration:none">Configure a DevSecOps Workstation </a> and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'devops'})" style="text-decoration:none">Learn the Concepts</a>. Here are the rake tasks in the order:</p>
+<ol>
+<li>
+<p><code>bundle exec rake config</code>:pull This task creates a <code>pipeline-config</code> directory under <code>target</code> directory with the content from external configuration repository.</p>
+</li>
+<li>
+<p><code>bundle exec rake build</code> will build an AMI using the provided packer template. Note this task actually creates an un-encrypted AMI.</p>
+</li>
+<li>
+<p><code>bundle exec rake test</code> will launch an instance using the AMI built in previous step and run server tests and compliance tests.</p>
+</li>
+<li>
+<p><code>bundle exec rake deliver</code> will create encrypted copies of the previously created un-encrypted images.</p>
+<p>NOTE: The Core account is where we will bake the images. We will actually use the AMIs to spin up instances and run the required application related services in Workload accounts.</p>
+</li>
+</ol>
+<blockquote>
+<p>Before starting this tutorial of building an AMI locally; make sure to first read through the <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'create-projects', viewSection: 'proj'})" style="text-decoration:none">Create Projects</a>, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'customizing-projects', viewSection: 'cust'})" style="text-decoration:none">Customize projects</a>, and <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'configure-projects', viewSection: 'con-pro'})" style="text-decoration:none">Configure Projects</a> sections.
+It is <strong>critically important</strong> to understand the information presented in those sections before proceeding in this tutorial.</p>
+</blockquote>
+<h3 id="setting-up-the-build">Setting up the Build<a class="headerlink" href="#setting-up-the-build" title="Permanent link">&para;</a></h3>
+<p>The build task spins up an instance using <strong>Packer</strong>, runs the Packer provisioners as mentioned in the <strong>build.json</strong> file of Packer. For more information, see <a href="https://www.packer.io/intro/getting-started/build-image.html"><strong>Packer docs</strong></a></p>
+<h4 id="overview-of-the-buildjson-file">Overview of the build.json file<a class="headerlink" href="#overview-of-the-buildjson-file" title="Permanent link">&para;</a></h4>
+<p>The <em>build.json</em> file contains much of the variables and configurations for the packer AMI build. The <em>build.json</em> contains mainly these sections:</p>
+<ul>
+<li><a href="https://www.packer.io/docs/templates/user-variables.html">variables</a> - Default packer variables that can be overridden while building</li>
+<li><a href="https://www.packer.io/docs/builders/index.html">builders</a> - contains what type of AMI is being built and the cloud provider type</li>
+<li><a href="https://www.packer.io/docs/provisioners/index.html">provisioners</a> - Configuration and scripts that needs to be applied on the AMI</li>
+<li><a href="https://www.packer.io/docs/post-processors/index.html">post-processors</a> - Tasks that needs to be run after the AMI is built</li>
+</ul>
+<p>For more information on configuring <strong>build.json</strong>, in the Learn the Concepts topic, <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'packer'})" style="text-decoration:none">Building with Packer</a>.</p>
+<p>Multiple <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'cloud'})" style="text-decoration:none">AWS Settings</a> also need to be configured as Environmental variables and configuring the profile being used to create this image.</p>
+<p>The required ENV settings are shown below in step 2.</p>
+<h5 id="step-1-create-an-ami-project-with-the-project-generator-using-the-packer-style-template"><strong>Step 1: Create an AMI project with the project generator using the packer style template.</strong><a class="headerlink" href="#step-1-create-an-ami-project-with-the-project-generator-using-the-packer-style-template" title="Permanent link">&para;</a></h5>
+<p>Use the project generator gem to create a new AMI pipeline.</p>
+<div class="highlight"><pre><span></span><code>generate pipeline my-project ../my-ami -s image/packer
+</code></pre></div>
+<blockquote>
+<p>Here <em>my-project</em> is the name of the application and <em>my-ami</em> is the folder in which the image pipeline project is generated.</p>
+<p>All steps below assume that the commands/steps are performed in <strong>the my-ami project directory created</strong> in the project generator script used above.</p>
+</blockquote>
+<h5 id="step-2-configure-environment-env-variables"><strong>Step 2: Configure Environment (ENV) Variables</strong><a class="headerlink" href="#step-2-configure-environment-env-variables" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>It is recommended to use <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'direnv'})" style="text-decoration:none">direnv</a>. tool to set the environment variables using the <strong>.envrc</strong> file.</p>
+</blockquote>
+<p>If direnv is not installed, the ENV variables can be set using the <code>export VARIABLE_NAME=value</code> in the terminal. To see all the Environment available variables and their values, in the terminal, type <code>printenv</code> . The benefit of using the direnv tool is that it allows you to create a project level file for ENV variables without cluttering up the global ENV variables or having naming conflicts and/or conflicting values.</p>
+<p>The following ENV (Environment Variables) values (see table below) should be set when building a local AMI from your workstation. As you can see, the only required one
+is the AWS_PROFILE which is includes the AWS_REGION within the profile needed for this pipeline.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Usage</th>
+<th>Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS_PROFILE</td>
+<td>Set this to the same profile as the account in which the AMI is being built</td>
+<td>true</td>
+</tr>
+<tr>
+<td>AWS_REGION</td>
+<td>Region in which the image is being built, if it's not set will read from config</td>
+<td>false</td>
+</tr>
+<tr>
+<td>VAR_FILE</td>
+<td>Set this if using a local override JSON file for packer variables</td>
+<td>true</td>
+</tr>
+<tr>
+<td>PACKER_LOG</td>
+<td>Set to 1 to enable <em>packer</em> debug logs</td>
+<td>true</td>
+</tr>
+<tr>
+<td>PACKER_LOG_PATH</td>
+<td>File to save the build logs to</td>
+<td>true</td>
+</tr>
+<tr>
+<td>PIPELINE_CONFIG_REF</td>
+<td>External Configuration's GIT Branch</td>
+<td>false</td>
+</tr>
+<tr>
+<td>PIPELINE_CONFIG_URL</td>
+<td>External configuration URL</td>
+<td>false</td>
+</tr>
+<tr>
+<td>SOURCE_AMI</td>
+<td>BASE AMI using used for AMI baking process</td>
+<td>false</td>
+</tr>
+<tr>
+<td>STIGTOOL_S3_BUCKET</td>
+<td>Required only if you need publishing STIG state to S3</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: The external configuration can be disabled by setting :external_config_type to :none.</p>
+</blockquote>
+<p>An example <strong>.envrc</strong> file</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PIPELINE_CONFIG_REF</span><span class="o">=</span>develop
+<span class="nb">export</span> <span class="nv">PIPELINE_CONFIG_URL</span><span class="o">=</span>git@github.com/reancloud/rean-pipeline-config.git
+<span class="nb">export</span> <span class="nv">AWS_PROFILE</span><span class="o">=</span>rean-pldev
+<span class="nb">export</span> <span class="nv">VAR_FILE</span><span class="o">=</span>vars.json
+<span class="nb">export</span> <span class="nv">SOURCE_AMI</span><span class="o">=</span>ami-053f6d5d4cb2dbae7
+</code></pre></div>
+<p>Environment variables are used to configure values that the framework passes into the packer builder. </p>
+<h5 id="step-3-modifying-configrb"><strong>Step 3: Modifying config.rb</strong><a class="headerlink" href="#step-3-modifying-configrb" title="Permanent link">&para;</a></h5>
+<p>This file should be modified with all user specific configurations.</p>
+<p>The default variables in the table below are always passed to the packer command.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expiry_date</td>
+<td>Calculated as the current date plus 1 day</td>
+</tr>
+<tr>
+<td>aws_region</td>
+<td>Value of <em>AWS_REGION</em> or <em>AWS_DEFAULT_REGION</em> environment variables</td>
+</tr>
+<tr>
+<td>build_url</td>
+<td>Value of <em>BUILD_URL</em> environment variable if it is set, defaults to None</td>
+</tr>
+</tbody>
+</table>
+<p>The framework sets <em>:default_image_build_vars</em> configuration variable which consists of the following values:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>environment</td>
+<td>Value of <em>PIPELINE_ENV</em> environment variable, defaults to dev.</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Current project version in the VERSION file</td>
+</tr>
+<tr>
+<td>name</td>
+<td><em>AMI_NAME</em> environment variable if set</td>
+</tr>
+<tr>
+<td>source_ami</td>
+<td>Checks for <em>SOURCE_IMAGE</em> environment variable fallback to <em>SOURCE_IMAGE_FILE</em></td>
+</tr>
+<tr>
+<td>ami_users</td>
+<td>Comma separated value of accounts to which to share the image, get's auto-generated from workload_account*.json from external pipeline repository data</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The <strong>source_ami</strong> key specifies the source AMI to be used while building an AMI. When building a base AMI this can either come from the external pipeline repository or the local <strong>vars.json</strong> or the <strong>SOURCE_IMAGE</strong> environment variable which has the AMI id. When building a dependent AMI based on an already built AMI, either use the <strong>SOURCE_IMAGE</strong> or <strong>SOURCE_IMAGE_FILE</strong> environment variable. The <strong>SOURCE_IMAGE_FILE</strong> environment variable points to a JSON file containing the AMI info in a format as mentioned below:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ami_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-0f18387ab543f07be&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The framework sets the variables that are passed to packer command as <em>image_build_vars</em> which initially points to the <em>default_image_build_vars</em></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># using the default values</span>
+<span class="n">set_if_empty</span> <span class="ss">:image_build_vars</span><span class="p">,</span> <span class="nb">lambda</span> <span class="p">{</span>
+  <span class="n">fetch</span><span class="p">(</span><span class="ss">:default_image_build_vars</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The user can add additional variables as shown below:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># using the default values and adding one variable</span>
+<span class="n">set</span> <span class="ss">:image_build_vars</span><span class="p">,</span> <span class="nb">lambda</span> <span class="p">{</span>
+  <span class="n">vars</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="ss">:default_image_build_vars</span><span class="p">)</span>
+  <span class="n">vars</span><span class="o">[</span><span class="ss">:source_ami</span><span class="o">]</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SOURCE_AMI&#39;</span><span class="o">]</span> <span class="k">if</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;SOURCE_AMI&#39;</span><span class="o">]</span>
+  <span class="n">vars</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The following configuration values are used for AMI server and compliance testing.</p>
+<p><code>:compliance_tool</code>: This is the tool used for compliance scanning of STIGs. For more information, in the Learn the Concepts topic, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'security'})" style="text-decoration:none">Security Technical Implementation Guides</a>. </p>
+<p>Defaults to <code>:stigtool</code>.</p>
+<p>When using <code>:stigtool</code>, the state publisher s3 bucket can be configured using the environment variable <code>STIGTOOL_S3_BUCKET</code>.</p>
+<p>To disable the compliance checking, set the value to <code>:none</code> in the config.rb.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># disable the compliance checking</span>
+<span class="n">set</span> <span class="ss">:compliance_tool</span><span class="p">,</span> <span class="ss">:none</span>
+</code></pre></div>
+<blockquote>
+<p><code>:server_test_tool</code>: The tools used for server testing. Defaults to <code>:inspec</code>.</p>
+</blockquote>
+<h5 id="step-4-modify-the-buildjson-file"><strong>Step 4: Modify the build.json file</strong><a class="headerlink" href="#step-4-modify-the-buildjson-file" title="Permanent link">&para;</a></h5>
+<p>The project generator sets the Packer build  default values in the build.json created in the root project directory.
+Any value of <code>null</code> in the variables section must either be defined via external configuration repository json files, local var.json file or provided in the <strong>config.rb</strong>. For more information, in the Create Project, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'create-projects', viewSection: 'work-config'})" style="text-decoration:none">Set Basic Configuration in Config.rb</a>.</p>
+<p>All values defined in upper case in <em>build.json</em> in the <em>variables</em> section should be updated with user specified values.</p>
+<table>
+<thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MY_AMI</td>
+<td>A meaningful name for the packer builder</td>
+</tr>
+<tr>
+<td>MY_OWNER</td>
+<td>Propagates as <em>Owner</em> tag for the image</td>
+</tr>
+<tr>
+<td>MY_PRODUCT</td>
+<td>Propagates as <em>Product</em> tag for the image</td>
+</tr>
+<tr>
+<td>MY_PROJECT</td>
+<td>Propagates as <em>Project</em> tag for the image</td>
+</tr>
+<tr>
+<td>MY_SG_ID</td>
+<td>Comma separated list of security groups</td>
+</tr>
+<tr>
+<td>MY_SOURCE_AMI</td>
+<td>The source image to be used, can be over-ridden by SOURCE_AMI environment variable</td>
+</tr>
+<tr>
+<td>MY_SSH_USERNAME</td>
+<td>The SSH username used to connect to the launched machine</td>
+</tr>
+<tr>
+<td>MY_SUBNET_ID</td>
+<td>The subnet id to use</td>
+</tr>
+<tr>
+<td>MY_VPC_ID</td>
+<td>The VPC id to use</td>
+</tr>
+<tr>
+<td>MY_INSTANCE_PROFILE</td>
+<td>It is in the generated build.json</td>
+</tr>
+<tr>
+<td>MY_INSTANCE_SIZE</td>
+<td>It is in the generated build.json</td>
+</tr>
+</tbody>
+</table>
+<p>Any values defined as <em>null</em> in the <em>variables</em> section of <em>build.json</em> are auto-generated by the framework.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ami_users</td>
+<td>Comma separated value of accounts to which to share the image, get's auto-generated from workload_account*.json from external pipeline repository data</td>
+</tr>
+<tr>
+<td>aws_region</td>
+<td>Value of <em>AWS_REGION</em> or <em>AWS_DEFAULT_REGION</em> environment variables</td>
+</tr>
+<tr>
+<td>build_url</td>
+<td>Value of <em>BUILD_URL</em> environment variable if set, defaults to None.</td>
+</tr>
+<tr>
+<td>environment</td>
+<td>Value of <em>PIPELINE_ENV</em> environment variable, defaults to dev.</td>
+</tr>
+<tr>
+<td>expiry_date</td>
+<td>Calculated as the current date plus 1 day</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Current project version in the VERSION file</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The <em>public_ip</em> variable can be set to <em>true</em> if required.</p>
+<p>Any of the <em>variables</em> defined in <strong>build.json</strong> under <strong>variables</strong> key can be overridden by the local <strong>vars.json</strong>. If we are not using VPC infrastructure or we haven't been bootstrapped by the framework, the variables <em>vpc_id</em> (Virtual Private Cloud Id), <em>sg_ids</em> (Security Group Ids), <em>subnet_id</em> (Network Subnet Id), etc. should be added to the local <strong>vars.json</strong></p>
+</blockquote>
+<p>For more information, in the Learn the Concepts topic, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'aws-img'})" style="text-decoration:none">Network Connectivity: AWS image pipeline</a>. </p>
+<h3 id="running-the-build">Running the build<a class="headerlink" href="#running-the-build" title="Permanent link">&para;</a></h3>
+<p>This steps generate Packer inputs from multiple sources (config.rb, external configuration, environment variables etc) and then runs packer to build an initial un-encrypted AMI, creates details of built AMI under <strong>target/image.json</strong>, <strong>target/image-\&lt;region>.json</strong> files and then verifies the AMI is available for further use.</p>
+<p>Run the following command which will download all the gems and dependencies:</p>
+<div class="highlight"><pre><span></span><code>bundle install
+</code></pre></div>
+<p>Then run  <strong>config:pull</strong>. It actually creates a <code>pipeline-config</code> directory under <code>target</code> directory with the content from external configuration repository and checkouts the reference branch. The directory <code>target/pipeline-config</code> will have configuration information for all pipelines.</p>
+<div class="highlight"><pre><span></span><code>  bundle <span class="nb">exec</span> rake config:pull
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake build
+</code></pre></div>
+<p>This <code>build</code> rake task above will run the actual AMI build using <strong>packer</strong> and creates the un-encrypted AMI, then creates <strong>target/image.json</strong>, <strong>target/image-us-east-1.json</strong> with the built AMI info and verifies the AMI is available.</p>
+<p>**Below are examples of generated files from the AMI build: **</p>
+<blockquote>
+<p><strong>target/image.json</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;ami_ids&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;us-east-1&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-XXXXXXXXXXXXXXXX&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>target/image-us-east-1.json</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;ami_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-XXXXXXXXXXXXXXXXXXXX&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="build-rake-task-dependencies"><strong>build</strong> rake task dependencies<a class="headerlink" href="#build-rake-task-dependencies" title="Permanent link">&para;</a></h4>
+<p>If this is your first time using Rake tasks for task management or if you want to learn more about Ruby Rake task management. For more information, in the Learn the Concepts topic, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'rake'})" style="text-decoration:none">Running builds with Rake</a>. </p>
+<div class="highlight"><pre><span></span><code>.
+└── build                                               - Top level build task
+    ├── vendor_clean                                    - Cleans the existing vendor-cookbooks folder
+    ├── vendor-cookbooks                                - Downloads the cookbook dependencies
+    │   └── target                                      - Creates the target folder if missing
+    ├── target                                          - Creates the target folder if missing
+    └── build:build                                     - Task to runs the image build
+        ├── build:inputs                                - Generates the packer inputs(`target/image-inputs.json`) from multiple sources
+        │   └── target                                  - Creates the target folder if missing
+        └── build:prereq_json                           - Backwards compatibility for builds that uses json_updater packer plugin
+</code></pre></div>
+<h3 id="running-tests-and-compliance-scans">Running tests and compliance scans<a class="headerlink" href="#running-tests-and-compliance-scans" title="Permanent link">&para;</a></h3>
+<p>The test task is responsible for spinning up a temporary EC2 machine instance based on the created AMI, running baseline tests, running compliance scanning tests, and finally destroying the temporary infrastructure.</p>
+<p>This uses <strong>terraform</strong> to launch the temporary infrastructure. The configuration for the terraform is standard across all projects and is stored as <strong>test.tf</strong>.</p>
+<blockquote>
+<p>To learn more about terraform as well as InSpec which are used for the testing, refer to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'inspec'})" style="text-decoration:none">Testing with Terraform and Inspec</a>. </p>
+<p>The compliance scans are run according to STIG guidelines; to learn more about STIGS--what they are and how they are used, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'security'})" style="text-decoration:none">Security Technical Implementation Guides</a>. </p>
+</blockquote>
+<p>The high level <strong>overview</strong> consists of the following:</p>
+<ol>
+<li>Create a temporary infrastructure (EC2 machine) using terraform from the previously created AMI</li>
+<li>Wait for the instance to be available (status checks to pass)</li>
+<li>Fetch the password for WinRM connection in case of Windows machines</li>
+<li>Wait for the connection to be available (SSH in case of Linux machines and WinRM in case of Windows machines)</li>
+<li>Run Inspec scans to test the EC2 instance against baseline configuration</li>
+<li>Run compliance scans using Nessus/Inspec if compliance scanning is enabled</li>
+<li>Generate/Record the results if compliance scanning is enabled</li>
+<li>Destroy the temporary infrastructure using terraform, independent of the status of the test/compliance scanning</li>
+</ol>
+<h4 id="running-test">Running Test<a class="headerlink" href="#running-test" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Run tests on an AMI that was built during the previous steps.</p>
+<p>This assumes that the <strong>target/image.json</strong> file is created as part of the AMI build process.</p>
+</blockquote>
+<h5 id="option-1"><strong>Option 1</strong><a class="headerlink" href="#option-1" title="Permanent link">&para;</a></h5>
+<p>Runs the whole test process mentioned above from the overview in a single command.</p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake <span class="nb">test</span>
+</code></pre></div>
+<blockquote>
+<p>If any task/stage fails the AMI get de-registered</p>
+</blockquote>
+<h5 id="option-2"><strong>Option 2</strong><a class="headerlink" href="#option-2" title="Permanent link">&para;</a></h5>
+<p>Runs each stage of the test process individually</p>
+<blockquote>
+<p>This helps to run baseline tests/compliance scans over and over again without having to create/destroy temporary EC2 machine every single time. <strong>This method should be used while running scans/tests locally.</strong></p>
+</blockquote>
+<p><strong>Test Option 2 &gt; Step 1</strong></p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake test:pre
+</code></pre></div>
+<p>This task will first generate a temporary SSH keypair and launches the EC2 using <strong>terraform</strong></p>
+<p><strong>Test Option 2 &gt; Step 2</strong></p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake test:integration
+</code></pre></div>
+<p>This task runs the baseline scans on the AMI as per the test profiles present under the <strong>test</strong> directory.</p>
+<p>This task can be re-run after fixing any failing tests to confirm they are working without having to re-create the EC2 instance.</p>
+<p><strong>Test Option 2 &gt; Step 3</strong></p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake test:compliance
+</code></pre></div>
+<p>This task runs the compliance scans on the AMI as per the compliance profiles present under the <strong>audit</strong> directory.</p>
+<p>This task can be re-run after fixing any failing compliance tests to confirm they are working without having to re-create the EC2 instance.</p>
+<p><strong>Test Option 2 &gt; Step 4</strong></p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake test:post
+</code></pre></div>
+<p>This task is used to destroy the temporary EC2 that was spun up to run tests/compliance scans.</p>
+<blockquote>
+<p><strong>Make sure to run this task always after running tests/compliance scans locally</strong>.</p>
+</blockquote>
+<h4 id="test-rake-task-dependencies-listing"><strong>Test</strong> rake task dependencies listing<a class="headerlink" href="#test-rake-task-dependencies-listing" title="Permanent link">&para;</a></h4>
+<p>If any stage/task in the <em>test</em> stage fails the framework will call the <strong>expire</strong> or <strong>destroy</strong> task as per the configuration.
+The default action is to <strong>destroy</strong></p>
+<blockquote>
+<p>Note: See in the <strong>tree below</strong> if you call <code>test</code> at the outer level, it will call all the subsequent tasks within this task. However, you can also call <code>test:pre</code>, <code>test:integration</code>, <code>test:compliance</code>, and <code>test:post</code> separately which allows more flexibility and not needing to re-create the EC2 instance when re-running tests.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>.
+└── test                                                - Top level test task
+    ├── test:pre                                        - Creates temporary infrastructure for the tests
+    │   └── test:infra:deploy:test                      - Infra task which deploys a server internally named **test** server
+    │       ├── target                                  - Creates the target folder if missing
+    │       ├── test:infra:deploy:test:init             - Task to run **terraform init**
+    │       │   ├── test:infra:deploy:test:inputs       - Generates terraform inputs
+    │       │   │   └── target                          - Creates the target folder if missing
+    │       │   ├── build:inputs                        - Generates the packer inputs from multiple sources
+    │       │   │   └── target                          - Creates the target folder if missing
+    │       │   └── test:infra:keypair                  - Generates temporary keypair for standing up the ec2 and for connecting to the launched instance
+    │       │       └── target                          - Creates the target folder if missing
+    │       ├── test:infra:deploy:test:apply            - Task to run **terraform apply**
+    │       │   └── test:infra:deploy:test:inputs       - Generates terraform inputs
+    │       │       └── target                          - Creates the target folder if missing
+    │       └── test:infra:deploy:test:outputs          - Task to run **terraform output**
+    ├── test:all                                        - Task to run the integration and compliance scans
+    │   ├── test:integration                            - Task to run inspec scans
+    │   │   └── test:integration:test                   - Task to run inspec against the internally named **test** server
+    │   │       └── test:integration:test:prepare       - Task to check if the ec2 is up and running and is able connect to that
+    │   └── test:compliance                             - Task to run STIG compliance scan
+    │       ├── test:compliance:test                    - task to run STIG compliance scan against the internally named **test** server
+    │       └── test:integration:test:prepare           - Task to check if the ec2 is up and running and is able connect to that
+    └── test:post                                       - Task to destroy the temporary infrastructure
+        └── test:infra:destroy:test                     - Infra task to destroy the internally named **test** server
+            ├── target                                  - Creates the target folder if missing
+            ├── test:infra:deploy:test:init             - Task to run **terraform init**
+            │   └── test:infra:deploy:test:inputs       - Generates terraform inputs
+            │       └── target                          - Creates the target folder if missing
+            └── test:infra:destroy:test:destroy         - Task to run **terraform destroy**
+                ├── test:infra:deploy:test:inputs       - Generates terraform inputs
+                │   └── target                          - Creates the target folder if missing
+                ├── build:inputs                        - Generates the packer inputs from multiple sources
+                │   └── target                          - Creates the target folder if missing
+                └── test:infra:keypair                  - Generates temporary keypair for standing up the ec2
+                    └── target                          - Creates the target folder if missing
+</code></pre></div>
+<h3 id="manually-inspecting-a-server">Manually inspecting a server<a class="headerlink" href="#manually-inspecting-a-server" title="Permanent link">&para;</a></h3>
+<p>To manually inspect a server, a server or server_source object needs to be configured / initialized in config.rb, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'configure-projects', viewSection: 'con-pro'})" style="text-decoration:none">Configure Projects</a>.</p>
+<p>To inspect an AMI, you may also choose to manually create the test infrastructure (EC2 instance) and inspect the server brought up by the image.
+However if testing manually using this method; remember the infrastructure will not automatically be destroyed and you must destroy after inspecting it.</p>
+<!-- Arnab: No topic present in learn the concepts///////
+To inspect an server, you may also want to connect to a **remote test system**. To learn more about network connectivity and remote logins for remote test system see the Learn the Concepts [Network Connectivity](../learn-the-concepts.md#network-connectivity-aws-image-pipelines) and [Remote Logins](../learn-the-concepts.md#remote-logins-linux-images) sections. -->
+
+<h3 id="destroying-an-image">Destroying an image<a class="headerlink" href="#destroying-an-image" title="Permanent link">&para;</a></h3>
+<p>When inside the project directory of the AMI image your are working on; you can use a Rake command to destroy the AMI.
+Again to do this, you need to be inside the AMI project directory as you have been working for all previous sections.</p>
+<p>If you run the following command as mentioned previously you will see all the rake tasks available:</p>
+<blockquote>
+<p><code>bundle exec rake -T</code></p>
+</blockquote>
+<p>You will see one called <code>destroy</code> and this is the command we will use to target the AMI of the project folder we are in.</p>
+<p>Run the following command to destroy the current AMI within the directory we are working:</p>
+<blockquote>
+<p><code>bundle exec rake destroy</code></p>
+</blockquote>
+<h3 id="publishing-an-image">Publishing an image<a class="headerlink" href="#publishing-an-image" title="Permanent link">&para;</a></h3>
+<p>The deliver task optionally shares the already created un-encrypted AMI to the workload accounts--workload accounts are where tasks and builds can happen; however the deployment would take place using the core account--and creates encrypted copies of the AMI in the same account
+where it was built (core account) and optionally to the external workload accounts.</p>
+<ol>
+<li>
+<p>If the Image type is Windows and Sysprep is enabled, an EC2 instance is used for copy using the AWS Instance launch API.</p>
+</li>
+<li>
+<p>If the image type is Windows and Sysprep is disabled and if the image does not have BillingCode EC2 CopyImage API is used.</p>
+</li>
+<li>
+<p>If the image type is Windows and Sysprep is disabled, and if the image have BillingCode packer is used for copy.</p>
+</li>
+<li>
+<p>If the image type is Linux and if the image does not have billing code enabled EC2 CopyImage API is used.</p>
+</li>
+<li>
+<p>If the image type is Linux and if the image have BillingCode packer is used for copy. </p>
+</li>
+</ol>
+<p>Fore more information on Sysprep, see <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation">Microsoft docs</a>.</p>
+<h4 id="deliver-rake-task-dependencies"><strong>deliver</strong> rake task dependencies<a class="headerlink" href="#deliver-rake-task-dependencies" title="Permanent link">&para;</a></h4>
+<p>The <strong>deliver</strong> task copies the unencrypted image built at the build stage to various workload accounts. The external configuration should define the workload_accounts.</p>
+<div class="highlight"><pre><span></span><code>  <span class="c1"># the workload accounts in `us-gov-west-1` AWS region</span>
+  <span class="c1"># the workload account codes are &quot;rean-sd&quot;, &quot;pldev&quot;, and &quot;plwl&quot;</span>
+  <span class="c1">#workload_accounts.us-gov-west-1.json</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;rean-sd&quot;</span> <span class="p">:</span> <span class="p">{</span>
+       <span class="s2">&quot;subnet_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;subnet-87e34ce3&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;account_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;XXXXX&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;vpc_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;vpc-95691df0&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;sg_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;sg-492fd32d&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;pldev&quot;</span> <span class="p">:</span> <span class="p">{</span>
+       <span class="s2">&quot;subnet_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;subnet-36add540&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;account_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;XXXXXXXXX&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;vpc_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;vpc-6e4ff30a&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;sg_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;sg-4e6f5329&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;plwl&quot;</span> <span class="p">:</span> <span class="p">{</span>
+       <span class="s2">&quot;subnet_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;subnet-61e90d05&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;account_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;XXXXXXXX&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;sg_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;sg-bd29d5d9&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;vpc_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;vpc-4c6b1f29&quot;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="c1"># the workload accounts in `us-east-1.` AWS region</span>
+ <span class="c1"># the workload account codes are &quot;product&quot;, &quot;trainee&quot;, and &quot;reanms&quot;</span>
+ <span class="c1">#workload_accounts.us-east-1.json</span>
+ <span class="p">{</span>
+    <span class="s2">&quot;product&quot;</span> <span class="p">:</span> <span class="p">{</span> <span class="c1">#core account</span>
+        <span class="s2">&quot;account_id&quot;</span><span class="p">:</span> <span class="s2">&quot;XXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc-0181557b&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-29cb4f75&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sg_id&quot;</span><span class="ss">:&quot;sg-6f18e222&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;owner&quot;</span> <span class="p">:</span> <span class="s2">&quot;engineer1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;trainee&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account_id&quot;</span><span class="p">:</span> <span class="s2">&quot;XXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc-07ced0d080a8f9419&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sg_id&quot;</span><span class="p">:</span> <span class="s2">&quot;sg-0ab199d93a6328210&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-04bab323ac37ee117&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;owner&quot;</span> <span class="p">:</span> <span class="s2">&quot;engineer1&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;reanms&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;account_id&quot;</span><span class="p">:</span> <span class="s2">&quot;XXXXXXXXX&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;vpc_id&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc-0998d5622512e678e&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subnet_id&quot;</span><span class="p">:</span> <span class="s2">&quot;subnet-0b7c153ee6773191d&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sg_id&quot;</span><span class="ss">:&quot;sg-03429fd7a87beff63&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;owner&quot;</span> <span class="p">:</span> <span class="s2">&quot;engineer1&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>.
+└── deliver                                             - Top level deliver tasks
+    └── deliver:all                                     - Task to call all deliver copies
+        └── deliver:copy                                - Task which calls the copy
+            ├── deliver:copy:&lt;workload-account-1&gt;       - Copy to workload account 1
+            ├── deliver:copy:&lt;workload-account-2&gt;       - Copy to workload account 2
+            ├── deliver:copy:&lt;workload-account-.&gt;       - ..........................
+            ├── deliver:copy:&lt;workload-account-.&gt;       - ..........................
+            └── deliver:copy:&lt;workload-account-n&gt;       - Copy to workload account **n**
+</code></pre></div>
+<p>The workload accounts <strong><em>deliver</em></strong> tasks dynamically generated based on workload accounts data. By default the framework looks for a JSON file at <em>target/pipeline-config/amis/workload_account.\&lt;region>.json</em></p>
+<blockquote>
+<p>The AWS CLI needs to be configured with all workload account credentials. The framework expects one AWS profile per the workload account. The AWS profile names should match the workload accounts. The framework passes in the profile name when running the workload account copy task, so the AWS CLI needs to be configured for each workload account in the workload_accounts.<region>.json.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>  <span class="c1">#example config ~/.aws/config</span>
+  <span class="o">[</span>pldev<span class="o">]</span> <span class="c1">#AWS_PROFILE as referrenced in the work load accounts</span>
+  <span class="nv">region</span><span class="o">=</span>us-gov-west-1 <span class="c1"># Default region</span>
+  <span class="nv">aws_access_key_id</span> <span class="o">=</span> AKIAZNNNNNNNNNNNNN
+  <span class="nv">aws_secret_access_key</span> <span class="o">=</span> <span class="m">1234567890</span>
+</code></pre></div>
+<p><strong>Note</strong>: One of work load accounts could actually be a core account in which the AMI is built at the build stage. It is added to workload accounts so that it can be copied as an encrypted AMI. During the build phase, the unencrypted AMI is shared across all workload accounts but due to AWS licensing issues, some AMIs can not be copied using the AWS copy AMI API unless it is in the same account. So the deliver task will have to rebuild the AMI by launching an AMI using unencrypted AMIs and then encrypt the resulting AMI.</p>
+<p>If our <code>AWS_REGION</code> is <code>us-east-1</code> and the workload accounts are <code>product</code>, <code>trainee</code>, and <code>reanms</code>, we will have the following <em>deliver</em> tasks.
+- rake deliver
+  - rake deliver:all - This task uses already shared AMI during build task.
+    - rake deliver:copy - This is a combination of tasks below
+      - rake deliver:copy:product - This task uses AWS AMI copy API as it runs in a core account. This task also validates if the AMI is already copied by using name tags. If it is already copied, then it will not create another AMI (this rule also applies for the other two tasks).
+      - rake deliver:copy:trainee - This task rebuilds AMI using the unencrypted AMI built at the build stage and encrypts it
+      - rake deliver:copy:reanms - This task rebuilds AMI using the unencrypted AMI built at the build stage and encrypts it</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Building-and-Testing-from-Jenkins/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Build and test from Jenkins
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../External-Configuration/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              External configurations
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

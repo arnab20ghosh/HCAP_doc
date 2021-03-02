@@ -1,0 +1,1845 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Deploy solution packages - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploy-solution-packages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploy solution packages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Deploy solution package
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Deploy solution package
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-solution-package-deployment-input-object-structure" class="md-nav__link">
+    Understanding the Solution Package Deployment Input Object structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Solution Package Deployment Input Object structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solutionpackageid" class="md-nav__link">
+    solutionPackageID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    inputParameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providers" class="md-nav__link">
+    providers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-a-solution-package" class="md-nav__link">
+    Deploying a solution package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redeploying-an-existing-deployment" class="md-nav__link">
+    Redeploying an existing deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroying-a-deployment" class="md-nav__link">
+    Destroying a deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-deployment-status-of-a-solution-package" class="md-nav__link">
+    Viewing the deployment status of a solution package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-deployment-logs" class="md-nav__link">
+    Viewing deployment logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performing-additional-actions-on-deployments" class="md-nav__link">
+    Performing additional actions on deployments
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-solution-package-deployment-input-object-structure" class="md-nav__link">
+    Understanding the Solution Package Deployment Input Object structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Solution Package Deployment Input Object structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solutionpackageid" class="md-nav__link">
+    solutionPackageID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    inputParameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providers" class="md-nav__link">
+    providers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-a-solution-package" class="md-nav__link">
+    Deploying a solution package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redeploying-an-existing-deployment" class="md-nav__link">
+    Redeploying an existing deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#destroying-a-deployment" class="md-nav__link">
+    Destroying a deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-deployment-status-of-a-solution-package" class="md-nav__link">
+    Viewing the deployment status of a solution package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-deployment-logs" class="md-nav__link">
+    Viewing deployment logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performing-additional-actions-on-deployments" class="md-nav__link">
+    Performing additional actions on deployments
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="deploy-solution-packages">Deploy solution packages<a class="headerlink" href="#deploy-solution-packages" title="Permanent link">&para;</a></h1>
+<p>Hitachi Cloud Accelerator Platform - Workflow Accelerator allows you to create and maintain a catalog of solution packages and easily deploy these solution packages across various cloud providers. This topic describes how to deploy the solution packages that you have registered. It also describes how to redeploy or destroy registered solution packages that you have already deployed.</p>
+<h2 id="contents"><a id="Content" name="Content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'prereqs'})" style="text-decoration:none">Prerequisites</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'deploy-obj'})" style="text-decoration:none">Understanding the Solution Package Deployment Input Object structure</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'deploy-sp'})" style="text-decoration:none">Deploying a solution package</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'deploystatus-sp'})" style="text-decoration:none">Viewing the deployment status of a solution package</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'redploy-sp'})" style="text-decoration:none">Redeploying an existing deployment</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'destroy-sp'})" style="text-decoration:none">Destroying a deployment</a> </li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'logs'})" style="text-decoration:none">Viewing deployment logs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'actions-sp'})" style="text-decoration:none">Performing additional actions on deployments</a></li>
+</ul>
+<h2 id="prerequisites"><a id="prereqs" name="prereqs"></a>Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before deploying a solution package, you must perform the following actions:</p>
+<ol>
+<li>
+<p>Ensure that you have completed all <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'prerequisites', viewSection: 'prereq'})" style="text-decoration:none">prerequisites for Workflow Accelerator</a>.</p>
+</li>
+<li>
+<p>Ensure that you have <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'create-and-register-solution-packages', viewSection: 'reg'})" style="text-decoration:none">registered your solution package</a>.</p>
+</li>
+</ol>
+<p>Note the ID of the registered solution package. You will require this ID to deploy the solution package.</p>
+<ol>
+<li>
+<p>Get IDs of the Deploy Accelerator providers that you have used in your solution package. The provider IDs are available on the List Providers page in Deploy Accelerator. </p>
+</li>
+<li>
+<p>Prepare the Solution Package Deployment Input Object. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'deploy-obj'})" style="text-decoration:none">Understanding the Solution Package Deployment Input Object structure</a>.</p>
+</li>
+</ol>
+<h2 id="understanding-the-solution-package-deployment-input-object-structure"><a id="deploy-obj" name="deploy-obj"></a>Understanding the Solution Package Deployment Input Object structure<a class="headerlink" href="#understanding-the-solution-package-deployment-input-object-structure" title="Permanent link">&para;</a></h2>
+<p>The Solution Package Deployment Input Object structure includes the following data objects:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'sp-id'})" style="text-decoration:none">solutionPackageID</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'name'})" style="text-decoration:none">name</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'desc'})" style="text-decoration:none">description</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'input'})" style="text-decoration:none">inputParameters</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'prov'})" style="text-decoration:none">providers</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'tags'})" style="text-decoration:none">tags</a></li>
+</ul>
+<p>Based on your requirements, you must create the deployment input object for each solution package that you want to deploy.<br></p>
+<p>The following is an example of the Solution Package Deployment Input Object.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;solutionPackageId&quot;</span><span class="p">:</span> <span class="s2">&quot;AW3URleQQYIgadxCC8hgJ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Staging_Env_Deploy&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;description&quot;</span> <span class="p">:</span> <span class="s2">&quot;solution package developer demo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;inputParameters&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;demo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;env&quot;</span> <span class="p">:</span> <span class="s2">&quot;sample-demo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;customer&quot;</span><span class="p">:</span> <span class="s2">&quot;hitachi&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;instance_type&quot;</span><span class="p">:</span> <span class="s2">&quot;t2.small&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.10.10.20/32&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;whitelisted_ip&quot;</span><span class="p">:[</span><span class="s2">&quot;71.124.103.45/32&quot;</span><span class="p">,</span> <span class="s2">&quot;76.212.44.133/16&quot;</span><span class="p">,</span> <span class="s2">&quot;210.19.95.45/32&quot;</span><span class="p">],</span>
+        <span class="nt">&quot;tagsTest&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;project&quot;</span><span class="p">:</span><span class="s2">&quot;Platform&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;buildUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;environment&quot;</span><span class="p">:</span> <span class="s2">&quot;QA&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;product&quot;</span><span class="p">:</span> <span class="s2">&quot;Platform&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;providers&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;aws-provider&quot;</span> <span class="p">:</span> <span class="mi">5</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="solutionpackageid"><a id="sp-id" name="sp-id"></a>solutionPackageID<a class="headerlink" href="#solutionpackageid" title="Permanent link">&para;</a></h3>
+<p>ID of the registered solution package. This ID is generated after registering the Solution Package.  This is a mandatory parameter.</p>
+<h3 id="name"><a id="name" name="name"></a>name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
+<p>The name of the solution package deployment. The name has to be unique per solution package. This is a mandatory parameter.</p>
+<h3 id="description"><a id="desc" name="desc"></a>description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>Description of the solution package deployment.</p>
+<h3 id="inputparameters"><a id="input" name="input"></a>inputParameters<a class="headerlink" href="#inputparameters" title="Permanent link">&para;</a></h3>
+<p>Contains input parameters with its respective values required for the deployment. The name of the input parameter must be same as defined in the <strong>inputParameters</strong> object in the solution package JSON.<br></p>
+<p>The parameter in the object is defined in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputParameters&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span> <span class="p">:</span> <span class="s2">&quot;Value&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here, <strong>Name</strong> is the name of the parameter and <strong>Value</strong> is the value of the parameter. Consider the following points while defining the value of the parameter.</p>
+<ul>
+<li>If a parameter has predefined values, you must enter a value from the <strong>possibleValues</strong> defined in the <strong>inputParameters</strong> object in the Solution Package. </li>
+<li>If a parameter has a default value set in the Solution Package and it is not defined in deployment, the default value will be used.</li>
+<li>If a parameter does not have any value defined in the Solution Package, it is mandatory to define a value for the parameter during deployment. </li>
+</ul>
+<h3 id="providers"><a id="prov" name="prov"></a>providers<a class="headerlink" href="#providers" title="Permanent link">&para;</a></h3>
+<p>List of providers to be used for deployment. The parameter in the object is defined in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Provider_name&quot;</span><span class="p">:</span> <span class="err">&lt;providerID&gt;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;aws-provider&quot;</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The name of the provider must be same as defined in the <strong>providers</strong> section in the solution package JSON. The <strong>Provider_name</strong> parameter is the name of the provider in the Solution Package. Make sure that the <strong>Provider_name</strong> is same as defined in the Solution Package.<br></p>
+<p>The <strong>providerID</strong> value is the registered ID of the provider in Deploy Accelerator. Make sure that all the providerIDs defined in the Solution Package is entered in this object. For more information on registering providers in Deploy Accelerator using API, see <a href="https://rean-platform.reancloud.com/api-documentation/reandeploydoc/api-docs/index.html#/Provider/getProviderByName">Deploy Accelerator API documentation</a>. </p>
+<p>You can override the default provider value at the time of Solution Package deployment by declaring a provider name and its provider ID.</p>
+<h3 id="tags"><a id="tags" name="tags"></a>tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h3>
+<p>Additional tags for the solution. The tags must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;tagname1&quot;</span><span class="p">:</span> <span class="s2">&quot;tag1 value&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tagname2&quot;</span><span class="p">:</span> <span class="s2">&quot;tag2 value&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>These tags can be used for creating a tag and searching a solution deployment with the tag name for a specific tag value. For example, you can create a tag called <strong>Environment</strong> that can have three values -- <strong>Testing</strong>, <strong>Staging</strong>, and <strong>Production</strong>. This will allow you to use the <strong>Environment</strong> parameter to search for a solution deployment that is in <strong>Production</strong>. </p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;Environment&quot;</span><span class="p">:</span> <span class="s2">&quot;Testing&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="deploying-a-solution-package"><a id="deploy-sp" name="deploy-sp"></a>Deploying a solution package<a class="headerlink" href="#deploying-a-solution-package" title="Permanent link">&para;</a></h2>
+<p>To deploy a solution package, use the following cURL command. For information about the cURL command syntax and options, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'api', viewSection: 'curl'})" style="text-decoration:none">Using cURL to make API requests</a>.  </p>
+<div class="highlight"><pre><span></span><code>curl -X POST $HCAP_URL/api/hcapworkflowengine/solution-deploy \
+ -H &#39;authorization: $USERNAME:$PASSWORD&#39; \
+ -H &#39;content-type: application/json&#39; \
+ -d &#39;{
+        &quot;solutionPackageId&quot;: &quot;SolutionPackageID&quot;,
+        &quot;name&quot;: &quot;DeploymentName&quot;,
+        &quot;description&quot;: &quot;Deployment description&quot;,
+        &quot;inputParameters&quot;: {
+            &quot;ParameterName&quot;: &quot;value&quot;,
+            &quot;ParameterName&quot;: &quot;Value&quot;
+        },
+        &quot;providers&quot;:{
+            &quot;ProviderName&quot;: ProviderID,
+            &quot;ProviderName&quot;: ProviderID
+        }
+    }&#39;
+</code></pre></div>
+<p><strong>Body JSON Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;solutionPackageId&quot;</span><span class="p">:</span> <span class="s2">&quot;AXcdSDadssaUqCsd&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DemoDeployment&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Deployment description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;vpc_cidr&quot;</span><span class="p">:</span> <span class="s2">&quot;10.0.0.0/16&quot;</span><span class="p">,</span> <span class="nt">&quot;zone&quot;</span><span class="p">:</span> <span class="s2">&quot;us-east-1&quot;</span><span class="p">},</span>
+    <span class="nt">&quot;providers&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;DemoProvider&quot;</span><span class="p">:</span> <span class="mi">8</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In the <strong>response</strong> section, confirm that the status of the solution package is <strong>DEPLOY_INITIATED</strong>. This status indicates that Workflow Accelerator has initiated the deployment of the workflow layers in the order in which they are listed in the solution package. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'deploystatus-sp'})" style="text-decoration:none">Viewing the deployment status of a solution package</a>.<br></p>
+<p><em><strong>Note:</strong> Make a note of the deployment ID as you will need it to view the deployment status of the solution package. You will also need this ID if you want to redeploy or destroy the deployed solution package.</em></p>
+<h2 id="redeploying-an-existing-deployment"><a id="redeploy-sp" name="redeploy-sp"></a>Redeploying an existing deployment<a class="headerlink" href="#redeploying-an-existing-deployment" title="Permanent link">&para;</a></h2>
+<p>To redeploy a solution package, use the following cURL command. For information about the cURL command syntax and options, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'api', viewSection: 'curl'})" style="text-decoration:none">Using cURL to make API requests</a>. </p>
+<div class="highlight"><pre><span></span><code>curl -X PUT $HCAP_URL/api/hcapworkflowengine/solution-deploy/redeploy \
+ -H &#39;authorization: $USERNAME:$PASSWORD&#39; \
+ -H &#39;content-type: application/json&#39; \
+ -d &#39;{
+    &quot;solutionPackageId&quot;: &quot;SolutionPackageID&quot;,
+    &quot;name&quot;: &quot;DeploymentName&quot;,
+    &quot;description&quot;: &quot;Deployment description&quot;,
+    &quot;inputParameters&quot;: {&quot;ParameterName&quot;: &quot;value&quot;, &quot;ParameterName&quot;: &quot;Value&quot;},
+    &quot;providers&quot;:{
+        &quot;ProviderName&quot;: ProviderID,
+        &quot;ProviderName&quot;: ProviderID
+    }
+ }&#39;
+</code></pre></div>
+<p>Workflow Accelerator once again deploys the workflow layers in the order that is specified in the solution package.</p>
+<h2 id="destroying-a-deployment"><a id="destroy-sp" name="destroy-sp"></a>Destroying a deployment<a class="headerlink" href="#destroying-a-deployment" title="Permanent link">&para;</a></h2>
+<p>To destroy a solution package, use the following cURL command. For information about the cURL command syntax and options, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'api', viewSection: 'curl'})" style="text-decoration:none">Using cURL to make API requests</a>. </p>
+<div class="highlight"><pre><span></span><code>curl -X DELETE $HCAP_URL/api/hcapworkflowengine/solution-deploy/&lt;SOLUTION_PACKAGE_DEPLOYMENT_ID&gt; \
+ -H &#39;authorization: $USERNAME:$PASSWORD&#39; \
+ -H &#39;content-type: application/json&#39;
+</code></pre></div>
+<p>The order in which Workflow Accelerator destroys workflow layers in the solution package is the reverse of the deployment order. For example, the workflow layer that was deployed last is destroyed first.</p>
+<h2 id="viewing-the-deployment-status-of-a-solution-package"><a id="deploystatus-sp" name="deploystatus-sp"></a>Viewing the deployment status of a solution package<a class="headerlink" href="#viewing-the-deployment-status-of-a-solution-package" title="Permanent link">&para;</a></h2>
+<p>To view the deployment status of a solution package, use the following cURL command. For information about the cURL command syntax and options, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'api', viewSection: 'curl'})" style="text-decoration:none">Using cURL to make API requests</a>. </p>
+<div class="highlight"><pre><span></span><code>curl -X GET $HCAP_URL/api/hcapworkflowengine/solution-deploy/&lt;SOLUTION_PACKAGE_DEPLOYMENT_ID&gt; \
+ -H &#39;authorization: $USERNAME:$PASSWORD&#39; \
+ -H &#39;content-type: application/json&#39;
+</code></pre></div>
+<p>In the <strong>response</strong> section, check the <strong>status</strong> attribute to view the deployment status of the solution package. The following table lists the status that is shown based on different scenarios. </p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deployment of a solution package has been initiated.</td>
+<td>DEPLOY_INITIATED</td>
+</tr>
+<tr>
+<td>Deployment of a solution package is in progress.</td>
+<td>DEPLOYING</td>
+</tr>
+<tr>
+<td>The solution package has been successfully deployed.<br><br><em><strong>Note:</strong> Make a note of the deployment ID as you will need it later if you want to redeploy or destroy this deployment of the solution package.</em></td>
+<td>DEPLOYED</td>
+</tr>
+<tr>
+<td>Deployment of any workflow layer in a solution package fails.</td>
+<td>FAILED</td>
+</tr>
+<tr>
+<td>Redeployment of an existing deployment of a solution package is in progress.</td>
+<td>DEPLOYING</td>
+</tr>
+<tr>
+<td>The Destroy action for an existing deployment of a solution package has been initiated</td>
+<td>DESTROY_INITIATED</td>
+</tr>
+<tr>
+<td>An existing deployment of a solution package is being destroyed.</td>
+<td>DESTROYING</td>
+</tr>
+<tr>
+<td>An existing deployment of a solution package is successfully destroyed.</td>
+<td>DESTROYED</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Note:</strong> To view the deployment status for a specific workflow layer in the solution package, check the <strong>workflowStatus</strong> attribute in the <strong>response</strong> section.</em></p>
+<h2 id="viewing-deployment-logs"><a id="logs" name="logs"></a>Viewing deployment logs<a class="headerlink" href="#viewing-deployment-logs" title="Permanent link">&para;</a></h2>
+<p>In the <strong>response</strong> section, check the <strong>recentError</strong> attribute to view any error messages related to the deployment of the solution package. You can also check the <strong>oldError</strong> attribute for viewing previous error messages.<br></p>
+<p>To view more detailed deployment logs of a failed environment in a solution package, you can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">sign in to Cloud Accelerator Platform</a> and open the Deploy Accelerator environment whose deployment has failed. Ensure that the failed deployment is selected in the deployment list on the canvas and click the <strong>Logs</strong> icon. After you have fixed the issues with the environment, you can <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'deploy-solution-packages', viewSection: 'redploy-sp'})" style="text-decoration:none">redeploy the existing deployment of the solution package</a>.</p>
+<h2 id="performing-additional-actions-on-deployments"><a id="actions-sp" name="actions-sp"></a>Performing additional actions on deployments<a class="headerlink" href="#performing-additional-actions-on-deployments" title="Permanent link">&para;</a></h2>
+<p>The Workflow Engine REST APIs also allow you to perform a few additional actions on the deployments of solution packages. For example, you can get a list of all your deployed solution packages, get the solution package deployments by solution package ID, or get the solution package deployments by solution package ID and deployment name.<br></p>
+<p>For information about accessing the Workflow Engine API documentation, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-workflow', viewPage: 'api', viewSection: 'we-api'})" style="text-decoration:none">Workflow Accelerator API Reference</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../using/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Create and register solution package
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../api-reference/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API reference
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

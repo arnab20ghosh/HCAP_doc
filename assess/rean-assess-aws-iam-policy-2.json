@@ -1,0 +1,59 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "elasticache:DescribeCacheClusters",
+                "elasticache:DescribeCacheEngineVersions",
+                "elasticache:DescribeCacheParameterGroups",
+                "elasticache:DescribeCacheParameters",
+                "elasticache:DescribeCacheSecurityGroups",
+                "elasticache:DescribeCacheSubnetGroups",
+                "elasticache:DescribeEngineDefaultParameters",
+                "elasticache:DescribeEvents",
+                "elasticache:DescribeReplicationGroups",
+                "elasticache:DescribeReservedCacheNodes",
+                "elasticache:DescribeReservedCacheNodesOfferings",
+                "elasticache:DescribeSnapshots",
+                "elasticbeanstalk:DescribeApplicationVersions",
+                "elasticbeanstalk:DescribeApplications",
+                "elasticbeanstalk:DescribeConfigurationOptions",
+                "elasticbeanstalk:DescribeConfigurationSettings",
+                "elasticbeanstalk:DescribeEnvironmentHealth",
+                "elasticbeanstalk:DescribeEnvironmentManagedActions",
+                "elasticbeanstalk:DescribeEnvironmentManagedActionHistory",
+                "elasticbeanstalk:DescribeEnvironmentResources",
+                "elasticbeanstalk:DescribeEnvironments",
+                "elasticbeanstalk:DescribeEvents",
+                "elasticbeanstalk:DescribeInstancesHealth",
+                "elasticloadbalancing:DescribeInstanceHealth",
+                "elasticloadbalancing:DescribeListeners",
+                "elasticloadbalancing:DescribeLoadBalancerAttributes",
+                "elasticloadbalancing:DescribeLoadBalancerPolicyTypes",
+                "elasticloadbalancing:DescribeLoadBalancerPolicies",
+                "elasticloadbalancing:DescribeLoadBalancers",
+                "elasticloadbalancing:DescribeRules",
+                "elasticloadbalancing:DescribeSSLPolicies",
+                "elasticloadbalancing:DescribeTags",
+                "elasticloadbalancing:DescribeTargetGroupAttributes",
+                "elasticloadbalancing:DescribeTargetGroups",
+                "elasticloadbalancing:DescribeTargetHealth",
+                "elasticmapreduce:DescribeJobFlows",
+                "elasticmapreduce:ListClusters",
+                "es:ListDomainNames",
+                "es:DescribeElasticsearchDomain",
+                "es:DescribeElasticsearchDomains",
+                "es:DescribeElasticsearchDomainConfig",
+                "firehose:DescribeDeliveryStream",
+                "firehose:ListDeliveryStreams",
+                "glacier:DescribeVault",
+                "glacier:GetVaultAccessPolicy",
+                "glacier:ListVaults"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2234 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Solution package schema version 1.2 - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#solution-package-schema-version-12" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution package schema version 1.2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#solution-package-example" class="md-nav__link">
+    Solution package example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-objects-in-the-solution-package-schema" class="md-nav__link">
+    Data objects in the solution package schema
+  </a>
+  
+    <nav class="md-nav" aria-label="Data objects in the solution package schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schemaversion" class="md-nav__link">
+    schemaVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name-mandatory-parameter" class="md-nav__link">
+    name (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-mandatory-parameter" class="md-nav__link">
+    version (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icon" class="md-nav__link">
+    icon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicationversion" class="md-nav__link">
+    applicationVersion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ownername" class="md-nav__link">
+    ownerName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owneremail" class="md-nav__link">
+    ownerEmail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licensename" class="md-nav__link">
+    licenseName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudregion-mandatory-parameter" class="md-nav__link">
+    cloudRegion (mandatory parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertical" class="md-nav__link">
+    vertical
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprints" class="md-nav__link">
+    blueprints
+  </a>
+  
+    <nav class="md-nav" aria-label="blueprints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customdata" class="md-nav__link">
+    customData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providers" class="md-nav__link">
+    providers
+  </a>
+  
+    <nav class="md-nav" aria-label="providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_provider_name" class="md-nav__link">
+    default_provider_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input
+  </a>
+  
+    <nav class="md-nav" aria-label="input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    inputParameters
+  </a>
+  
+    <nav class="md-nav" aria-label="inputParameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name_2" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_1" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaultvalue" class="md-nav__link">
+    defaultValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#possiblevalues" class="md-nav__link">
+    possibleValues
+  </a>
+  
+    <nav class="md-nav" aria-label="possibleValues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-inputparameter" class="md-nav__link">
+    Example: inputParameter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputmapping" class="md-nav__link">
+    inputMapping
+  </a>
+  
+    <nav class="md-nav" aria-label="inputMapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-name-dynamic-parameter" class="md-nav__link">
+    environment name (dynamic parameter)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider" class="md-nav__link">
+    provider
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployinput" class="md-nav__link">
+    deployInput
+  </a>
+  
+    <nav class="md-nav" aria-label="deployInput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_2" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="solution-package-schema-version-12">Solution package schema version 1.2<a class="headerlink" href="#solution-package-schema-version-12" title="Permanent link">&para;</a></h1>
+<p>Solution package in Workflow Accelerator is a JSON file that allows you to define all the information that is required for installing end-to-end application across various cloud platforms. To register and deploy the solution packages that you create, you have to use REST APIs.</p>
+<p>This page describes the version 1.2 of the solution package schema. To view the most recent schema, see Understand the solution package schema.</p>
+<h2 id="solution-package-example">Solution package example<a class="headerlink" href="#solution-package-example" title="Permanent link">&para;</a></h2>
+<p>Each solution package contains multiple JSON blocks for different data object types.</p>
+<p>The following is an example of the solution package for installing Magento E-Commerce application:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;schemaVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;magento&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;00.00.01&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This solution package is for installing Magento commerce application.&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;http://https://magento.com/log.png&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;applicationVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ownerName&quot;</span><span class="p">:</span> <span class="s2">&quot;MFI&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ownerEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;customer.mfi@reancloud.com&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;minDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 3h 20m&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;maxDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 2h 30m&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;en_US&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;licenseName&quot;</span><span class="p">:</span> <span class="s2">&quot;license-321&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;cloudRegion&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;us-east-1&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;vertical&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;commerce&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;has_free_trials&quot;</span><span class="p">:</span> <span class="kc">false</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;blueprints&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1.1&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Magento&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;workflow&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;NwLayer:01.00.00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Magento:01.00.00&quot;</span>
+    <span class="p">],</span>  
+    <span class="nt">&quot;customData&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SAP Hana&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0.0&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws-provider&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory_repo&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;default_provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;default_artifactory&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC CIDR&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Environment&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Customer Name&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;possibleValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;t2.large&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;t2.xlarge&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;db_name&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;db_name&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;db_password&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;db_password&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin_email&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Email id for the admin&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelisted_ip&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;List of IP&#39;s to whitelist&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsTest&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Resource tags&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;NwLayer&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;aws-provider&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;deployInput&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.vpc_cidr}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.env}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.customer}&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelisted_ip&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.whitelisted_ip}&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsTest&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.tagsTest}&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;MagentoApp&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;aws-provider&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;deployInput&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.env}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.customer}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.instance_size}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;db_name&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.db_name}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;db_password&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.db_password}&quot;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;admin_email&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.admin_email}&quot;</span>
+                    <span class="p">}</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC_ID&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;NwLayer&#39;][&#39;vpc_id&#39;]}&quot;</span> 
+                    <span class="p">}</span>
+                    <span class="p">{</span>
+                        <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;Customer_full_ID&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;NwLayer&#39;]&#39;customer_name&#39;]}-${#output[&#39;NwLayer&#39;][&#39;env&#39;]}&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="data-objects-in-the-solution-package-schema">Data objects in the solution package schema<a class="headerlink" href="#data-objects-in-the-solution-package-schema" title="Permanent link">&para;</a></h2>
+<p>The solution package schema contains the following data objects:</p>
+<ul>
+<li>schemaVersion</li>
+<li>metadata</li>
+<li>blueprints</li>
+<li>providers</li>
+<li>workflow</li>
+<li>customData</li>
+<li>
+<p>input</p>
+</li>
+<li>
+<p>inputParameters</p>
+</li>
+<li>inputMapping</li>
+</ul>
+<h3 id="schemaversion">schemaVersion<a class="headerlink" href="#schemaversion" title="Permanent link">&para;</a></h3>
+<p>The version of the solution package schema. The entry for this parameter must <strong>1.0</strong> by default. You can search a solution package using the schema version attribute. This is a mandatory parameter.</p>
+<h3 id="metadata">metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h3>
+<p>This data object contains the metadata about the Solution package and the application to be installed using Current Solution package. The information in the metadata section is used for displaying, accessing and searching the solution package by using parameters like name, version , language, cloud region, etc.</p>
+<p>The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;magento&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;00.00.01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This solution package is for installing Magento e-commerce application.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;http://https://magento.com/log.png&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;applicationVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;01.00.00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ownerName&quot;</span><span class="p">:</span> <span class="s2">&quot;MFI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ownerEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;customer.mfi@reancloud.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;minDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 3h 20m&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;maxDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 2h 30m&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;en_US&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;licenseName&quot;</span><span class="p">:</span> <span class="s2">&quot;License#321&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cloudRegion&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;us-east-1&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;vertical&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;commerce&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;has_free_trials&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Following are the attributes of the metadata object:</p>
+<h4 id="name-mandatory-parameter">name (mandatory parameter)<a class="headerlink" href="#name-mandatory-parameter" title="Permanent link">&para;</a></h4>
+<p>The name of the solution package. The solution name and version must be unique per user </p>
+<h4 id="version-mandatory-parameter">version (mandatory parameter)<a class="headerlink" href="#version-mandatory-parameter" title="Permanent link">&para;</a></h4>
+<p>The version of the solution package. You can create multiple versions for a single solution name. </p>
+<h4 id="description">description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>Description of the solution. You can add a detailed information about the application in this parameter.</p>
+<h4 id="icon">icon<a class="headerlink" href="#icon" title="Permanent link">&para;</a></h4>
+<p>URL to the location of the Application icon image.</p>
+<h4 id="applicationversion">applicationVersion<a class="headerlink" href="#applicationversion" title="Permanent link">&para;</a></h4>
+<p>The version of the application which is getting deployed as a part of this solution package </p>
+<h4 id="ownername">ownerName<a class="headerlink" href="#ownername" title="Permanent link">&para;</a></h4>
+<p>The name of the owner of the solution package. This is a mandatory parameter.</p>
+<h4 id="owneremail">ownerEmail<a class="headerlink" href="#owneremail" title="Permanent link">&para;</a></h4>
+<p>The email ID of the owner of the solution package. This is a mandatory parameter.</p>
+<h4 id="duration">duration<a class="headerlink" href="#duration" title="Permanent link">&para;</a></h4>
+<p>A user entry to define the minimum and maximum deployment time required by the solution package. The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;minDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 3h 20m&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;maxDeploymentTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1d 2h 30m&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The correct format for entry of time 1d 3h 20m for 1 day, 3 hours and 20 minutes. This format does not support time entry in seconds. </p>
+<h4 id="language">language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h4>
+<p>List of languages supported by the application to be deployed using solution package.  The list must be the language code in ISO standard. For example,</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;language&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;en_US&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>For more information on the language codes, in the ISO website, see <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">Codes for the Representation of Names of Languages</a>.</p>
+<h4 id="licensename">licenseName<a class="headerlink" href="#licensename" title="Permanent link">&para;</a></h4>
+<p>The license required for using the solution package. Before entering the license name here, make sure that the license is created for the solution package. For more information on the creation of the license key, see the license-controller API documentation in Solution Package. The license-control API documentation is available at following URL: 
+<strong>https://{HCAP-base-URL}/api-documentation/solutionpackagedoc/swagger-ui.html#/license-controller</strong></p>
+<h4 id="cloudregion-mandatory-parameter">cloudRegion (mandatory parameter)<a class="headerlink" href="#cloudregion-mandatory-parameter" title="Permanent link">&para;</a></h4>
+<p>List of cloud region where the solution package is to be deployed. For example, </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;cloudRegion&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;us-east-1&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="vertical">vertical<a class="headerlink" href="#vertical" title="Permanent link">&para;</a></h4>
+<p>Vertical of the organization to which the application belongs.</p>
+<h4 id="tags">tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h4>
+<p>Additional properties for the solution. The tags must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;tagname1&quot;</span><span class="p">:</span> <span class="s2">&quot;tag1 value&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tagname2&quot;</span><span class="p">:</span> <span class="s2">&quot;tag2 value&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>These tags can be used for creating a tag and searching a solution with the tag name for a specific tag value. For example,  you can tag a solution package as { "domain" : "commerce" }, which can be used for searching all the applications in the Finance domain. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;domain&quot;</span><span class="p">:</span> <span class="s2">&quot;commerce&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;has_free_trials&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="blueprints">blueprints<a class="headerlink" href="#blueprints" title="Permanent link">&para;</a></h3>
+<p>This object contains the list of blueprints that will get automatically imported from the artifactory before starting the deployment of the application. In the artifactory, these blueprints must be stored in the repository that is configured in Deploy Accelerator.</p>
+<p>Environments in the blueprint are imported into Deploy Accelerator with the naming convention <strong><solution_package_name>_<environment_name></strong>.</p>
+<blockquote>
+<p><strong>Note</strong>: Blueprint will get imported only once, the solution package will reuse the previously imported blueprint if it is already present in Deploy Accelerator. The blueprint must be present in the artifactory with the provided name and version, otherwise complete deployment of the solution package will fail. </p>
+</blockquote>
+<p>The object must be in the following format: </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;blueprints&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.1.1&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Magento&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.1&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h5 id="name">name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h5>
+<p>Name of the blueprint. The entry must be exactly same as the name of the blueprint in the artifactory.</p>
+<h5 id="version">version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h5>
+<p>Version of the blueprint for the specified name.</p>
+<blockquote>
+<p><strong>Note:</strong> You can also choose to manually import blueprints into Deploy Accelerator. In this case, you must specify an empty section for the <strong>blueprints</strong> object, as shown below.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;blueprints&quot;</span><span class="p">:</span> <span class="p">[]</span>
+</code></pre></div>
+</blockquote>
+<h3 id="workflow">workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h3>
+<p>The execution order of the Deploy Accelerator environments. The Environment Name and Version must be same as declared in the blueprints data object. Make sure that the environment is present in Deploy Accelerator before starting the deployment . The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;workflow&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;environment_name_1:environment_1_version_number&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;environment_name_2:environment_2_version_number&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> The naming convention used for environments in a blueprint that are imported from the artifactory is <strong><solution_package_name>_<environment_name></strong>. However, while specifying these environments in the workflow object, make sure that you enter only the <strong><environment_name></strong>. Before starting the deployment, the <strong><solution_package_name>_</strong> is automatically prefixed to the environment name. </p>
+</blockquote>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;workflow&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;NwLayer:01.00.00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Magento:01.00.00&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="customdata">customData<a class="headerlink" href="#customdata" title="Permanent link">&para;</a></h3>
+<p>This object allows you to define custom attributes for the solution package. These custom attributes can be used as a search parameter for the solution package. The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;customData&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SAP Hana&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0.0&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="providers">providers<a class="headerlink" href="#providers" title="Permanent link">&para;</a></h3>
+<p>The list of providers that the environments defined in the workflow will be using while deployment of the blueprint. The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;aws_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory_repo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;default_provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;default_artifactory&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Depending on the target cloud provider and account in the blueprint, you can define the providers list in the following ways:</p>
+<p><strong>Case 1</strong>: All the blueprints for the solution are to be deployed on the same Cloud service Provider account.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws_account1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p><strong>Case 2</strong>: Blueprints in the solution package are to be deployed on two different accounts of the same cloud service provider.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws_account1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws_account2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<p><strong>Case 3</strong>: Blueprints in the solution package targeting multiple cloud providers.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws_account1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;aws&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;k8s_provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span> <span class="p">:</span> <span class="s2">&quot;helm&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Note:</strong> Make sure you have added all providers in the providers list that will be required for deploying the blueprints. </p>
+</blockquote>
+<h5 id="name_1">name<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h5>
+<p>Name of the provider. The entry must be exactly same as the provider declared in the blueprint.</p>
+<h5 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h5>
+<p>Cloud service provider. For example, AWS, Google Cloud, Microsoft Azure, etc.</p>
+<h5 id="default_provider_name">default_provider_name<a class="headerlink" href="#default_provider_name" title="Permanent link">&para;</a></h5>
+<p>The default_provider_name parameter allows you to define a default provider for your solution package. The value of this parameter must be same as the name of the provider created in Deploy Accelerator. If required, you can override the default provider value at the time of deployment.</p>
+<p>You can define multiple default providers in solution package.</p>
+<p>This is an optional parameter. </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory_repo&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;artifactory&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;default_provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;default_artifactory&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="input">input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<p>The <strong>input</strong> data object contains 2 sub objects <strong>inputParameters</strong> and <strong>inputMapping</strong>. The object must be in the following format:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;input&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;inputParmaters&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">/*Parame</span><span class="kc">ter</span> <span class="err">de</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">*/</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">/*</span><span class="s2">&quot;Environment name&quot;</span><span class="err">*/</span>
+        <span class="p">{</span>
+         <span class="err">/*Parame</span><span class="kc">ter</span> <span class="err">Mappi</span><span class="kc">n</span><span class="err">g*/</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="inputparameters">inputParameters<a class="headerlink" href="#inputparameters" title="Permanent link">&para;</a></h4>
+<p>The <strong>inputParameters</strong> object contains the declaration of unique parameters that are required for deploying the environment.  This section consists of all unique sets of inputs that the solution owner wants the user to enter while deploying the solution package. For example, instance_size, which can be used in the one of the blueprint to set the ec2 instance size </p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;VPC CIDR&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Environment&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Customer Name&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;possibleValues&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;t2.large&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;t2.xlarge&quot;</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;db_name&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;db_name&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;db_password&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;db_password&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin_email&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Email id for the admin&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelisted_ip&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;List of IP&#39;s to whitelist&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsTest&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Resource tags&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h5 id="name_2">name<a class="headerlink" href="#name_2" title="Permanent link">&para;</a></h5>
+<p>Name of the parameter. The name must be a single string without any space. </p>
+<h5 id="description_1">description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h5>
+<p>Description of the parameter. You can add a detailed information about the application in this parameter. It is a free text area.</p>
+<h5 id="type_1">type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h5>
+<p>The data type of the input parameter. Supported data types are: List, String, Boolean, Json, Integer
+The default value for datatype is String.</p>
+<h5 id="defaultvalue">defaultValue<a class="headerlink" href="#defaultvalue" title="Permanent link">&para;</a></h5>
+<p>The default value of the parameter, if no value is entered while deployment. </p>
+<h5 id="possiblevalues">possibleValues<a class="headerlink" href="#possiblevalues" title="Permanent link">&para;</a></h5>
+<p>The list of possible values from which the user must select a value. </p>
+<h6 id="example-inputparameter">Example: inputParameter<a class="headerlink" href="#example-inputparameter" title="Permanent link">&para;</a></h6>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;instance_size&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;possibleValues&quot;</span><span class="p">:</span>
+    <span class="p">[</span>
+        <span class="s2">&quot;t2.large&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;t2.xlarge&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="inputmapping">inputMapping<a class="headerlink" href="#inputmapping" title="Permanent link">&para;</a></h4>
+<p>The inputMapping object contains the declaration of input parameter that will be used for a specific environment with a specific provider.  The mapping of input parameter is done for an environment. An environment can have multiple parameters under it. You can declare parameters for multiple environments in single inputMapping object.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;inputMapping&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;NwLayer&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="s2">&quot;aws-provider&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;deployInput&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.vpc_cidr}&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.env}&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.customer}&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;whitelisted_ip&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.whitelisted_ip}&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;tagsTest&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input.tagsTest}&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5 id="environment-name-dynamic-parameter">environment name (dynamic parameter)<a class="headerlink" href="#environment-name-dynamic-parameter" title="Permanent link">&para;</a></h5>
+<p>The environment name for which the following parameters are used for deployment. </p>
+<h5 id="provider">provider<a class="headerlink" href="#provider" title="Permanent link">&para;</a></h5>
+<p>The provider to be used by the environment for deployment. </p>
+<h5 id="deployinput">deployInput<a class="headerlink" href="#deployinput" title="Permanent link">&para;</a></h5>
+<p>The values for the parameters to be used while deploying the environment using the solution package. </p>
+<h6 id="key">key<a class="headerlink" href="#key" title="Permanent link">&para;</a></h6>
+<p>The exact name as defined in the inputParameter object. </p>
+<h6 id="value">value<a class="headerlink" href="#value" title="Permanent link">&para;</a></h6>
+<p>The value for the inputParameter key. There are three types of input mapping values:</p>
+<ul>
+<li><strong>Case 1</strong>: Mapping values for input parameters used in the solution package.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_cidr&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#input[&#39;vpc_cidr&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+  <span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>Case 2</strong>: Mapping environment output parameter of earlier deployed environment with the input parameter. When solution package has two blueprints which are not connected using <strong>Depends On</strong> feature of Deploy Accelerator, the output parameter of the parent blueprint must be used in the child blueprint.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;vpc_id&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;NwLayer&#39;][&#39;vpc_id&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+  <span class="p">}</span>
+</code></pre></div>
+<p>In this case <strong>NWLayer</strong> is name of the environment from where the output parameter will be received. </p>
+<ul>
+<li><strong>Case 3</strong>: Mapping input parameter with multiple input parameters or environment output.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>  <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;resource-name-prefix&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;${#output[&#39;NwLayer&#39;][&#39;customer_name&#39;]}-${#output[&#39;NwLayer&#39;][&#39;env&#39;]}&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+  <span class="p">}</span>
+</code></pre></div>
+<h6 id="type_2">type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h6>
+<p>The type of the inputParameter key. The supported types are are <strong>List</strong>, <strong>String</strong>, <strong>Boolean</strong>, <strong>JSON</strong>, and <strong>Integer</strong>. The value that you enter for this parameter is case sensitive. Therefore, enter the supported types as mentioned in this section. If you enter any other value (for example: <strong>map</strong>), registration of the solution package will fail.</p>
+<p>The default value of the parameter is <strong>String</strong>, if no value is entered while creating the Solution Package.</p>
+<blockquote>
+<p><strong>Note:</strong> The value of the inputParameter key is resolved based on the type of the inputParameter. If you specify an incorrect type, complete deployment of the solution package will fail.</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

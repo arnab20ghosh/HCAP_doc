@@ -1,0 +1,2318 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Run assessment policies - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#run-assessment-policies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Run assessment policies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link md-tabs__link--active">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" checked>
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Run assessment policies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Run assessment policies
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-assessment-policies" class="md-nav__link">
+    Overview of assessment policies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-assess-accelerator" class="md-nav__link">
+    Accessing Assess Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-for-aws-assessments" class="md-nav__link">
+    Prerequisites for AWS Assessments
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites for AWS Assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-iam-user-and-role-with-required-permission" class="md-nav__link">
+    Creating IAM user and role with required permission
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating IAM user and role with required permission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-aws-user" class="md-nav__link">
+    Creating AWS user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-kubernetes-user" class="md-nav__link">
+    Creating Kubernetes user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-a-provider" class="md-nav__link">
+    Configuring a provider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-for-azure-assessments" class="md-nav__link">
+    Prerequisites for Azure assessments
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites for Azure assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-azure-blueprints-cis-microsoft-azure-foundations-benchmark-blueprint-sample" class="md-nav__link">
+    Deploy the Azure Blueprints CIS Microsoft Azure Foundations Benchmark blueprint sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-cis-benchmark-policy-id" class="md-nav__link">
+    Copy CIS Benchmark policy ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-aws-assessment-jobs" class="md-nav__link">
+    Creating AWS assessment jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-azure-assessment-jobs" class="md-nav__link">
+    Creating Azure assessment jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-assessment-reports" class="md-nav__link">
+    Viewing assessment reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-assessment-reports" class="md-nav__link">
+    Downloading assessment reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-downloading-comparison-reports" class="md-nav__link">
+    Viewing and downloading comparison reports
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devsecops/Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-assessment-policies" class="md-nav__link">
+    Overview of assessment policies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-assess-accelerator" class="md-nav__link">
+    Accessing Assess Accelerator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-for-aws-assessments" class="md-nav__link">
+    Prerequisites for AWS Assessments
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites for AWS Assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-iam-user-and-role-with-required-permission" class="md-nav__link">
+    Creating IAM user and role with required permission
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating IAM user and role with required permission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-aws-user" class="md-nav__link">
+    Creating AWS user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-kubernetes-user" class="md-nav__link">
+    Creating Kubernetes user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-a-provider" class="md-nav__link">
+    Configuring a provider
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-for-azure-assessments" class="md-nav__link">
+    Prerequisites for Azure assessments
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites for Azure assessments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-azure-blueprints-cis-microsoft-azure-foundations-benchmark-blueprint-sample" class="md-nav__link">
+    Deploy the Azure Blueprints CIS Microsoft Azure Foundations Benchmark blueprint sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-cis-benchmark-policy-id" class="md-nav__link">
+    Copy CIS Benchmark policy ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-aws-assessment-jobs" class="md-nav__link">
+    Creating AWS assessment jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-azure-assessment-jobs" class="md-nav__link">
+    Creating Azure assessment jobs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-assessment-reports" class="md-nav__link">
+    Viewing assessment reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-assessment-reports" class="md-nav__link">
+    Downloading assessment reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-and-downloading-comparison-reports" class="md-nav__link">
+    Viewing and downloading comparison reports
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="run-assessment-policies">Run assessment policies<a class="headerlink" href="#run-assessment-policies" title="Permanent link">&para;</a></h1>
+<p>Hitachi Cloud Accelerator Platform - Assess ( Assess Accelerator) is a tool that automates the assessment of your cloud environment against the relevant security and compliance standards.<br></p>
+<p>This topic describes how you can use Assess Accelerator to run assessment jobs and view or download assessment reports.</p>
+<h2 id="contents"><a id="Content" name="Content"></a>Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<p><strong>Get started</strong></p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'overview'})" style="text-decoration:none">Overview of assessment policies</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'access'})" style="text-decoration:none">Accessing Assess Accelerator</a></li>
+</ul>
+<p><strong>Run assessment jobs</strong></p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'providers'})" style="text-decoration:none">Prerequisites for AWS Assessments</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'providers'})" style="text-decoration:none">Prerequisites for Azure Assessments</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'policy-run'})" style="text-decoration:none">Creating AWS assessment jobs</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'azure-run'})" style="text-decoration:none">Creating Azure assessment jobs</a></li>
+</ul>
+<p><strong>View and download reports</strong></p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'policy-results'})" style="text-decoration:none">Viewing assessment reports</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'results-download'})" style="text-decoration:none">Downloading assessment reports</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'compare-view'})" style="text-decoration:none">Viewing and downloading comparison reports</a></li>
+</ul>
+<h2 id="overview-of-assessment-policies"><a id="overview" name="overview"></a>Overview of assessment policies<a class="headerlink" href="#overview-of-assessment-policies" title="Permanent link">&para;</a></h2>
+<p>Assess Accelerator contains out-of-the-box policies that help you to assess if your cloud infrastructure meets the best-practice standards based on different checks. Assessment reports that are generated provide the status for each assessment check and possible solutions for resolving issues.<br></p>
+<p>Assess Accelerator supports multiple tools that can be used for assessments of your environment. For each assessment tool, Assess Accelerator provides a specific set of checks. These checks are categorized under the assessment policies. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'Content'})" style="text-decoration:none">Assessment Checks Reference</a>.<br></p>
+<p>The following table describes the out-of-the-box policies that are available to assess your cloud infrastructure.</p>
+<table>
+<thead>
+<tr>
+<th>Policy name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost Optimization Policy</td>
+<td>This policy enables you to assess how optimally you are managing the cost of your cloud infrastructure. It basically assesses cost optimization for your Amazon Web Services (AWS) environment by checking for unused Amazon Machine Images (AMIs), Snapshots, route tables, Elastic Load Balancers (ELBs), security groups, network interfaces, and much more.</td>
+</tr>
+<tr>
+<td>Operations Policy</td>
+<td>This policy enables you to assess the operational efficiency of your AWS environment based on best practices. It evaluates your environment based on criteria such as creation of your own VPC, data encryption, creation of the required tags for instances, and use of appropriate IAM user names.</td>
+</tr>
+<tr>
+<td>Security Policy</td>
+<td>This policy enables you to assess the security of your AWS  and Azure environment based on industry standards and best practices. It consists of security assessment for network compliance, monitoring compliance, logging compliance, and IAM compliance.<br>This policy is based on the best-practice security guidelines developed by the Center for Internet Security (CIS) for Amazon Web Services and Microsoft Azure environments.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accessing-assess-accelerator"><a id="access" name="access"></a>Accessing Assess Accelerator<a class="headerlink" href="#accessing-assess-accelerator" title="Permanent link">&para;</a></h2>
+<p>Assess Accelerator is deployed as part of Hitachi Cloud Accelerator Platform.</p>
+<ol>
+<li>Sign in to <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'logon'})" style="text-decoration:none">Hitachi Cloud Accelerator Platform</a>.</li>
+</ol>
+<p>For information on creating a Hitachi Cloud Accelerator Platform account, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-platform-common', viewPage: 'createAndAccessAccount', viewSection: 'create'})" style="text-decoration:none">Create &amp; access account</a>.</p>
+<ol>
+<li>Click the <strong>Module selector</strong> icon (<img alt="" src="/images/rean-platform-common/icon_accelerator.PNG" />) in the top-left corner.</li>
+</ol>
+<p>The Assess Accelerator home page appears.</p>
+<p><em><strong>Note:</strong> You can access Assess Accelerator and perform various actions only if your Hitachi Cloud Accelerator Platform administrator has granted you the appropriate permissions.</em></p>
+<h2 id="prerequisites-for-aws-assessments"><a id="providers" name="providers"></a>Prerequisites for AWS Assessments<a class="headerlink" href="#prerequisites-for-aws-assessments" title="Permanent link">&para;</a></h2>
+<p>The prerequisites for AWS assessment includes creating a provider. Following are the prerequisites you need to complete before running assessments for AWS:</p>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'user'})" style="text-decoration:none">Creating IAM user and role with required permission</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'configure-provider'})" style="text-decoration:none">Configuring a provider</a></li>
+</ul>
+<h3 id="creating-iam-user-and-role-with-required-permission"><a id="user" name="user"></a>Creating IAM user and role with required permission<a class="headerlink" href="#creating-iam-user-and-role-with-required-permission" title="Permanent link">&para;</a></h3>
+<h4 id="creating-aws-user">Creating AWS user<a class="headerlink" href="#creating-aws-user" title="Permanent link">&para;</a></h4>
+<p>Before configuring a provider, you must create an Identity and Access Management (IAM) user or role with permissions to run the different assessment checks on your AWS infrastructure.</p>
+<ol>
+<li>
+<p>Download the following custom inline policies:</p>
+</li>
+<li>
+<p><a href="downloads/rean-assess/rean-assess-aws-iam-policy-1.json" download="rean-assess-aws-iam-policy.json">rean-assess-aws-iam-policy-1.json</a></p>
+</li>
+<li><a href="downloads/rean-assess/rean-assess-aws-iam-policy-2.json" download="rean-assess-aws-iam-policy.json">rean-assess-aws-iam-policy-2.json</a></li>
+<li>
+<p><a href="downloads/rean-assess/rean-assess-aws-iam-policy-3.json" download="rean-assess-aws-iam-policy.json">rean-assess-aws-iam-policy-3.json</a></p>
+</li>
+<li>
+<p>In the AWS account where you want to run the assessment policies, perform the following actions:</p>
+</li>
+<li>
+<p>Create IAM policies by using the custom inline policies that you have downloaded.</p>
+<p>For step-by-step instructions, see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html">AWS Identity and Access Management User Guide</a>.</p>
+<p><em><strong>Important:</strong> To enable Assess Accelerator to upload assessment reports to an S3 bucket, you must add the <strong>s3:PutObject</strong> permission to one of the IAM policies. To enable Assess Accelerator to create a new S3 bucket, you must also add the <strong>s3:CreateBucket</strong> permission, as shown in the following example:</em></p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Sid&quot;: &quot;VisualEditor0&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;s3:PutObject&quot;, 
+                &quot;s3:CreateBucket&quot;
+            ],
+            &quot;Resource&quot;: &quot;&lt;s3_bucket_ARN&gt;/*&quot;
+        }
+    ]
+}
+</code></pre></div>
+</li>
+<li>
+<p>If you plan to use the <strong>Instance Profile with Assume Role</strong> or <strong>Static Credentials with Assume Role</strong> method while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'configure-provider'})" style="text-decoration:none">configuring a provider</a>, perform the following actions:</p>
+<ul>
+<li>Create an IAM role that Assess Accelerator can assume to run the assessment policies.</li>
+</ul>
+<p>For step-by-step instructions, see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html">AWS Identity and Access Management User Guide</a>.</p>
+<ul>
+<li>Attach the IAM policies that you have created to this role.</li>
+</ul>
+<p>While creating the AWS provider, you must specify this IAM role.</p>
+</li>
+<li>
+<p>If you plan to use the <strong>Static Credentials</strong> method while <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'configure-provider'})" style="text-decoration:none">configuring a provider</a>, perform the following actions:</p>
+<ul>
+<li>Create an IAM group and attach the IAM policies that you have created to this group.</li>
+</ul>
+<p>For step-by-step instructions, see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html">AWS Identity and Access Management User Guide</a>. </p>
+<ul>
+<li>Create an IAM user and add the user to the IAM group that you have created.</li>
+</ul>
+<p>For step-by-step instructions, see the <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html">AWS Identity and Access Management User Guide</a>. </p>
+<p>While creating the AWS provider, you must provide credentials of this IAM user. </p>
+</li>
+</ol>
+<p><strong><em>Important*</em></strong>: Make sure that the IAM user/role does not have administrator access. As per AWS CIS Foundations Benchmark the use of administrator access is highly discouraged. This is applicable for both Instance Profile and Static Credentials.*</p>
+<h4 id="creating-kubernetes-user"><a id="providerk8s" name="providerk8s"></a>Creating Kubernetes user<a class="headerlink" href="#creating-kubernetes-user" title="Permanent link">&para;</a></h4>
+<p>Following are the steps to create a provider for instance profile when Assess is running on EKS. Before configuring a provider, you must create an Identity and Access Management (IAM) user or role with permissions.</p>
+<ol>
+<li>
+<p>Download the following custom inline policies:</p>
+</li>
+<li>
+<p><a href="downloads/rean-assess/rean-assess-aws-iam-policy-1.json" download="rean-assess-aws-iam-policy.json">rean-assess-aws-iam-policy-1.json</a></p>
+</li>
+<li><a href="downloads/rean-assess/rean-assess-aws-iam-policy-2.json" download="rean-assess-aws-iam-policy.json">rean-assess-aws-iam-policy-2.json</a></li>
+<li>
+<p><a href="downloads/rean-assess/rean-assess-aws-iam-policy-3.json" download="rean-assess-aws-iam-policy.json">rean-assess-aws-iam-policy-3.json</a></p>
+</li>
+<li>
+<p>Create an IAM role specific to Assess pod. In the AWS account where you want to run the assessment policies, perform the following actions:</p>
+</li>
+<li>
+<p>Create an IAM Role (or use an existing role with the required name) for the Assess pod specific IAM Role**.** For the IAM role, you can enter the name as <strong><em>hcap-assess-iam-role</em></strong>, or use a custom name specified in the <strong>customer.yml</strong> file before deploying Assess. The custom name must have the value "<strong>assess_pods_iam_role_name</strong>".
+     Once the Assess is deployed, make sure to use only this Role for various Instance profile use-cases. For different use-cases, you can change the policies attached to this Role as per requirement.</p>
+</li>
+<li>
+<p>After creating a new Role, select <strong>Type of trusted entity</strong> as <strong>AWS Service - ec2</strong>.</p>
+</li>
+<li>
+<p>Add EKS worker node's IAM Role in the Trust relationships for the above role:</p>
+<ul>
+<li>Under the Role, go to "<strong>Trust relationships</strong>" tab and click on "<strong>Edit trust relationships</strong>". Replace the policy JSON with the following JSON.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Principal&quot;: {
+        &quot;Service&quot;: &quot;ec2.amazonaws.com&quot;
+      },
+      &quot;Action&quot;: &quot;sts:AssumeRole&quot;
+    },
+    {
+      &quot;Sid&quot;: &quot;&quot;,
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Principal&quot;: {
+        &quot;AWS&quot;: &quot;&lt;EKS_Worker_ec2_Node_IAM_Role_ARN&gt;&quot;
+      },
+      &quot;Action&quot;: &quot;sts:AssumeRole&quot;
+    }
+  ]
+}
+</code></pre></div>
+<p>For <EKS_Worker_ec2_Node_IAM_Role_ARN>, use the Role ARN of the IAM Role attached to the EKS Worker node ec2 instance, where Assess is running.</p>
+<ul>
+<li>Save changes by clicking on "<strong>Update Trust Policy</strong>".</li>
+</ul>
+</li>
+<li>
+<p>Attach the IAM policies to the above created role.</p>
+</li>
+<li>
+<p>To create a provider with an instance profile without name use the following JSON:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>{
+  &quot;region&quot;: &quot;&lt;AWS_Region&gt;&quot;
+}
+</code></pre></div>
+<ol>
+<li>To create a provider with an instance profile without name with assume role use the following JSON:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Sid&quot;: &quot;VisualEditor0&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;sts:DecodeAuthorizationMessage&quot;,
+                &quot;sts:GetCallerIdentity&quot;
+            ],
+            &quot;Resource&quot;: &quot;*&quot;
+        },
+        {
+            &quot;Sid&quot;: &quot;VisualEditor1&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: &quot;sts:*&quot;,
+            &quot;Resource&quot;: &quot;&lt;Assume_Role_ARN&gt;&quot;
+        }
+    ]
+}
+</code></pre></div>
+<h3 id="configuring-a-provider"><a id="configure-provider" name="configure-provider"></a>Configuring a provider<a class="headerlink" href="#configuring-a-provider" title="Permanent link">&para;</a></h3>
+<p>Assess Accelerator uses the AWS providers that are available in Deploy Accelerator. </p>
+<ol>
+<li>
+<p>Open Deploy Accelerator, on the home page, click the <strong>More options</strong> (<img alt="" src="/images/rean-platform-common/icon_more.PNG" />) icon in the top-right corner and then click <strong>Providers</strong>.</p>
+</li>
+<li>
+<p>On the Provider page, click <strong>New</strong>.</p>
+</li>
+<li>
+<p>Enter the provider name and select the <strong>AWS</strong> provider type.</p>
+</li>
+<li>
+<p>In the <strong>Provider Details</strong> section, use one of the following methods to specify authentication details of the AWS account in which Assess Accelerator must run the assessment policies.</p>
+</li>
+<li>
+<p><strong>Instance Profile with Assume Role</strong></p>
+<p>This method provides a more secure way for cross-account access. Consider a scenario in which Hitachi Cloud Accelerator Platform is deployed in an AWS account that is different from the accounts in which Assess Accelerator must run the assessment policies. Instead of storing the access credentials for all those accounts in Assess Accelerator, you can attach a role to the instance in which Hitachi Cloud Accelerator Platform is deployed. Assess Accelerator can then assume a role in the other accounts and run the assessment policies. For more information about assuming roles, see the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-roles.html">AWS documentation</a>.<br></p>
+<p>To use the <strong>Instance Profile with Assume Role</strong> method, you must attach a role to the instance on which Hitachi Cloud Accelerator Platform is deployed. For the other accounts, you must specify a role that Assess Accelerator can assume to run the assessment policies. The role that you specify must have permissions to run the different assessment checks on the AWS infrastructure. It must also define the account in which Hitachi Cloud Accelerator Platform is deployed as a trusted entity.<br></p>
+<p>In the <strong>Provider Details</strong> section, you must specify the details, as shown in the following example:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;region&quot;: &quot;xx-xxxx-x&quot;,
+    &quot;assume_role&quot;: {
+        &quot;role_arn&quot;: &quot;arn:aws:iam::xxxxxxxxxxx:role/assume_role&quot;,
+        &quot;session_name&quot;: &quot;SESSION-NAME&quot;,
+        &quot;external_id&quot;: &quot;assume_role&quot;
+    }
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Instance Profile</strong></p>
+<p>This method provides a more secure way of accessing the account in which Assess Accelerator must run the assessment policies. However, Assess Accelerator can use this method only if a role is attached to the instance on which Hitachi Cloud Accelerator Platform is deployed. This role must have permissions to run the different assessment checks on the AWS infrastructure.<br></p>
+<p>To use the Instance Profile method, you must specify only the region in which the assessment policies must be run, as shown in the following example:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;region&quot;: &quot;xx-xxx-x&quot;
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Static Credentials with Assume Role</strong></p>
+<p>This method provides a more secure way for cross-account access. Consider a scenario in which Assess Accelerator needs to run the assessment policies across multiple AWS accounts. Instead of storing the access credentials for all these accounts in Assess Accelerator, you can specify long-term access credentials for only the parent account. Assess Accelerator can then use temporary credentials to access all other child accounts by assuming roles in those accounts. For more information about assuming roles, see the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-roles.html">AWS documentation</a>.<br></p>
+<p>To use the <strong>Static Credentials with Assume Role</strong> method, you must specify the credentials for only the parent account. For each child account, you must specify a role that Assess Accelerator can assume to run the assessment policies in that account. The role that you specify must have access to run the different assessment checks on the AWS infrastructure. It must also define the parent account as a trusted entity.<br></p>
+<p>In the <strong>Provider Details</strong> section, you must specify the details, as shown in the following example:  </p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;access_key&quot;: &quot;xxxxxxxxxx&quot;,
+    &quot;secret_key&quot;: &quot;xxxxxxxxxx&quot;,
+    &quot;region&quot;: &quot;xx-xxxx-x&quot;,
+    &quot;assume_role&quot;: {
+        &quot;role_arn&quot;: &quot;arn:aws:iam::xxxxxxxxxxx:role/assume_role&quot;,
+        &quot;session_name&quot;: &quot;SESSION-NAME&quot;,
+        &quot;external_id&quot;: &quot;assume_role&quot;
+    }
+}
+</code></pre></div>
+</li>
+<li>
+<p><strong>Static Credentials</strong></p>
+<p>To use this method, you must specify the IAM user credentials for accessing the account in which Assess Accelerator must run the assessment policies, as shown in the following example:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;access_key&quot;: &quot;ACCESS-KEY&quot;,
+    &quot;secret_key&quot;: &quot;SECRET-KEY&quot;,
+    &quot;region&quot;: &quot;xx-xxxx-x&quot;
+}
+</code></pre></div>
+<p><em><strong>Note:</strong> The IAM user whose credentials you specify must have permissions to run the different assessment checks on the AWS infrastructure. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'user'})" style="text-decoration:none">Before you begin</a>.</em></p>
+</li>
+<li>
+<p>To verify whether the JSON syntax and the authentication details that you have specified are correct, click <strong>VALIDATE</strong>.</p>
+</li>
+</ol>
+<p>To also save the provider after successfully validating the provider details, click <strong>VALIDATE &amp; SAVE</strong>.</p>
+<p><em><strong>Note:</strong> The <strong>VALIDATE</strong> and <strong>VALIDATE &amp; SAVE</strong> buttons are enabled only if you have specified a valid JSON syntax in the provider details.</em></p>
+<ol>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>A new provider appears in the <strong>Provider List</strong> section.</p>
+<p><em><strong>Note:</strong> The <strong>SAVE</strong> button is enabled only if you have specified a valid JSON syntax in the provider details.</em></p>
+<h2 id="prerequisites-for-azure-assessments"><a id="azure" name="azure"></a>Prerequisites for Azure assessments<a class="headerlink" href="#prerequisites-for-azure-assessments" title="Permanent link">&para;</a></h2>
+<p>The Azure assessment in Assess Accelerator is executed by the Microsoft Azure blueprint service. The blueprint used for Azure assessment is a sample of the CIS Microsoft Azure Foundations Benchmark blueprint. For more details see, <a href="https://docs.microsoft.com/en-us/azure/governance/blueprints/samples/cis-azure-1-1-0#deploy">Microsoft Azure Documentation</a>. </p>
+<p>The prerequisite steps must be performed in the Azure account on which the assessment is to be run. The prerequisite involves the following steps:</p>
+<ul>
+<li>Deploy the Azure Blueprints CIS Microsoft Azure Foundations Benchmark blueprint sample</li>
+<li>Copy CIS Benchmark policy ID</li>
+</ul>
+<h3 id="deploy-the-azure-blueprints-cis-microsoft-azure-foundations-benchmark-blueprint-sample"><a id="create-blueprint" name="create-blueprint"></a>Deploy the Azure Blueprints CIS Microsoft Azure Foundations Benchmark blueprint sample<a class="headerlink" href="#deploy-the-azure-blueprints-cis-microsoft-azure-foundations-benchmark-blueprint-sample" title="Permanent link">&para;</a></h3>
+<p>The deployment steps include the following three steps:</p>
+<ul>
+<li>Create a new blueprint from the sample</li>
+<li>Mark your copy of the sample as <strong>Published</strong></li>
+<li>Assign your copy of the blueprint to an existing subscription</li>
+</ul>
+<p>For more information on how to deploy the sample blueprint, see <a href="https://docs.microsoft.com/en-us/azure/governance/blueprints/samples/cis-azure-1-1-0#deploy">Microsoft Azure Documentation</a>.</p>
+<h3 id="copy-cis-benchmark-policy-id"><a id="cis" name="cis"></a>Copy CIS Benchmark policy ID<a class="headerlink" href="#copy-cis-benchmark-policy-id" title="Permanent link">&para;</a></h3>
+<p>After a successful assignment of the blueprint, you must copy the policy ID for using while running the assessment job. </p>
+<p>To get the policy ID, perform the following actions:</p>
+<ol>
+<li>
+<p>In the Azure account, go to <strong>Policy Service</strong>. </p>
+</li>
+<li>
+<p>Select <strong>CIS Microsoft Azure Foundations Benchmark 1.1.0</strong> policy</p>
+</li>
+<li>
+<p>From the Assignment ID parameter, click Copy to clipboard.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-assess/azure_id.png" /></p>
+<ol>
+<li>Save the last section of the assignment ID. For example, if complete policy assignment id is <strong><em>/subscriptions/<subscription_id>/providers/Microsoft.Authorization/policyAssignments/qwertyuiop1234567</em></strong> then policy assignment ID to be saved is <strong><em>qwertyuiop1234567</em></strong>.</li>
+</ol>
+<h2 id="creating-aws-assessment-jobs"><a id="policy-run" name="policy-run"></a>Creating AWS assessment jobs<a class="headerlink" href="#creating-aws-assessment-jobs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page of Assess Accelerator, select <strong>Assess Now</strong>.</p>
+</li>
+<li>
+<p>For <strong>Select your Cloud type</strong>, select <strong>AWS</strong>.</p>
+<p><img alt="" src="/images/rean-assess/assess_policyselect.PNG" /></p>
+</li>
+<li>
+<p>Enter a name for the assessment job.</p>
+</li>
+</ol>
+<p><em><strong>Tip:</strong> You might run different types of assessment policies for one or more providers multiple times. Therefore, it is recommended that you specify a unique job name that helps you to identify the selected policies and any other details. For example, Operations-May2017-Week1.</em></p>
+<ol>
+<li>
+<p>In the <strong>Select Providers</strong> list, perform one of the following actions:</p>
+</li>
+<li>
+<p>To run the assessment policies for one or more providers, select the check boxes next to those providers.</p>
+</li>
+<li>To run the assessment policies for all providers, select <strong>All</strong>.</li>
+</ol>
+<p><em><strong>Note:</strong> The assessment policies are run on all resources that are owned by the account that is specified in the provider. However, the account credentials that are specified must have the required access to run these policies on the resources. Otherwise, no data or incomplete data is displayed in the summary and detailed reports.</em></p>
+<ol>
+<li>In the <strong>Select Assessment Template</strong> list, select a template for assessment. </li>
+</ol>
+<p>You can create multiple templates with different checks for each template. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-templates', viewSection: 'Content'})" style="text-decoration:none">Creating and managing assessment templates</a>.</p>
+<ol>
+<li>
+<p>Select the assessment policies that you want to run for the selected providers. 
+   For information about the available policies, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'overview'})" style="text-decoration:none">Overview of assessment policies</a>.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To upload the assessment report for each provider to an AWS S3 bucket, perform the following actions:</p>
+</li>
+<li>
+<p>Select the <strong>Upload report to S3</strong> check box.</p>
+</li>
+<li>
+<p>Enter the S3 bucket name.</p>
+<p>For each selected provider, Assess Accelerator appends this S3 bucket name with the account ID (<em>BucketName-AccountID</em>).</p>
+<p>If the <em>BucketName-AccountID</em> bucket already exists for a provider, Assess Accelerator uploads the assessment reports to this existing bucket. Otherwise, Assess Accelerator creates a new S3 bucket and then uploads the assessment report to this bucket.</p>
+<p><em><strong>Important:</strong> To enable Assess Accelerator to upload assessment reports to an S3 bucket, you must add the <strong>s3:PutObject</strong> permission to the IAM policies that are used in each selected provider. To enable Assess Accelerator to create a new S3 bucket, you must also add the <strong>s3:CreateBucket</strong> permission, as shown in the following example:</em></p>
+<p><code>json
+   {
+"Version": "2012-10-17",
+"Statement": [
+    {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": [
+            "s3:PutObject", 
+            "s3:CreateBucket"
+        ],
+        "Resource": "&lt;s3_bucket_ARN&gt;/*"
+    }
+]
+   }</code></p>
+</li>
+<li>
+<p><em>(Optional)</em> To receive email notifications for assessments, perform the following actions:</p>
+</li>
+<li>
+<p>Select <strong>Enable Notification</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Customer Name</strong> field, enter your company name and enter your email address that was used for creating the login credentials. You will receive an assessment start email and an email with a detailed report after assessment completion. </p>
+<p>You can also enter multiple email addresses separated by a comma. The email addresses apart from the logged in user will only receive an assessment start email.</p>
+</li>
+<li>
+<p>Click <strong>START ASSESSMENT</strong>. </p>
+</li>
+</ol>
+<p>The <strong>Assessment Started</strong> message appears.  </p>
+<p><strong><em>Notes:</em></strong> </p>
+<ul>
+<li><em>If the user has administrator access inherited from the IAM user in AWS, a validation message appears asking if you want to proceed with the assessment. You can choose to continue or cancel the assessment and check t he policies assigned to the IAM user.</em> </li>
+<li>
+<p><em>If the user is missing some required permissions, a validation message appears with a list of missing permissions. You can choose to continue or cancel the assessment and check the permissions assigned to the IAM user.</em></p>
+</li>
+<li>
+<p>To start another assessment, click <strong>ASSESS MORE</strong>.</p>
+</li>
+<li>
+<p>To view the progress of the assessment, click <strong>VIEW PROGRESS</strong>.</p>
+</li>
+<li>
+<p>Under the <strong>My Assessment</strong> tab, click <strong>Refresh</strong> (<img alt="" src="/images/rean-assess/icon_joblistrefresh.PNG" />) to view the recently started assessment.
+    If an assessment job contains multiple providers, Assess Accelerator creates a separate job for each provider in the format <em>JobName_ProviderName</em>. Following are the columns:</p>
+<ul>
+<li>
+<p><strong>Provider</strong>: provider name</p>
+</li>
+<li>
+<p><strong>Job Name</strong>: job name for the provider. </p>
+</li>
+<li>
+<p><strong>Group</strong>: assessment job name that you have specified.</p>
+</li>
+</ul>
+<p>The status icons indicate whether the job is in progress (<img alt="" src="/images/rean-assess/icon_inprogress.PNG" />), has failed (<img alt="" src="/images/rean-assess/icon_failed.PNG" />), or has completed successfully (<img alt="" src="/images/rean-assess/icon_passed.PNG" />). Place mouse-pointer over the status icons to see the job start date and time.</p>
+</li>
+</ul>
+<h2 id="creating-azure-assessment-jobs"><a id="azure-run" name="azure-run"></a>Creating Azure assessment jobs<a class="headerlink" href="#creating-azure-assessment-jobs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page of Assess Accelerator, select <strong>Assess Now</strong>.</p>
+</li>
+<li>
+<p>For <strong>Select your Cloud type</strong>, select <strong>Azure</strong>.</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-assess/assess_azure.png" /></p>
+<ol>
+<li>Enter a name for the assessment job.</li>
+</ol>
+<p><em><strong>Tip:</strong> You might run different types of assessment policies for one or more providers multiple times. Therefore, it is recommended that you specify a unique job name that helps you to identify the selected policies and any other details. For example, Operations-May2017-Week1.</em></p>
+<ol>
+<li>In the <strong>Select Providers</strong> list, select a provider for running the assessment on that account. For Azure assessment job, you can currently select only one provider.</li>
+</ol>
+<p><em><strong>Note:</strong> The assessment policies are run on all resources that are owned by the account that is specified in the provider. However, the account credentials that are specified must have the required access to run these policies on the resources. Otherwise, no data or incomplete data is displayed in the summary and detailed reports.</em> </p>
+<ol>
+<li>In the <strong>Select Assessment Template</strong> list, select a template for assessment. </li>
+</ol>
+<p>You can create multiple templates with different checks for each template. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-templates', viewSection: 'Content'})" style="text-decoration:none">Creating and managing assessment templates</a>.</p>
+<ol>
+<li>
+<p>In the <strong>Azure CIS Policy Assignment ID</strong> field, enter the assignment ID acquired by performing the prerequisite steps. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'providers'})" style="text-decoration:none">Prerequisites for Azure assessments</a>. </p>
+</li>
+<li>
+<p>Select <strong>Security Policy</strong>. </p>
+</li>
+</ol>
+<p>For information about the available policies, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'run-assessment-policies', viewSection: 'overview'})" style="text-decoration:none">Overview of assessment policies</a>.</p>
+<ol>
+<li>
+<p><em>(Optional)</em> To receive email notifications for assessments, perform the following actions:</p>
+</li>
+<li>
+<p>Select <strong>Enable Notification</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Customer Name</strong> field, enter your company name and enter your email address that was used for creating the login credentials. You will receive an assessment start email and an email with a detailed report after assessment completion. </p>
+<p>You can also enter multiple email addresses separated by a comma. The email addresses apart from the logged in user will only receive an assessment start email.</p>
+</li>
+<li>
+<p>Click <strong>START ASSESSMENT</strong>. The <strong>Assessment Started</strong> message appears.  </p>
+</li>
+<li>
+<p>To start another assessment, click <strong>ASSESS MORE</strong>.</p>
+</li>
+<li>
+<p>To view the progress of the assessment, click <strong>VIEW PROGRESS</strong>.</p>
+</li>
+<li>
+<p>Under the <strong>My Assessment</strong> tab, click <strong>Refresh</strong> (<img alt="" src="/images/rean-assess/icon_joblistrefresh.PNG" />) to view the recently started assessment.
+    If an assessment job contains multiple providers, Assess Accelerator creates a separate job for each provider in the format <em>JobName_ProviderName</em>. Following are the columns: </p>
+<ul>
+<li>
+<p><strong>Provider</strong>: provider name</p>
+</li>
+<li>
+<p><strong>Job Name</strong>: job name for the provider</p>
+</li>
+<li>
+<p><strong>Group</strong>: assessment job name that you have specified.</p>
+</li>
+</ul>
+<p>The status icons indicate whether the job is in progress (<img alt="" src="/images/rean-assess/icon_inprogress.PNG" />), has failed (<img alt="" src="/images/rean-assess/icon_failed.PNG" />), or has completed successfully (<img alt="" src="/images/rean-assess/icon_passed.PNG" />). Place mouse-pointer over the status icons to see the job start date and time.</p>
+</li>
+</ol>
+<h2 id="viewing-assessment-reports"><a id="policy-results" name="policy-results"></a>Viewing assessment reports<a class="headerlink" href="#viewing-assessment-reports" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page, select <strong>My Assessment</strong>.</p>
+</li>
+<li>
+<p>From the list of assessment jobs, select the job for which you want to view a report.</p>
+</li>
+</ol>
+<p>In the right panel, you can see a sunburst chart that provides a graphical summary of the policies that were run for the selected job, along with their status. </p>
+<p><img alt="" src="/images/rean-assess/assess_chart.PNG" /></p>
+<p>The sunburst chart consists of the following layers:</p>
+<ul>
+<li>
+<p>The center layer provides a summary of the assessment job. You can see the total number of checks that were run and the number of checks that failed.</p>
+</li>
+<li>
+<p>The second layer represents the policies that were run for the selected job.</p>
+<p>For example, security policy, cost optimization policy, and operations policy.</p>
+</li>
+<li>
+<p>The third layer represents different categories of assessment checks within each policy.</p>
+<p>For example, Security Assessment for Monitoring Compliance is a category of assessment check within the security policy.</p>
+</li>
+<li>
+<p>The outermost layer represents each check that is included in a policy.</p>
+<p>For example, "Ensure no S3 buckets are public" is a specific check within the security policy.</p>
+</li>
+<li>
+<p>To drill down into a specific set of data, click on a layer in the sunburst chart.</p>
+</li>
+</ul>
+<p>When you click on the chart, the right panel further expands to display a report.</p>
+<p><img alt="" src="/images/rean-assess/assess_policydetails.PNG" /></p>
+<p>The information displayed in the report is filtered based on the policy, assessment category, or assessment check that you click in the chart:</p>
+<ul>
+<li>
+<p>If you click on a policy in the second layer of the chart, you can view the different categories of assessment checks for that policy.</p>
+<p><img alt="" src="/images/rean-assess/assessmentcategories.PNG" /></p>
+</li>
+<li>
+<p>If you click on a specific category of assessment checks in the third layer of the chart, you can view the different assessment checks that are included in that category.</p>
+<p><img alt="" src="/images/rean-assess/assessmentchecks.PNG" /></p>
+</li>
+<li>
+<p>If you click on an assessment check in the outermost layer of the chart, you can view details about that check.</p>
+<p><img alt="" src="/images/rean-assess/assessmentcheckdetails.PNG" /></p>
+<p>For each assessment check, you can view the status (failed or passed), severity level (CRITICAL, MAJOR, or WARNING), and possible solutions for resolving the identified issues.</p>
+</li>
+</ul>
+<p><em><strong>Note:</strong> If the provider that you have selected does not have the permissions required to run a specific policy, no data is displayed for that policy.</em></p>
+<ol>
+<li>
+<p><em>(Optional)</em> To navigate to the previous layer, click on the center layer in the chart.</p>
+</li>
+<li>
+<p><em>(Optional)</em> To rerun a failed job from the list of assessment jobs, click the <strong>ReRun</strong> link next to that job.</p>
+</li>
+</ol>
+<p><em><strong>Note:</strong> If AWS credentials are not configured correctly, you cannot re-run the failed job from the list of assessment jobs.</em></p>
+<h2 id="downloading-assessment-reports"><a id="results-download" name="results-download"></a>Downloading assessment reports<a class="headerlink" href="#downloading-assessment-reports" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>On the Home page, select <strong>My Assessment</strong>.</p>
+</li>
+<li>
+<p>From the list of assessment jobs, click the job for which you want to download a report. </p>
+</li>
+<li>
+<p>In the right panel, click <strong>Download Report</strong>.</p>
+</li>
+<li>
+<p>In the Download Report window,  perform the following actions:</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-assess/assess_reportdownload.PNG" /></p>
+<ul>
+<li>
+<p>In <strong>Customer Name</strong>, enter your company name.</p>
+</li>
+<li>
+<p>In <strong>Summary</strong>, type a summary of the report.</p>
+<p>The text that you specify in this box is displayed in the <strong>Executive Summary</strong> section of the report.  </p>
+</li>
+<li>
+<p>In the <strong>Template</strong> list, select the type of report as <strong>Custom_Assess_Template</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Download</strong>.</p>
+<p>Assess Accelerator generates the assessment report in the .docx format. The assessment report contains detailed tables that list the multiple assessment criteria, their status and severity level, and possible solutions.</p>
+<p>The report contains the following columns:</p>
+<ul>
+<li><strong>Check ID:</strong> The check ID for the assessment check. For more information, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-assess', viewPage: 'assess-checks', viewSection: 'Content'})" style="text-decoration:none">Assessment Checks Reference</a>.</li>
+<li><strong>Assessment Check:</strong> The check being performed on the resources.</li>
+<li><strong>Status:</strong> The result of the check after it is run. The status could either be <strong>Passed</strong> or <strong>Failed</strong>.</li>
+<li><strong>Severity:</strong> The severity of the result of the check. The severity could <strong>Critical</strong>, <strong>Low</strong>, or <strong>Medium</strong>.</li>
+<li><strong>Output:</strong> The output of the check after it is run. </li>
+<li><strong>Possible Solutions:</strong> The recommendations after running the checks.</li>
+</ul>
+</li>
+</ul>
+<h2 id="viewing-and-downloading-comparison-reports"><a id="compare-view" name="compare-view"></a>Viewing and downloading comparison reports<a class="headerlink" href="#viewing-and-downloading-comparison-reports" title="Permanent link">&para;</a></h2>
+<p>Assess Accelerator enables you to view and download a report that compares the assessment results across multiple jobs or providers. This report is especially useful in the following scenarios:</p>
+<ul>
+<li>If you have created an assessment job with multiple providers, you can generate a comparison report to view the assessment summary across all the providers.</li>
+<li>If you have created multiple jobs for the same provider over time, you can generate a comparison report to view the assessment summary across all the jobs for that provider.</li>
+</ul>
+<p><strong>To view and download a comparison report, perform the following actions:</strong></p>
+<ol>
+<li>
+<p>On the Home page, select <strong>Compare</strong>. </p>
+</li>
+<li>
+<p>Click <strong>Select Jobs</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Select your Cloud type</strong> list, select <strong>AWS</strong> or <strong>Azure</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Select job</strong> list, perform one of the following actions:</p>
+</li>
+</ol>
+<p><img alt="" src="/images/rean-assess/assesscompare_selectjobs.PNG" /></p>
+<ul>
+<li>To compare the assessment results across multiple jobs, select the check boxes next to those assessment jobs.</li>
+<li>To compare the assessment results across all jobs, click <strong>Select all jobs</strong>.</li>
+</ul>
+<p>The selected jobs are displayed in the Summary table. To remove a job from the Summary table, click <strong>Delete</strong>(<img alt="" src="/images/rean-assess/compare_removejobs.PNG" />).</p>
+<p><img alt="" src="/images/rean-assess/assesscompare_joblist.PNG" /></p>
+<p><em><strong>Note:</strong> You can view the comparison report in the Assess Accelerator UI for a maximum of 6 jobs. If you select more than 6 jobs, you have to download the comparison report.</em></p>
+<ol>
+<li>
+<p><em>(Only if you have selected a maximum of 6 jobs)</em> To view and download the comparison report, perform the following actions:</p>
+</li>
+<li>
+<p>In the Add Assessment jobs to compare window, click <strong>OK</strong>.</p>
+<p>On the <strong>Compare</strong> tab, you can view the comparison report for the selected jobs.</p>
+<p><img alt="" src="/images/rean-assess/assess_compare_report.PNG" /></p>
+<p>If you move your mouse over a column header, you can see the provider name and the date and time when the assessment job was started.</p>
+</li>
+<li>
+<p>To download the comparison report to your local computer, click <strong>Export</strong> and then select the <strong>Comparison Report</strong> option.</p>
+<p>The comparison report contains the following sheets:</p>
+<ul>
+<li><strong>Dashboard:</strong> This sheet provides an overall status of all the jobs or providers in charts and the graph format. It also displays the assessment status based on account, policy and checkset, and assessment checks (for example, Cost Optimization Assessment, Performance Assessment, and other Security Assessment) across all jobs or providers.</li>
+<li><strong>Summary View:</strong> This sheet lists all the assessment checks that were run and displays the total number of jobs (or providers) for which each check passed, failed, or was not applicable. It also displays the pass, fail, and not applicable percentage across all jobs or providers.</li>
+<li><strong>Policy Raw Data:</strong> This sheet provides all the assessment data that is gathered across all selected jobs or providers. You can use this data to generate your own reports and charts.   </li>
+</ul>
+</li>
+<li>
+<p><em>(Optional)</em> To download a <strong>TAR</strong> file that contains the assessment summary report (<em>.docx</em> format) for each selected job, select the <strong>Document Report</strong> option.</p>
+<p>In the Download Report window, enter your company name and report summary, select the report type, and then click <strong>DOWNLOAD</strong>.</p>
+</li>
+<li>
+<p><em>(Only if you have selected more than 6 jobs)</em> In the Add Assessment jobs to compare window, perform one of the following actions based on your requirements:</p>
+</li>
+<li>
+<p>To download the comparison report to your local computer, click <strong>Export Comparison Report</strong>.</p>
+</li>
+<li>
+<p>To download a <strong>TAR</strong> file that contains the assessment summary report (docx format) for each selected job, click <strong>Export Document Report</strong>.</p>
+<p>In the Download Report window, enter your company name and report summary, select the report type, and then click <strong>DOWNLOAD</strong>.</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../getting-started/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Overview
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../assess-templates/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Create and manage assessment templates
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

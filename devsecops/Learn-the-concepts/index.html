@@ -1,0 +1,1730 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>Learn the concepts - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learn-the-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Learn the concepts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link md-tabs__link--active">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../External-Configuration/" class="md-nav__link">
+        External configurations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Learn the concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Learn the concepts
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#devops-concepts" class="md-nav__link">
+    DevOps Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devsecops-concepts" class="md-nav__link">
+    DevSecOps Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-packer" class="md-nav__link">
+     Building with Packer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-with-chef" class="md-nav__link">
+     Provisioning with Chef
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-environment-variables-with-direnv" class="md-nav__link">
+     Managing Environment Variables with direnv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-terraform-and-inspec" class="md-nav__link">
+     Testing with Terraform and InSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-builds-with-rake" class="md-nav__link">
+     Running builds with Rake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-git-and-git-flow" class="md-nav__link">
+     Understanding git and git flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-credentials-aws" class="md-nav__link">
+    Cloud credentials: AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-compliance-security-technical-implementation-guide" class="md-nav__link">
+    Security and Compliance: Security Technical Implementation Guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-connectivity-aws-image-pipelines" class="md-nav__link">
+    Network connectivity: AWS image pipelines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#devops-concepts" class="md-nav__link">
+    DevOps Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devsecops-concepts" class="md-nav__link">
+    DevSecOps Concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-with-packer" class="md-nav__link">
+     Building with Packer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioning-with-chef" class="md-nav__link">
+     Provisioning with Chef
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-environment-variables-with-direnv" class="md-nav__link">
+     Managing Environment Variables with direnv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-with-terraform-and-inspec" class="md-nav__link">
+     Testing with Terraform and InSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-builds-with-rake" class="md-nav__link">
+     Running builds with Rake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-git-and-git-flow" class="md-nav__link">
+     Understanding git and git flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-credentials-aws" class="md-nav__link">
+    Cloud credentials: AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-compliance-security-technical-implementation-guide" class="md-nav__link">
+    Security and Compliance: Security Technical Implementation Guide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-connectivity-aws-image-pipelines" class="md-nav__link">
+    Network connectivity: AWS image pipelines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="learn-the-concepts">Learn the concepts<a class="headerlink" href="#learn-the-concepts" title="Permanent link">&para;</a></h1>
+<h2 id="devops-concepts"><a id="devops" name="devops"></a>DevOps Concepts<a class="headerlink" href="#devops-concepts" title="Permanent link">&para;</a></h2>
+<p>DevOps is the practice of operations and development engineers participating together in the entire service lifecycle, from design through the development process to production support. </p>
+<p><em>Continuous Integration (CI)</em> Continuous Integration (CI) is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early. </p>
+<p><em>Continuous Delivery (CD)</em> Continuous Delivery is the ability to get changes of all types—including new features, configuration changes, bug fixes and experiments—into production, or into the hands of users, safely and quickly in a sustainable way.</p>
+<p>DevOps learning resources:</p>
+<ul>
+<li><a href="https://theagileadmin.com/what-is-devops/">What is DevOps</a></li>
+<li><a href="https://aws.amazon.com/devops/what-is-devops/">More about DevOps</a></li>
+<li><a href="https://www.thoughtworks.com/continuous-integration">Continuous Integration</a></li>
+<li><a href="https://continuousdelivery.com/">Continuous Delivery</a></li>
+</ul>
+<h2 id="devsecops-concepts"><a id="devops" name="devops"></a>DevSecOps Concepts<a class="headerlink" href="#devsecops-concepts" title="Permanent link">&para;</a></h2>
+<p>DevSecOps is the philosophy of integrating security practices within the DevOps process. DevSecOps is about built-in security, not security that functions as a perimeter around apps and data. All people involved in the development process are accountable for security.  </p>
+<p><a href="https://www.redhat.com/en/topics/devops/what-is-devsecops">What is DevSecOps</a></p>
+<h2 id="building-with-packer"><a id="packer" name="packer"></a> Building with Packer<a class="headerlink" href="#building-with-packer" title="Permanent link">&para;</a></h2>
+<p><a href="https://packer.io/intro/#what-is-packer-">Packer</a> is a tool for creating machine images for multiple platforms from a single source configuration.</p>
+<p>The JSON configuration file used to define what image we want built and how is called a <em>template</em> in Packer terminology. The template has one or more <a href="https://packer.io/docs/builders/index.html"><em>builders</em></a> which are Packer components that are able to create a machine image for a single platform (for example, <code>amazon-ebs</code> is the Amazon EC2 AMI builder that ships with Packer). Builders read in some configuration and use that to run and generate a machine image. A builder is invoked as part of a build in order to create the actual resulting images.</p>
+<p>Packer learning resources:</p>
+<ul>
+<li><a href="https://packer.io/docs/index.html">Packer documentation</a></li>
+<li><a href="https://hitachivantara.udemy.com/learn-devops-infrastructure-automation-with-terraform/">Learn DevOps: Infrastructure Automation With Terraform</a></li>
+</ul>
+<h2 id="provisioning-with-chef"><a id="chef" name="chef"></a> Provisioning with Chef<a class="headerlink" href="#provisioning-with-chef" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.chef.io/">Chef</a> is a powerful automation platform that transforms infrastructure into code. You create and test your code on your workstation before you deploy it to other environments.</p>
+<p>When you write your code, you use resources to describe your infrastructure. A resource corresponds to some piece of infrastructure, such as a file, a template, or a package. Each resource declares what state a part of the system should be in, but not how to get there. Chef handles these complexities for you. Chef provides many resources that are ready for you to use. You can also utilize resources shipped in community cookbooks, or write your own resources specific to your infrastructure.</p>
+<p>Chef learning resources:</p>
+<ul>
+<li><a href="https://linuxacademy.com/cp/modules/view/id/224">Basic Chef Fluency Badge</a></li>
+<li><a href="https://linuxacademy.com/cp/modules/view/id/122">Chef Local Cookbook Development Badge</a></li>
+<li><a href="https://hitachivantara.udemy.com/chef-fundamentals-a-recipe-for-automating-infrastructure/">Chef Fundamentals: A Recipe for Automating Infrastructure</a></li>
+</ul>
+<h2 id="managing-environment-variables-with-direnv"><a id="direnv" name="direnv"></a> Managing Environment Variables with direnv<a class="headerlink" href="#managing-environment-variables-with-direnv" title="Permanent link">&para;</a></h2>
+<p><a href="https://direnv.net/">Direnv</a> is an extension for your shell. It augments existing shells with a new feature that can load and unload environment variables depending on the current directory.</p>
+<p>To see all the Environment variables available and their values--as well as the one you just created--you can type <code>printenv</code> in the terminal. </p>
+<p>If using direnv, you will most likely have to type <code>direnv allow</code> after creating the new variable. </p>
+<h2 id="testing-with-terraform-and-inspec"><a id="inspec" name="inspec"></a> Testing with Terraform and InSpec<a class="headerlink" href="#testing-with-terraform-and-inspec" title="Permanent link">&para;</a></h2>
+<p><a href="www.terraform.io">Terraform</a> is a tool for building, changing, and versioning infrastructure safely and efficiently. </p>
+<p>Configuration files describe to Terraform the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied.</p>
+<p><a href="https://www.inspec.io/docs/">Chef InSpec</a> is a free and open-source framework for testing and auditing your applications and infrastructure. Chef InSpec works by comparing the actual state of your system with the desired state that you express in easy-to-read and easy-to-write Chef InSpec code. Chef InSpec detects violations and displays findings in the form of a report, but puts you in control of remediation.</p>
+<p>For testing our images, we use Terraform to create temporary resources (<a href="https://www.terraform.io/docs/providers/aws/r/instance.html">EC2 instances</a>) and <a href="https://www.inspec.io/docs/reference/profiles/">InSpec profiles</a> to test the resources. </p>
+<!--TODO: In case the user has not visited any other sections before this one, explain to them (briefly) how Terraform is used to create temporary systems to perform tests on, and how Inspec is used to test the contents of those systems.-->
+
+<!--TODO: The user will not need to understand all Terraform concepts and resources in order to perform tests.  Instruct them about which resources we use,and link to documentation on those resources.  Also link to documentation on basic Terraform variable interpolation.-->
+
+<!--TODO: The user will not need to understand basic Inspec testing concepts in order to use inspec tests with these pipelines.  Hyperlink to different documentation sections on the different concepts that they will need to learn.-->
+
+<p>Terraform and InSpec learning resources:</p>
+<ul>
+<li><a href="https://www.terraform.io/docs/configuration-0-11/interpolation.html">Terraform variable interpolation</a></li>
+<li><a href="https://linuxacademy.com/cp/modules/view/id/358">Using Terraform to Manage Applications and Infrastructure</a></li>
+<li><a href="https://hitachivantara.udemy.com/learn-devops-infrastructure-automation-with-terraform/">Learn DevOps: Infrastructure Automation With Terraform</a></li>
+<li><a href="https://learn.chef.io/tracks/compliance-automation#/">Compliance Automation with InSpec</a></li>
+<li><a href="https://learn.chef.io/modules/create-a-custom-profile#/">How to create custom InSpec profiles</a></li>
+<li><a href="https://github.com/inspec/inspec/tree/master/examples/profile">Example InSpec profile</a></li>
+</ul>
+<h2 id="running-builds-with-rake"><a id="rake" name="rake"></a> Running builds with Rake<a class="headerlink" href="#running-builds-with-rake" title="Permanent link">&para;</a></h2>
+<p><a href="https://ruby.github.io/rake/">Rake</a> is a make-like build utility for Ruby with tasks and dependencies specified in standard Ruby syntax.</p>
+<p>To see the rake tasks run the following command on the command line.</p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake -T
+</code></pre></div>
+<p>We can use rake to execute individual pipeline tasks or to execute rake tasks which have dependencies on other tasks. </p>
+<p>In this example, we are executing one rake task.</p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake expire <span class="c1"># This task expires machine images built by Packer</span>
+</code></pre></div>
+<p>In this example, we are executing another rake task with a lot of dependencies.</p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake <span class="nb">test</span> <span class="c1"># This task executes pre, post, and actual testing steps</span>
+</code></pre></div>
+<p>In this example, we are executing a rake task in a namespace.</p>
+<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> rake build:validate <span class="c1"># the namespace is build and the task is validate</span>
+</code></pre></div>
+<!--TODO: In case the user has not visited any other sections before this one, explain to them (briefly) how Rake is used to execute tasks in image pipelines.-->
+
+<!--TODO: The user will not need to understand all Rake concepts and DSL methods in order to develop and run these pipelines.  Instruct them about which rake concepts we use, and link to documentation on those resources.  Also link to basic guides on how to use rake.-->
+
+<p>Rake learning resources:</p>
+<ul>
+<li><a href="https://ruby.github.io/rake/">Rake</a></li>
+<li><a href="https://ruby.github.io/rake/doc/rakefile_rdoc.html">Rakefile</a></li>
+<li><a href="https://ruby.github.io/rake/doc/rakefile_rdoc.html#label-Namespaces">Rake Namespaces</a></li>
+</ul>
+<h2 id="understanding-git-and-git-flow"><a id="git-flow" name="git-flow"></a> Understanding git and git flow<a class="headerlink" href="#understanding-git-and-git-flow" title="Permanent link">&para;</a></h2>
+<p><a href="https://git-scm.com/">Git</a> is a free and open source distributed version control system. </p>
+<p><a href="https://nvie.com/posts/a-successful-git-branching-model/">Git flow</a>  is a Git workflow design which defines a strict branching model and it dictates what kind of branches to set up and how to merge them together.</p>
+<p>Git flow uses two branches to record the history of the project. The <code>master</code> branch stores the official release history, and the <code>develop</code> branch serves as an integration branch for features. It's also convenient to tag all commits in the <code>master</code> branch with a version number. Each new feature should reside in its own branch, which can be pushed to the central repository for backup/collaboration. But, instead of branching off of <code>master</code>, <code>feature</code> branches use <code>develop</code> as their parent branch. When a feature is complete, it gets merged back into develop. Features should never interact directly with <code>master</code>.</p>
+<p><img alt="git flow model" src="/images/rean-devsecops/gitflow-model.png" /></p>
+<p>Git and Git Flow learning resources:</p>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a></li>
+</ul>
+<h2 id="cloud-credentials-aws"><a id="cloud" name="cloud"></a>Cloud credentials: AWS<a class="headerlink" href="#cloud-credentials-aws" title="Permanent link">&para;</a></h2>
+<p>The AWS Command Line Interface (AWS CLI) is an open source tool that interacts with AWS services using commands in your command-line shell. </p>
+<p>The easiest way to setup AWS credentials is to run the following command in your shell.</p>
+<div class="highlight"><pre><span></span><code>aws configure
+</code></pre></div>
+<p>TODO: Teach the user how to set up their AWS credentials INI file, and hyperlink them to external documentation about the topic.</p>
+<p>TODO: Teach the user about the relevant AWS environment variables to select </p>
+<p>At the very least, the framework needs the following environment variables:</p>
+<ul>
+<li><em>AWS_ACCESS_KEY_ID</em>  - an AWS access key associated with an IAM user or role</li>
+<li><em>AWS_SECRET_ACCESS_KEY</em>  - the "password" for the access key</li>
+<li><em>AWS_DEFAULT_REGION</em> - AWS will send requests to this AWS Region</li>
+</ul>
+<p>AWS learning resources:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS Command Line Interface</a></li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html#cli-quick-configuration">Configure the AWS CLI</a></li>
+<li><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html">AWS CLI environment variables</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions-availability-zones">AWS Region</a></li>
+</ul>
+<h2 id="security-and-compliance-security-technical-implementation-guide"><a id="security" name="security"></a>Security and Compliance: Security Technical Implementation Guide<a class="headerlink" href="#security-and-compliance-security-technical-implementation-guide" title="Permanent link">&para;</a></h2>
+<p>The Security Technical Implementation Guides (STIGs) contain technical guidance to "lock down" information systems/software that might otherwise be vulnerable to a malicious computer attack.</p>
+<p>The framework creates compliance reports by executing the InSpec profiles based on the STIG specifications.</p>
+<p>For compliance scanning using stigtool one can write <code>skip.yml</code>, <code>poam.yml</code>, <code>filter.yml</code> and <code>inspec_attributes.yml</code>. </p>
+<p>Below we explain what the purpose of using POAM, Skip and Filter are using for when testing STIG specifications.</p>
+<blockquote>
+<p><strong>POAM</strong> - Plan of Action and Milestones. A POAM is temporary exclusion in an inspec test.
+For example, if Red Hat Linux introduces an error in the latest version of a software package, we may have to downgrade.
+This will cause the compliance scan to fail validation because the STIG insists software should be updated.  In order to work around the issue, we would create a POAM for it with an expiration date.  Once the date in the POAM has passed, the InSpec test will fail. </p>
+<p><strong>Skip</strong> - InSpec also supports skipping tests entirely.  For example, we rely on Amazon to pass several STIGs regarding datacenter security.  These tests are skipped permanently, and the reason logged.</p>
+<p><strong>Filter</strong> - Nessus does not support skips and POAMs, instead it uses a filter to exclude tests that are not applicable.</p>
+</blockquote>
+<p>STIGs cover many topics, some of which we rely on Amazon's certification process to cover.  Some STIGs do not apply at all.  For example, we can't check bios settings on an EC2 instance, so we can't validate any bios settings called out in the STIG.  They will never apply, so they can be permanently skipped.   Rather than removing them from the code base and invalidating the comprehensive STIG list we generated, we skip them. </p>
+<p>There are also occasionally temporary conditions that force us to bypass an Inspec test.  If there's an issue with a RedHat package and we have to downgrade it until a patch comes out, the build would fail the Inspec test that mandates the most recent version.  In these situations, we want to skip the check, but we eventually want to run it again.  </p>
+<p>In these situations, we create a POAM for it.  A poam looks similar to a skip, but it contains an expiration date.  Both contain approval information and an explanation of why it's in place, which are included in the output </p>
+<p>Skips and POAMs are stored as configuration files in the appropriate <code>audit</code> directory of the external configuration.  For example, the base OS RHEL7 packer job skips and POAMs are kept in <code>rean-pipeline-config/amis/rhel7/baseos/audit/</code> folder of the <code>rean-pipeline-config</code> repo.  </p>
+<p>These files are required to skip STIGs if STIGs are not valid or STIGs cause application issues on the machine. </p>
+<p>STIGs learning resources:</p>
+<ul>
+<li><a href="https://public.cyber.mil/stigs/">STIGs</a></li>
+</ul>
+<h2 id="network-connectivity-aws-image-pipelines"><a id="aws-img" name="aws-img"></a>Network connectivity: AWS image pipelines<a class="headerlink" href="#network-connectivity-aws-image-pipelines" title="Permanent link">&para;</a></h2>
+<p>If a subnet associated with a route table that has a route to an Internet Gateway, it is known as a <em>public</em> subnet. Otherwise, it is a <em>private</em> subnet.</p>
+<p>AWS networking learning resources:</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">AWS VPCs and Subnets</a></li>
+</ul>
+<h2 id="_1"><!-- Remote logins: Linux images --><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<!--TODO: The user will need to understand that remote management of Linux systems is done through SSH.-->
+
+<!--TODO: The user will need to understand which settings in their config.rb and their packer build JSON are used to configure remote logins.-->
+
+<!--TODO: The user will need to understand how remote login configuration is handled for testing phases: how keys are generated and created in the cloud, how the temporary VM is configured to use that configuration, and how the inspec tests use the same configuration.-->
+
+<h2 id="_2"><!-- Remote logins: Windows images --><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<!--TODO: The user will need to understand that remote management of Linux systems is done through WinRM.  They should also understand the difference between HTTP WinRM (no encryption), and HTTPS WinRM (encryption).-->
+
+<!--TODO: The user will need to understand which settings in their config.rb and their packer build JSON are used to configure remote logins.  They should also understand how the system is able to automatically collect the Administrator password in some cloud setups.-->
+
+<!--TODO: The user will need to understand how EC2 userdata must be used to configure remote management capability for Windows systems on bootup, so that the system is accessible by packer over WinRM.-->
+
+<!--TODO: The user will need to understand how remote login configuration is handled for testing phases: how keys are generated and created in the cloud, how the temporary VM is configured to use that configuration, and how the inspec tests use the same configuration.-->
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Customizing-projects/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Customize projects
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Windows-Linux-Virtual-Machine-Setup/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Set-up a Linux Virtual Machine
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>

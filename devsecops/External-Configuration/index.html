@@ -1,0 +1,1950 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+    
+    
+      
+        <title>External Configuration - Hitachi Cloud Accelerator Platform Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#external-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <!-- <div data-md-component="announce">
+      
+    </div> -->
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-header__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hitachi Cloud Accelerator Platform Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              External Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/getStarted/" class="md-tabs__link">
+        Get started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy/getting-started/" class="md-tabs__link">
+        Accelerators
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../devops/gettingStarted/" class="md-tabs__link md-tabs__link--active">
+        DevSecOps
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-tabs__link">
+        Infobytes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../platform-common/whatsNew/" class="md-tabs__link">
+        What's New?
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hitachi Cloud Accelerator Platform Documentation" class="md-nav__button md-logo" aria-label="Hitachi Cloud Accelerator Platform Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Hitachi Cloud Accelerator Platform Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://arnab20ghosh.github.io/HCAP_doc/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCAP_doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Get started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Get started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Get started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/getStarted/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/deployAndConfigure/" class="md-nav__link">
+        Deploy and configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/createAndAccessAccount/" class="md-nav__link">
+        Create & access account
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/cliTool/" class="md-nav__link">
+        Install and use Platform CLI
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Accelerators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Deploy Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      <label class="md-nav__link" for="__nav_3_1_2">
+        Deploy and Manage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deploy and Manage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deploy and Manage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/using_copy/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/howto-guides/" class="md-nav__link">
+        How-to guides
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Workflow Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Workflow Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/understand-solution-package-schema/" class="md-nav__link">
+        Understand the solution package schema
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/using/" class="md-nav__link">
+        Create and register solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/deploy-package/" class="md-nav__link">
+        Deploy solution package
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Test Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Test Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/using/" class="md-nav__link">
+        Run tests
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/administer/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test/api-reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Assess Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assess Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Assess Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/using/" class="md-nav__link">
+        Run assessment policies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-templates/" class="md-nav__link">
+        Create and manage assessment templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assess/assess-checks/" class="md-nav__link">
+        Assessment checks reference
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Migrate Accelerator
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Migrate Accelerator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrate Accelerator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/getting-started/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/using/" class="md-nav__link">
+        Discover and migrate resources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrate/administering/" class="md-nav__link">
+        Administer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        DevSecOps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="DevSecOps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DevSecOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/gettingStarted/" class="md-nav__link">
+        Overview of DevSecOps Services
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Image Pipeline
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Image Pipeline" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Image Pipeline
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Configuring-a-DevSecOps-Workstation/" class="md-nav__link">
+        Configure a DevSecOps workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Create project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-Projects/" class="md-nav__link">
+        Configure project
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-Jenkins/" class="md-nav__link">
+        Build and test from Jenkins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building-and-Testing-from-your-Workstation/" class="md-nav__link">
+        Build and test from your workstation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          External configurations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        External configurations
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#external-configuration" class="md-nav__link">
+    External Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="External Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-buildjson" class="md-nav__link">
+    Example of build.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-in-configrb" class="md-nav__link">
+    Variables in config.rb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-configuration-environment-variables" class="md-nav__link">
+    External Configuration environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-external-configuration-do" class="md-nav__link">
+    What does external configuration do
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-disable-external-configuration" class="md-nav__link">
+    How to disable external configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-external-configuration" class="md-nav__link">
+    How to use external configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-external-configuration-is-used-in-the-pipeline-builds" class="md-nav__link">
+    How external configuration is used in the pipeline builds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-configuration-key" class="md-nav__link">
+    External configuration key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-external-configuration-files" class="md-nav__link">
+    Searching external configuration files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-external-configuration" class="md-nav__link">
+    Sample External Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-configuration-directory-structure" class="md-nav__link">
+    External Configuration Directory Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-json-files-and-config-pull" class="md-nav__link">
+    External JSON files and config pull
+  </a>
+  
+    <nav class="md-nav" aria-label="External JSON files and config pull">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loaded-first" class="md-nav__link">
+    Loaded First:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loaded-second" class="md-nav__link">
+    Loaded Second:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loaded-third" class="md-nav__link">
+    Loaded Third:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-for-variable-precedence" class="md-nav__link">
+    Example for variable precedence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-topics" class="md-nav__link">
+    Related Topics
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Customizing-projects/" class="md-nav__link">
+        Customize projects
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn-the-concepts/" class="md-nav__link">
+        Learn the concepts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Windows-Linux-Virtual-Machine-Setup/" class="md-nav__link">
+        Set-up a Linux Virtual Machine
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infobytes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infobytes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infobytes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes/" class="md-nav__link">
+        Deploy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-01/" class="md-nav__link">
+        Infobyte 1- Product overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-02/" class="md-nav__link">
+        Infobyte 2- Layered environments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-03/" class="md-nav__link">
+        Infobyte 3- Multiple deployment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-04/" class="md-nav__link">
+        Infobyte 4- Environment versions and releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-05/" class="md-nav__link">
+        Infobyte 5- Blueprints
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-06/" class="md-nav__link">
+        Infobyte 6- Packages
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy-infobytes/info-btyes-07/" class="md-nav__link">
+        Infobyte 7- Platform CLI tool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        What's New?
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="What's New?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's New?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNew/" class="md-nav__link">
+        Latest Releases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-common/whatsNewArchive/" class="md-nav__link">
+        Archive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#external-configuration" class="md-nav__link">
+    External Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="External Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-buildjson" class="md-nav__link">
+    Example of build.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-in-configrb" class="md-nav__link">
+    Variables in config.rb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-configuration-environment-variables" class="md-nav__link">
+    External Configuration environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-does-external-configuration-do" class="md-nav__link">
+    What does external configuration do
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-disable-external-configuration" class="md-nav__link">
+    How to disable external configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-external-configuration" class="md-nav__link">
+    How to use external configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-external-configuration-is-used-in-the-pipeline-builds" class="md-nav__link">
+    How external configuration is used in the pipeline builds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-configuration-key" class="md-nav__link">
+    External configuration key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-external-configuration-files" class="md-nav__link">
+    Searching external configuration files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-external-configuration" class="md-nav__link">
+    Sample External Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-configuration-directory-structure" class="md-nav__link">
+    External Configuration Directory Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-json-files-and-config-pull" class="md-nav__link">
+    External JSON files and config pull
+  </a>
+  
+    <nav class="md-nav" aria-label="External JSON files and config pull">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loaded-first" class="md-nav__link">
+    Loaded First:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loaded-second" class="md-nav__link">
+    Loaded Second:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loaded-third" class="md-nav__link">
+    Loaded Third:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-for-variable-precedence" class="md-nav__link">
+    Example for variable precedence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-topics" class="md-nav__link">
+    Related Topics
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>External configurations</h1>
+                
+                <h2 id="external-configuration">External Configuration<a class="headerlink" href="#external-configuration" title="Permanent link">&para;</a></h2>
+<p>This feature allows the framework to use json configuration files from an external source.
+The external source is usually a GIT repository (referred as <code>pipeline-config</code> below). The framework automatically clones the repository (i.e. makes a local copy of the files in the repository) in the <code>external_config_dir</code>, which defaults to <code>target/pipeline-config</code>.<br />
+The external configuration files are combined into specific configurations.</p>
+<p>The default values for Packer build is present in the <code>build.json</code> file. </p>
+<p>Packer is is a tool for creating machine images for multiple platforms from a single source configuration. 
+This single source is in the form of a template file in JSON format and in this case we use a <code>build.json</code> file. To learn more about Packer and JSON templates, see <a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'learn-the-concept', viewSection: 'devops'})" style="text-decoration:none">Learn the Concepts</a>. </p>
+<blockquote>
+<p>The <code>build.json</code> file contains much of the variables and configurations for the packer build of the AMI you are building. In the build.json file you will find builders (contains what type of AMI is being built), variables, provisioners (processes and software to run after server is up and running) and post-process (tasks for what should be done after the AMI is built). </p>
+</blockquote>
+<h3 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'example'})" style="text-decoration:none">External variables in config.rb</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'external'})" style="text-decoration:none">External Configuration environment variables </a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'what'})" style="text-decoration:none">What does external configuration do</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'how'})" style="text-decoration:none">How to disable external configuration</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'how-to'})" style="text-decoration:none">How to use external configuration</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'how-external'})" style="text-decoration:none">How external configuration is used in the pipeline builds</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'external-con'})" style="text-decoration:none">External configuration key</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'searching'})" style="text-decoration:none">Searching external configuration files</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'sample'})" style="text-decoration:none">Sample External Configuration</a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'directory'})" style="text-decoration:none">External Configuration Directory Structure </a></li>
+<li><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'external-configuration', viewSection: 'JSON'})" style="text-decoration:none">External JSON files and config pull</a> </li>
+</ul>
+<p>The default values for Packer build is present in the <code>build.json</code> file.</p>
+<h3 id="example-of-buildjson"><a id="example" name="example"></a>Example of build.json<a class="headerlink" href="#example-of-buildjson" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code># code truncated for brevity
+&quot;builders&quot;: [
+    {
+      &quot;ssh_bastion_host&quot;: &quot;&lt;Bastion_public_ip&gt;&quot;,
+      &quot;ssh_bastion_private_key_file&quot;: &quot;&lt;path_of_SSH_key&gt;&quot;,
+      &quot;ssh_bastion_username&quot;: &quot;ec2-user&quot;,
+...
+</code></pre></div>
+<h3 id="variables-in-configrb"><a id="variables" name="variables"></a>Variables in config.rb<a class="headerlink" href="#variables-in-configrb" title="Permanent link">&para;</a></h3>
+<p>All external configuration parameters are defined in <em>config.rb</em> with variable names starting with <strong>external_config</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:external_config_url</td>
+<td>The URL of the external configuration source. It is used when <code>external_config_type</code> is not set to <code>:none</code>.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>:external_config_ref</td>
+<td>The external configuration GIT branch</td>
+<td>Must be set for GIT sources</td>
+</tr>
+<tr>
+<td>:external_config_dir</td>
+<td>The external configuration directory</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>:external_config_prefix</td>
+<td>The base configuration directory under <code>:external_config_dir</code>. If this parameter is not set, the base configuration directory is <code>:external_config_dir</code>.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>:external_config_key</td>
+<td>Determine all possible directories to load configuration from the least specific to the most specific</td>
+<td>No</td>
+</tr>
+<tr>
+<td>:external_config_type</td>
+<td>External configuration type. Defaults to <code>:git</code> for AMIs</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>The GIT repository is pulled when the <strong>config:pull</strong> task is executed.</p>
+<h3 id="external-configuration-environment-variables"><a id="external" name="external"></a>External Configuration environment variables<a class="headerlink" href="#external-configuration-environment-variables" title="Permanent link">&para;</a></h3>
+<p>The framework will read certain external configuration values from environment variables</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Environment Variable</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:external_config_url</td>
+<td>PIPELINE_CONFIG_URL</td>
+<td></td>
+</tr>
+<tr>
+<td>:external_config_ref</td>
+<td>PIPELINE_CONFIG_REF</td>
+<td><code>master</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-does-external-configuration-do"><a id="what" name="what"></a>What does external configuration do<a class="headerlink" href="#what-does-external-configuration-do" title="Permanent link">&para;</a></h3>
+<p>The framework pulls the external configuration files from GIT (where the git repository is :external_config_url and the branch is :external_config_ref ) to the :external_config_dir directory.  The framework can use the external configuration feature to pull configuration files for a given project (i.e. base rhel7 AMI) and for a given AWS region (i.e. us-east-1).  </p>
+<h3 id="how-to-disable-external-configuration"><a id="how" name="how"></a>How to disable external configuration<a class="headerlink" href="#how-to-disable-external-configuration" title="Permanent link">&para;</a></h3>
+<p>Set <code>:external_config_type</code> to <code>:none</code> and make sure <code>:external_config_dir</code> is not set.</p>
+<h3 id="how-to-use-external-configuration"><a id="how-to" name="how-to"></a>How to use external configuration<a class="headerlink" href="#how-to-use-external-configuration" title="Permanent link">&para;</a></h3>
+<p>To use this feature directly, call <code>external_config_files</code> or <code>external_config_file</code> in your configuration files.   </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># this call will return the list of all vars.json files from the least specific to the most specific</span>
+<span class="n">set</span> <span class="ss">:customer_app_var_files</span><span class="p">,</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">external_config_files</span><span class="p">(</span><span class="s1">&#39;vars.json&#39;</span><span class="p">)</span> <span class="p">}</span>
+</code></pre></div>
+<h3 id="how-external-configuration-is-used-in-the-pipeline-builds"><a id="how-external" name="how-external"></a>How external configuration is used in the pipeline builds<a class="headerlink" href="#how-external-configuration-is-used-in-the-pipeline-builds" title="Permanent link">&para;</a></h3>
+<p>This feature allows image and application pipelines to use pipeline configuration files from <code>pipeline-config</code> and in the 
+case of packer AMI image pipelines the configuration file is the <code>vars.json</code> file. </p>
+<p>Below shows an example of a <code>vars.json</code> file specific to an AMI project</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;source_ami&quot;</span><span class="p">:</span> <span class="s2">&quot;ami-6871a115&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;chefdk_version&quot;</span><span class="p">:</span> <span class="s2">&quot;3.3.23-1&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;chefdk_rpm&quot;</span><span class="p">:</span> <span class="s2">&quot;chefdk-3.3.23-1.el7.x86_64.rpm&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;nessus_agent_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;NessusAgent&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;nessus_agent_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;6.11.1-es7&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mcafee_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;mcafee-epo-agent&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mcafee_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;4.8.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;aws_cli_package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;awscli-bundle&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;aws_cli_package_version&quot;</span><span class="p">:</span> <span class="s2">&quot;20180913&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="external-configuration-key"><a id="external-con" name="external-con"></a>External configuration key<a class="headerlink" href="#external-configuration-key" title="Permanent link">&para;</a></h3>
+<p>The external configuration key (<code>:external_config_key</code>) is automatically created based on the the application name. <br />
+The key is constructed by splitting <code>:application</code> on <code>-</code>, reversing it, and joining it back with a new separator <code>/</code>.  </p>
+<p>For instance if the :application name is <code>baseos-rhel7</code> then the external configuration key would be <code>rhel7/baseos</code> for the location.</p>
+<p>Or using another example with the <strong>:application</strong> value below:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set</span> <span class="ss">:application</span><span class="p">,</span> <span class="s1">&#39;customer-app123&#39;</span>  <span class="c1"># :external_config_key is set to `app123/customer`</span>
+</code></pre></div>
+<p>The key can be overridden by setting the value directly in the application's <code>config.rb</code>.  </p>
+<p>The key determines the directories where the framework will look for external configuration files. </p>
+<h3 id="searching-external-configuration-files"><a id="searching" name="searching"></a>Searching external configuration files<a class="headerlink" href="#searching-external-configuration-files" title="Permanent link">&para;</a></h3>
+<p>The search is driven by the external configuration key. The search determines all configuration files matching the given name from the least specific to the most specific.<br />
+The least specific configuration files are located in the top level directory and the most specific configuration files are located in the lowest level directory.  </p>
+<p>Let's say the base configuration directory is <code>pipeline-config</code> and the external configuration key is set to <code>customer/app123</code>.<br />
+The framework will start searching in the <code>pipeline-config</code> directory, moving on to the <code>pipeline-config/app123</code>, and finishing the search in the <code>pipeline-config/customer/app123</code> directory.  </p>
+<h3 id="sample-external-configuration"><a id="sample" name="sample"></a>Sample External Configuration<a class="headerlink" href="#sample-external-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">set</span> <span class="ss">:external_config_dir</span><span class="p">,</span> <span class="n">target</span><span class="p">(</span><span class="s1">&#39;pipeline-config&#39;</span><span class="p">)</span>
+<span class="n">set</span> <span class="ss">:external_config_url</span><span class="p">,</span> <span class="s1">&#39;git@github.com:customer123/rean-pipeline-config.git&#39;</span>
+<span class="n">set</span> <span class="ss">:external_config_ref</span><span class="p">,</span> <span class="s1">&#39;branch456&#39;</span>
+<span class="n">set</span> <span class="ss">:external_config_prefix</span><span class="p">,</span> <span class="s1">&#39;pipelines&#39;</span>
+<span class="n">set</span> <span class="ss">:external_config_type</span><span class="p">,</span> <span class="ss">:git</span>
+<span class="n">set</span> <span class="ss">:external_config_key</span><span class="p">,</span> <span class="s1">&#39;customerapp/jenkins&#39;</span>
+</code></pre></div>
+<p>This external configuration will cause the framework to get the external configuration files from the GIT branch 'branch456' and the GIT repository at '<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a>:customer123/rean-pipeline-config.git' into a directory under <code>./target/pipeline-config</code>.</p>
+<h3 id="external-configuration-directory-structure"><a id="directory" name="directory"></a>External Configuration Directory Structure<a class="headerlink" href="#external-configuration-directory-structure" title="Permanent link">&para;</a></h3>
+<p>Let's look at the example of <code>pipeline-config</code> directory structure.</p>
+<div class="highlight"><pre><span></span><code>  pipeline-config/
+    ├── amis   <span class="c1">#:external_config_prefix</span>
+    │   ├── core_account.json
+    │   ├── rhel7
+    │   │   ├── artifactory <span class="c1">#:external_config_key - &#39;rhel7/baseos&#39;</span>
+    │   │   │   ├── audit <span class="c1">#:audit_dir</span>
+    │   │   │   │   ├── filter.yml
+    │   │   │   │   ├── inspec_attributes.yml <span class="c1">#values for inspec attributes</span>
+    │   │   │   │   ├── poam.yml <span class="c1">#Rules that should be skipped for a approved period of timeframe, reasons, request and approval</span>
+    │   │   │   │   └── skip.yml <span class="c1">#Rules that should be skipped, reasons, request and approval</span>
+    │   │   │   ├── inspec_attributes.yml
+    │   │   │   └── vars.json <span class="c1">#packer vars for packer build task</span>
+    │   │   ├── baseos <span class="c1">#:external_config_key - &#39;rhel7/baseos&#39;</span>
+    │   │   │   ├── audit <span class="c1">#:audit_dir</span>
+    │   │   │   │   ├── filter.yml
+    │   │   │   │   ├── inspec_attributes.yml
+    │   │   │   │   ├── poam.yml
+    │   │   │   │   └── skip.yml
+    │   │   │   └── vars.json <span class="c1">#packer vars for packer build task</span>
+    │   │   ├── dockerhost
+    │   │   │   ├── audit <span class="c1">#:audit_dir</span>
+    │   │   │   │   ├── filter.yml
+    │   │   │   │   ├── inspec_attributes.yml
+    │   │   │   │   ├── poam.yml
+    │   │   │   │   └── skip.yml
+    │   │   │   └── vars.json <span class="c1">#packer vars for packer build task</span>
+    │   │   ├── inspec_attributes.yml
+    │   │   └── vars.json
+    │   ├── vars.json <span class="c1">#packer vars for packer build task</span>
+    │   ├── win2012r2
+    │   │   ├── baseos <span class="c1">##:external_config_key - &#39;win2012r2/baseos&#39;</span>
+    │   │   │   └── vars.json
+    │   │   └── reantestclient <span class="c1">##:external_config_key - &#39;win2012r2/reantestclient&#39;</span>
+    │   │       ├── inspec_attributes.yml
+    │   │       ├── selenium
+    │   │       │   ├── inspec_attributes.yml
+    │   │       │   └── vars.json
+    │   │       ├── testcomplete
+    │   │       │   ├── inspec_attributes.yml
+    │   │       │   └── vars.json
+    │   │       ├── uft
+    │   │       │   ├── inspec_attributes.yml
+    │   │       │   └── vars.json
+    │   │       └── vars.json
+    │   └── workload_accounts.json
+    ├── docker-images <span class="c1">#:external_config_prefix</span>
+    │   └── rhel7
+    │       ├── baseos <span class="c1">#:external_config_key - &#39;rhel7/baseos&#39;</span>
+    │       │   ├── audit <span class="c1">#:audit_dir</span>
+    │       │   │   ├── filter.yml
+    │       │   │   ├── inspec_attributes.yml
+    │       │   │   ├── poam.yml
+    │       │   │   └── skip.yml
+    │       │   └── vars.json <span class="c1"># vars for docker build task</span>
+    │       ├── bootstrap <span class="c1">#:external_config_key - &#39;rhel7/bootstrap&#39;</span>
+    │       │   ├── audit <span class="c1">#:audit_dir</span>
+    │       │   │   ├── filter.yml
+    │       │   │   ├── poam.yml
+    │       │   │   └── skip.yml
+    │       │   └── vars.json
+    │       │ 
+    │       ├── stigtool_inspec_attributes.yml
+    │       └── tomcat
+    │           ├── audit
+    │           │   ├── filter.yml
+    │           │   ├── inspec_attributes.yml
+    │           │   ├── poam.yml
+    │           │   └── skip.yml
+    │           ├── inspec_attributes.yml
+    │           └── vars.json
+    └── pipelines <span class="c1">#:external_config_prefix</span>
+        └── reanplatform
+            └── bootstrap <span class="c1">#:external_config_key - &#39;reanplatform/bootstrap&#39;</span>
+                └── customer.yml
+</code></pre></div>
+<p>In the directory structure above, you may have noticed the file <code>workload_accounts.json</code>. </p>
+<p><strong>Workload accounts</strong> are where tasks and builds can happen; however the deployment would take place using the core account.</p>
+<p>For AMIs and Docker Images the vars.json at the root folder i.e, the order in which a variable will be taken for 'baseos-rhel7' is
+ 1. ami/rhel7/baseos/vars.json
+ 2. ami/rhel7/vars.json</p>
+<p>The framework supports cloud provider and region specific vars. The variable <code>:aws_region</code> must be set in <code>config.rb</code>. In this example, the cloud provider is <code>aws</code>. 
+  - ami/rhel7/vars.json
+  - ami/rhel7/baseos/vars.json
+  - ami/rhel7/baseos/aws.vars.json
+  - ami/rhel7/baseos/aws.us-east-1.vars.json
+  - ami/rhel7/baseos/aws.us-gov-west1.vars.json
+  - ami/rhel7/baseos/aws.us-west2.vars.json</p>
+<p>If <code>:aws_region</code> or <code>AWS_REGION</code>  or <code>AWS_DEFAULT_REGION</code> is 'us-east-1', the order of preference is taken as :
+ 1. ami/rhel7/baseos/aws.us-east-1.vars.json
+ 2. ami/rhel7/baseos/aws.vars.json
+ 3. ami/rhel7/baseos/vars.json
+ 4. ami/rhel7/vars.json</p>
+<p>If the same variable is declared in all four files, the value in the most specific file (in the first file) will be used.</p>
+<h3 id="external-json-files-and-config-pull"><a id="JSON" name="JSON"></a>External JSON files and config pull<a class="headerlink" href="#external-json-files-and-config-pull" title="Permanent link">&para;</a></h3>
+<p>Extra variable files get passed to the AMI Packer build (in addition to the build.json) in the <strong><em>following order</em></strong>, 
+with each subsequent file overriding variables of the same name or adding new variables-</p>
+<h4 id="loaded-first"><strong>Loaded First:</strong><a class="headerlink" href="#loaded-first" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>target/pipeline-config/amis/rhel7/baseos/vars-final.json: The relevant JSON files from the external pipeline configuration(target/pipeline-config/amis ) are combined into a vars-final.json file.</p>
+</blockquote>
+<p><em>the vars-final.json is created by the *</em><code>bundle exec rake config:pull</code>** command and pulls down json files from the remote repository based upon the <code>:application</code> name*</p>
+<h4 id="loaded-second"><strong>Loaded Second:</strong><a class="headerlink" href="#loaded-second" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>vars.json: local vars.json file for packer build</p>
+</blockquote>
+<h4 id="loaded-third"><strong>Loaded Third:</strong><a class="headerlink" href="#loaded-third" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>target/image-inputs.json: contains data generated from config.rb, environment variables, etc.</p>
+</blockquote>
+<h4 id="example-for-variable-precedence">Example for variable precedence<a class="headerlink" href="#example-for-variable-precedence" title="Permanent link">&para;</a></h4>
+<p>An example of this would be if the <code>config.rb</code> file had a configuration value set for <code>"aws_region"</code> as <code>"us-east-1"</code> and the <code>vars.json</code> file in the <code>pipeline-config/amis</code> had <code>"aws_region"</code> as a value of <code>"us-gov-west-1"</code>. </p>
+<p>The value set in <code>config.rb</code> for <code>"aws_region"</code> would override/replace the value set in the JSON file of the <code>pipeline-config/amis</code> because this would be loaded afterwards.</p>
+<blockquote>
+<p>The <strong>key point</strong> is here is the external <code>pipeline-config</code> repository is a central location for common configuration values of different AMI types. 
+And these values can be overridden or added to <strong>locally</strong> when configuring the pipeline and only pulling down the values pertaining to the specific AMI based upon the :application value. </p>
+</blockquote>
+<h2 id="related-topics">Related Topics<a class="headerlink" href="#related-topics" title="Permanent link">&para;</a></h2>
+<p><a href="" ui-sref="rean-platform-docs.accelerator({viewAccelerator: 'rean-devsecops', viewPage: 'configure-projects', viewSection: 'con-pro'})" style="text-decoration:none">Configure Projects</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Building-and-Testing-from-your-Workstation/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Build and test from your workstation
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Customizing-projects/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Customize projects
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <!-- <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 Martin Donath
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div> -->
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.31ff4e5f.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.216d634c.min.js"></script>
+      
+    
+  </body>
+</html>
